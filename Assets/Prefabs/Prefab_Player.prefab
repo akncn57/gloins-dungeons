@@ -225,6 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbf6ed6b57956b4d9119b5aae30ac20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InputReader: {fileID: 3668276198034107764}
+  RigidBody: {fileID: 8141660944448092658}
+  WalkSpeed: 5
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

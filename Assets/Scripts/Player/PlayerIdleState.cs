@@ -1,20 +1,27 @@
+using UnityEngine;
+
 namespace Player
 {
     public class PlayerIdleState : PlayerBaseState
     {
+        protected override PlayerStateEnums StateEnum => PlayerStateEnums.Idle;
+        
+        public PlayerIdleState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
+
         public override void OnEnter()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override void OnTick()
         {
-            throw new System.NotImplementedException();
+            if (PlayerStateMachine.InputReader.MovementValue != Vector2.zero)
+                PlayerStateMachine.SwitchState(new PlayerWalkState(PlayerStateMachine));
         }
 
         public override void OnExit()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

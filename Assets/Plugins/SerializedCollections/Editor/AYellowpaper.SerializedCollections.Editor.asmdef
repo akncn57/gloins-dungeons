@@ -1,12 +1,11 @@
 {
-    "name": "Player.Assembly",
-    "rootNamespace": "",
+    "name": "AYellowpaper.SerializedCollections.Editor",
     "references": [
-        "GUID:1c1c95c724dc433478cacaf7f896ac15",
-        "GUID:d525ad6bd40672747bde77962f1c401e",
-        "GUID:072b98d23b6cdb2438ab1d5aaf72f2b2"
+        "GUID:d525ad6bd40672747bde77962f1c401e"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
