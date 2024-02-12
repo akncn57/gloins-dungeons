@@ -227,7 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputReader: {fileID: 3668276198034107764}
   RigidBody: {fileID: 8141660944448092658}
-  WalkSpeed: 5
+  Animator: {fileID: 7586337879990168668}
+  WalkSpeed: 3
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

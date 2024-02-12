@@ -6,11 +6,13 @@ namespace Player
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Idle;
         
+        private readonly int _idleAnimationHash = Animator.StringToHash("Player_Idle");
+        
         public PlayerIdleState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 
         public override void OnEnter()
         {
-            
+            PlayerStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationHash, 0.1f);
         }
 
         public override void OnTick()
