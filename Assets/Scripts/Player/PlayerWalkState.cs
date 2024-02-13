@@ -12,6 +12,8 @@ namespace Player
 
         public override void OnEnter()
         {
+            PlayerStateMachine.InputReader.AttackBasicEvent += CheckAttackBasic;
+            
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
         }
 
@@ -26,7 +28,7 @@ namespace Player
         
         public override void OnExit()
         {
-            
+            PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
         }
 
         private void Movement(Vector2 movement)
@@ -37,12 +39,17 @@ namespace Player
 
         private void Facing(float horizontalMovement)
         {
-            PlayerStateMachine.SpriteRenderer.flipX = horizontalMovement switch
+            PlayerStateMachine.ParentObject.transform.localScale = horizontalMovement switch
             {
-                > 0 => false,
-                < 0 => true,
-                _ => PlayerStateMachine.SpriteRenderer.flipX
+                > 0 => new Vector3(1f, 1f, 1f),
+                < 0 => new Vector3(-1f, 1f, 1f),
+                _ => PlayerStateMachine.ParentObject.transform.localScale
             };
+        }
+
+        private void CheckAttackBasic()
+        {
+            PlayerStateMachine.SwitchState(new PlayerAttackBasicState(PlayerStateMachine));
         }
     }
 }

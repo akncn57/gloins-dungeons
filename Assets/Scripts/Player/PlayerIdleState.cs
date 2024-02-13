@@ -12,6 +12,8 @@ namespace Player
 
         public override void OnEnter()
         {
+            PlayerStateMachine.InputReader.AttackBasicEvent += CheckAttackBasic;
+            
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationHash, 0.1f);
         }
 
@@ -23,7 +25,12 @@ namespace Player
 
         public override void OnExit()
         {
-            
+            PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
+        }
+        
+        private void CheckAttackBasic()
+        {
+            PlayerStateMachine.SwitchState(new PlayerAttackBasicState(PlayerStateMachine));
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ namespace InputSystem
     public class InputReader : MonoBehaviour, Controls.IPlayerActions
     {
         public Vector2 MovementValue { get; private set; }
+        public event Action AttackBasicEvent;
         
         private Controls _controls;
     
@@ -24,6 +26,12 @@ namespace InputSystem
         public void OnMovement(InputAction.CallbackContext context)
         {
             MovementValue = context.ReadValue<Vector2>();
+        }
+
+        public void OnAttackBasic(InputAction.CallbackContext context)
+        {
+            if (!context.performed) { return; }
+            AttackBasicEvent?.Invoke();
         }
     }
 }
