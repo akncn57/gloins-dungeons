@@ -21,6 +21,7 @@ namespace Player
                 PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
             
             Movement(PlayerStateMachine.InputReader.MovementValue);
+            Facing(PlayerStateMachine.InputReader.MovementValue.x);
         }
         
         public override void OnExit()
@@ -32,6 +33,16 @@ namespace Player
         {
             movement = movement.normalized * PlayerStateMachine.WalkSpeed;
             PlayerStateMachine.RigidBody.velocity = movement;
+        }
+
+        private void Facing(float horizontalMovement)
+        {
+            PlayerStateMachine.SpriteRenderer.flipX = horizontalMovement switch
+            {
+                > 0 => false,
+                < 0 => true,
+                _ => PlayerStateMachine.SpriteRenderer.flipX
+            };
         }
     }
 }

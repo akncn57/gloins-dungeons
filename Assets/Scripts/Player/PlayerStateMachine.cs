@@ -10,6 +10,7 @@ namespace Player
         public InputReader InputReader;
         public Rigidbody2D RigidBody;
         public Animator Animator;
+        public SpriteRenderer SpriteRenderer;
         public float WalkSpeed;
 
         private void Start()

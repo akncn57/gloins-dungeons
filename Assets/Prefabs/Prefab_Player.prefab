@@ -228,6 +228,7 @@ MonoBehaviour:
   InputReader: {fileID: 3668276198034107764}
   RigidBody: {fileID: 8141660944448092658}
   Animator: {fileID: 7586337879990168668}
+  SpriteRenderer: {fileID: 1367954976438784724}
   WalkSpeed: 3
 --- !u!1 &6903877863259661129
 GameObject:
