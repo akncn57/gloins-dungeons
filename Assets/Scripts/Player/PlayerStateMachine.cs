@@ -12,6 +12,7 @@ namespace Player
         public Animator Animator;
         public GameObject ParentObject;
         public GameObject AttackBasicColliderObject;
+        public GameObject BlockColliderObject;
         public float WalkSpeed;
 
         private void Start()

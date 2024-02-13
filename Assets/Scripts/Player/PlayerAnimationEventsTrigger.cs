@@ -7,6 +7,7 @@ namespace Player
     {
         public event Action OnAttackBasicColliderOpen;
         public event Action OnAttackBasicColliderClose;
+        public event Action OnAttackBasicFinished;
 
         public void AttackBasicColliderOpen()
         {
@@ -16,6 +17,11 @@ namespace Player
         public void AttackBasicColliderClose()
         {
             OnAttackBasicColliderClose?.Invoke();
+        }
+        
+        public void AttackBasicFinished()
+        {
+            OnAttackBasicFinished?.Invoke();
         }
     }
 }

@@ -119,6 +119,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11e3178c8aeea647a1938a16cb0b976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2240762866422721845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 713872783321104047}
+  - component: {fileID: 8728631554666312883}
+  m_Layer: 0
+  m_Name: Block_Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &713872783321104047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2240762866422721845}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.495, y: 0.432, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 835681899011389610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &8728631554666312883
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2240762866422721845}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &3962129957628306886
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +285,7 @@ Transform:
   - {fileID: 507000679476120397}
   - {fileID: 3861632257688820086}
   - {fileID: 3620759674405059476}
+  - {fileID: 713872783321104047}
   m_Father: {fileID: 7176032953458692562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5866446098461063905
@@ -312,6 +380,7 @@ MonoBehaviour:
   Animator: {fileID: 7586337879990168668}
   ParentObject: {fileID: 5415165778118375842}
   AttackBasicColliderObject: {fileID: 3962129957628306886}
+  BlockColliderObject: {fileID: 2240762866422721845}
   WalkSpeed: 3
 --- !u!1 &6903877863259661129
 GameObject:
