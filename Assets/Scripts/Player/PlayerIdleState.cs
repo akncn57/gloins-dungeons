@@ -21,6 +21,9 @@ namespace Player
         {
             if (PlayerStateMachine.InputReader.MovementValue != Vector2.zero)
                 PlayerStateMachine.SwitchState(new PlayerWalkState(PlayerStateMachine));
+            
+            if (PlayerStateMachine.InputReader.IsBlocking)
+                PlayerStateMachine.SwitchState(new PlayerBlockState(PlayerStateMachine));
         }
 
         public override void OnExit()

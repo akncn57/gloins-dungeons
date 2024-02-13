@@ -8,7 +8,8 @@ namespace InputSystem
     {
         public Vector2 MovementValue { get; private set; }
         public event Action AttackBasicEvent;
-        
+        public bool IsBlocking { get; private set; }
+
         private Controls _controls;
     
         private void Start()
@@ -32,6 +33,18 @@ namespace InputSystem
         {
             if (!context.performed) { return; }
             AttackBasicEvent?.Invoke();
+        }
+
+        public void OnBlock(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                IsBlocking = true;
+            }
+            else if (context.canceled)
+            {
+                IsBlocking = false;
+            }
         }
     }
 }

@@ -22,6 +22,9 @@ namespace Player
             if (PlayerStateMachine.InputReader.MovementValue == Vector2.zero)
                 PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
             
+            if (PlayerStateMachine.InputReader.IsBlocking)
+                PlayerStateMachine.SwitchState(new PlayerBlockState(PlayerStateMachine));
+            
             Movement(PlayerStateMachine.InputReader.MovementValue);
             Facing(PlayerStateMachine.InputReader.MovementValue.x);
         }
