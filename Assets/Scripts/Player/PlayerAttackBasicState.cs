@@ -15,6 +15,7 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen += AttackBasicOpenCollider;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose += AttackBasicCloseCollider;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicFinished += AttackBasicFinish;
+            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
@@ -30,6 +31,7 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen -= AttackBasicOpenCollider;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose -= AttackBasicCloseCollider;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicFinished -= AttackBasicFinish;
+            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
         }
 
         private void AttackBasicOpenCollider()
@@ -45,6 +47,11 @@ namespace Player
         private void AttackBasicFinish()
         {
             PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
+        }
+        
+        private void CheckOnHurt()
+        {
+            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine));
         }
     }
 }

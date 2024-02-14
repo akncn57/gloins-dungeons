@@ -331,14 +331,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5866446098461063905}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -376,6 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputReader: {fileID: 3668276198034107764}
   PlayerAnimationEventsTrigger: {fileID: 6354206733172649317}
+  PlayerColliderController: {fileID: 7766550905894063296}
   RigidBody: {fileID: 8141660944448092658}
   Animator: {fileID: 7586337879990168668}
   ParentObject: {fileID: 5415165778118375842}
@@ -392,6 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3861632257688820086}
   - component: {fileID: 4599766792962230047}
+  - component: {fileID: 7766550905894063296}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -443,9 +445,21 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.5}
   m_Size: {x: 0.85, y: 1.5}
   m_Direction: 0
+--- !u!114 &7766550905894063296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903877863259661129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1c5311e081a7c4cb5923a059594ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

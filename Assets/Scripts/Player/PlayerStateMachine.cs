@@ -8,6 +8,7 @@ namespace Player
     {
         public InputReader InputReader;
         public PlayerAnimationEventsTrigger PlayerAnimationEventsTrigger;
+        public PlayerColliderController PlayerColliderController;
         public Rigidbody2D RigidBody;
         public Animator Animator;
         public GameObject ParentObject;

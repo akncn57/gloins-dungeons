@@ -14,6 +14,8 @@ namespace Player
 
         public override void OnEnter()
         {
+            PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
+            
             PlayerStateMachine.BlockColliderObject.SetActive(true);
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockUpAnimationHash, 0.1f);
         }
@@ -31,8 +33,15 @@ namespace Player
 
         public override void OnExit()
         {
+            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
+            
             PlayerStateMachine.BlockColliderObject.SetActive(false);
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockDownAnimationHash, 0.1f);
+        }
+        
+        private void CheckOnHurt()
+        {
+            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine));
         }
     }
 }

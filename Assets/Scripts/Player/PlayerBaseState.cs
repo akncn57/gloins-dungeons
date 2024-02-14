@@ -20,6 +20,7 @@ namespace Player
         Walk,
         AttackBasic,
         Block,
+        Hurt,
         Death
     }
 }

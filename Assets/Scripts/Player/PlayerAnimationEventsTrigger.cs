@@ -8,6 +8,8 @@ namespace Player
         public event Action OnAttackBasicColliderOpen;
         public event Action OnAttackBasicColliderClose;
         public event Action OnAttackBasicFinished;
+        public event Action OnHurtStart;
+        public event Action OnHurtEnd;
 
         public void AttackBasicColliderOpen()
         {
@@ -22,6 +24,16 @@ namespace Player
         public void AttackBasicFinished()
         {
             OnAttackBasicFinished?.Invoke();
+        }
+
+        public void HurtStart()
+        {
+            OnHurtStart?.Invoke();
+        }
+        
+        public void HurtEnd()
+        {
+            OnHurtEnd?.Invoke();
         }
     }
 }
