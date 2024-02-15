@@ -7,8 +7,12 @@ namespace Player
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Hurt;
         
         private readonly int _hurtAnimationHash = Animator.StringToHash("Player_Hurt");
-        
-        public PlayerHurtState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
+        private Vector3 _hitPosition;
+
+        public PlayerHurtState(PlayerStateMachine playerStateMachine, Vector3 hitPosition) : base(playerStateMachine)
+        {
+            _hitPosition = hitPosition;
+        }
 
         public override void OnEnter()
         {
@@ -32,7 +36,7 @@ namespace Player
 
         private void HurtStart()
         {
-            PlayerStateMachine.RigidBody.velocity = new Vector2(5f, PlayerStateMachine.RigidBody.velocity.y);
+            PlayerStateMachine.RigidBody.velocity = new Vector2(-_hitPosition.x, PlayerStateMachine.RigidBody.velocity.y);
         }
         
         private void HurtEnd()

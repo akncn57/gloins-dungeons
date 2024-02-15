@@ -38,9 +38,9 @@ namespace Player
             PlayerStateMachine.SwitchState(new PlayerAttackBasicState(PlayerStateMachine));
         }
 
-        private void CheckOnHurt()
+        private void CheckOnHurt(Vector3 hitPosition)
         {
-            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine));
+            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition));
         }
     }
 }
