@@ -8,10 +8,15 @@ namespace Player
         
         private readonly int _hurtAnimationHash = Animator.StringToHash("Player_Hurt");
         private Vector3 _hitPosition;
+        private float _knockBackStrength;
 
-        public PlayerHurtState(PlayerStateMachine playerStateMachine, Vector3 hitPosition) : base(playerStateMachine)
+        public PlayerHurtState(
+            PlayerStateMachine playerStateMachine,
+            Vector3 hitPosition,
+            float knockBackStrength) : base(playerStateMachine)
         {
             _hitPosition = hitPosition;
+            _knockBackStrength = knockBackStrength;
         }
 
         public override void OnEnter()
@@ -36,7 +41,7 @@ namespace Player
 
         private void HurtStart()
         {
-            PlayerStateMachine.RigidBody.velocity = new Vector2(-_hitPosition.x, PlayerStateMachine.RigidBody.velocity.y);
+            PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
         }
         
         private void HurtEnd()

@@ -57,9 +57,9 @@ namespace Player
             PlayerStateMachine.SwitchState(new PlayerAttackBasicState(PlayerStateMachine));
         }
         
-        private void CheckOnHurt(Vector3 hitPosition)
+        private void CheckOnHurt(Vector3 hitPosition, float knockBackStrength)
         {
-            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition));
+            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition, knockBackStrength));
         }
     }
 }

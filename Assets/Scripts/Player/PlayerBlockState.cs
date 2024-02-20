@@ -39,9 +39,9 @@ namespace Player
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockDownAnimationHash, 0.1f);
         }
         
-        private void CheckOnHurt(Vector3 hitPosition)
+        private void CheckOnHurt(Vector3 hitPosition, float knockBackStrength)
         {
-            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition));
+            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition, knockBackStrength));
         }
     }
 }
