@@ -1,6 +1,6 @@
 using System;
+using HealthSystem;
 using InputSystem;
-using LifeSystem;
 using StateMachine;
 using UnityEngine;
 
@@ -11,7 +11,7 @@ namespace Player
         public InputReader InputReader;
         public PlayerAnimationEventsTrigger PlayerAnimationEventsTrigger;
         public PlayerColliderController PlayerColliderController;
-        [NonSerialized] public LifeController LifeController;
+        [NonSerialized] public HealthController HealthController;
         public Rigidbody2D RigidBody;
         public Animator Animator;
         public GameObject ParentObject;
@@ -21,7 +21,7 @@ namespace Player
 
         private void Awake()
         {
-            LifeController = new LifeController(100, 100, 0);
+            HealthController = new HealthController(100, 100, 0);
         }
 
         private void Start()
