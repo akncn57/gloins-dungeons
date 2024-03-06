@@ -8,19 +8,25 @@ namespace Player
         
         private readonly int _hurtAnimationHash = Animator.StringToHash("Player_Hurt");
         private Vector3 _hitPosition;
+        private int _damage;
         private float _knockBackStrength;
 
         public PlayerHurtState(
             PlayerStateMachine playerStateMachine,
             Vector3 hitPosition,
+            int damage,
             float knockBackStrength) : base(playerStateMachine)
         {
             _hitPosition = hitPosition;
+            _damage = damage;
             _knockBackStrength = knockBackStrength;
         }
 
         public override void OnEnter()
         {
+            PlayerStateMachine.HealthController.SpendHealth(_damage);
+            Debug.Log("Player Health : " + PlayerStateMachine.HealthController.Health);
+            
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtStart += HurtStart;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtEnd += HurtEnd;
             
@@ -41,6 +47,7 @@ namespace Player
 
         private void HurtStart()
         {
+            PlayerStateMachine.HealthController.SpendHealth(10);
             PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
         }
         

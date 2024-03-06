@@ -11,9 +11,10 @@ namespace HealthSystem
 
         public event Action<long, long> OnHealthAdding;
         public event Action<long, long> OnHealthSpending;
+        public event Action<long> OnHealthLimitSet;
 
-        private readonly long _health;
-        private readonly long _healthLimit;
+        private long _health;
+        private long _healthLimit;
         private readonly long _healthOverLimit;
 
         public HealthController(long health, long healthLimit, long healthOverLimit)
@@ -37,17 +38,40 @@ namespace HealthSystem
 
             if (_health > _healthLimit) return;
 
-            var newHealth = _health + amount;
-            OnHealthAdding?.Invoke(_health, newHealth);
+            var tempOldHealth = _health;
+            _health += amount;
+            OnHealthAdding?.Invoke(tempOldHealth, _health);
         }
 
         public void SpendHealth(long amount)
         {
-            if (amount < 0) Debug.LogError("Spending health amount can't be zero!");
-            if (_health ! >= _healthOverLimit) return;
+            if (amount < 0)
+            {
+                Debug.LogError("Spending health amount can't be zero!");
+                return;
+            }
+            
+            if (_health < 0)
+            {
+                Debug.LogError("Health already equal zero or less!");
+                return;
+            }
 
-            var newHealth = _health - amount;
-            OnHealthSpending?.Invoke(_health, newHealth);
+            var temOldHealth = _health;
+            _health -= amount;
+            OnHealthSpending?.Invoke(temOldHealth, _health);
+        }
+
+        public void SetHealthLimit(long amount)
+        {
+            if (amount < 0)
+            {
+                Debug.LogError("Health limit must not less zero!");
+                return;
+            }
+
+            _healthLimit = amount;
+            OnHealthLimitSet?.Invoke(_healthLimit);
         }
     }
 }
