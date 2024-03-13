@@ -24,9 +24,6 @@ namespace Player
 
         public override void OnEnter()
         {
-            PlayerStateMachine.HealthController.SpendHealth(_damage);
-            Debug.Log("Player Health : " + PlayerStateMachine.HealthController.Health);
-            
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtStart += HurtStart;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtEnd += HurtEnd;
             
@@ -47,7 +44,8 @@ namespace Player
 
         private void HurtStart()
         {
-            PlayerStateMachine.HealthController.SpendHealth(10);
+            PlayerStateMachine.HealthController.SpendHealth(_damage);
+            Debug.Log("Player Health : " + PlayerStateMachine.HealthController.Health);
             PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
         }
         
