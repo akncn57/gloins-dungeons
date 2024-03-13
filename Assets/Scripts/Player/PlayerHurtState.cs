@@ -33,7 +33,7 @@ namespace Player
 
         public override void OnTick()
         {
-            
+            CheckDeath();
         }
 
         public override void OnExit()
@@ -52,6 +52,11 @@ namespace Player
         private void HurtEnd()
         {
             PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
+        }
+
+        private void CheckDeath()
+        {
+            if (PlayerStateMachine.HealthController.Health <= 0) PlayerStateMachine.SwitchState(new PlayerDeathState(PlayerStateMachine));
         }
     }
 }
