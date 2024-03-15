@@ -5,25 +5,14 @@ namespace HealthSystem
 {
     public class HealthController : MonoBehaviour
     {
-        public long Health => _health;
-        public long HealthLimit => _healthLimit;
-        public long HealthOverLimit => _healthOverLimit;
+        [field: SerializeField] public long Health { get; private set; }
+        [field: SerializeField] public long HealthLimit { get; private set; }
+        [field: SerializeField] public long HealthOverLimit { get; private set; }
 
         public event Action<long, long> OnHealthAdding;
         public event Action<long, long> OnHealthSpending;
         public event Action<long> OnHealthLimitSet;
 
-        private long _health;
-        private long _healthLimit;
-        private readonly long _healthOverLimit;
-
-        public HealthController(long health, long healthLimit, long healthOverLimit)
-        {
-            _health = health;
-            _healthLimit = healthLimit;
-            _healthOverLimit = healthOverLimit;
-        }
-        
         public void AddHealth(long amount)
         {
             switch (amount)
@@ -36,11 +25,11 @@ namespace HealthSystem
                     break;
             }
 
-            if (_health > _healthLimit) return;
+            if (Health >= HealthLimit) return;
 
-            var tempOldHealth = _health;
-            _health += amount;
-            OnHealthAdding?.Invoke(tempOldHealth, _health);
+            var tempOldHealth = Health;
+            Health += amount;
+            OnHealthAdding?.Invoke(tempOldHealth, Health);
         }
 
         public void SpendHealth(long amount)
@@ -51,15 +40,15 @@ namespace HealthSystem
                 return;
             }
             
-            if (_health < 0)
+            if (Health < 0)
             {
                 Debug.LogError("Health already equal zero or less!");
                 return;
             }
 
-            var temOldHealth = _health;
-            _health -= amount;
-            OnHealthSpending?.Invoke(temOldHealth, _health);
+            var temOldHealth = Health;
+            Health -= amount;
+            OnHealthSpending?.Invoke(temOldHealth, Health);
         }
 
         public void SetHealthLimit(long amount)
@@ -70,8 +59,8 @@ namespace HealthSystem
                 return;
             }
 
-            _healthLimit = amount;
-            OnHealthLimitSet?.Invoke(_healthLimit);
+            HealthLimit = amount;
+            OnHealthLimitSet?.Invoke(HealthLimit);
         }
     }
 }

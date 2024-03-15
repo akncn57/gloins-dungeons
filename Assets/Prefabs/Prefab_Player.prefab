@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 8141660944448092658}
   - component: {fileID: 3668276198034107764}
   - component: {fileID: 1893331197882160776}
+  - component: {fileID: 588573030473328513}
   m_Layer: 0
   m_Name: Prefab_Player
   m_TagString: Player
@@ -377,12 +378,28 @@ MonoBehaviour:
   InputReader: {fileID: 3668276198034107764}
   PlayerAnimationEventsTrigger: {fileID: 6354206733172649317}
   PlayerColliderController: {fileID: 7766550905894063296}
+  HealthController: {fileID: 588573030473328513}
   RigidBody: {fileID: 8141660944448092658}
   Animator: {fileID: 7586337879990168668}
   ParentObject: {fileID: 5415165778118375842}
   AttackBasicColliderObject: {fileID: 3962129957628306886}
   BlockColliderObject: {fileID: 2240762866422721845}
   WalkSpeed: 3
+--- !u!114 &588573030473328513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866446098461063905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1db39ce6dda454cad3247630195f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Health>k__BackingField: 100
+  <HealthLimit>k__BackingField: 100
+  <HealthOverLimit>k__BackingField: 0
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0
