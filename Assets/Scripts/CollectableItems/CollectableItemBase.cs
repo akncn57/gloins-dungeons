@@ -9,6 +9,21 @@ namespace CollectableItems
         [SerializeField] protected float animationSpeed;
         [SerializeField] protected Ease animationEase;
         
+        protected virtual void OnEnable()
+        {
+            Animation();
+        }
+
+        protected virtual void OnTriggerEnter2D(Collider2D other)
+        {
+            OnCollect(other);
+        }
+        
+        protected abstract void ItemEffect(GameObject to);
+        protected abstract void ItemAnimation();
+
+        #region ICollectableItem
+
         public float EffectValue
         {
             get => effectValue;
@@ -27,16 +42,6 @@ namespace CollectableItems
             set => animationEase = value;
         }
         
-        private void OnEnable()
-        {
-            Animation();
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            OnCollect(other);
-        }
-        
         public void Animation()
         {
             ItemAnimation();
@@ -52,8 +57,7 @@ namespace CollectableItems
         {
             Destroy(gameObject);
         }
-        
-        protected abstract void ItemEffect(GameObject to);
-        protected abstract void ItemAnimation();
+
+        #endregion
     }
 }

@@ -17,6 +17,7 @@ namespace Player
         public GameObject ParentObject;
         public GameObject AttackBasicColliderObject;
         public GameObject BlockColliderObject;
+        public ParticleSystem HurtParticle;
         public float WalkSpeed;
 
         private void Start()

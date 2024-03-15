@@ -28,6 +28,7 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtEnd += HurtEnd;
             
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
+            PlayerStateMachine.HurtParticle.Play();
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
         }
 
