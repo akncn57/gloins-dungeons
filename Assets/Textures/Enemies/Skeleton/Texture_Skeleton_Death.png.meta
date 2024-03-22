@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cf83dbbe0c358241a21e83ddb319c02
+guid: dfa1193b9e204574ba65d5b99ae2d4f5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,11 +119,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_0
+      name: Texture_Skeleton_Death_0
       rect:
         serializedVersion: 2
         x: 66
@@ -131,266 +144,266 @@ TextureImporter:
         width: 78
         height: 49
       alignment: 9
-      pivot: {x: 0.60468495, y: 0.15632552}
+      pivot: {x: 0.6026729, y: 0.1631339}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcbd1316cce5d854b9aa69e1601525b1
-      internalID: -2018835010
+      spriteID: ce68d3bd63b16294d9df9a1a5aaf1944
+      internalID: 665180022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_1
+      name: Texture_Skeleton_Death_1
       rect:
         serializedVersion: 2
-        x: 283
+        x: 281
         y: 71
-        width: 81
-        height: 49
+        width: 83
+        height: 52
       alignment: 9
-      pivot: {x: 0.6262761, y: 0.15723637}
+      pivot: {x: 0.6148373, y: 0.1631339}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8cba5146f922ab499dcd3a4efb84b21
-      internalID: 1214760690
+      spriteID: dcfc59f8e7fe9c14ea80eb6d31fe93bd
+      internalID: -1322377134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_2
+      name: Texture_Skeleton_Death_2
       rect:
         serializedVersion: 2
-        x: 499
+        x: 501
         y: 71
-        width: 85
-        height: 50
+        width: 83
+        height: 45
       alignment: 9
-      pivot: {x: 0.6418148, y: 0.15292038}
+      pivot: {x: 0.6148373, y: 0.1631339}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5d7dcccbcf4fbd4aa8e588c7e5dac13
-      internalID: -1114123897
+      spriteID: 452635d28f8e4ba4c8aeac0f937c90da
+      internalID: -602689991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_3
+      name: Texture_Skeleton_Death_3
       rect:
         serializedVersion: 2
         x: 721
         y: 71
-        width: 78
-        height: 52
-      alignment: 9
-      pivot: {x: 0.67704266, y: 0.14758536}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90d3e9673e0e58e4ab8d0ff265ffcac0
-      internalID: 119257346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_6
-      rect:
-        serializedVersion: 2
-        x: 964
-        y: 70
-        width: 79
-        height: 50
-      alignment: 9
-      pivot: {x: 0.4307707, y: 0.15115647}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a482d55e4a11f924b8089880a9ff3aa5
-      internalID: -336341125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_7
-      rect:
-        serializedVersion: 2
-        x: 1166
-        y: 64
-        width: 103
-        height: 56
-      alignment: 9
-      pivot: {x: 0.4638577, y: 0.26033252}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de47201a1d73e8542b41ea21da04d596
-      internalID: -826318353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_8
-      rect:
-        serializedVersion: 2
-        x: 1387
-        y: 70
-        width: 104
-        height: 50
-      alignment: 9
-      pivot: {x: 0.44769052, y: 0.1726831}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88f50709d5925a840a09c52a5edb788b
-      internalID: 1264866232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_9
-      rect:
-        serializedVersion: 2
-        x: 1641
-        y: 70
-        width: 71
-        height: 50
-      alignment: 9
-      pivot: {x: 0.1753136, y: 0.17297989}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e94bce1997330ad4ba7d86ca6f37c0db
-      internalID: -1048971634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_10
-      rect:
-        serializedVersion: 2
-        x: 1849
-        y: 71
-        width: 84
-        height: 49
-      alignment: 9
-      pivot: {x: 0.29853603, y: 0.15575315}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 779bef8dff30ea146911248f19a52cb2
-      internalID: 552690267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_11
-      rect:
-        serializedVersion: 2
-        x: 2043
-        y: 71
-        width: 82
-        height: 49
-      alignment: 9
-      pivot: {x: 0.6147491, y: 0.15495051}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a14d572477e7b25438034fdf92cae0ce
-      internalID: -1087112877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_12
-      rect:
-        serializedVersion: 2
-        x: 2265
-        y: 71
-        width: 80
-        height: 49
-      alignment: 9
-      pivot: {x: 0.6089417, y: 0.15538211}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d706907d96b561640bfbaac4ca1af7db
-      internalID: -1985241620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_13
-      rect:
-        serializedVersion: 2
-        x: 2483
-        y: 71
-        width: 81
-        height: 49
-      alignment: 9
-      pivot: {x: 0.6194571, y: 0.15649305}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2c5419c44c36e743b0708e64d4e75cc
-      internalID: 113042812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Attack_1_14
-      rect:
-        serializedVersion: 2
-        x: 2702
-        y: 71
         width: 83
-        height: 49
+        height: 43
       alignment: 9
-      pivot: {x: 0.62208205, y: 0.15689321}
+      pivot: {x: 0.6148373, y: 0.1631339}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea63fd441da0f574babf8b5534ff537d
-      internalID: -260073741
+      spriteID: b06c020734dfd5e4d88c7b008ba40814
+      internalID: 973320741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_4
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 70
+        width: 86
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c3fa1469d50654c8ce72d96b2275f0
+      internalID: 247955120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_6
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 50
+        width: 97
+        height: 61
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ace5e787e41074dbff2ade265f4ccd
+      internalID: 471842329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_7
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 47
+        width: 95
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2761c07b168989d4e9f7e494a49323b0
+      internalID: 1059746615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_8
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 47
+        width: 101
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefe2c03062f98d458293c7b585b1215
+      internalID: 629388182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_9
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 47
+        width: 92
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbbb5feeb7e25d46883a272cf81d6e9
+      internalID: -436693582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_15
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 49
+        width: 105
+        height: 46
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d40ea0636edc344b1ce962729ce3b3
+      internalID: 725039219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_17
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 49
+        width: 111
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1758e2c026880924da4193a3fc6c25db
+      internalID: 657881641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_19
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 47
+        width: 115
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001cfe4f7f10da847a6bac40a0703058
+      internalID: -552102730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_22
+      rect:
+        serializedVersion: 2
+        x: 2686
+        y: 48
+        width: 116
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beecdb89e4d2bea4386e07dfc70200ee
+      internalID: -1631404630
       vertices: []
       indices: 
       edges: []
@@ -406,25 +419,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Texture_Skeleton_Attack_1_0: -2018835010
-      Texture_Skeleton_Attack_1_1: 1214760690
-      Texture_Skeleton_Attack_1_10: 552690267
-      Texture_Skeleton_Attack_1_11: -1087112877
-      Texture_Skeleton_Attack_1_12: -1985241620
-      Texture_Skeleton_Attack_1_13: 113042812
-      Texture_Skeleton_Attack_1_14: -260073741
-      Texture_Skeleton_Attack_1_15: -241859489
-      Texture_Skeleton_Attack_1_16: 626052396
-      Texture_Skeleton_Attack_1_17: 1155789200
-      Texture_Skeleton_Attack_1_18: 1111879554
-      Texture_Skeleton_Attack_1_2: -1114123897
-      Texture_Skeleton_Attack_1_3: 119257346
-      Texture_Skeleton_Attack_1_4: -1623159688
-      Texture_Skeleton_Attack_1_5: 646662089
-      Texture_Skeleton_Attack_1_6: -336341125
-      Texture_Skeleton_Attack_1_7: -826318353
-      Texture_Skeleton_Attack_1_8: 1264866232
-      Texture_Skeleton_Attack_1_9: -1048971634
+      Texture_Skeleton_Death_0: 665180022
+      Texture_Skeleton_Death_1: -1322377134
+      Texture_Skeleton_Death_10: 1356168358
+      Texture_Skeleton_Death_11: -1184632035
+      Texture_Skeleton_Death_12: -1372249472
+      Texture_Skeleton_Death_13: 544677899
+      Texture_Skeleton_Death_14: 895496821
+      Texture_Skeleton_Death_15: 725039219
+      Texture_Skeleton_Death_16: -314435683
+      Texture_Skeleton_Death_17: 657881641
+      Texture_Skeleton_Death_18: -1791985095
+      Texture_Skeleton_Death_19: -552102730
+      Texture_Skeleton_Death_2: -602689991
+      Texture_Skeleton_Death_20: 1992935025
+      Texture_Skeleton_Death_21: 1247100825
+      Texture_Skeleton_Death_22: -1631404630
+      Texture_Skeleton_Death_23: 397402453
+      Texture_Skeleton_Death_24: 1652509442
+      Texture_Skeleton_Death_25: 242467149
+      Texture_Skeleton_Death_26: -260407848
+      Texture_Skeleton_Death_27: 1327342976
+      Texture_Skeleton_Death_3: 973320741
+      Texture_Skeleton_Death_4: 247955120
+      Texture_Skeleton_Death_5: -1038055607
+      Texture_Skeleton_Death_6: 471842329
+      Texture_Skeleton_Death_7: 1059746615
+      Texture_Skeleton_Death_8: 629388182
+      Texture_Skeleton_Death_9: -436693582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e9d6da44263c4a489b8ec499a8fa3d4
+guid: 801b3652356bd8040a7d193e5de94e9b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,173 +119,186 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_0
+      name: Texture_Skeleton_Hurt_Shield_Break_0
       rect:
         serializedVersion: 2
-        x: 63
+        x: 66
         y: 72
-        width: 80
+        width: 77
         height: 47
       alignment: 9
-      pivot: {x: 0.62590945, y: 0.14734098}
+      pivot: {x: 0.6116019, y: 0.14786984}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcc5ce1857f048648aef9347bc31334e
-      internalID: -2089815335
+      spriteID: 1156e74947ab60a45be44309e91a042c
+      internalID: 806775358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_1
+      name: Texture_Skeleton_Hurt_Shield_Break_1
       rect:
         serializedVersion: 2
-        x: 285
+        x: 282
         y: 72
-        width: 78
-        height: 47
+        width: 81
+        height: 49
       alignment: 9
-      pivot: {x: 0.61478955, y: 0.14734098}
+      pivot: {x: 0.61727077, y: 0.14316668}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1f988f22bc2d4c4c985c88d59ffeda9
-      internalID: -426714233
+      spriteID: 13efd6b2c94fc4b4698d8b37d01ed184
+      internalID: -1404671694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_2
+      name: Texture_Skeleton_Hurt_Shield_Break_2
       rect:
         serializedVersion: 2
-        x: 502
+        x: 499
+        y: 72
+        width: 84
+        height: 49
+      alignment: 9
+      pivot: {x: 0.63182795, y: 0.1418798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbad9f04e4abce546bee2d40fe9cf3cd
+      internalID: 40552140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Hurt_Shield_Break_3
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 72
+        width: 76
+        height: 48
+      alignment: 9
+      pivot: {x: 0.71040267, y: 0.14547713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b112eb5ac108bc45b22bd36a66e6994
+      internalID: -103719924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Hurt_Shield_Break_4
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 72
+        width: 82
+        height: 47
+      alignment: 9
+      pivot: {x: 0.68350965, y: 0.14684945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f6371a642970f41b20dfb08c4d0627
+      internalID: 2049951793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Hurt_Shield_Break_5
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 72
+        width: 83
+        height: 47
+      alignment: 9
+      pivot: {x: 0.6751665, y: 0.14778413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e31ae0466e86f04db16ac01d47b7b8c
+      internalID: -690287111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Hurt_Shield_Break_6
+      rect:
+        serializedVersion: 2
+        x: 1376
         y: 72
         width: 81
         height: 47
       alignment: 9
-      pivot: {x: 0.62914133, y: 0.14746419}
+      pivot: {x: 0.7044331, y: 0.14717151}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6d6ffaa1a200034d91dc40a98d5c14e
-      internalID: -1164726441
+      spriteID: 839e78eacbfaefc439d7108269187dfc
+      internalID: -873571635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_3
+      name: Texture_Skeleton_Hurt_Shield_Break_7
       rect:
         serializedVersion: 2
-        x: 720
+        x: 1597
         y: 72
-        width: 83
-        height: 46
-      alignment: 9
-      pivot: {x: 0.63903075, y: 0.12926964}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ab6d713ed9f8df4bbd163a9b8a5a943
-      internalID: 1989091506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_4
-      rect:
-        serializedVersion: 2
-        x: 939
-        y: 70
-        width: 84
-        height: 47
-      alignment: 9
-      pivot: {x: 0.6433948, y: 0.1700868}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bd6ba98d97d96647a4bff08099b391f
-      internalID: 1446797835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_5
-      rect:
-        serializedVersion: 2
-        x: 1158
-        y: 67
-        width: 85
-        height: 50
-      alignment: 9
-      pivot: {x: 0.6467917, y: 0.21929719}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 036e3b03245267a4a9da62518d93271b
-      internalID: -1249542648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_6
-      rect:
-        serializedVersion: 2
-        x: 1383
-        y: 68
-        width: 80
-        height: 50
-      alignment: 9
-      pivot: {x: 0.62490845, y: 0.19985199}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f4bd51f4c483774581380679b132d39
-      internalID: 1074212337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton 1 - animations-idle_7
-      rect:
-        serializedVersion: 2
-        x: 1603
-        y: 71
         width: 80
         height: 47
       alignment: 9
-      pivot: {x: 0.624733, y: 0.16926217}
+      pivot: {x: 0.7004074, y: 0.14851671}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9753546d4ac5c42ab135fd9a2be4cb
-      internalID: 1987055711
+      spriteID: ab766c6acc4125d488de42afb99b21cc
+      internalID: 1681949389
       vertices: []
       indices: 
       edges: []
@@ -301,14 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton 1 - animations-idle_0: -2089815335
-      Skeleton 1 - animations-idle_1: -426714233
-      Skeleton 1 - animations-idle_2: -1164726441
-      Skeleton 1 - animations-idle_3: 1989091506
-      Skeleton 1 - animations-idle_4: 1446797835
-      Skeleton 1 - animations-idle_5: -1249542648
-      Skeleton 1 - animations-idle_6: 1074212337
-      Skeleton 1 - animations-idle_7: 1987055711
+      Texture_Skeleton_Hurt_Shield_Break_0: 806775358
+      Texture_Skeleton_Hurt_Shield_Break_1: -1404671694
+      Texture_Skeleton_Hurt_Shield_Break_2: 40552140
+      Texture_Skeleton_Hurt_Shield_Break_3: -103719924
+      Texture_Skeleton_Hurt_Shield_Break_4: 2049951793
+      Texture_Skeleton_Hurt_Shield_Break_5: -690287111
+      Texture_Skeleton_Hurt_Shield_Break_6: -873571635
+      Texture_Skeleton_Hurt_Shield_Break_7: 1681949389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

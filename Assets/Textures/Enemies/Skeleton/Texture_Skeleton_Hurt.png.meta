@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2bb91fe5fe7bb2c449a573f3ff76be0e
+guid: fae0e958848d37e4a8638128d4758b0b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,11 +119,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Texture_Skeleton_Block_0
+      name: Texture_Skeleton_Hurt_0
       rect:
         serializedVersion: 2
         x: 66
@@ -131,161 +144,161 @@ TextureImporter:
         width: 77
         height: 47
       alignment: 9
-      pivot: {x: 0.61, y: 0.15}
+      pivot: {x: 0.6115903, y: 0.14887433}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 040de583d46baf94eb10af565ba9d785
-      internalID: -421563234
+      spriteID: d70de8699ad04c647a8c161f6096ef12
+      internalID: -1704433235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Block_1
+      name: Texture_Skeleton_Hurt_1
       rect:
         serializedVersion: 2
-        x: 284
+        x: 282
         y: 72
-        width: 75
-        height: 45
+        width: 81
+        height: 49
       alignment: 9
-      pivot: {x: 0.6401546, y: 0.1542772}
+      pivot: {x: 0.6172312, y: 0.14142017}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b1a03f1094566543aee32d901563067
-      internalID: 1086383263
+      spriteID: ee51f0488fc97d74eab13ea0c17fabb4
+      internalID: -1810534844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Block_2
+      name: Texture_Skeleton_Hurt_2
       rect:
         serializedVersion: 2
-        x: 504
+        x: 499
         y: 72
-        width: 75
-        height: 45
+        width: 84
+        height: 49
       alignment: 9
-      pivot: {x: 0.64052737, y: 0.15360633}
+      pivot: {x: 0.6313615, y: 0.14344585}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb3a576c34f868c4caa04695db228140
-      internalID: 217896733
+      spriteID: 61315ceb3781ae74da412ced55d753c5
+      internalID: -509131519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Block_3
+      name: Texture_Skeleton_Hurt_3
       rect:
         serializedVersion: 2
-        x: 724
+        x: 718
         y: 72
-        width: 75
-        height: 45
+        width: 88
+        height: 48
       alignment: 9
-      pivot: {x: 0.6402889, y: 0.15435368}
+      pivot: {x: 0.614547, y: 0.14511108}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7467aefe84ae3c24babaf48dcd3bfd11
-      internalID: 653524912
+      spriteID: ec6b6ebc300fb394d94c35f8ca53c584
+      internalID: -1246623152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Block_4
+      name: Texture_Skeleton_Hurt_4
       rect:
         serializedVersion: 2
-        x: 944
+        x: 937
         y: 72
-        width: 75
-        height: 45
-      alignment: 9
-      pivot: {x: 0.6389331, y: 0.15389913}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d49bfe90218dc94498effde8e268bb4
-      internalID: 297515298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Block_5
-      rect:
-        serializedVersion: 2
-        x: 1163
-        y: 72
-        width: 76
-        height: 46
-      alignment: 9
-      pivot: {x: 0.65689087, y: 0.15182395}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c949c18c720acda4a9d6c2f55ddc8149
-      internalID: -1917387772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Block_6
-      rect:
-        serializedVersion: 2
-        x: 1382
-        y: 72
-        width: 78
+        width: 89
         height: 47
       alignment: 9
-      pivot: {x: 0.65330935, y: 0.14818898}
+      pivot: {x: 0.6310521, y: 0.14634947}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b787ff83ea673c41a61cf281132ff20
-      internalID: 1154990352
+      spriteID: c53dc9b4944e51542b5aa80077cf373e
+      internalID: -1045895040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Block_7
+      name: Texture_Skeleton_Hurt_5
       rect:
         serializedVersion: 2
-        x: 1603
+        x: 1157
         y: 72
-        width: 79
+        width: 86
         height: 47
       alignment: 9
-      pivot: {x: 0.6327893, y: 0.14739536}
+      pivot: {x: 0.65207976, y: 0.14995688}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79eeb1a1a0bf75044a2e9e6dbb0ff620
-      internalID: -910306098
+      spriteID: 1e4be5b90ac8b4a49ad2c305db00eb4e
+      internalID: -2027466883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 72
+        width: 88
+        height: 47
+      alignment: 9
+      pivot: {x: 0.6484028, y: 0.14776887}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f09fff6d5aad8448e59d86e5aafb2d
+      internalID: 26890101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 72
+        width: 86
+        height: 47
+      alignment: 9
+      pivot: {x: 0.65185124, y: 0.14818898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00be2a4864636ea4eb96c7888f5cb4e3
+      internalID: -1389869176
       vertices: []
       indices: 
       edges: []
@@ -301,14 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Texture_Skeleton_Block_0: -421563234
-      Texture_Skeleton_Block_1: 1086383263
-      Texture_Skeleton_Block_2: 217896733
-      Texture_Skeleton_Block_3: 653524912
-      Texture_Skeleton_Block_4: 297515298
-      Texture_Skeleton_Block_5: -1917387772
-      Texture_Skeleton_Block_6: 1154990352
-      Texture_Skeleton_Block_7: -910306098
+      Texture_Skeleton_Hurt_0: -1704433235
+      Texture_Skeleton_Hurt_1: -1810534844
+      Texture_Skeleton_Hurt_2: -509131519
+      Texture_Skeleton_Hurt_3: -1246623152
+      Texture_Skeleton_Hurt_4: -1045895040
+      Texture_Skeleton_Hurt_5: -2027466883
+      Texture_Skeleton_Hurt_6: 26890101
+      Texture_Skeleton_Hurt_7: -1389869176
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
