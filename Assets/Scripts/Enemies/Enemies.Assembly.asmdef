@@ -2,7 +2,8 @@
     "name": "Enemies.Assembly",
     "rootNamespace": "",
     "references": [
-        "GUID:1c1c95c724dc433478cacaf7f896ac15"
+        "GUID:1c1c95c724dc433478cacaf7f896ac15",
+        "GUID:e4d6b6b2e2bf1ee42b6f14e05d3fc8f0"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

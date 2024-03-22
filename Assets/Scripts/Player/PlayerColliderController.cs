@@ -6,14 +6,14 @@ namespace Player
     [RequireComponent(typeof(Collider2D))]
     public class PlayerColliderController : MonoBehaviour
     {
-        public event Action<Vector3, int, float> OnHitStart;
-        public event Action OnHitEnd;
+        public event Action<Vector3, int, float> PlayerOnHitStart;
+        public event Action PlayerOnHitEnd;
         
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                OnHitStart?.Invoke((transform.position - other.transform.position).normalized, 10, 5f);
+                PlayerOnHitStart?.Invoke((transform.position - other.transform.position).normalized, 10, 5f);
             }
         }
 
@@ -21,7 +21,7 @@ namespace Player
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                OnHitEnd?.Invoke();
+                PlayerOnHitEnd?.Invoke();
             }
         }
     }
