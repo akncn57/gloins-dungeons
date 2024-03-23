@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System;
 
 namespace Enemies.Skeleton
 {
@@ -11,6 +10,14 @@ namespace Enemies.Skeleton
             if (other.gameObject.CompareTag("Player"))
             {
                 InvokeOnHitStartEvent(10);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                InvokeOnHitEndEvent();
             }
         }
     }

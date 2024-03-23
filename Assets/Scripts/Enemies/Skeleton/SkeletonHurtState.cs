@@ -10,6 +10,8 @@ namespace Enemies.Skeleton
 
         public override void OnEnter()
         {
+            EnemyStateMachine.EnemyColliderController.OnHitEnd += HurtEnd;
+            
             EnemyStateMachine.Rigidbody.velocity = Vector2.zero;
             EnemyStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
         }
@@ -21,7 +23,12 @@ namespace Enemies.Skeleton
 
         public override void OnExit()
         {
-            
+            EnemyStateMachine.EnemyColliderController.OnHitEnd -= HurtEnd;
+        }
+
+        private void HurtEnd()
+        {
+            EnemyStateMachine.SwitchState(new SkeletonIdleState(EnemyStateMachine));
         }
     }
 }

@@ -47,7 +47,7 @@ namespace Player
         {
             PlayerStateMachine.HealthController.SpendHealth(_damage);
             Debug.Log("Player Health : " + PlayerStateMachine.HealthController.Health);
-            PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
+            //PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
         }
         
         private void HurtEnd()
