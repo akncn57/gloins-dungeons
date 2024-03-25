@@ -5,35 +5,35 @@ namespace Player
 {
     public class PlayerAnimationEventsTrigger : MonoBehaviour
     {
-        public event Action OnAttackBasicColliderOpen;
-        public event Action OnAttackBasicColliderClose;
-        public event Action OnAttackBasicFinished;
-        public event Action OnHurtStart;
-        public event Action OnHurtEnd;
+        public event Action PlayerOnAttackBasicOverlapOpen;
+        public event Action PlayerOnAttackBasicOverlapClose;
+        public event Action PlayerOnAttackBasicFinished;
+        public event Action PlayerOnHurtStart;
+        public event Action PlayerOnHurtEnd;
 
         public void AttackBasicColliderOpen()
         {
-            OnAttackBasicColliderOpen?.Invoke();
+            PlayerOnAttackBasicOverlapOpen?.Invoke();
         }
     
         public void AttackBasicColliderClose()
         {
-            OnAttackBasicColliderClose?.Invoke();
+            PlayerOnAttackBasicOverlapClose?.Invoke();
         }
         
         public void AttackBasicFinished()
         {
-            OnAttackBasicFinished?.Invoke();
+            PlayerOnAttackBasicFinished?.Invoke();
         }
 
         public void HurtStart()
         {
-            OnHurtStart?.Invoke();
+            PlayerOnHurtStart?.Invoke();
         }
         
         public void HurtEnd()
         {
-            OnHurtEnd?.Invoke();
+            PlayerOnHurtEnd?.Invoke();
         }
     }
 }

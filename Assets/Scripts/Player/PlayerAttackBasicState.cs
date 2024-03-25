@@ -16,9 +16,9 @@ namespace Player
 
         public override void OnEnter()
         {
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen += AttackBasicOpenOverlap;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose += AttackBasicCloseOverlap;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicFinished += AttackBasicFinish;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapOpen += PlayerOnAttackBasicOpenOverlap;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose += PlayerOnAttackBasicCloseOverlap;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished += PlayerOnAttackBasicFinish;
             PlayerStateMachine.PlayerColliderController.PlayerOnHitStart -= CheckOnHurt;
             
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
@@ -32,13 +32,13 @@ namespace Player
 
         public override void OnExit()
         {
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen -= AttackBasicOpenOverlap;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose -= AttackBasicCloseOverlap;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicFinished -= AttackBasicFinish;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapOpen -= PlayerOnAttackBasicOpenOverlap;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose -= PlayerOnAttackBasicCloseOverlap;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished -= PlayerOnAttackBasicFinish;
             PlayerStateMachine.PlayerColliderController.PlayerOnHitStart -= CheckOnHurt;
         }
 
-        private void AttackBasicOpenOverlap()
+        private void PlayerOnAttackBasicOpenOverlap()
         {
             var results = Physics2D.OverlapCapsuleAll(PlayerStateMachine.AttackBasicCollider.transform.position, PlayerStateMachine.AttackBasicCollider.size,
                 PlayerStateMachine.AttackBasicCollider.direction, 0f);
@@ -50,11 +50,12 @@ namespace Player
                 if (!result) continue;
                 var enemy = result.GetComponent<EnemyColliderBaseController>();
                 _hittingEnemies.Add(enemy);
-                enemy.InvokeOnHitStartEvent(10);
+                //TODO: Enemy | Damage, knockbackpower farkli sekilde al.
+                enemy.InvokeOnHitStartEvent(10, (enemy.transform.position - PlayerStateMachine.transform.position).normalized, 2f);
             }
         }
         
-        private void AttackBasicCloseOverlap()
+        private void PlayerOnAttackBasicCloseOverlap()
         {
             foreach (var enemy in _hittingEnemies)
             {
@@ -64,7 +65,7 @@ namespace Player
             _hittingEnemies.Clear();
         }
 
-        private void AttackBasicFinish()
+        private void PlayerOnAttackBasicFinish()
         {
             PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
         }

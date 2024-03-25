@@ -25,9 +25,9 @@ namespace Enemies.Skeleton
             EnemyStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
         }
 
-        private void CheckOnHurt(int damage)
+        private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
         {
-            EnemyStateMachine.SwitchState(new SkeletonHurtState(EnemyStateMachine));
+            EnemyStateMachine.SwitchState(new SkeletonHurtState(EnemyStateMachine, knockBackPosition, 50, knockBackPower));
         }
     }
 }

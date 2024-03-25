@@ -24,8 +24,8 @@ namespace Player
 
         public override void OnEnter()
         {
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtStart += HurtStart;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtEnd += HurtEnd;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtStart += PlayerOnHurtStart;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtEnd += PlayerOnHurtEnd;
             
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
             PlayerStateMachine.HurtParticle.Play();
@@ -39,18 +39,18 @@ namespace Player
 
         public override void OnExit()
         {
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtStart -= HurtStart;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnHurtEnd -= HurtEnd;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtStart -= PlayerOnHurtStart;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtEnd -= PlayerOnHurtEnd;
         }
 
-        private void HurtStart()
+        private void PlayerOnHurtStart()
         {
             PlayerStateMachine.HealthController.SpendHealth(_damage);
             Debug.Log("Player Health : " + PlayerStateMachine.HealthController.Health);
-            //PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
+            PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
         }
         
-        private void HurtEnd()
+        private void PlayerOnHurtEnd()
         {
             PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
         }

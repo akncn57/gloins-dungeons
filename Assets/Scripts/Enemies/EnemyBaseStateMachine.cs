@@ -9,6 +9,7 @@ namespace Enemies
     {
         public abstract HealthController HealthController { get; }
         public abstract EnemyColliderBaseController EnemyColliderController { get; }
+        public abstract EnemyAnimationEventTrigger EnemyAnimationEventTrigger { get; }
         public abstract Rigidbody2D Rigidbody { get; }
         public abstract Animator Animator { get; }
         public abstract ParticleSystem HurtParticle { get; }
