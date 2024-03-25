@@ -33,7 +33,7 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
-            
+            CheckDeath();
         }
 
         public override void OnExit()
@@ -52,6 +52,11 @@ namespace Enemies.Skeleton
         private void EnemyOnHurtEnd()
         {
             EnemyStateMachine.SwitchState(new SkeletonIdleState(EnemyStateMachine));
+        }
+        
+        private void CheckDeath()
+        {
+            if (EnemyStateMachine.HealthController.Health <= 0) EnemyStateMachine.SwitchState(new SkeletonDeathState(EnemyStateMachine));
         }
     }
 }
