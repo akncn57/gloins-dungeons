@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Enemies;
 using UnityEngine;
 
 namespace Player
@@ -5,6 +7,8 @@ namespace Player
     public class PlayerAttackBasicState : PlayerBaseState
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.AttackBasic;
+
+        private readonly List<EnemyColliderBaseController> _hittingEnemies = new();
         
         private readonly int _attackBasicAnimationHash = Animator.StringToHash("Player_Attack_Basic");
         
@@ -12,8 +16,8 @@ namespace Player
 
         public override void OnEnter()
         {
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen += AttackBasicOpenCollider;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose += AttackBasicCloseCollider;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen += AttackBasicOpenOverlap;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose += AttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicFinished += AttackBasicFinish;
             PlayerStateMachine.PlayerColliderController.PlayerOnHitStart -= CheckOnHurt;
             
@@ -28,20 +32,36 @@ namespace Player
 
         public override void OnExit()
         {
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen -= AttackBasicOpenCollider;
-            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose -= AttackBasicCloseCollider;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderOpen -= AttackBasicOpenOverlap;
+            PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicColliderClose -= AttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.OnAttackBasicFinished -= AttackBasicFinish;
             PlayerStateMachine.PlayerColliderController.PlayerOnHitStart -= CheckOnHurt;
         }
 
-        private void AttackBasicOpenCollider()
+        private void AttackBasicOpenOverlap()
         {
-            PlayerStateMachine.AttackBasicColliderObject.SetActive(true);
+            var results = Physics2D.OverlapCapsuleAll(PlayerStateMachine.AttackBasicCollider.transform.position, PlayerStateMachine.AttackBasicCollider.size,
+                PlayerStateMachine.AttackBasicCollider.direction, 0f);
+            
+            _hittingEnemies.Clear();
+            
+            foreach (var result in results)
+            {
+                if (!result) continue;
+                var enemy = result.GetComponent<EnemyColliderBaseController>();
+                _hittingEnemies.Add(enemy);
+                enemy.InvokeOnHitStartEvent(10);
+            }
         }
         
-        private void AttackBasicCloseCollider()
+        private void AttackBasicCloseOverlap()
         {
-            PlayerStateMachine.AttackBasicColliderObject.SetActive(false);
+            foreach (var enemy in _hittingEnemies)
+            {
+                if (!enemy) continue;
+                enemy.InvokeOnHitEndEvent();
+            }
+            _hittingEnemies.Clear();
         }
 
         private void AttackBasicFinish()

@@ -8,12 +8,12 @@ namespace Enemies
         public event Action<int> OnHitStart;
         public event Action OnHitEnd;
 
-        protected void InvokeOnHitStartEvent(int damage)
+        public void InvokeOnHitStartEvent(int damage)
         {
             OnHitStart?.Invoke(damage);
         }
 
-        protected void InvokeOnHitEndEvent()
+        public void InvokeOnHitEndEvent()
         {
             OnHitEnd?.Invoke();
         }

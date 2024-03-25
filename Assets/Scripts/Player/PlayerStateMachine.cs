@@ -3,6 +3,7 @@ using HealthSystem;
 using InputSystem;
 using StateMachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -15,7 +16,7 @@ namespace Player
         public Rigidbody2D RigidBody;
         public Animator Animator;
         public GameObject ParentObject;
-        public GameObject AttackBasicColliderObject;
+        public CapsuleCollider2D AttackBasicCollider;
         public GameObject BlockColliderObject;
         public ParticleSystem HurtParticle;
         public float WalkSpeed;

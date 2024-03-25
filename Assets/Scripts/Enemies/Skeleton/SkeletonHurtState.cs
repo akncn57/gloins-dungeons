@@ -14,6 +14,8 @@ namespace Enemies.Skeleton
             
             EnemyStateMachine.Rigidbody.velocity = Vector2.zero;
             EnemyStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
+            
+            EnemyStateMachine.HurtParticle.Play();
         }
 
         public override void OnTick()
