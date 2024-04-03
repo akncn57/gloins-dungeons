@@ -17,7 +17,7 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
-            
+            DrawChaseOverlayAndCheck();
         }
 
         public override void OnExit()
@@ -28,6 +28,13 @@ namespace Enemies.Skeleton
         private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
         {
             EnemyStateMachine.SwitchState(new SkeletonHurtState(EnemyStateMachine, knockBackPosition, 50, knockBackPower));
+        }
+        
+        private void DrawChaseOverlayAndCheck()
+        {
+            var result = Physics2D.OverlapCircle(EnemyStateMachine.ChaseCollider.transform.position, EnemyStateMachine.ChaseCollider.radius);
+            if (!result) return;
+            EnemyStateMachine.SwitchState(new SkeletonChaseState(EnemyStateMachine));
         }
     }
 }

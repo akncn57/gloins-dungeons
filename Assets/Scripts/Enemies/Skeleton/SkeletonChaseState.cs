@@ -12,7 +12,7 @@ namespace Enemies.Skeleton
 
         public override void OnEnter()
         {
-            
+            Debug.Log("Enemy Chase State");
         }
 
         public override void OnTick()
