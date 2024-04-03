@@ -11,6 +11,7 @@ namespace Enemies.Skeleton
         public override void OnEnter()
         {
             Debug.Log("Enemy Skeleton Death!");
+            EnemyStateMachine.Collider.enabled = false;
             EnemyStateMachine.Rigidbody.velocity = Vector2.zero;
             EnemyStateMachine.Animator.CrossFadeInFixedTime(_deathAnimationHash, 0.1f);
         }

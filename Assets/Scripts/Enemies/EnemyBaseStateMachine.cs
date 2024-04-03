@@ -11,7 +11,9 @@ namespace Enemies
         public abstract EnemyColliderBaseController EnemyColliderController { get; }
         public abstract EnemyAnimationEventTrigger EnemyAnimationEventTrigger { get; }
         public abstract Rigidbody2D Rigidbody { get; }
+        public abstract Collider2D Collider { get; }
         public abstract Animator Animator { get; }
         public abstract ParticleSystem HurtParticle { get; }
+        public abstract float WalkSpeed { get; }
     }
 }
