@@ -1,4 +1,6 @@
-﻿using HealthSystem;
+﻿using System;
+using System.Collections.Generic;
+using HealthSystem;
 using UnityEngine;
 
 namespace Enemies.Skeleton
@@ -13,6 +15,7 @@ namespace Enemies.Skeleton
         [SerializeField] private Collider2D collider;
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
+        [SerializeField] private List<PatrolData> patrolCoordinates;
         [SerializeField] private float walkSpeed;
 
         public override HealthController HealthController => healthController;
@@ -23,6 +26,7 @@ namespace Enemies.Skeleton
         public override CircleCollider2D ChaseCollider => chaseCollider;
         public override Animator Animator => animator;
         public override ParticleSystem HurtParticle => hurtParticle;
+        public override List<PatrolData> PatrolCoordinates => patrolCoordinates;
         public override float WalkSpeed => walkSpeed;
 
         private void Start()
@@ -30,4 +34,12 @@ namespace Enemies.Skeleton
             SwitchState(new SkeletonIdleState(this));
         }
     }
+}
+
+//TODO: Uygun bir yere yada ayri bir script olarak ac.
+[Serializable]
+public class PatrolData
+{
+    public Transform PatrolCoordinate;
+    public bool IsShouldWait;
 }

@@ -17,7 +17,7 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
-            DrawChaseOverlayAndCheck();
+            //DrawChaseOverlayAndCheck();
         }
 
         public override void OnExit()
