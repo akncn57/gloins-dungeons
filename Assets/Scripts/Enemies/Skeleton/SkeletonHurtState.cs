@@ -2,61 +2,50 @@
 
 namespace Enemies.Skeleton
 {
-    public class SkeletonHurtState : EnemyBaseState
+    public class SkeletonHurtState : SkeletonBaseState
     {
         private readonly int _hurtAnimationHash = Animator.StringToHash("Skeleton_Hurt");
-        private Vector3 _hitPosition;
-        private int _damage;
-        private float _knockBackStrength;
         
-        public SkeletonHurtState(
-            EnemyBaseStateMachine enemyStateMachine,
-            Vector3 hitPosition,
-            int damage,
-            float knockBackStrength) : base(enemyStateMachine)
-        {
-            _hitPosition = hitPosition;
-            _damage = damage;
-            _knockBackStrength = knockBackStrength;
-        }
+        public SkeletonHurtState(SkeletonStateMachine enemyStateMachine) : base(enemyStateMachine){}
 
         public override void OnEnter()
         {
-            EnemyStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart += EnemyOnHurtStart;
-            EnemyStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd += EnemyOnHurtEnd;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart += EnemyOnHurtStart;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd += EnemyOnHurtEnd;
             
-            EnemyStateMachine.Rigidbody.velocity = Vector2.zero;
-            EnemyStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
+            SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
+            SkeletonStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
             
-            EnemyStateMachine.HurtParticle.Play();
+            SkeletonStateMachine.HurtParticle.Play();
         }
 
         public override void OnTick()
         {
             CheckDeath();
+            Debug.Log("sa");
         }
 
         public override void OnExit()
         {
-            EnemyStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart -= EnemyOnHurtStart;
-            EnemyStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd -= EnemyOnHurtEnd;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart -= EnemyOnHurtStart;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd -= EnemyOnHurtEnd;
         }
 
         private void EnemyOnHurtStart()
         {
-            EnemyStateMachine.HealthController.SpendHealth(_damage);
-            Debug.Log("Enemy Skeleton Health : " + EnemyStateMachine.HealthController.Health);
-            EnemyStateMachine.Rigidbody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, EnemyStateMachine.Rigidbody.velocity.y);
+            SkeletonStateMachine.HealthController.SpendHealth(SkeletonStateMachine.HitData.Damage);
+            Debug.Log("Enemy Skeleton Health : " + SkeletonStateMachine.HealthController.Health);
+            SkeletonStateMachine.Rigidbody.velocity = new Vector2(SkeletonStateMachine.HitData.HitPosition.x * SkeletonStateMachine.HitData.KnockBackStrength, SkeletonStateMachine.Rigidbody.velocity.y);
         }
 
         private void EnemyOnHurtEnd()
         {
-            EnemyStateMachine.SwitchState(new SkeletonIdleState(EnemyStateMachine));
+            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
         }
         
         private void CheckDeath()
         {
-            if (EnemyStateMachine.HealthController.Health <= 0) EnemyStateMachine.SwitchState(new SkeletonDeathState(EnemyStateMachine));
+            if (SkeletonStateMachine.HealthController.Health <= 0) SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonDeathState);
         }
     }
 }

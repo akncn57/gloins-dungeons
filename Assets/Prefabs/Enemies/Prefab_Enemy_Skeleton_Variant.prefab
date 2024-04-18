@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ca6d837cdc415b9db6bf17b8503838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyBaseStateMachine: {fileID: 6769109018153971998}
 --- !u!114 &2128871182171178337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +368,7 @@ MonoBehaviour:
   collider: {fileID: 3439191373737910293}
   chaseCollider: {fileID: 2930696307945057985}
   hurtParticle: {fileID: 6422862922965006203}
+  patrolCoordinates: []
   walkSpeed: 0
 --- !u!4 &2135900426838073759 stripped
 Transform:

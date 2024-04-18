@@ -15,7 +15,7 @@ namespace Enemies.Skeleton
         [SerializeField] private Collider2D collider;
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
-        [SerializeField] private List<PatrolData> patrolCoordinates;
+        [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
         [SerializeField] private float walkSpeed;
 
         public override HealthController HealthController => healthController;
@@ -26,20 +26,76 @@ namespace Enemies.Skeleton
         public override CircleCollider2D ChaseCollider => chaseCollider;
         public override Animator Animator => animator;
         public override ParticleSystem HurtParticle => hurtParticle;
-        public override List<PatrolData> PatrolCoordinates => patrolCoordinates;
+        public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
+        public override EnemyHitData HitData { get; set; }
         public override float WalkSpeed => walkSpeed;
+
+        public SkeletonChaseState SkeletonChaseState
+        {
+            get;
+            private set;
+        }
+        
+        public SkeletonDeathState SkeletonDeathState
+        {
+            get;
+            private set;
+        }
+        
+        public SkeletonHurtState SkeletonHurtState
+        {
+            get;
+            private set;
+        }
+        
+        public SkeletonIdleState SkeletonIdleState
+        {
+            get;
+            private set;
+        }
+        
+        public SkeletonPatrolState SkeletonPatrolState
+        {
+            get;
+            private set;
+        }
+        
+
+        private void Awake()
+        {
+            SkeletonChaseState = new SkeletonChaseState(this);
+            SkeletonDeathState = new SkeletonDeathState(this);
+            SkeletonHurtState = new SkeletonHurtState(this);
+            SkeletonIdleState = new SkeletonIdleState(this);
+            SkeletonPatrolState = new SkeletonPatrolState(this);
+        }
 
         private void Start()
         {
-            SwitchState(new SkeletonIdleState(this));
+            SwitchState(SkeletonIdleState);
         }
     }
 }
 
 //TODO: Uygun bir yere yada ayri bir script olarak ac.
 [Serializable]
-public class PatrolData
+public class EnemyPatrolData
 {
     public Transform PatrolCoordinate;
     public bool IsShouldWait;
+}
+
+//TODO: Uygun bir yere yada ayri bir script olarak ac.
+public class EnemyHitData
+{
+    public Vector3 HitPosition;
+    public int Damage;
+    public float KnockBackStrength;
+
+    public EnemyHitData(Vector3 hitPosition, int damage, float knockBackStrength)
+    {
+        HitPosition = hitPosition;
+        Damage = damage;
+        KnockBackStrength = knockBackStrength;
+    }
 }

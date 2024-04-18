@@ -2,11 +2,11 @@
 
 namespace Enemies.Skeleton
 {
-    public class SkeletonChaseState : EnemyBaseState
+    public class SkeletonChaseState : SkeletonBaseState
     {
         private readonly int _walkAnimationHash = Animator.StringToHash("Skeleton_Walk");
         
-        public SkeletonChaseState(EnemyBaseStateMachine enemyStateMachine) : base(enemyStateMachine)
+        public SkeletonChaseState(SkeletonStateMachine enemyStateMachine) : base(enemyStateMachine)
         {
         }
 

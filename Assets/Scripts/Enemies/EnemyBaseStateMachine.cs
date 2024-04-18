@@ -15,7 +15,8 @@ namespace Enemies
         public abstract CircleCollider2D ChaseCollider { get; }
         public abstract Animator Animator { get; }
         public abstract ParticleSystem HurtParticle { get; }
-        public abstract List<PatrolData> PatrolCoordinates { get; }
+        public abstract List<EnemyPatrolData> PatrolCoordinates { get; }
+        public abstract EnemyHitData HitData { get; set; }
         public abstract float WalkSpeed { get; }
     }
 }
