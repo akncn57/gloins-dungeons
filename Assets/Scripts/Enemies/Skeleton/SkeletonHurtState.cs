@@ -22,7 +22,6 @@ namespace Enemies.Skeleton
         public override void OnTick()
         {
             CheckDeath();
-            Debug.Log("sa");
         }
 
         public override void OnExit()
