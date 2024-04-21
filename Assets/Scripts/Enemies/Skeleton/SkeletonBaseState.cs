@@ -1,12 +1,16 @@
-﻿namespace Enemies.Skeleton
+﻿using Zenject;
+
+namespace Enemies.Skeleton
 {
     public class SkeletonBaseState : EnemyBaseState
     {
         protected SkeletonStateMachine SkeletonStateMachine;
+        protected IInstantiator Instantiator;
         
-        protected SkeletonBaseState(SkeletonStateMachine SkeletonStateMachine)
+        protected SkeletonBaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator)
         {
-            this.SkeletonStateMachine = SkeletonStateMachine;
+            SkeletonStateMachine = skeletonStateMachine;
+            Instantiator = instantiator;
         }
 
         public override void OnEnter()

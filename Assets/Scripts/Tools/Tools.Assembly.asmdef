@@ -1,3 +1,4 @@
 {
-	"name": "Tools.Assembly"
+	"name": "Tools.Assembly",
+	"references":[ "GUID:15a6954ace0fd1840b9c7f65a3a72997" ]
 }

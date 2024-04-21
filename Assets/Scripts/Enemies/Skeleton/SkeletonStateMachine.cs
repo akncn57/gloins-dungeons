@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using HealthSystem;
 using UnityEngine;
-using UtilScripts;
 using Zenject;
 
 namespace Enemies.Skeleton
@@ -32,6 +30,8 @@ namespace Enemies.Skeleton
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
         public override float WalkSpeed => walkSpeed;
+
+        [Inject] public IInstantiator Instantiator;
 
         public SkeletonChaseState SkeletonChaseState
         {
@@ -66,11 +66,11 @@ namespace Enemies.Skeleton
 
         private void Awake()
         {
-            SkeletonChaseState = new SkeletonChaseState(this);
-            SkeletonDeathState = new SkeletonDeathState(this);
-            SkeletonHurtState = new SkeletonHurtState(this);
-            SkeletonIdleState = new SkeletonIdleState(this);
-            SkeletonPatrolState = new SkeletonPatrolState(this);
+            SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});
+            SkeletonDeathState = Instantiator.Instantiate<SkeletonDeathState>(new object[]{this});
+            SkeletonHurtState = Instantiator.Instantiate<SkeletonHurtState>(new object[]{this});
+            SkeletonIdleState = Instantiator.Instantiate<SkeletonIdleState>(new object[]{this});
+            SkeletonPatrolState = Instantiator.Instantiate<SkeletonPatrolState>(new object[]{this});
         }
 
         private void Start()

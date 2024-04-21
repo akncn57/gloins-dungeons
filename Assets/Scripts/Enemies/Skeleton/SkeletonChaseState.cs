@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace Enemies.Skeleton
 {
@@ -6,9 +7,7 @@ namespace Enemies.Skeleton
     {
         private readonly int _walkAnimationHash = Animator.StringToHash("Skeleton_Walk");
         
-        public SkeletonChaseState(SkeletonStateMachine enemyStateMachine) : base(enemyStateMachine)
-        {
-        }
+        public SkeletonChaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
 
         public override void OnEnter()
         {

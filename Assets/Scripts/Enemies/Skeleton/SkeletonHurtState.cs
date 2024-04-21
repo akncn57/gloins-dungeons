@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace Enemies.Skeleton
 {
@@ -6,7 +7,7 @@ namespace Enemies.Skeleton
     {
         private readonly int _hurtAnimationHash = Animator.StringToHash("Skeleton_Hurt");
         
-        public SkeletonHurtState(SkeletonStateMachine enemyStateMachine) : base(enemyStateMachine){}
+        public SkeletonHurtState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
 
         public override void OnEnter()
         {
