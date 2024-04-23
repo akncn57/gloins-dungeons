@@ -86,6 +86,7 @@ public class EnemyPatrolData
 {
     public Transform PatrolCoordinate;
     public bool IsShouldWait;
+    public bool IsCompleted;
 }
 
 //TODO: Uygun bir yere yada ayri bir script olarak ac.

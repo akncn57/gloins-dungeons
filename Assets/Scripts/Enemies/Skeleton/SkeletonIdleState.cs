@@ -13,7 +13,7 @@ namespace Enemies.Skeleton
         
         public override void OnEnter()
         {
-            _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{5});
+            _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{3});
             
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
             _genericTimer.OnTimerFinished += CheckIdleWaitFinished;
@@ -39,7 +39,7 @@ namespace Enemies.Skeleton
 
         private void CheckIdleWaitFinished()
         {
-            Debug.Log("Skeleton enter Patrol State!");
+            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonPatrolState);
         }
         
         // private void DrawChaseOverlayAndCheck()
