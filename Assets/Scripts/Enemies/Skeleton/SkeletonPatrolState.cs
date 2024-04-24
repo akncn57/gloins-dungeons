@@ -14,7 +14,7 @@ namespace Enemies.Skeleton
         {
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
             
-            if (_patrolIndex > SkeletonStateMachine.PatrolCoordinates.Count) _patrolIndex = 0;
+            if (_patrolIndex >= SkeletonStateMachine.PatrolCoordinates.Count) _patrolIndex = 0;
         }
 
         public override void OnTick()
@@ -35,8 +35,20 @@ namespace Enemies.Skeleton
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
                 return;
             }
-            
-            SkeletonStateMachine.Rigidbody.velocity = (coordinate - SkeletonStateMachine.Rigidbody.transform.position).normalized * SkeletonStateMachine.WalkSpeed;
+
+            var movement = coordinate - SkeletonStateMachine.Rigidbody.transform.position;
+            SkeletonStateMachine.Rigidbody.velocity = movement.normalized * SkeletonStateMachine.WalkSpeed;
+            Facing(movement.x);
+        }
+        
+        private void Facing(float horizontalMovement)
+        {
+            SkeletonStateMachine.ParentObject.transform.localScale = horizontalMovement switch
+            {
+                > 0 => new Vector3(1f, 1f, 1f),
+                < 0 => new Vector3(-1f, 1f, 1f),
+                _ => SkeletonStateMachine.ParentObject.transform.localScale
+            };
         }
     }
 }
