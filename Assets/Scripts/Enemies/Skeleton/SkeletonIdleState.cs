@@ -24,7 +24,7 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
-            //DrawChaseOverlayAndCheck();
+            DrawChaseOverlayAndCheck();
         }
 
         public override void OnExit()
@@ -43,11 +43,19 @@ namespace Enemies.Skeleton
             SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonPatrolState);
         }
         
-        // private void DrawChaseOverlayAndCheck()
-        // {
-        //     var result = Physics2D.OverlapCircle(EnemyStateMachine.ChaseCollider.transform.position, EnemyStateMachine.ChaseCollider.radius);
-        //     if (!result) return;
-        //     EnemyStateMachine.SwitchState(new SkeletonChaseState(EnemyStateMachine));
-        // }
+        private void DrawChaseOverlayAndCheck()
+        {
+            var results = Physics2D.OverlapCircleAll(SkeletonStateMachine.ChaseCollider.transform.position, SkeletonStateMachine.ChaseCollider.radius);
+            
+            foreach (var result in results)
+            {
+                if (!result) continue;
+                
+                if (result.CompareTag("Player"))
+                {
+                    SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonChaseState);
+                }
+            }
+        }
     }
 }

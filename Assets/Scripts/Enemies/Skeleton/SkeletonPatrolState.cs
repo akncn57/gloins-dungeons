@@ -26,6 +26,8 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
+            DrawChaseOverlayAndCheck();
+            
             if (!SkeletonStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted)
                 GoPatrolCoordinate(SkeletonStateMachine.PatrolCoordinates[_patrolIndex].PatrolCoordinate.position);
         }
@@ -65,6 +67,21 @@ namespace Enemies.Skeleton
                 < 0 => new Vector3(-1f, 1f, 1f),
                 _ => SkeletonStateMachine.ParentObject.transform.localScale
             };
+        }
+        
+        private void DrawChaseOverlayAndCheck()
+        {
+            var results = Physics2D.OverlapCircleAll(SkeletonStateMachine.ChaseCollider.transform.position, SkeletonStateMachine.ChaseCollider.radius);
+            
+            foreach (var result in results)
+            {
+                if (!result) continue;
+                
+                if (result.CompareTag("Player"))
+                {
+                    SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonChaseState);
+                }
+            }
         }
     }
 }
