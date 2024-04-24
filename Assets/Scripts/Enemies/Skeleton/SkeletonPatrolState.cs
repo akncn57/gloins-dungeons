@@ -15,13 +15,19 @@ namespace Enemies.Skeleton
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
             
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
-            
-            if (_patrolIndex >= SkeletonStateMachine.PatrolCoordinates.Count) _patrolIndex = 0;
+
+            if (_patrolIndex >= SkeletonStateMachine.PatrolCoordinates.Count)
+            {
+                SkeletonStateMachine.ResetPatrolCoordinateStatus();
+                SkeletonStateMachine.PatrolCoordinates.Reverse();
+                _patrolIndex = 0;
+            }
         }
 
         public override void OnTick()
         {
-            GoPatrolCoordinate(SkeletonStateMachine.PatrolCoordinates[_patrolIndex].PatrolCoordinate.position);
+            if (!SkeletonStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted)
+                GoPatrolCoordinate(SkeletonStateMachine.PatrolCoordinates[_patrolIndex].PatrolCoordinate.position);
         }
 
         public override void OnExit()
@@ -40,6 +46,7 @@ namespace Enemies.Skeleton
         {
             if ((SkeletonStateMachine.Rigidbody.transform.position - coordinate).magnitude < 0.1f)
             {
+                SkeletonStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted = true;
                 SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
                 return;

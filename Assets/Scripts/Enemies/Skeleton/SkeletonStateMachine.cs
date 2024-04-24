@@ -79,6 +79,14 @@ namespace Enemies.Skeleton
         {
             SwitchState(SkeletonIdleState);
         }
+
+        public void ResetPatrolCoordinateStatus()
+        {
+            foreach (var coordinate in PatrolCoordinates)
+            {
+                coordinate.IsCompleted = false;
+            }
+        }
     }
 }
 
@@ -87,7 +95,6 @@ namespace Enemies.Skeleton
 public class EnemyPatrolData
 {
     public Transform PatrolCoordinate;
-    public bool IsShouldWait;
     public bool IsCompleted;
 }
 
