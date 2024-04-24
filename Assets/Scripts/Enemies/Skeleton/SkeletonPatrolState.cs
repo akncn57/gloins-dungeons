@@ -12,6 +12,8 @@ namespace Enemies.Skeleton
         
         public override void OnEnter()
         {
+            SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
+            
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
             
             if (_patrolIndex >= SkeletonStateMachine.PatrolCoordinates.Count) _patrolIndex = 0;
@@ -24,7 +26,14 @@ namespace Enemies.Skeleton
 
         public override void OnExit()
         {
+            SkeletonStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
+            
             _patrolIndex++;
+        }
+        
+        private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonHurtState);
         }
 
         private void GoPatrolCoordinate(Vector3 coordinate)
