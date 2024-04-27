@@ -13,8 +13,6 @@ namespace Enemies.Skeleton
         public override void OnEnter()
         {
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
-            
-            Debug.Log("Enemy Chase State");
         }
 
         public override void OnTick()
@@ -31,8 +29,7 @@ namespace Enemies.Skeleton
         {
             if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 1f)
             {
-                SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
-                Debug.Log("Skeleton Attack Basic State!");
+                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
                 return;
             }
             

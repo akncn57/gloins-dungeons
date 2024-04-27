@@ -64,6 +64,12 @@ namespace Enemies.Skeleton
             get;
             private set;
         }
+
+        public SkeletonAttackBasicState SkeletonAttackBasicState
+        {
+            get;
+            private set;
+        }
         
 
         private void Awake()
@@ -73,6 +79,7 @@ namespace Enemies.Skeleton
             SkeletonHurtState = Instantiator.Instantiate<SkeletonHurtState>(new object[]{this});
             SkeletonIdleState = Instantiator.Instantiate<SkeletonIdleState>(new object[]{this});
             SkeletonPatrolState = Instantiator.Instantiate<SkeletonPatrolState>(new object[]{this});
+            SkeletonAttackBasicState = Instantiator.Instantiate<SkeletonAttackBasicState>(new object[]{this});
         }
 
         private void Start()
