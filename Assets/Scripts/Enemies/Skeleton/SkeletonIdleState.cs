@@ -53,6 +53,7 @@ namespace Enemies.Skeleton
                 
                 if (result.CompareTag("Player"))
                 {
+                    SkeletonStateMachine.SkeletonChaseState.Init(result.gameObject);
                     SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonChaseState);
                 }
             }
