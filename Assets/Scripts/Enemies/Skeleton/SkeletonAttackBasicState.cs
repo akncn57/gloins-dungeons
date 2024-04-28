@@ -11,9 +11,10 @@ namespace Enemies.Skeleton
 
         public override void OnEnter()
         {
-            SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += SkeletonOnAttackBasicFinish;
             
-            Debug.Log("Enemy Attack Basic State");
+            SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
+            SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
         }
 
         public override void OnTick()
@@ -23,7 +24,12 @@ namespace Enemies.Skeleton
 
         public override void OnExit()
         {
-            
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished -= SkeletonOnAttackBasicFinish;
+        }
+        
+        private void SkeletonOnAttackBasicFinish()
+        {
+            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
         }
     }
 }
