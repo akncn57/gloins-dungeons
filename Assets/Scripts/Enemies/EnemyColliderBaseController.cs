@@ -1,24 +1,22 @@
 ﻿using System;
+using ColliderController;
 using UnityEngine;
 
 namespace Enemies
 {
-    public class EnemyColliderBaseController : MonoBehaviour
+    public class EnemyColliderBaseController : ColliderControllerBase
     {
         [SerializeField] private EnemyBaseStateMachine enemyBaseStateMachine;
-        
-        public event Action<int, Vector3, float> OnHitStart;
-        public event Action OnHitEnd;
 
-        public void InvokeOnHitStartEvent(int damage, Vector3 knockBackPosition, float knockBackPower)
+        public override void InvokeOnHitStartEvent(int damage, Vector3 knockBackPosition, float knockBackPower)
         {
-            OnHitStart?.Invoke(damage, knockBackPosition, knockBackPower);
+            base.InvokeOnHitStartEvent(damage, knockBackPosition, knockBackPower);
             enemyBaseStateMachine.HitData = new EnemyHitData(knockBackPosition, damage, knockBackPower);
         }
 
-        public void InvokeOnHitEndEvent()
+        public override void InvokeOnHitEndEvent()
         {
-            OnHitEnd?.Invoke();
+            base.InvokeOnHitEndEvent();
         }
     }
 }

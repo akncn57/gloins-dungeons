@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ColliderController;
 using Enemies;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ namespace Player
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.AttackBasic;
 
-        private readonly List<EnemyColliderBaseController> _hittingEnemies = new();
+        private readonly List<ColliderControllerBase> _hittingEnemies = new();
         
         private readonly int _attackBasicAnimationHash = Animator.StringToHash("Player_Attack_Basic");
         
@@ -48,7 +49,7 @@ namespace Player
             foreach (var result in results)
             {
                 if (!result) continue;
-                var enemy = result.GetComponent<EnemyColliderBaseController>();
+                var enemy = result.GetComponent<ColliderControllerBase>();
                 _hittingEnemies.Add(enemy);
                 //TODO: Enemy | Damage, knockbackpower farkli sekilde al.
                 enemy.InvokeOnHitStartEvent(10, (enemy.transform.position - PlayerStateMachine.transform.position).normalized, 2f);

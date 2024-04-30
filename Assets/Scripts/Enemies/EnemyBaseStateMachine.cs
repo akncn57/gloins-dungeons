@@ -12,6 +12,7 @@ namespace Enemies
         public abstract EnemyAnimationEventTrigger EnemyAnimationEventTrigger { get; }
         public abstract Rigidbody2D Rigidbody { get; }
         public abstract Collider2D Collider { get; }
+        public abstract CapsuleCollider2D AttackBasicCollider { get; }
         public abstract GameObject ParentObject { get; }
         public abstract CircleCollider2D ChaseCollider { get; }
         public abstract Animator Animator { get; }

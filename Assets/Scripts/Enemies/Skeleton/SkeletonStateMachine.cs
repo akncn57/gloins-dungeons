@@ -14,6 +14,7 @@ namespace Enemies.Skeleton
         [SerializeField] private Rigidbody2D rigidBody;
         [SerializeField] private Animator animator;
         [SerializeField] private Collider2D collider;
+        [SerializeField] private CapsuleCollider2D attackBasicCollider;
         [SerializeField] private GameObject parentObject;
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
@@ -25,6 +26,7 @@ namespace Enemies.Skeleton
         public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => skeletonAnimationEventTrigger;
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
+        public override CapsuleCollider2D AttackBasicCollider => attackBasicCollider;
         public override GameObject ParentObject => parentObject;
         public override CircleCollider2D ChaseCollider => chaseCollider;
         public override Animator Animator => animator;
