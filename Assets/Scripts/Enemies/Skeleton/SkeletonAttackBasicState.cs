@@ -18,6 +18,7 @@ namespace Enemies.Skeleton
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += SkeletonOnAttackBasicOpenOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose += SkeletonOnAttackBasicCloseOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += SkeletonOnAttackBasicFinish;
+            SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
             
             SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
@@ -33,13 +34,14 @@ namespace Enemies.Skeleton
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen -= SkeletonOnAttackBasicOpenOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose -= SkeletonOnAttackBasicCloseOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished -= SkeletonOnAttackBasicFinish;
+            SkeletonStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
         }
 
         private void SkeletonOnAttackBasicOpenOverlap()
         {
             var results = Physics2D.OverlapCapsuleAll(SkeletonStateMachine.AttackBasicCollider.transform.position, SkeletonStateMachine.AttackBasicCollider.size,
                 SkeletonStateMachine.AttackBasicCollider.direction, 0f);
-            
+            Debug.Log("Skeleton Result : " + results);
             _hittingEnemies.Clear();
             
             foreach (var result in results)
@@ -64,6 +66,11 @@ namespace Enemies.Skeleton
         private void SkeletonOnAttackBasicFinish()
         {
             SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
+        }
+        
+        private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonHurtState);
         }
     }
 }

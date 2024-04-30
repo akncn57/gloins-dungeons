@@ -20,7 +20,7 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapOpen += PlayerOnAttackBasicOpenOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose += PlayerOnAttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished += PlayerOnAttackBasicFinish;
-            PlayerStateMachine.PlayerColliderController.PlayerOnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
@@ -36,14 +36,14 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapOpen -= PlayerOnAttackBasicOpenOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose -= PlayerOnAttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished -= PlayerOnAttackBasicFinish;
-            PlayerStateMachine.PlayerColliderController.PlayerOnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
         }
 
         private void PlayerOnAttackBasicOpenOverlap()
         {
             var results = Physics2D.OverlapCapsuleAll(PlayerStateMachine.AttackBasicCollider.transform.position, PlayerStateMachine.AttackBasicCollider.size,
                 PlayerStateMachine.AttackBasicCollider.direction, 0f);
-            
+            Debug.Log("Player Result : " + results);
             _hittingEnemies.Clear();
             
             foreach (var result in results)
@@ -71,7 +71,7 @@ namespace Player
             PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
         }
         
-        private void CheckOnHurt(Vector3 hitPosition, int damage, float knockBackStrength)
+        private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
         {
             PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition, damage, knockBackStrength));
         }

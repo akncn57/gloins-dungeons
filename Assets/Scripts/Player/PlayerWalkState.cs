@@ -13,7 +13,7 @@ namespace Player
         public override void OnEnter()
         {
             PlayerStateMachine.InputReader.AttackBasicEvent += CheckAttackBasic;
-            PlayerStateMachine.PlayerColliderController.PlayerOnHitStart += CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
         }
@@ -33,7 +33,7 @@ namespace Player
         public override void OnExit()
         {
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
-            PlayerStateMachine.PlayerColliderController.PlayerOnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
         }
 
         private void Movement(Vector2 movement)
@@ -57,7 +57,7 @@ namespace Player
             PlayerStateMachine.SwitchState(new PlayerAttackBasicState(PlayerStateMachine));
         }
         
-        private void CheckOnHurt(Vector3 hitPosition, int damage, float knockBackStrength)
+        private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
         {
             PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition, damage, knockBackStrength));
         }

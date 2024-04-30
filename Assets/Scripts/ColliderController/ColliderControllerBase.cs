@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ColliderController
 {
-    public abstract class ColliderControllerBase : MonoBehaviour
+    public class ColliderControllerBase : MonoBehaviour
     {
         public event Action<int, Vector3, float> OnHitStart;
         public event Action OnHitEnd;

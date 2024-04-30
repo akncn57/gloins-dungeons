@@ -27,7 +27,7 @@ namespace Enemies.Skeleton
 
         private void ApproachPlayer(Vector3 playerPosition)
         {
-            if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 1f)
+            if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 1.3f)
             {
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
                 return;
