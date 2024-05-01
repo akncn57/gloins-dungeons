@@ -14,7 +14,6 @@ namespace Player
 
         public override void OnEnter()
         {
-            PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
             PlayerStateMachine.BlockColliderObject.SetActive(true);
@@ -34,7 +33,6 @@ namespace Player
 
         public override void OnExit()
         {
-            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
             
             PlayerStateMachine.BlockColliderObject.SetActive(false);

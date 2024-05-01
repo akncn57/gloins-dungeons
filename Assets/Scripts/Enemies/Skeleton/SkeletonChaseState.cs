@@ -56,7 +56,6 @@ namespace Enemies.Skeleton
                 }
             }
 
-            Debug.Log(closestPosition);
             return closestPosition;
         }
         
