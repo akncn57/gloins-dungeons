@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using CustomInterfaces;
+using UnityEngine;
 using Zenject;
 
 namespace Enemies.Skeleton
@@ -6,7 +8,7 @@ namespace Enemies.Skeleton
     public class SkeletonChaseState : SkeletonBaseState
     {
         private readonly int _walkAnimationHash = Animator.StringToHash("Skeleton_Walk");
-        private GameObject _playerGameObject;
+        private List<Transform> _enemyChasePositionsList;
 
         public SkeletonChaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
 
@@ -17,7 +19,7 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
-            ApproachPlayer(_playerGameObject.transform.position);
+            ApproachPlayer(FindClosestPosition(SkeletonStateMachine.Rigidbody.position));
         }
 
         public override void OnExit()
@@ -27,7 +29,7 @@ namespace Enemies.Skeleton
 
         private void ApproachPlayer(Vector3 playerPosition)
         {
-            if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 1.3f)
+            if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 0.1f)
             {
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
                 return;
@@ -36,6 +38,26 @@ namespace Enemies.Skeleton
             var movement = playerPosition - SkeletonStateMachine.Rigidbody.transform.position;
             SkeletonStateMachine.Rigidbody.velocity = movement.normalized * SkeletonStateMachine.WalkSpeed;
             Facing(movement.x);
+        }
+        
+        private Vector3 FindClosestPosition(Vector3 targetPosition)
+        {
+            var minDistance = Mathf.Infinity;
+            var closestPosition = Vector3.zero;
+            
+            foreach (var enemyChasePosition in _enemyChasePositionsList)
+            {
+                var distance = Vector3.Distance(targetPosition, enemyChasePosition.position);
+                
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    closestPosition = enemyChasePosition.position;
+                }
+            }
+
+            Debug.Log(closestPosition);
+            return closestPosition;
         }
         
         private void Facing(float horizontalMovement)
@@ -48,9 +70,9 @@ namespace Enemies.Skeleton
             };
         }
 
-        public void Init(GameObject playerGameObject)
+        public void Init(IPlayer player)
         {
-            _playerGameObject = playerGameObject;
+            _enemyChasePositionsList = player.EnemyChasePositions;
         }
     }
 }

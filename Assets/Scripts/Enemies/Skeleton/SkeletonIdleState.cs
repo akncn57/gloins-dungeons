@@ -1,4 +1,5 @@
-﻿using Tools;
+﻿using CustomInterfaces;
+using Tools;
 using UnityEngine;
 using Zenject;
 
@@ -50,10 +51,13 @@ namespace Enemies.Skeleton
             foreach (var result in results)
             {
                 if (!result) continue;
-                
-                if (result.CompareTag("Player"))
+
+                if (!result.TryGetComponent(out IPlayer player))
+                    player = result.GetComponentInParent<IPlayer>();
+
+                if (player != null)
                 {
-                    SkeletonStateMachine.SkeletonChaseState.Init(result.gameObject);
+                    SkeletonStateMachine.SkeletonChaseState.Init(player);
                     SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonChaseState);
                 }
             }

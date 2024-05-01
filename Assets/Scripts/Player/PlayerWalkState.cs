@@ -14,6 +14,7 @@ namespace Player
         {
             PlayerStateMachine.InputReader.AttackBasicEvent += CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
         }
@@ -34,6 +35,7 @@ namespace Player
         {
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
         }
 
         private void Movement(Vector2 movement)

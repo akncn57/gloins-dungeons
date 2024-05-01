@@ -253,6 +253,37 @@ CapsuleCollider2D:
   m_Offset: {x: -0.24, y: 0}
   m_Size: {x: 0.96, y: 0.5}
   m_Direction: 1
+--- !u!1 &5158457682762376750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3142007250446321171}
+  m_Layer: 0
+  m_Name: Enemy_Chase_Position_Left
+  m_TagString: EnemyChasePosition
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3142007250446321171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158457682762376750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 835681899011389610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5415165778118375842
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +318,8 @@ Transform:
   - {fileID: 3620759674405059476}
   - {fileID: 713872783321104047}
   - {fileID: 3824275064031769090}
+  - {fileID: 4711215615441751233}
+  - {fileID: 3142007250446321171}
   m_Father: {fileID: 7176032953458692562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5866446098461063905
@@ -387,6 +420,9 @@ MonoBehaviour:
   BlockColliderObject: {fileID: 2240762866422721845}
   HurtParticle: {fileID: 2295064625310618213}
   WalkSpeed: 3
+  EnemyChasePositionsList:
+  - {fileID: 4711215615441751233}
+  - {fileID: 3142007250446321171}
 --- !u!114 &588573030473328513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +518,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1c5311e081a7c4cb5923a059594ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8194642622634777720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4711215615441751233}
+  m_Layer: 0
+  m_Name: Enemy_Chase_Position_Right
+  m_TagString: EnemyChasePosition
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4711215615441751233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8194642622634777720}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 835681899011389610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1255169729584720556
 PrefabInstance:
   m_ObjectHideFlags: 0

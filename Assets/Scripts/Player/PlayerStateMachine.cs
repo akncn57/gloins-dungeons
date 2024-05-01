@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using CustomInterfaces;
 using HealthSystem;
 using InputSystem;
 using StateMachine;
@@ -7,7 +9,7 @@ using UnityEngine.Serialization;
 
 namespace Player
 {
-    public class PlayerStateMachine : BaseStateMachine
+    public class PlayerStateMachine : BaseStateMachine, IPlayer
     {
         public InputReader InputReader;
         public PlayerAnimationEventsTrigger PlayerAnimationEventsTrigger;
@@ -20,6 +22,13 @@ namespace Player
         public GameObject BlockColliderObject;
         public ParticleSystem HurtParticle;
         public float WalkSpeed;
+        public List<Transform> EnemyChasePositionsList;
+
+        public List<Transform> EnemyChasePositions
+        {
+            get => EnemyChasePositionsList;
+            set => EnemyChasePositionsList = value;
+        }
 
         private void Start()
         {

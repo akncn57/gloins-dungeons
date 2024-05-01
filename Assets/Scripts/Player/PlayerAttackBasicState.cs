@@ -21,6 +21,7 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose += PlayerOnAttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished += PlayerOnAttackBasicFinish;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
@@ -37,6 +38,7 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose -= PlayerOnAttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished -= PlayerOnAttackBasicFinish;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
         }
 
         private void PlayerOnAttackBasicOpenOverlap()

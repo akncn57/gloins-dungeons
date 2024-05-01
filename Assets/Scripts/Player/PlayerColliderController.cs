@@ -7,8 +7,8 @@ namespace Player
     [RequireComponent(typeof(Collider2D))]
     public class PlayerColliderController : ColliderControllerBase
     {
-        // public event Action<Vector3, int, float> PlayerOnHitStart;
-        // public event Action PlayerOnHitEnd;
+        public event Action<int, Vector3, float> PlayerColliderOnHitStart;
+        public event Action PlayerColliderOnHitEnd;
 
         public override void InvokeOnHitStartEvent(int damage, Vector3 knockBackPosition, float knockBackPower)
         {
@@ -20,20 +20,20 @@ namespace Player
             base.InvokeOnHitEndEvent();
         }
 
-        // private void OnTriggerEnter2D(Collider2D other)
-        // {
-        //     if (other.gameObject.CompareTag("Enemy"))
-        //     {
-        //         PlayerOnHitStart?.Invoke((transform.position - other.transform.position).normalized, 10, 5f);
-        //     }
-        // }
-        //
-        // private void OnTriggerExit2D(Collider2D other)
-        // {
-        //     if (other.gameObject.CompareTag("Enemy"))
-        //     {
-        //         PlayerOnHitEnd?.Invoke();
-        //     }
-        // }
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                PlayerColliderOnHitStart?.Invoke(10, (transform.position - other.transform.position).normalized, 5f);
+            }
+        }
+        
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                PlayerColliderOnHitEnd?.Invoke();
+            }
+        }
     }
 }

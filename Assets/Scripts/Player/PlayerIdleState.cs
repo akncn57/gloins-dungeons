@@ -14,6 +14,7 @@ namespace Player
         {
             PlayerStateMachine.InputReader.AttackBasicEvent += CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationHash, 0.1f);
         }
@@ -31,6 +32,7 @@ namespace Player
         {
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
         }
         
         private void CheckAttackBasic()
