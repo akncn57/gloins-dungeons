@@ -25,7 +25,7 @@ namespace Player
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
             
             if (!PlayerStateMachine.InputReader.IsBlocking)
-                PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
             
             //TODO: Block idle animation.
             // PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockIdleAnimationHash, 0.1f);
@@ -41,7 +41,7 @@ namespace Player
         
         private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
         {
-            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition, damage, knockBackStrength));
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerHurtState);
         }
     }
 }

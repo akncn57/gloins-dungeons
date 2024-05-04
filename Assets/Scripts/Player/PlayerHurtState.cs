@@ -7,20 +7,8 @@ namespace Player
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Hurt;
         
         private readonly int _hurtAnimationHash = Animator.StringToHash("Player_Hurt");
-        private Vector3 _hitPosition;
-        private int _damage;
-        private float _knockBackStrength;
 
-        public PlayerHurtState(
-            PlayerStateMachine playerStateMachine,
-            Vector3 hitPosition,
-            int damage,
-            float knockBackStrength) : base(playerStateMachine)
-        {
-            _hitPosition = hitPosition;
-            _damage = damage;
-            _knockBackStrength = knockBackStrength;
-        }
+        public PlayerHurtState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 
         public override void OnEnter()
         {
@@ -45,19 +33,19 @@ namespace Player
 
         private void PlayerOnHurtStart()
         {
-            PlayerStateMachine.HealthController.SpendHealth(_damage);
+            PlayerStateMachine.HealthController.SpendHealth(PlayerStateMachine.HitData.Damage);
             Debug.Log("Player Health : " + PlayerStateMachine.HealthController.Health);
-            PlayerStateMachine.RigidBody.velocity = new Vector2(_hitPosition.x * _knockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
+            PlayerStateMachine.RigidBody.velocity = new Vector2(PlayerStateMachine.HitData.HitPosition.x * PlayerStateMachine.HitData.KnockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
         }
         
         private void PlayerOnHurtEnd()
         {
-            PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
         }
 
         private void CheckDeath()
         {
-            if (PlayerStateMachine.HealthController.Health <= 0) PlayerStateMachine.SwitchState(new PlayerDeathState(PlayerStateMachine));
+            if (PlayerStateMachine.HealthController.Health <= 0) PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerDeathState);
         }
     }
 }
