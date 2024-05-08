@@ -6,6 +6,7 @@ namespace Enemies
 {
     public class EnemyColliderBaseController : ColliderControllerBase
     {
+        //TODO: Bagimlilik var.
         [SerializeField] private EnemyBaseStateMachine enemyBaseStateMachine;
 
         public override void InvokeOnHitStartEvent(int damage, Vector3 knockBackPosition, float knockBackPower)

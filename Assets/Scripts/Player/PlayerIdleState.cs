@@ -22,10 +22,10 @@ namespace Player
         public override void OnTick()
         {
             if (PlayerStateMachine.InputReader.MovementValue != Vector2.zero)
-                PlayerStateMachine.SwitchState(new PlayerWalkState(PlayerStateMachine));
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerWalkState);
             
             if (PlayerStateMachine.InputReader.IsBlocking)
-                PlayerStateMachine.SwitchState(new PlayerBlockState(PlayerStateMachine));
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerBlockState);
         }
 
         public override void OnExit()
@@ -37,12 +37,12 @@ namespace Player
         
         private void CheckAttackBasic()
         {
-            PlayerStateMachine.SwitchState(new PlayerAttackBasicState(PlayerStateMachine));
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerAttackBasicState);
         }
 
         private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
         {
-            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition, damage, knockBackStrength));
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerHurtState);
         }
     }
 }

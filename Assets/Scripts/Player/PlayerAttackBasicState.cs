@@ -70,12 +70,12 @@ namespace Player
 
         private void PlayerOnAttackBasicFinish()
         {
-            PlayerStateMachine.SwitchState(new PlayerIdleState(PlayerStateMachine));
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
         }
         
         private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
         {
-            PlayerStateMachine.SwitchState(new PlayerHurtState(PlayerStateMachine, hitPosition, damage, knockBackStrength));
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerHurtState);
         }
     }
 }
