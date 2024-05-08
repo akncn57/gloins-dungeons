@@ -1,5 +1,6 @@
 ﻿using System;
 using ColliderController;
+using HitData;
 using UnityEngine;
 
 namespace Enemies

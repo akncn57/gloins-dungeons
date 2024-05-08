@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using HealthSystem;
+using HitData;
 using UnityEngine;
 using Zenject;
 
@@ -105,19 +106,4 @@ public class EnemyPatrolData
 {
     public Transform PatrolCoordinate;
     public bool IsCompleted;
-}
-
-//TODO: Uygun bir yere yada ayri bir script olarak ac.
-public class EnemyHitData
-{
-    public Vector3 HitPosition;
-    public int Damage;
-    public float KnockBackStrength;
-
-    public EnemyHitData(Vector3 hitPosition, int damage, float knockBackStrength)
-    {
-        HitPosition = hitPosition;
-        Damage = damage;
-        KnockBackStrength = knockBackStrength;
-    }
 }

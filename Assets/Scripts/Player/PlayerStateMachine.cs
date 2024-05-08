@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using CustomInterfaces;
 using HealthSystem;
+using HitData;
 using InputSystem;
 using StateMachine;
 using UnityEngine;
@@ -83,19 +84,5 @@ namespace Player
             
             SwitchState(PlayerIdleState);
         }
-    }
-}
-
-public class PlayerHitData
-{
-    public Vector3 HitPosition;
-    public int Damage;
-    public float KnockBackStrength;
-
-    public PlayerHitData(Vector3 hitPosition, int damage, float knockBackStrength)
-    {
-        HitPosition = hitPosition;
-        Damage = damage;
-        KnockBackStrength = knockBackStrength;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using HealthSystem;
+using HitData;
 using StateMachine;
 using UnityEngine;
 
