@@ -99,11 +99,3 @@ namespace Enemies.Skeleton
         }
     }
 }
-
-//TODO: Uygun bir yere yada ayri bir script olarak ac.
-[Serializable]
-public class EnemyPatrolData
-{
-    public Transform PatrolCoordinate;
-    public bool IsCompleted;
-}
