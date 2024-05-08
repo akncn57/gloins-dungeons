@@ -1,11 +1,9 @@
-using System;
 using System.Collections.Generic;
 using CustomInterfaces;
 using HealthSystem;
 using InputSystem;
 using StateMachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Player
@@ -28,6 +26,8 @@ namespace Player
         
         [Inject] public IInstantiator Instantiator;
 
+        #region Player State Classes
+        
         public List<Transform> EnemyChasePositions
         {
             get => EnemyChasePositionsList;
@@ -69,6 +69,8 @@ namespace Player
             get;
             private set;
         }
+        
+        #endregion
 
         private void Start()
         {
