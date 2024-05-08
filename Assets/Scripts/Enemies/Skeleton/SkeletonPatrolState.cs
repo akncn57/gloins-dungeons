@@ -21,7 +21,7 @@ namespace Enemies.Skeleton
             {
                 SkeletonStateMachine.ResetPatrolCoordinateStatus();
                 SkeletonStateMachine.PatrolCoordinates.Reverse();
-                _patrolIndex = 0;
+                _patrolIndex = 1;
             }
         }
 

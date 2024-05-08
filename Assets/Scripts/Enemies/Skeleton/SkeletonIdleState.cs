@@ -14,7 +14,6 @@ namespace Enemies.Skeleton
         
         public override void OnEnter()
         {
-            //TODO: Patrol list reverse edilince ayni pozisyonda 2 kere bekliyor.
             _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{3});
             
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;

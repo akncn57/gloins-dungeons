@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace HitData
 {
-    public abstract class HitDataBase : MonoBehaviour
+    public abstract class HitDataBase
     {
         public Vector3 HitPosition { get; set; }
         public int Damage { get; set; }
