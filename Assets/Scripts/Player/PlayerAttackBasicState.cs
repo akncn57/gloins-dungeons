@@ -54,7 +54,7 @@ namespace Player
                 var enemy = result.GetComponent<ColliderControllerBase>();
                 _hittingEnemies.Add(enemy);
                 //TODO: Enemy | Damage, knockbackpower farkli sekilde al.
-                enemy.InvokeOnHitStartEvent(10, (enemy.transform.position - PlayerStateMachine.transform.position).normalized, 2f);
+                enemy.InvokeOnHitStartEvent(PlayerStateMachine.PlayerProperties.BasicAttackPower, (enemy.transform.position - PlayerStateMachine.transform.position).normalized, PlayerStateMachine.PlayerProperties.HitKnockBackPower);
             }
         }
         

@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputReader: {fileID: 3668276198034107764}
+  PlayerProperties: {fileID: 11400000, guid: 58554ebdb6e379b4780afa56d3e6c66f, type: 2}
   PlayerAnimationEventsTrigger: {fileID: 6354206733172649317}
   PlayerColliderController: {fileID: 7766550905894063296}
   HealthController: {fileID: 588573030473328513}

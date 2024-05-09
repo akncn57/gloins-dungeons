@@ -40,7 +40,7 @@ namespace Player
 
         private void Movement(Vector2 movement)
         {
-            movement = movement.normalized * PlayerStateMachine.WalkSpeed;
+            movement = movement.normalized * PlayerStateMachine.PlayerProperties.WalkSpeed;
             PlayerStateMachine.RigidBody.velocity = movement;
         }
 

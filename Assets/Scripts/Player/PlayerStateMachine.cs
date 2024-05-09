@@ -12,6 +12,7 @@ namespace Player
     public class PlayerStateMachine : BaseStateMachine, IPlayer
     {
         public InputReader InputReader;
+        public PlayerProperties PlayerProperties;
         public PlayerAnimationEventsTrigger PlayerAnimationEventsTrigger;
         public PlayerColliderController PlayerColliderController;
         public HealthController HealthController;
@@ -21,7 +22,6 @@ namespace Player
         public CapsuleCollider2D AttackBasicCollider;
         public GameObject BlockColliderObject;
         public ParticleSystem HurtParticle;
-        public float WalkSpeed;
         public List<Transform> EnemyChasePositionsList;
         public PlayerHitData HitData;
         
