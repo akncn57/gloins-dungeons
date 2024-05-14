@@ -21,7 +21,7 @@ namespace Player
 
         public override void OnTick()
         {
-            CheckStopMoving();
+            CheckWalking();
             CheckBlocking();
         }
 
@@ -32,10 +32,10 @@ namespace Player
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
         }
         
-        private void CheckStopMoving()
+        private void CheckWalking()
         {
-            if (PlayerStateMachine.InputReader.MovementValue == Vector2.zero)
-                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
+            if (PlayerStateMachine.InputReader.MovementValue != Vector2.zero)
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerWalkState);
         }
 
         private void CheckBlocking()
