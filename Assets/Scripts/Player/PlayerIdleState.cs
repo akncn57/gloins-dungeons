@@ -21,11 +21,8 @@ namespace Player
 
         public override void OnTick()
         {
-            if (PlayerStateMachine.InputReader.MovementValue != Vector2.zero)
-                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerWalkState);
-            
-            if (PlayerStateMachine.InputReader.IsBlocking)
-                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerBlockState);
+            CheckStopMoving();
+            CheckBlocking();
         }
 
         public override void OnExit()
@@ -33,6 +30,18 @@ namespace Player
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
+        }
+        
+        private void CheckStopMoving()
+        {
+            if (PlayerStateMachine.InputReader.MovementValue == Vector2.zero)
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
+        }
+
+        private void CheckBlocking()
+        {
+            if (PlayerStateMachine.InputReader.IsBlocking)
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerBlockState);
         }
         
         private void CheckAttackBasic()

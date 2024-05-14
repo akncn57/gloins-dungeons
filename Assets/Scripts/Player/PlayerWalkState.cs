@@ -21,11 +21,8 @@ namespace Player
 
         public override void OnTick()
         {
-            if (PlayerStateMachine.InputReader.MovementValue == Vector2.zero)
-                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
-            
-            if (PlayerStateMachine.InputReader.IsBlocking)
-                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerBlockState);
+            CheckStopMoving();
+            CheckBlocking();
             
             Movement(PlayerStateMachine.InputReader.MovementValue);
             Facing(PlayerStateMachine.InputReader.MovementValue.x);
@@ -52,6 +49,18 @@ namespace Player
                 < 0 => new Vector3(-1f, 1f, 1f),
                 _ => PlayerStateMachine.ParentObject.transform.localScale
             };
+        }
+
+        private void CheckStopMoving()
+        {
+            if (PlayerStateMachine.InputReader.MovementValue == Vector2.zero)
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
+        }
+
+        private void CheckBlocking()
+        {
+            if (PlayerStateMachine.InputReader.IsBlocking)
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerBlockState);
         }
 
         private void CheckAttackBasic()

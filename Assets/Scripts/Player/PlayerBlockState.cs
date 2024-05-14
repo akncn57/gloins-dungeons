@@ -23,10 +23,8 @@ namespace Player
         public override void OnTick()
         {
             PlayerStateMachine.RigidBody.velocity = Vector2.zero;
-            
-            if (!PlayerStateMachine.InputReader.IsBlocking)
-                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
-            
+            CheckBlockingFinished();
+
             //TODO: Block idle animation.
             // PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockIdleAnimationHash, 0.1f);
         }
@@ -37,6 +35,12 @@ namespace Player
             
             PlayerStateMachine.BlockColliderObject.SetActive(false);
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockDownAnimationHash, 0.1f);
+        }
+
+        private void CheckBlockingFinished()
+        {
+            if (!PlayerStateMachine.InputReader.IsBlocking)
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
         }
         
         private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
