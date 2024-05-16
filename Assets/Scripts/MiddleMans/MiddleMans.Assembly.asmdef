@@ -1,0 +1,16 @@
+{
+    "name": "MiddleMans.Assembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:36cf7b0cb63fe51499ee604432a0b271"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
