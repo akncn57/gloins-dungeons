@@ -1,4 +1,4 @@
-﻿namespace Observer.CustomObservers
+﻿namespace DesignPatterns.ObserverPattern.CustomObservers
 {
     public interface IHealthObserver
     {

@@ -1,0 +1,16 @@
+{
+    "name": "DesignPatterns.Command.Assembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e4d6b6b2e2bf1ee42b6f14e05d3fc8f0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
