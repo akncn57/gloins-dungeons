@@ -34,7 +34,7 @@ namespace Enemies.Skeleton
         private void EnemyOnHurtStart()
         {
             SkeletonStateMachine.HealthController.SpendHealth(SkeletonStateMachine.HitData.Damage);
-            Debug.Log("Enemy Skeleton Health : " + SkeletonStateMachine.HealthController.Health);
+            Debug.Log("Enemy Skeleton Health : " + SkeletonStateMachine.HealthController.HealthData.Health);
             SkeletonStateMachine.Rigidbody.velocity = new Vector2(SkeletonStateMachine.HitData.HitPosition.x * SkeletonStateMachine.HitData.KnockBackStrength, SkeletonStateMachine.Rigidbody.velocity.y);
         }
 
@@ -45,7 +45,7 @@ namespace Enemies.Skeleton
         
         private void CheckDeath()
         {
-            if (SkeletonStateMachine.HealthController.Health <= 0) SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonDeathState);
+            if (SkeletonStateMachine.HealthController.HealthData.Health <= 0) SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonDeathState);
         }
     }
 }

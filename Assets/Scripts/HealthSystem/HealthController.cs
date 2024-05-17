@@ -1,17 +1,25 @@
-using System;
+using System.Collections.Generic;
+using DesignPatterns.ObserverPattern.CustomObservers;
 using UnityEngine;
 
 namespace HealthSystem
 {
     public class HealthController : MonoBehaviour
     {
-        [field: SerializeField] public long Health { get; private set; }
-        [field: SerializeField] public long HealthLimit { get; private set; }
-        [field: SerializeField] public long HealthOverLimit { get; private set; }
-
-        public event Action<long, long> OnHealthAdding;
-        public event Action<long, long> OnHealthSpending;
-        public event Action<long> OnHealthLimitSet;
+        public HealthData HealthData => _healthData;
+        
+        private readonly HealthData _healthData = new();
+        private readonly List<IHealthObserver> _observers = new();
+        
+        public void AddObserver(IHealthObserver observer)
+        {
+            _observers.Add(observer);
+        }
+        
+        public void RemoveObserver(IHealthObserver observer)
+        {
+            _observers.Remove(observer);
+        }
 
         public void AddHealth(long amount)
         {
@@ -25,11 +33,15 @@ namespace HealthSystem
                     break;
             }
 
-            if (Health >= HealthLimit) return;
+            if (_healthData.Health >= _healthData.HealthLimit) return;
 
-            var tempOldHealth = Health;
-            Health += amount;
-            OnHealthAdding?.Invoke(tempOldHealth, Health);
+            var tempOldHealth = _healthData.Health;
+            _healthData.Health += amount;
+            
+            foreach (var observer in _observers)
+            {
+                observer.OnHealthChanged(tempOldHealth, _healthData.Health);
+            }
         }
 
         public void SpendHealth(long amount)
@@ -40,15 +52,19 @@ namespace HealthSystem
                 return;
             }
             
-            if (Health < 0)
+            if (_healthData.Health < 0)
             {
                 Debug.LogError("Health already equal zero or less!");
                 return;
             }
 
-            var temOldHealth = Health;
-            Health -= amount;
-            OnHealthSpending?.Invoke(temOldHealth, Health);
+            var temOldHealth = _healthData.Health;
+            _healthData.Health -= amount;
+            
+            foreach (var observer in _observers)
+            {
+                observer.OnHealthChanged(temOldHealth, _healthData.Health);
+            }
         }
 
         public void SetHealthLimit(long amount)
@@ -59,8 +75,12 @@ namespace HealthSystem
                 return;
             }
 
-            HealthLimit = amount;
-            OnHealthLimitSet?.Invoke(HealthLimit);
+            _healthData.HealthLimit = amount;
+            
+            foreach (var observer in _observers)
+            {
+                observer.OnHealthLimitChanged(_healthData.HealthLimit);
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace DesignPatterns.CommandPattern.CustomCommands
         
         public void Execute()
         {
-            _previousHealth = _healthController.Health;
+            _previousHealth = _healthController.HealthData.Health;
             _healthController.SpendHealth(_spendAmount);
         }
 

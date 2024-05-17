@@ -1,7 +1,10 @@
 {
     "name": "HealthSystem.Assembly",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:36cf7b0cb63fe51499ee604432a0b271",
+        "GUID:50f1ea26f436d714e9bca36c20d9259d"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

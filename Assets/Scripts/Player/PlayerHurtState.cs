@@ -34,7 +34,7 @@ namespace Player
         private void PlayerOnHurtStart()
         {
             PlayerStateMachine.HealthController.SpendHealth(PlayerStateMachine.HitData.Damage);
-            Debug.Log("Player Health : " + PlayerStateMachine.HealthController.Health);
+            Debug.Log("Player Health : " + PlayerStateMachine.HealthController.HealthData.Health);
             PlayerStateMachine.RigidBody.velocity = new Vector2(PlayerStateMachine.HitData.HitPosition.x * PlayerStateMachine.HitData.KnockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
         }
         
@@ -45,7 +45,7 @@ namespace Player
 
         private void CheckDeath()
         {
-            if (PlayerStateMachine.HealthController.Health <= 0) PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerDeathState);
+            if (PlayerStateMachine.HealthController.HealthData.Health <= 0) PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerDeathState);
         }
     }
 }
