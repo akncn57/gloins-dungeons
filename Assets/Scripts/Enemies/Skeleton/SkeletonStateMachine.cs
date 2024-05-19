@@ -9,7 +9,6 @@ namespace Enemies.Skeleton
 {
     public class SkeletonStateMachine : EnemyBaseStateMachine
     {
-        [SerializeField] private HealthController healthController;
         [SerializeField] private SkeletonColliderController skeletonColliderController;
         [SerializeField] private SkeletonAnimationEventTrigger skeletonAnimationEventTrigger;
         [SerializeField] private Rigidbody2D rigidBody;
@@ -21,6 +20,8 @@ namespace Enemies.Skeleton
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
         [SerializeField] private float walkSpeed;
+        
+        private HealthController healthController;
 
         public override HealthController HealthController => healthController;
         public override EnemyColliderBaseController EnemyColliderController => skeletonColliderController;
@@ -77,6 +78,8 @@ namespace Enemies.Skeleton
 
         private void Awake()
         {
+            healthController = new HealthController(100, 100);
+            
             SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});
             SkeletonDeathState = Instantiator.Instantiate<SkeletonDeathState>(new object[]{this});
             SkeletonHurtState = Instantiator.Instantiate<SkeletonHurtState>(new object[]{this});
