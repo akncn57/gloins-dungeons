@@ -75,6 +75,8 @@ namespace Player
 
         private void Start()
         {
+            HealthController = new HealthController(100, 100);
+            
             PlayerAttackBasicState = Instantiator.Instantiate<PlayerAttackBasicState>(new object[]{this});
             PlayerBlockState = Instantiator.Instantiate<PlayerBlockState>(new object[]{this});
             PlayerDeathState = Instantiator.Instantiate<PlayerDeathState>(new object[]{this});

@@ -1,26 +1,18 @@
-using System.Collections.Generic;
-using DesignPatterns.ObserverPattern.CustomObservers;
 using UnityEngine;
 
 namespace HealthSystem
 {
-    public class HealthController : MonoBehaviour
+    public class HealthController
     {
         public HealthData HealthData => _healthData;
-        
-        private readonly HealthData _healthData = new();
-        private readonly List<IHealthObserver> _observers = new();
-        
-        public void AddObserver(IHealthObserver observer)
-        {
-            _observers.Add(observer);
-        }
-        
-        public void RemoveObserver(IHealthObserver observer)
-        {
-            _observers.Remove(observer);
-        }
 
+        private readonly HealthData _healthData;
+
+        public HealthController(long health, long healthLimit)
+        {
+            _healthData = new HealthData(health, healthLimit);
+        }
+        
         public void AddHealth(long amount)
         {
             switch (amount)
@@ -37,11 +29,6 @@ namespace HealthSystem
 
             var tempOldHealth = _healthData.Health;
             _healthData.Health += amount;
-            
-            foreach (var observer in _observers)
-            {
-                observer.OnHealthChanged(tempOldHealth, _healthData.Health);
-            }
         }
 
         public void SpendHealth(long amount)
@@ -60,11 +47,6 @@ namespace HealthSystem
 
             var temOldHealth = _healthData.Health;
             _healthData.Health -= amount;
-            
-            foreach (var observer in _observers)
-            {
-                observer.OnHealthChanged(temOldHealth, _healthData.Health);
-            }
         }
 
         public void SetHealthLimit(long amount)
@@ -76,11 +58,6 @@ namespace HealthSystem
             }
 
             _healthData.HealthLimit = amount;
-            
-            foreach (var observer in _observers)
-            {
-                observer.OnHealthLimitChanged(_healthData.HealthLimit);
-            }
         }
     }
 }

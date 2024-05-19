@@ -1,20 +1,14 @@
-﻿using DesignPatterns.ObserverPattern;
-
-namespace HealthSystem
+﻿namespace HealthSystem
 {
-    public sealed class HealthData : ISubject
+    public sealed class HealthData
     {
         public long Health;
         public long HealthLimit;
-        
-        public void RegisterObserver(IObserver observer)
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public void RemoveObserver(IObserver observer)
+        public HealthData(long health, long healthLimit)
         {
-            throw new System.NotImplementedException();
+            Health = health;
+            HealthLimit = healthLimit;
         }
     }
 }

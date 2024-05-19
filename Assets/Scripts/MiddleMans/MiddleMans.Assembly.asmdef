@@ -1,11 +1,7 @@
 {
     "name": "MiddleMans.Assembly",
     "rootNamespace": "",
-    "references": [
-        "GUID:36cf7b0cb63fe51499ee604432a0b271",
-        "GUID:b7f2bb165ff099a4cba616124b5b3199",
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
