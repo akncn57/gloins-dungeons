@@ -6,7 +6,7 @@ namespace Player
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Idle;
         
-        private readonly int _idleAnimationHash = Animator.StringToHash("Player_Idle");
+        private readonly int _idleAnimationHash = Animator.StringToHash("Warrior_Idle");
         
         public PlayerIdleState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 

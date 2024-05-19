@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2089815335, guid: 0e9d6da44263c4a489b8ec499a8fa3d4, type: 3}
+  m_Sprite: {fileID: 1609678400, guid: 3fe29515316479f4abc21efcdf6a1690, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -334,7 +334,6 @@ GameObject:
   - component: {fileID: 8141660944448092658}
   - component: {fileID: 3668276198034107764}
   - component: {fileID: 1893331197882160776}
-  - component: {fileID: 588573030473328513}
   m_Layer: 0
   m_Name: Prefab_Player
   m_TagString: Player
@@ -413,32 +412,15 @@ MonoBehaviour:
   PlayerProperties: {fileID: 11400000, guid: 58554ebdb6e379b4780afa56d3e6c66f, type: 2}
   PlayerAnimationEventsTrigger: {fileID: 6354206733172649317}
   PlayerColliderController: {fileID: 7766550905894063296}
-  HealthController: {fileID: 588573030473328513}
   RigidBody: {fileID: 8141660944448092658}
   Animator: {fileID: 7586337879990168668}
   ParentObject: {fileID: 5415165778118375842}
   AttackBasicCollider: {fileID: 9088230493574328710}
   BlockColliderObject: {fileID: 2240762866422721845}
   HurtParticle: {fileID: 2295064625310618213}
-  WalkSpeed: 3
   EnemyChasePositionsList:
   - {fileID: 4711215615441751233}
   - {fileID: 3142007250446321171}
---- !u!114 &588573030473328513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5866446098461063905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1db39ce6dda454cad3247630195f12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Health>k__BackingField: 100
-  <HealthLimit>k__BackingField: 100
-  <HealthOverLimit>k__BackingField: 0
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

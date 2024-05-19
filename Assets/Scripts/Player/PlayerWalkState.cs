@@ -6,7 +6,7 @@ namespace Player
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Walk;
         
-        private readonly int _walkAnimationHash = Animator.StringToHash("Player_Walk");
+        private readonly int _walkAnimationHash = Animator.StringToHash("Warrior_Walk");
         
         public PlayerWalkState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 
