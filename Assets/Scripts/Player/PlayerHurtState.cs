@@ -6,7 +6,7 @@ namespace Player
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Hurt;
         
-        private readonly int _hurtAnimationHash = Animator.StringToHash("Player_Hurt");
+        private readonly int _hurtAnimationHash = Animator.StringToHash("Warrior_Hurt");
 
         public PlayerHurtState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 

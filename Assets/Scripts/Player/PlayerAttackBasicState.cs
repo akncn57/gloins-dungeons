@@ -11,7 +11,7 @@ namespace Player
 
         private readonly List<ColliderControllerBase> _hittingEnemies = new();
         
-        private readonly int _attackBasicAnimationHash = Animator.StringToHash("Player_Attack_Basic");
+        private readonly int _attackBasicAnimationHash = Animator.StringToHash("Warrior_Attack_Basic");
         
         public PlayerAttackBasicState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 

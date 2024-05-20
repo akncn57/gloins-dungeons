@@ -6,7 +6,7 @@ namespace Player
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Death;
         
-        private readonly int _deathAnimationHash = Animator.StringToHash("Player_Death");
+        private readonly int _deathAnimationHash = Animator.StringToHash("Warrior_Death");
         
         public PlayerDeathState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 
