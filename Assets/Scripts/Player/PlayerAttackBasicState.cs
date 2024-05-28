@@ -45,7 +45,7 @@ namespace Player
         {
             var results = Physics2D.OverlapCapsuleAll(PlayerStateMachine.AttackBasicCollider.transform.position, PlayerStateMachine.AttackBasicCollider.size,
                 PlayerStateMachine.AttackBasicCollider.direction, 0f);
-            Debug.Log("Player Result : " + results);
+            
             _hittingEnemies.Clear();
             
             foreach (var result in results)
@@ -53,7 +53,6 @@ namespace Player
                 if (!result) continue;
                 var enemy = result.GetComponent<ColliderControllerBase>();
                 _hittingEnemies.Add(enemy);
-                //TODO: Enemy | Damage, knockbackpower farkli sekilde al.
                 enemy.InvokeOnHitStartEvent(PlayerStateMachine.PlayerProperties.BasicAttackPower, (enemy.transform.position - PlayerStateMachine.transform.position).normalized, PlayerStateMachine.PlayerProperties.HitKnockBackPower);
             }
         }

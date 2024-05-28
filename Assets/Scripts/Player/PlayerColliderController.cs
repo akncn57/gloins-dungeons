@@ -2,7 +2,6 @@ using System;
 using ColliderController;
 using HitData;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -12,18 +11,12 @@ namespace Player
         public event Action<int, Vector3, float> PlayerColliderOnHitStart;
         public event Action PlayerColliderOnHitEnd;
         
-        //TODO: Bagimlilik var.
         [SerializeField] private PlayerStateMachine playerStateMachine;
 
         public override void InvokeOnHitStartEvent(int damage, Vector3 knockBackPosition, float knockBackPower)
         {
             base.InvokeOnHitStartEvent(damage, knockBackPosition, knockBackPower);
             playerStateMachine.HitData = new PlayerHitData(knockBackPosition, damage, knockBackPower);
-        }
-
-        public override void InvokeOnHitEndEvent()
-        {
-            base.InvokeOnHitEndEvent();
         }
 
         private void OnTriggerEnter2D(Collider2D other)
