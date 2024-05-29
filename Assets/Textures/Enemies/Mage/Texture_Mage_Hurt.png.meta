@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.60741526, y: 0.11431362}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e174012efc1f743b7c91c6deae58c4
+      internalID: 1794207972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 72
+        width: 73
+        height: 60
+      alignment: 9
+      pivot: {x: 0.6162879, y: 0.103021875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592db7212215e4c43aea3e8126702f6e
+      internalID: -2009152698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 72
+        width: 73
+        height: 60
+      alignment: 9
+      pivot: {x: 0.6174166, y: 0.103021875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5b9e06671b6804d83e08ec7dac2b2b
+      internalID: 1251771943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_3
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 72
+        width: 72
+        height: 59
+      alignment: 9
+      pivot: {x: 0.61069405, y: 0.105488405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1295397bdc2c6714d89d821224d26e7c
+      internalID: 776216267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_4
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 72
+        width: 64
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5952883, y: 0.113306634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96446006b8f8624f8c2c9225b797c72
+      internalID: 931651818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_5
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 72
+        width: 64
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5798054, y: 0.11743899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb2b67fecaded6419235c6b2fd8430a
+      internalID: 1374771320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6074739, y: 0.11743899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4dbd0dafd3a3a4b9a2024e97fe09f2
+      internalID: 444676575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.60872465, y: 0.116027266}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f6681e59a25d14aabbff6cc3f15b1b
+      internalID: 521437480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Texture_Mage_Hurt_0: 1794207972
+      Texture_Mage_Hurt_1: -2009152698
+      Texture_Mage_Hurt_2: 1251771943
+      Texture_Mage_Hurt_3: 776216267
+      Texture_Mage_Hurt_4: 931651818
+      Texture_Mage_Hurt_5: 1374771320
+      Texture_Mage_Hurt_6: 444676575
+      Texture_Mage_Hurt_7: 521437480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

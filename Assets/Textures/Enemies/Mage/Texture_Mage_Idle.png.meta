@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 72
+        width: 59
+        height: 54
+      alignment: 9
+      pivot: {x: 0.627, y: 0.114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37323d0dfb99fe4c9c1acdbea1066d2
+      internalID: 2082833027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 72
+        width: 59
+        height: 54
+      alignment: 9
+      pivot: {x: 0.627, y: 0.114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb406f3786a7f1d49892848a62e1dafe
+      internalID: -2045981217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6087757, y: 0.11399983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ac2fc2148edec4eb76091e2e037e70
+      internalID: 1821077617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6090678, y: 0.094485104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e347f7ae63f044439fa19abac1c85a1
+      internalID: 1962622439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 72
+        width: 59
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5929948, y: 0.09483394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f426403b1ed9b4393879843564ff11
+      internalID: 924709740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 72
+        width: 59
+        height: 54
+      alignment: 9
+      pivot: {x: 0.59305483, y: 0.09591336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2858d60cdd27c7d4eb78e030f2a2322e
+      internalID: 1914808014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 72
+        width: 60
+        height: 54
+      alignment: 9
+      pivot: {x: 0.60174155, y: 0.09576939}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543cb18b8b0336644855e79bc4f94121
+      internalID: -69607391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 72
+        width: 59
+        height: 54
+      alignment: 9
+      pivot: {x: 0.62946695, y: 0.11320595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b808f60166dfc42b09c602e5753288
+      internalID: 997079453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Texture_Mage_Idle_0: 2082833027
+      Texture_Mage_Idle_1: -2045981217
+      Texture_Mage_Idle_2: 1821077617
+      Texture_Mage_Idle_3: 1962622439
+      Texture_Mage_Idle_4: 924709740
+      Texture_Mage_Idle_5: 1914808014
+      Texture_Mage_Idle_6: -69607391
+      Texture_Mage_Idle_7: 997079453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
