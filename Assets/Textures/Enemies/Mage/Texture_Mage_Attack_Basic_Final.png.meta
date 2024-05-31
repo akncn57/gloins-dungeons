@@ -134,7 +134,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Final_0
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 72
+        width: 67
+        height: 45
+      alignment: 9
+      pivot: {x: 0.17155536, y: 0.14121398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f96b2c8c879984c9af894a134dcc72
+      internalID: -777842745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Final_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 72
+        width: 63
+        height: 51
+      alignment: 9
+      pivot: {x: 0.21420772, y: 0.122891895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83217910843d3dd4f9256e2d591587c1
+      internalID: 1132176534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Final_2
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 72
+        width: 64
+        height: 60
+      alignment: 9
+      pivot: {x: 0.21131992, y: 0.10613988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82542cfa65055843bc5cfab01a1593c
+      internalID: -1389651500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Final_3
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 72
+        width: 40
+        height: 63
+      alignment: 9
+      pivot: {x: 0.46061707, y: 0.09875137}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf0ed64408419540817d2a2fd19324a
+      internalID: -56936553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Final_4
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 72
+        width: 51
+        height: 61
+      alignment: 9
+      pivot: {x: 0.61795104, y: 0.10320494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81db4c0847eb63a4b9e4d50e4e6519d4
+      internalID: -1911079937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Final_5
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 72
+        width: 55
+        height: 57
+      alignment: 9
+      pivot: {x: 0.65452325, y: 0.11205559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721afe9458f35e64d84983f4c11dcebb
+      internalID: 139963891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Final_6
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 72
+        width: 59
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6280414, y: 0.11964883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd29b5bb8b2eb4844a385eeef2d912e4
+      internalID: 151424096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +292,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Texture_Mage_Attack_Basic_Final_0: -777842745
+      Texture_Mage_Attack_Basic_Final_1: 1132176534
+      Texture_Mage_Attack_Basic_Final_2: -1389651500
+      Texture_Mage_Attack_Basic_Final_3: -56936553
+      Texture_Mage_Attack_Basic_Final_4: -1911079937
+      Texture_Mage_Attack_Basic_Final_5: 139963891
+      Texture_Mage_Attack_Basic_Final_6: 151424096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Start_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6074812, y: 0.11754354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b784f94f3ad510489136178c15082f0
+      internalID: -513685302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Start_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 72
+        width: 60
+        height: 57
+      alignment: 9
+      pivot: {x: 0.62566376, y: 0.11323012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f755322da3dde154191f57900755dadf
+      internalID: 751229092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Start_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 72
+        width: 54
+        height: 61
+      alignment: 9
+      pivot: {x: 0.6376218, y: 0.10310539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8b04df250fed246b21111d4cf010c4
+      internalID: 1690583196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Start_3
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 72
+        width: 41
+        height: 63
+      alignment: 9
+      pivot: {x: 0.49542385, y: 0.10098569}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de506e8042df7041bceee6f905ad918
+      internalID: 95621263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Start_4
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 72
+        width: 64
+        height: 45
+      alignment: 9
+      pivot: {x: 0.21043015, y: 0.13964488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daea818aba231304d9f29afccda3881b
+      internalID: 292522471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Start_5
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 72
+        width: 67
+        height: 45
+      alignment: 9
+      pivot: {x: 0.16994739, y: 0.14119059}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa950d3b90fc5a45a0a5b09cc426c79
+      internalID: -838669662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +271,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Texture_Mage_Attack_Basic_Start_0: -513685302
+      Texture_Mage_Attack_Basic_Start_1: 751229092
+      Texture_Mage_Attack_Basic_Start_2: 1690583196
+      Texture_Mage_Attack_Basic_Start_3: 95621263
+      Texture_Mage_Attack_Basic_Start_4: 292522471
+      Texture_Mage_Attack_Basic_Start_5: -838669662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
