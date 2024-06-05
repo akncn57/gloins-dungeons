@@ -134,7 +134,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6060856, y: 0.120178364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf667233172008b4a9732e7fc32033d9
+      internalID: -1779102437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_1
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 72
+        width: 54
+        height: 55
+      alignment: 9
+      pivot: {x: 0.62999356, y: 0.11312478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35e69b24eb478141930d47919fc1234
+      internalID: -1846980039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_2
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 72
+        width: 44
+        height: 57
+      alignment: 9
+      pivot: {x: 0.6146684, y: 0.111305505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba105bae1332f60478a4b5c0f03dfa39
+      internalID: -1219116670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_3
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 72
+        width: 29
+        height: 65
+      alignment: 9
+      pivot: {x: 0.51891035, y: 0.1000858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3457fb3d2dbc334988cea4dbeafc3df
+      internalID: 1658733356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_4
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 72
+        width: 28
+        height: 67
+      alignment: 9
+      pivot: {x: 0.48041424, y: 0.1087495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f1266a60b84a8448ed8193de7fc321
+      internalID: 460738767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_5
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 72
+        width: 28
+        height: 68
+      alignment: 9
+      pivot: {x: 0.48041645, y: 0.10643835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8181c2787f3ee44b4135a8c33cfb87
+      internalID: -57054568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_6
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 72
+        width: 28
+        height: 69
+      alignment: 9
+      pivot: {x: 0.48041645, y: 0.107373446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76990dd1c351f994290e1a555d194fd9
+      internalID: 582769760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_7
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 72
+        width: 28
+        height: 69
+      alignment: 9
+      pivot: {x: 0.4843314, y: 0.107373446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e607f407117b5f41b5f4d1f5c2b6397
+      internalID: 756337578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_8
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 70
+        width: 27
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5162534, y: 0.17095657}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a59eccc5ff2f804bbd420a563aae313
+      internalID: -1716636562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_9
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 70
+        width: 27
+        height: 53
+      alignment: 9
+      pivot: {x: 0.512189, y: 0.16474828}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c745822c4f5952746b0a721ec93bd23d
+      internalID: -1930383222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_10
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 70
+        width: 27
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5203179, y: 0.16060926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4f791231ab7e64b920dd875f1f664f
+      internalID: 2032661810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_11
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 70
+        width: 27
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4878201, y: 0.16267884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de630f01e75e8b498f0f10eef15bb96
+      internalID: 1132449671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_12
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 72
+        width: 42
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6410203, y: 0.116116114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4923835bb03fd54fab27f69ae66274f
+      internalID: 911472622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_13
+      rect:
+        serializedVersion: 2
+        x: 2942
+        y: 72
+        width: 52
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5949191, y: 0.116116114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b9832dbd74be946a1443886790e8ca
+      internalID: -833991412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_14
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 72
+        width: 58
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5850998, y: 0.115118966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0cdac08ae9bbd44847cc6c0b1513fd
+      internalID: 2064542366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Heavy_15
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 72
+        width: 61
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6060851, y: 0.11611614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a06d8b3c156c8b42812c868611e9148
+      internalID: 209035251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +481,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Texture_Mage_Attack_Heavy_0: -1779102437
+      Texture_Mage_Attack_Heavy_1: -1846980039
+      Texture_Mage_Attack_Heavy_10: 2032661810
+      Texture_Mage_Attack_Heavy_11: 1132449671
+      Texture_Mage_Attack_Heavy_12: 911472622
+      Texture_Mage_Attack_Heavy_13: -833991412
+      Texture_Mage_Attack_Heavy_14: 2064542366
+      Texture_Mage_Attack_Heavy_15: 209035251
+      Texture_Mage_Attack_Heavy_2: -1219116670
+      Texture_Mage_Attack_Heavy_3: 1658733356
+      Texture_Mage_Attack_Heavy_4: 460738767
+      Texture_Mage_Attack_Heavy_5: -57054568
+      Texture_Mage_Attack_Heavy_6: 582769760
+      Texture_Mage_Attack_Heavy_7: 756337578
+      Texture_Mage_Attack_Heavy_8: -1716636562
+      Texture_Mage_Attack_Heavy_9: -1930383222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
