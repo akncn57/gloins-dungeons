@@ -1,7 +1,11 @@
-﻿namespace Enemies.Mage
+﻿using Zenject;
+
+namespace Enemies.Mage
 {
     public class MageHurtState : MageBaseState
     {
+        public MageHurtState(MageStateMachine mageStateMachine, IInstantiator instantiator) : base(mageStateMachine, instantiator){}
+        
         public override void OnEnter()
         {
             throw new System.NotImplementedException();

@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Walk
+  m_Name: Mage_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -37,28 +37,28 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6953055900974041149}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 30, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5050645241515301227}
-    m_Position: {x: 235, y: 65, z: 0}
+    m_Position: {x: 250, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8001158057996185883}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_Position: {x: 250, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1386082388762141925}
-    m_Position: {x: 305, y: 195, z: 0}
+    m_Position: {x: 250, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 844439588707310015}
-    m_Position: {x: 340, y: 260, z: 0}
+    m_Position: {x: 250, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3496455892659591586}
-    m_Position: {x: 375, y: 325, z: 0}
+    m_Position: {x: 250, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1247574299109565265}
-    m_Position: {x: 410, y: 390, z: 0}
+    m_Position: {x: 250, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5205413876987915181}
-    m_Position: {x: 445, y: 455, z: 0}
+    m_Position: {x: 250, y: 350, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -76,7 +76,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Attack_Basic_Final
+  m_Name: Mage_Attack_Basic_Final
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -124,7 +124,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Attack_Basic_Start
+  m_Name: Mage_Attack_Basic_Start
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -150,7 +150,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Death
+  m_Name: Mage_Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -176,7 +176,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Attack_Basic_Loop
+  m_Name: Mage_Attack_Basic_Loop
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -202,7 +202,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Attack_Heavy
+  m_Name: Mage_Attack_Heavy
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -228,7 +228,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Idle
+  m_Name: Mage_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -254,7 +254,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Mage_Hurt
+  m_Name: Mage_Hurt
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
