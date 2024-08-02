@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Enemies.Skeleton
+﻿namespace Enemies.Skeleton
 {
     public class SkeletonAnimationEventTrigger : EnemyAnimationEventTrigger
     {
