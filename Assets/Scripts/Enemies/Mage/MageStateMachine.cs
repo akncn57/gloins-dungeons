@@ -3,14 +3,15 @@ using Enemies.Skeleton;
 using HealthSystem;
 using HitData;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace Enemies.Mage
 {
     public class MageStateMachine : EnemyBaseStateMachine
     {
-        [SerializeField] private SkeletonColliderController skeletonColliderController;
-        [SerializeField] private SkeletonAnimationEventTrigger skeletonAnimationEventTrigger;
+        [SerializeField] private MageColliderController mageColliderController;
+        [SerializeField] private MageAnimationEventTrigger mageAnimationEventTrigger;
         [SerializeField] private Rigidbody2D rigidBody;
         [SerializeField] private Animator animator;
         [SerializeField] private Collider2D collider;
@@ -24,8 +25,8 @@ namespace Enemies.Mage
         private HealthController _healthController;
         
         public override HealthController HealthController => _healthController;
-        public override EnemyColliderBaseController EnemyColliderController => skeletonColliderController;
-        public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => skeletonAnimationEventTrigger;
+        public override EnemyColliderBaseController EnemyColliderController => mageColliderController;
+        public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => mageAnimationEventTrigger;
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
         public override CapsuleCollider2D AttackBasicCollider => attackBasicCollider;

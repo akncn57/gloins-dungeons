@@ -1,5 +1,4 @@
 ﻿using CustomInterfaces;
-using Enemies.Skeleton;
 using Tools;
 using UnityEngine;
 using Zenject;
@@ -8,7 +7,7 @@ namespace Enemies.Mage
 {
     public class MageIdleState : MageBaseState
     {
-        private readonly int _idleAnimationText = Animator.StringToHash("Mage_Idle");
+        private readonly int _idleAnimationHash = Animator.StringToHash("Mage_Idle");
         private GenericTimer _genericTimer;
 
         public MageIdleState(MageStateMachine mageStateMachine, IInstantiator instantiator) : base(mageStateMachine, instantiator){}
@@ -20,7 +19,7 @@ namespace Enemies.Mage
 
             MageStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
             
-            MageStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationText, 0.1f);
+            MageStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationHash, 0.1f);
         }
 
         public override void OnTick()
