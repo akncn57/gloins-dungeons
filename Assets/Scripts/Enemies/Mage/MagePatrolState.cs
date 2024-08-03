@@ -1,5 +1,4 @@
 ﻿using CustomInterfaces;
-using Enemies.Skeleton;
 using UnityEngine;
 using Zenject;
 
