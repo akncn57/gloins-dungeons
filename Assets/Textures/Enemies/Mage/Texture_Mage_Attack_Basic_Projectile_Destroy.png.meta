@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 17
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409d0e68f55fd444ba3c40d189d4bede
+      internalID: -1408181012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 17
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db81701b709f03849936767919dc46c4
+      internalID: 506318978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 16
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69461442aab2df4686adf7ab2b0f810
+      internalID: 1684778916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_3
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 15
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d86a0ebd636b924285583593ed3804d
+      internalID: -226296013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_4
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 24
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a98abd8f28380d4eb8322b77217a4d1
+      internalID: 958430169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_5
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 25
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b6aa48a9da2764583e24873144b4b4
+      internalID: -435285413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_6
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 26
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53ee54812bdebb4bbf5fd855fe0641f
+      internalID: -150364206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Destroy_7
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 26
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe40f72cbfb9b0649a04ff0d120191e9
+      internalID: -1735941828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Texture_Mage_Attack_Basic_Projectile_Destroy_0: -1408181012
+      Texture_Mage_Attack_Basic_Projectile_Destroy_1: 506318978
+      Texture_Mage_Attack_Basic_Projectile_Destroy_2: 1684778916
+      Texture_Mage_Attack_Basic_Projectile_Destroy_3: -226296013
+      Texture_Mage_Attack_Basic_Projectile_Destroy_4: 958430169
+      Texture_Mage_Attack_Basic_Projectile_Destroy_5: -435285413
+      Texture_Mage_Attack_Basic_Projectile_Destroy_6: -150364206
+      Texture_Mage_Attack_Basic_Projectile_Destroy_7: -1735941828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

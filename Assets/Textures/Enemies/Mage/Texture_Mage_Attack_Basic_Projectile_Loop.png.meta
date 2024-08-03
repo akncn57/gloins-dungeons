@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 16
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea3c9ce14cc10a4a84a0842b58f0c65
+      internalID: 414189366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 19
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d90f000e66eca44972005fe89a01e1
+      internalID: 1602397194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 19
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f76164975e6fe4e939f6d66e86d8d3
+      internalID: 25131842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_3
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 19
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32b90e5604757e48ae1a0b128dff7fb
+      internalID: 1403169351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_5
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 17
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074a080714fb00045a918d5f2d5dab09
+      internalID: 1389423338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_6
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 17
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c7315dec7e97c46afa9308b0738681
+      internalID: -2017194066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_8
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 16
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3515b431ea8962f408e932a67eb0a7ed
+      internalID: -2123195418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Mage_Attack_Basic_Projectile_Loop_10
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 15
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e9595f95b898b4a86cf3454f2c12cf
+      internalID: 1602778028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Texture_Mage_Attack_Basic_Projectile_Loop_0: 414189366
+      Texture_Mage_Attack_Basic_Projectile_Loop_1: 1602397194
+      Texture_Mage_Attack_Basic_Projectile_Loop_10: 1602778028
+      Texture_Mage_Attack_Basic_Projectile_Loop_11: 1552864440
+      Texture_Mage_Attack_Basic_Projectile_Loop_12: -1967011515
+      Texture_Mage_Attack_Basic_Projectile_Loop_13: -1565664716
+      Texture_Mage_Attack_Basic_Projectile_Loop_14: -1121271441
+      Texture_Mage_Attack_Basic_Projectile_Loop_15: -492402035
+      Texture_Mage_Attack_Basic_Projectile_Loop_2: 25131842
+      Texture_Mage_Attack_Basic_Projectile_Loop_3: 1403169351
+      Texture_Mage_Attack_Basic_Projectile_Loop_4: -239891734
+      Texture_Mage_Attack_Basic_Projectile_Loop_5: 1389423338
+      Texture_Mage_Attack_Basic_Projectile_Loop_6: -2017194066
+      Texture_Mage_Attack_Basic_Projectile_Loop_7: -1875177333
+      Texture_Mage_Attack_Basic_Projectile_Loop_8: -2123195418
+      Texture_Mage_Attack_Basic_Projectile_Loop_9: 828111639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
