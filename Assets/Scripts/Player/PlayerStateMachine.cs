@@ -35,6 +35,8 @@ namespace Player
             set => EnemyChasePositionsList = value;
         }
         
+        public GameObject GameObject => gameObject;
+
         public PlayerAttackBasicState PlayerAttackBasicState
         {
             get;

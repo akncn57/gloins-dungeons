@@ -8,7 +8,7 @@ namespace Enemies.Mage
     public class MageChaseState : MageBaseState
     {
         private readonly int _walkAnimationHash = Animator.StringToHash("Mage_Walk");
-        private List<Transform> _enemyChasePositionsList;
+        private GameObject _playerGameObject;
         
         public MageChaseState(MageStateMachine mageStateMachine, IInstantiator instantiator) : base(mageStateMachine, instantiator){}
         
@@ -19,7 +19,7 @@ namespace Enemies.Mage
 
         public override void OnTick()
         {
-            ApproachPlayer(FindClosestPosition(MageStateMachine.Rigidbody.position));
+            ApproachPlayer(FindClosestPosition());
         }
 
         public override void OnExit()
@@ -39,24 +39,13 @@ namespace Enemies.Mage
             MageStateMachine.Rigidbody.velocity = movement.normalized * MageStateMachine.WalkSpeed;
             Facing(movement.x);
         }
-        
-        private Vector3 FindClosestPosition(Vector3 targetPosition)
-        {
-            var minDistance = Mathf.Infinity;
-            var closestPosition = Vector3.zero;
-            
-            foreach (var enemyChasePosition in _enemyChasePositionsList)
-            {
-                var distance = Vector3.Distance(targetPosition, enemyChasePosition.position);
-                
-                if (distance < minDistance)
-                {
-                    minDistance = distance;
-                    closestPosition = enemyChasePosition.position;
-                }
-            }
 
-            return closestPosition;
+        private Vector3 FindClosestPosition()
+        {
+            var playerPosition = _playerGameObject.transform.position;
+            return MageStateMachine.Rigidbody.position.x <= playerPosition.x 
+                ? new Vector3(playerPosition.x - MageStateMachine.ChasePositionOffset, playerPosition.y, 0f) 
+                : new Vector3(playerPosition.x + MageStateMachine.ChasePositionOffset, playerPosition.y, 0f);
         }
         
         private void Facing(float horizontalMovement)
@@ -71,7 +60,7 @@ namespace Enemies.Mage
         
         public void Init(IPlayer player)
         {
-            _enemyChasePositionsList = player.EnemyChasePositions;
+            _playerGameObject = player.GameObject;
         }
     }
 }

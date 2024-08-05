@@ -20,6 +20,7 @@ namespace Enemies.Skeleton
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
         [SerializeField] private float walkSpeed;
+        [SerializeField] private float chasePositionOffset;
         
         private HealthController healthController;
 
@@ -36,6 +37,7 @@ namespace Enemies.Skeleton
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
         public override float WalkSpeed => walkSpeed;
+        public override float ChasePositionOffset => chasePositionOffset;
 
         [Inject] public IInstantiator Instantiator;
 

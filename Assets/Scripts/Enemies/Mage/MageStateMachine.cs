@@ -21,6 +21,7 @@ namespace Enemies.Mage
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
         [SerializeField] private float walkSpeed;
+        [SerializeField] private float chasePositionOffset;
         
         private HealthController _healthController;
         
@@ -37,6 +38,7 @@ namespace Enemies.Mage
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
         public override float WalkSpeed => walkSpeed;
+        public override float ChasePositionOffset => chasePositionOffset;
         
         [Inject] public IInstantiator Instantiator;
 

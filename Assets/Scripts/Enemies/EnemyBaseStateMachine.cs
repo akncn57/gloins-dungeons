@@ -21,5 +21,6 @@ namespace Enemies
         public abstract List<EnemyPatrolData> PatrolCoordinates { get; }
         public abstract EnemyHitData HitData { get; set; }
         public abstract float WalkSpeed { get; }
+        public abstract float ChasePositionOffset { get; }
     }
 }

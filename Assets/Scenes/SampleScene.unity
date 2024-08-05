@@ -599,6 +599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Enemy_Mage_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1394914158873198191, guid: 89708fa106beb124b9258db794cba322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3886935488700711051, guid: 89708fa106beb124b9258db794cba322, type: 3}
       propertyPath: patrolCoordinates.Array.size
       value: 3
@@ -617,11 +621,11 @@ PrefabInstance:
       objectReference: {fileID: 1642800160}
     - target: {fileID: 4721552687610608958, guid: 89708fa106beb124b9258db794cba322, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.7290297
+      value: 6.81
       objectReference: {fileID: 0}
     - target: {fileID: 4721552687610608958, guid: 89708fa106beb124b9258db794cba322, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9740699
+      value: 2.24
       objectReference: {fileID: 0}
     - target: {fileID: 4721552687610608958, guid: 89708fa106beb124b9258db794cba322, type: 3}
       propertyPath: m_LocalPosition.z

@@ -8,7 +8,7 @@ namespace Enemies.Skeleton
     public class SkeletonChaseState : SkeletonBaseState
     {
         private readonly int _walkAnimationHash = Animator.StringToHash("Skeleton_Walk");
-        private List<Transform> _enemyChasePositionsList;
+        private GameObject _playerGameObject;
 
         public SkeletonChaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
 
@@ -19,7 +19,7 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
-            ApproachPlayer(FindClosestPosition(SkeletonStateMachine.Rigidbody.position));
+            ApproachPlayer(FindClosestPosition());
         }
 
         public override void OnExit()
@@ -40,23 +40,12 @@ namespace Enemies.Skeleton
             Facing(movement.x);
         }
         
-        private Vector3 FindClosestPosition(Vector3 targetPosition)
+        private Vector3 FindClosestPosition()
         {
-            var minDistance = Mathf.Infinity;
-            var closestPosition = Vector3.zero;
-            
-            foreach (var enemyChasePosition in _enemyChasePositionsList)
-            {
-                var distance = Vector3.Distance(targetPosition, enemyChasePosition.position);
-                
-                if (distance < minDistance)
-                {
-                    minDistance = distance;
-                    closestPosition = enemyChasePosition.position;
-                }
-            }
-
-            return closestPosition;
+            var playerPosition = _playerGameObject.transform.position;
+            return SkeletonStateMachine.Rigidbody.position.x <= playerPosition.x 
+                ? new Vector3(playerPosition.x - SkeletonStateMachine.ChasePositionOffset, playerPosition.y, 0f) 
+                : new Vector3(playerPosition.x + SkeletonStateMachine.ChasePositionOffset, playerPosition.y, 0f);
         }
         
         private void Facing(float horizontalMovement)
@@ -71,7 +60,7 @@ namespace Enemies.Skeleton
 
         public void Init(IPlayer player)
         {
-            _enemyChasePositionsList = player.EnemyChasePositions;
+            _playerGameObject = player.GameObject;
         }
     }
 }
