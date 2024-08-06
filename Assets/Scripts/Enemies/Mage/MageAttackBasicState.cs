@@ -31,7 +31,8 @@ namespace Enemies.Mage
 
         private void InstantiateProjectileObject()
         {
-            
+            var projectile = Instantiator.InstantiatePrefab(MageStateMachine.ProjectilePrefab, MageStateMachine.ProjectileSpawnPoint.transform);
+            projectile.transform.SetParent(GameObject.Find("Projectiles").transform);
         }
 
         private void BasicAttackFinish()

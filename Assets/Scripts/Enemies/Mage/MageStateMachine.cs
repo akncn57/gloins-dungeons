@@ -16,6 +16,7 @@ namespace Enemies.Mage
         [SerializeField] private CapsuleCollider2D attackBasicCollider;
         [SerializeField] private GameObject parentObject;
         [SerializeField] private GameObject projectileSpawnPoint;
+        [SerializeField] private GameObject projectilePrefab;
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
@@ -32,6 +33,7 @@ namespace Enemies.Mage
         public override CapsuleCollider2D AttackBasicCollider => attackBasicCollider;
         public override GameObject ParentObject => parentObject;
         public GameObject ProjectileSpawnPoint => projectileSpawnPoint;
+        public GameObject ProjectilePrefab => projectilePrefab;
         public override CircleCollider2D ChaseCollider => chaseCollider;
         public override Animator Animator => animator;
         public override ParticleSystem HurtParticle => hurtParticle;
