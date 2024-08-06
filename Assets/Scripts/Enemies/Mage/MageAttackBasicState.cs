@@ -1,24 +1,42 @@
-﻿using Zenject;
+﻿using UnityEngine;
+using Zenject;
 
 namespace Enemies.Mage
 {
     public class MageAttackBasicState : MageBaseState
     {
+        private readonly int _attackBasicAnimationHash = Animator.StringToHash("Mage_Attack_Basic");
+        
         public MageAttackBasicState(MageStateMachine mageStateMachine, IInstantiator instantiator) : base(mageStateMachine, instantiator){}
         
         public override void OnEnter()
         {
-            throw new System.NotImplementedException();
+            MageStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += InstantiateProjectileObject;
+            MageStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += BasicAttackFinish;
+            
+            MageStateMachine.Rigidbody.velocity = Vector2.zero;
+            MageStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
         }
 
         public override void OnTick()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public override void OnExit()
         {
-            throw new System.NotImplementedException();
-        }   
+            MageStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen -= InstantiateProjectileObject;
+            MageStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished -= BasicAttackFinish;
+        }
+
+        private void InstantiateProjectileObject()
+        {
+            
+        }
+
+        private void BasicAttackFinish()
+        {
+            MageStateMachine.SwitchState(MageStateMachine.MageIdleState);
+        }
     }
 }

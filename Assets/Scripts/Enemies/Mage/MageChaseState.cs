@@ -24,13 +24,17 @@ namespace Enemies.Mage
 
         public override void OnExit()
         {
-            throw new System.NotImplementedException();
+            
         }
         
         private void ApproachPlayer(Vector3 playerPosition)
         {
             if ((MageStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 0.1f)
             {
+                MageStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < MageStateMachine.Rigidbody.position.x 
+                    ? new Vector3(-1f, 1f, 1f) 
+                    : new Vector3(1f, 1f, 1f);
+                
                 MageStateMachine.SwitchState(MageStateMachine.MageAttackBasicState);
                 return;
             }

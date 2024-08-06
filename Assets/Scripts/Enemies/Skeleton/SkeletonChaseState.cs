@@ -31,6 +31,10 @@ namespace Enemies.Skeleton
         {
             if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 0.1f)
             {
+                SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
+                    ? new Vector3(-1f, 1f, 1f) 
+                    : new Vector3(1f, 1f, 1f);
+                
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
                 return;
             }

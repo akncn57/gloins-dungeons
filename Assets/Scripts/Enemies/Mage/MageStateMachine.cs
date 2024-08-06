@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using Enemies.Skeleton;
 using HealthSystem;
 using HitData;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Enemies.Mage
@@ -17,6 +15,7 @@ namespace Enemies.Mage
         [SerializeField] private Collider2D collider;
         [SerializeField] private CapsuleCollider2D attackBasicCollider;
         [SerializeField] private GameObject parentObject;
+        [SerializeField] private GameObject projectileSpawnPoint;
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
@@ -32,6 +31,7 @@ namespace Enemies.Mage
         public override Collider2D Collider => collider;
         public override CapsuleCollider2D AttackBasicCollider => attackBasicCollider;
         public override GameObject ParentObject => parentObject;
+        public GameObject ProjectileSpawnPoint => projectileSpawnPoint;
         public override CircleCollider2D ChaseCollider => chaseCollider;
         public override Animator Animator => animator;
         public override ParticleSystem HurtParticle => hurtParticle;
