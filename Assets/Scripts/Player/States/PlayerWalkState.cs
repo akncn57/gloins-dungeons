@@ -32,8 +32,11 @@ namespace Player
                 PlayerStateMachine.InputReader.MovementValue,
                 PlayerStateMachine.PlayerProperties.WalkSpeed);
             CommandInvoker.ExecuteCommand(runCommand);
-            
-            Facing(PlayerStateMachine.InputReader.MovementValue.x);
+
+            ICommand facingCommand = new PlayerFacingCommand(
+                PlayerStateMachine.ParentObject,
+                PlayerStateMachine.InputReader.MovementValue.x);
+            CommandInvoker.ExecuteCommand(facingCommand);
         }
         
         public override void OnExit()
@@ -41,16 +44,6 @@ namespace Player
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
-        }
-
-        private void Facing(float horizontalMovement)
-        {
-            PlayerStateMachine.ParentObject.transform.localScale = horizontalMovement switch
-            {
-                > 0 => new Vector3(1f, 1f, 1f),
-                < 0 => new Vector3(-1f, 1f, 1f),
-                _ => PlayerStateMachine.ParentObject.transform.localScale
-            };
         }
 
         private void CheckStopMoving()

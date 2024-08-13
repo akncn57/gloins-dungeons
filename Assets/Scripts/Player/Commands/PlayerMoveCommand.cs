@@ -25,7 +25,7 @@ namespace Player.Commands
 
         public void Undo()
         {
-            _playerMover.Move(_rigidbody, -_movement, _speed);
+            throw new System.NotImplementedException();
         }
     }
 }
