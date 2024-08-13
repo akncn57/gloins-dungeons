@@ -34,6 +34,7 @@ namespace Player
             CommandInvoker.ExecuteCommand(runCommand);
 
             ICommand facingCommand = new PlayerFacingCommand(
+                PlayerStateMachine.PlayerFacing,
                 PlayerStateMachine.ParentObject,
                 PlayerStateMachine.InputReader.MovementValue.x);
             CommandInvoker.ExecuteCommand(facingCommand);

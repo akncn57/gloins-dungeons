@@ -26,6 +26,7 @@ namespace Player
         public List<Transform> EnemyChasePositionsList;
         public PlayerHitData HitData;
         public PlayerMover PlayerMover;
+        public PlayerFacing PlayerFacing;
         
         [Inject] public IInstantiator Instantiator;
 
@@ -80,6 +81,7 @@ namespace Player
         private void Start()
         {
             PlayerMover = new PlayerMover();
+            PlayerFacing = new PlayerFacing();
             HealthController = new HealthController(100, 100);
             
             PlayerAttackBasicState = Instantiator.Instantiate<PlayerAttackBasicState>(new object[]{this});
