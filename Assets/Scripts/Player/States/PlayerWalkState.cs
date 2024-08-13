@@ -1,3 +1,5 @@
+using DesignPatterns.CommandPattern;
+using Player.Commands;
 using UnityEngine;
 
 namespace Player
@@ -23,8 +25,14 @@ namespace Player
         {
             CheckStopMoving();
             CheckBlocking();
+
+            ICommand runCommand = new PlayerMoveCommand(
+                PlayerStateMachine.PlayerMover,
+                PlayerStateMachine.RigidBody,
+                PlayerStateMachine.InputReader.MovementValue,
+                PlayerStateMachine.PlayerProperties.WalkSpeed);
+            CommandInvoker.ExecuteCommand(runCommand);
             
-            Movement(PlayerStateMachine.InputReader.MovementValue);
             Facing(PlayerStateMachine.InputReader.MovementValue.x);
         }
         
@@ -33,12 +41,6 @@ namespace Player
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
-        }
-
-        private void Movement(Vector2 movement)
-        {
-            movement = movement.normalized * PlayerStateMachine.PlayerProperties.WalkSpeed;
-            PlayerStateMachine.RigidBody.velocity = movement;
         }
 
         private void Facing(float horizontalMovement)

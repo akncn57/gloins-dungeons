@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CustomInterfaces;
+using DesignPatterns.CommandPattern;
 using HealthSystem;
 using HitData;
 using InputSystem;
@@ -24,6 +25,7 @@ namespace Player
         public ParticleSystem HurtParticle;
         public List<Transform> EnemyChasePositionsList;
         public PlayerHitData HitData;
+        public PlayerMover PlayerMover;
         
         [Inject] public IInstantiator Instantiator;
 
@@ -77,6 +79,7 @@ namespace Player
 
         private void Start()
         {
+            PlayerMover = new PlayerMover();
             HealthController = new HealthController(100, 100);
             
             PlayerAttackBasicState = Instantiator.Instantiate<PlayerAttackBasicState>(new object[]{this});

@@ -601,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1394914158873198191, guid: 89708fa106beb124b9258db794cba322, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3886935488700711051, guid: 89708fa106beb124b9258db794cba322, type: 3}
       propertyPath: patrolCoordinates.Array.size
@@ -2703,7 +2703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447305621094317975, guid: ff9a689522bc45740990abe82192febe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2023733852312952781, guid: ff9a689522bc45740990abe82192febe, type: 3}
       propertyPath: m_IsActive
