@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using ColliderController;
 using UnityEngine;
 
 namespace Enemies.Mage
@@ -9,6 +10,8 @@ namespace Enemies.Mage
         [SerializeField] private Animator _animator;
         [SerializeField] private float _speed;
         [SerializeField] private float _lifeTime;
+        
+        private readonly int _destroyAnimationParameter = Animator.StringToHash("Destroy");
 
         private void Start()
         {
