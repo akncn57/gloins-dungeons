@@ -27,6 +27,7 @@ namespace Player
         public PlayerHitData HitData;
         public PlayerMover PlayerMover;
         public PlayerFacing PlayerFacing;
+        public PlayerAttackBasic PlayerAttackBasic;
         
         [Inject] public IInstantiator Instantiator;
 
@@ -82,6 +83,7 @@ namespace Player
         {
             PlayerMover = new PlayerMover();
             PlayerFacing = new PlayerFacing();
+            PlayerAttackBasic = new PlayerAttackBasic();
             HealthController = new HealthController(100, 100);
             
             PlayerAttackBasicState = Instantiator.Instantiate<PlayerAttackBasicState>(new object[]{this});

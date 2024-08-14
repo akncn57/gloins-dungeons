@@ -1,6 +1,5 @@
-using System.Collections.Generic;
-using ColliderController;
-using Enemies;
+using DesignPatterns.CommandPattern;
+using Player.Commands;
 using UnityEngine;
 
 namespace Player
@@ -9,9 +8,9 @@ namespace Player
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.AttackBasic;
 
-        private readonly List<ColliderControllerBase> _hittingEnemies = new();
         
         private readonly int _attackBasicAnimationHash = Animator.StringToHash("Warrior_Attack_Basic");
+        private ICommand _attackCommand;
         
         public PlayerAttackBasicState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
 
@@ -43,28 +42,18 @@ namespace Player
 
         private void PlayerOnAttackBasicOpenOverlap()
         {
-            var results = Physics2D.OverlapCapsuleAll(PlayerStateMachine.AttackBasicCollider.transform.position, PlayerStateMachine.AttackBasicCollider.size,
-                PlayerStateMachine.AttackBasicCollider.direction, 0f);
-            
-            _hittingEnemies.Clear();
-            
-            foreach (var result in results)
-            {
-                if (!result) continue;
-                var enemy = result.GetComponent<ColliderControllerBase>();
-                _hittingEnemies.Add(enemy);
-                enemy.InvokeOnHitStartEvent(PlayerStateMachine.PlayerProperties.BasicAttackPower, (enemy.transform.position - PlayerStateMachine.transform.position).normalized, PlayerStateMachine.PlayerProperties.HitKnockBackPower);
-            }
+            _attackCommand = new PlayerAttackBasicCommand(
+                PlayerStateMachine.PlayerAttackBasic,
+                PlayerStateMachine.AttackBasicCollider,
+                PlayerStateMachine.PlayerProperties.BasicAttackPower,
+                PlayerStateMachine.PlayerProperties.HitKnockBackPower,
+                PlayerStateMachine.RigidBody.position);
+            CommandInvoker.ExecuteCommand(_attackCommand);
         }
         
         private void PlayerOnAttackBasicCloseOverlap()
         {
-            foreach (var enemy in _hittingEnemies)
-            {
-                if (!enemy) continue;
-                enemy.InvokeOnHitEndEvent();
-            }
-            _hittingEnemies.Clear();
+            CommandInvoker.UndoCommand();
         }
 
         private void PlayerOnAttackBasicFinish()
