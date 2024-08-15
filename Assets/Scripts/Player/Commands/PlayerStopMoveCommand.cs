@@ -5,8 +5,8 @@ namespace Player.Commands
 {
     public class PlayerStopMoveCommand : ICommand
     {
-        private PlayerMover _playerMover;
-        private Rigidbody2D _rigidbody;
+        private readonly PlayerMover _playerMover;
+        private readonly Rigidbody2D _rigidbody;
         
         public PlayerStopMoveCommand(PlayerMover playerMover, Rigidbody2D rigidbody)
         {
