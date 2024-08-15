@@ -39,7 +39,13 @@ namespace Player
         {
             PlayerStateMachine.HealthController.SpendHealth(PlayerStateMachine.HitData.Damage);
             Debug.Log("Player Health : " + PlayerStateMachine.HealthController.HealthData.Health);
-            PlayerStateMachine.RigidBody.velocity = new Vector2(PlayerStateMachine.HitData.HitPosition.x * PlayerStateMachine.HitData.KnockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
+
+            ICommand knockBackCommand = new PlayerKnockBackCommand(
+                PlayerStateMachine.PlayerMover,
+                PlayerStateMachine.RigidBody,
+                PlayerStateMachine.HitData.HitPosition.x,
+                PlayerStateMachine.HitData.KnockBackStrength);
+            CommandInvoker.ExecuteCommand(knockBackCommand);
         }
         
         private void PlayerOnHurtEnd()
