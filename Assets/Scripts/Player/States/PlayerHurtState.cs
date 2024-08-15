@@ -1,4 +1,6 @@
 using UnityEngine;
+using DesignPatterns.CommandPattern;
+using Player.Commands;
 
 namespace Player
 {
@@ -15,7 +17,9 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtStart += PlayerOnHurtStart;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtEnd += PlayerOnHurtEnd;
             
-            PlayerStateMachine.RigidBody.velocity = Vector2.zero;
+            ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
+            CommandInvoker.ExecuteCommand(stopCommand);
+            
             PlayerStateMachine.HurtParticle.Play();
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
         }

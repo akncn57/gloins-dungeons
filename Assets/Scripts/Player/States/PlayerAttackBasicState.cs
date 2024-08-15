@@ -21,8 +21,10 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished += PlayerOnAttackBasicFinish;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
+
+            ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
+            CommandInvoker.ExecuteCommand(stopCommand);
             
-            PlayerStateMachine.RigidBody.velocity = Vector2.zero;
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
         }
 

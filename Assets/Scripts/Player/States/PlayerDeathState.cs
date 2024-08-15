@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using DesignPatterns.CommandPattern;
+using Player.Commands;
 
 namespace Player
 {
@@ -13,7 +15,10 @@ namespace Player
         public override void OnEnter()
         {
             Debug.Log("Player Death!");
-            PlayerStateMachine.RigidBody.velocity = Vector2.zero;
+            
+            ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
+            CommandInvoker.ExecuteCommand(stopCommand);
+            
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_deathAnimationHash, 0.1f);
         }
 

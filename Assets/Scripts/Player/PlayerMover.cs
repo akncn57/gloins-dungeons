@@ -9,5 +9,10 @@ namespace Player
             movement = movement.normalized * speed;
             rigidbody.velocity = movement;
         }
+
+        public void Stop(Rigidbody2D rigidbody)
+        {
+            rigidbody.velocity = Vector2.zero;
+        }
     }
 }
