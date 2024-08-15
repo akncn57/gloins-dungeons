@@ -1,22 +1,24 @@
 ﻿using DesignPatterns.CommandPattern;
+using HealthSystem;
 
 namespace Player.Commands
 {
     public class PlayerHurtCommand : ICommand
     {
-        public PlayerHurtCommand()
+        private readonly HealthController _healthController;
+        private readonly int _damage;
+        
+        public PlayerHurtCommand(HealthController healthController, int damage)
         {
-            
+            _healthController = healthController;
+            _damage = damage;
         }
 
         public void Execute()
         {
-            throw new System.NotImplementedException();
+            _healthController.SpendHealth(_damage);
         }
 
-        public void Undo()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void Undo(){}
     }
 }

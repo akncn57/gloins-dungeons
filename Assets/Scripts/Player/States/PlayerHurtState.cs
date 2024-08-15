@@ -37,7 +37,10 @@ namespace Player
 
         private void PlayerOnHurtStart()
         {
-            PlayerStateMachine.HealthController.SpendHealth(PlayerStateMachine.HitData.Damage);
+
+            ICommand spendHealthCommand = new PlayerHurtCommand(PlayerStateMachine.HealthController, PlayerStateMachine.HitData.Damage);
+            CommandInvoker.ExecuteCommand(spendHealthCommand);
+            
             Debug.Log("Player Health : " + PlayerStateMachine.HealthController.HealthData.Health);
 
             ICommand knockBackCommand = new PlayerKnockBackCommand(
