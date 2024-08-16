@@ -22,5 +22,7 @@ namespace Enemies
         public abstract EnemyHitData HitData { get; set; }
         public abstract float WalkSpeed { get; }
         public abstract float ChasePositionOffset { get; }
+        public abstract EnemyMover EnemyMover { get; }
+        public abstract EnemyFacing EnemyFacing { get; }
     }
 }

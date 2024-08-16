@@ -22,9 +22,11 @@ namespace Enemies.Skeleton
         [SerializeField] private float walkSpeed;
         [SerializeField] private float chasePositionOffset;
         
-        private HealthController healthController;
+        private HealthController _healthController;
+        private EnemyMover _enemyMover;
+        private EnemyFacing _enemyFacing;
 
-        public override HealthController HealthController => healthController;
+        public override HealthController HealthController => _healthController;
         public override EnemyColliderBaseController EnemyColliderController => skeletonColliderController;
         public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => skeletonAnimationEventTrigger;
         public override Rigidbody2D Rigidbody => rigidBody;
@@ -38,6 +40,8 @@ namespace Enemies.Skeleton
         public override EnemyHitData HitData { get; set; }
         public override float WalkSpeed => walkSpeed;
         public override float ChasePositionOffset => chasePositionOffset;
+        public override EnemyMover EnemyMover => _enemyMover;
+        public override EnemyFacing EnemyFacing => _enemyFacing;
 
         [Inject] public IInstantiator Instantiator;
 
@@ -80,7 +84,9 @@ namespace Enemies.Skeleton
 
         private void Awake()
         {
-            healthController = new HealthController(100, 100);
+            _healthController = new HealthController(100, 100);
+            _enemyMover = new EnemyMover();
+            _enemyFacing = new EnemyFacing();
             
             SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});
             SkeletonDeathState = Instantiator.Instantiate<SkeletonDeathState>(new object[]{this});

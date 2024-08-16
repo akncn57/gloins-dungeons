@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using CustomInterfaces;
+﻿using CustomInterfaces;
+using DesignPatterns.CommandPattern;
+using Enemies.Commands;
 using UnityEngine;
 using Zenject;
 
@@ -39,9 +40,17 @@ namespace Enemies.Skeleton
                 return;
             }
             
-            var movement = playerPosition - SkeletonStateMachine.Rigidbody.transform.position;
-            SkeletonStateMachine.Rigidbody.velocity = movement.normalized * SkeletonStateMachine.WalkSpeed;
-            Facing(movement.x);
+            ICommand moveCommand = new EnemyMoveCommand(
+                SkeletonStateMachine.EnemyMover,
+                playerPosition, SkeletonStateMachine.Rigidbody,
+                SkeletonStateMachine.WalkSpeed);
+            CommandInvoker.ExecuteCommand(moveCommand);
+
+            ICommand facingCommand = new EnemyFacingCommand(
+                SkeletonStateMachine.EnemyFacing,
+                SkeletonStateMachine.ParentObject,
+                playerPosition.x - SkeletonStateMachine.Rigidbody.transform.position.x);
+            CommandInvoker.ExecuteCommand(facingCommand);
         }
         
         private Vector3 FindClosestPosition()
@@ -50,16 +59,6 @@ namespace Enemies.Skeleton
             return SkeletonStateMachine.Rigidbody.position.x <= playerPosition.x 
                 ? new Vector3(playerPosition.x - SkeletonStateMachine.ChasePositionOffset, playerPosition.y, 0f) 
                 : new Vector3(playerPosition.x + SkeletonStateMachine.ChasePositionOffset, playerPosition.y, 0f);
-        }
-        
-        private void Facing(float horizontalMovement)
-        {
-            SkeletonStateMachine.ParentObject.transform.localScale = horizontalMovement switch
-            {
-                > 0 => new Vector3(1f, 1f, 1f),
-                < 0 => new Vector3(-1f, 1f, 1f),
-                _ => SkeletonStateMachine.ParentObject.transform.localScale
-            };
         }
 
         public void Init(IPlayer player)

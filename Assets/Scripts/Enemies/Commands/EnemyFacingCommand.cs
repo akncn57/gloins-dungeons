@@ -1,24 +1,24 @@
 ﻿using DesignPatterns.CommandPattern;
 using UnityEngine;
 
-namespace Player.Commands
+namespace Enemies.Commands
 {
-    public class PlayerFacingCommand : ICommand
+    public class EnemyFacingCommand : ICommand
     {
-        private readonly PlayerFacing _playerFacing;
+        private readonly EnemyFacing _enemyFacing;
         private readonly GameObject _parentObject;
         private readonly float _horizontalMove;
         
-        public PlayerFacingCommand(PlayerFacing playerFacing, GameObject parentObject, float horizontalMove)
+        public EnemyFacingCommand(EnemyFacing enemyFacing, GameObject parentObject, float horizontalMove)
         {
-            _playerFacing = playerFacing;
+            _enemyFacing = enemyFacing;
             _parentObject = parentObject;
             _horizontalMove = horizontalMove;
         }
 
         public void Execute()
         {
-            _playerFacing.Facing(_parentObject, _horizontalMove);
+            _enemyFacing.Facing(_parentObject, _horizontalMove);
         }
 
         public void Undo(){}
