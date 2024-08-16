@@ -2,7 +2,7 @@ using DesignPatterns.CommandPattern;
 using Player.Commands;
 using UnityEngine;
 
-namespace Player
+namespace Player.States
 {
     public class PlayerWalkState : PlayerBaseState
     {

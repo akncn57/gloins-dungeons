@@ -2,12 +2,11 @@ using DesignPatterns.CommandPattern;
 using Player.Commands;
 using UnityEngine;
 
-namespace Player
+namespace Player.States
 {
     public class PlayerAttackBasicState : PlayerBaseState
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.AttackBasic;
-
         
         private readonly int _attackBasicAnimationHash = Animator.StringToHash("Warrior_Attack_Basic");
         private ICommand _attackCommand;
@@ -28,10 +27,7 @@ namespace Player
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
         }
 
-        public override void OnTick()
-        {
-            
-        }
+        public override void OnTick(){}
 
         public override void OnExit()
         {

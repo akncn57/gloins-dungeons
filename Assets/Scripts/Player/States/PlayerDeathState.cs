@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using DesignPatterns.CommandPattern;
+﻿using DesignPatterns.CommandPattern;
 using Player.Commands;
+using UnityEngine;
 
-namespace Player
+namespace Player.States
 {
     public class PlayerDeathState : PlayerBaseState
     {
@@ -22,14 +22,8 @@ namespace Player
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_deathAnimationHash, 0.1f);
         }
 
-        public override void OnTick()
-        {
-            
-        }
+        public override void OnTick(){}
 
-        public override void OnExit()
-        {
-            
-        }
+        public override void OnExit(){}
     }
 }
