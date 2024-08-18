@@ -24,5 +24,6 @@ namespace Enemies
         public abstract float ChasePositionOffset { get; }
         public abstract EnemyMover EnemyMover { get; }
         public abstract EnemyFacing EnemyFacing { get; }
+        public abstract EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }
     }
 }

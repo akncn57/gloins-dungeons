@@ -4,7 +4,7 @@ using Enemies.Commands;
 using UnityEngine;
 using Zenject;
 
-namespace Enemies.Skeleton
+namespace Enemies.Skeleton.States
 {
     public class SkeletonChaseState : SkeletonBaseState
     {
@@ -20,13 +20,18 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
+            //TODO: Return biciminde komut calistirmak lazim.
+            // ICommand findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
+            //     SkeletonStateMachine.EnemyFindClosestChasePoint,
+            //     _playerGameObject.transform.position,
+            //     SkeletonStateMachine.Rigidbody.position,
+            //     SkeletonStateMachine.ChasePositionOffset);
+            // CommandInvoker.ExecuteCommand(findClosestChasePositionCommand);
+                
             ApproachPlayer(FindClosestPosition());
         }
 
-        public override void OnExit()
-        {
-            
-        }
+        public override void OnExit(){}
 
         private void ApproachPlayer(Vector3 playerPosition)
         {

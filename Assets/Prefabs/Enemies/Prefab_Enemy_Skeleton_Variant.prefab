@@ -411,7 +411,7 @@ MonoBehaviour:
   hurtParticle: {fileID: 6422862922965006203}
   patrolCoordinates: []
   walkSpeed: 3
-  chasePositionOffset: 1.5
+  chasePositionOffset: 1.2
 --- !u!4 &2135900426838073759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8472845367005656802, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}

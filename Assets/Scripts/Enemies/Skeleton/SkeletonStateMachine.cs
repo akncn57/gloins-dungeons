@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Enemies.Skeleton.States;
 using HealthSystem;
 using HitData;
 using UnityEngine;
@@ -25,6 +26,8 @@ namespace Enemies.Skeleton
         private HealthController _healthController;
         private EnemyMover _enemyMover;
         private EnemyFacing _enemyFacing;
+        private EnemyFindClosestChasePoint _enemyFindClosestChasePoint;
+        private SkeletonDrawChaseOverlay _skeletonDrawChaseOverlay;
 
         public override HealthController HealthController => _healthController;
         public override EnemyColliderBaseController EnemyColliderController => skeletonColliderController;
@@ -42,6 +45,8 @@ namespace Enemies.Skeleton
         public override float ChasePositionOffset => chasePositionOffset;
         public override EnemyMover EnemyMover => _enemyMover;
         public override EnemyFacing EnemyFacing => _enemyFacing;
+        public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint => _enemyFindClosestChasePoint;
+        public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
 
         [Inject] public IInstantiator Instantiator;
 
@@ -87,6 +92,8 @@ namespace Enemies.Skeleton
             _healthController = new HealthController(100, 100);
             _enemyMover = new EnemyMover();
             _enemyFacing = new EnemyFacing();
+            _enemyFindClosestChasePoint = new EnemyFindClosestChasePoint();
+            _skeletonDrawChaseOverlay = new SkeletonDrawChaseOverlay();
             
             SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});
             SkeletonDeathState = Instantiator.Instantiate<SkeletonDeathState>(new object[]{this});

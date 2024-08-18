@@ -1,9 +1,11 @@
 ﻿using CustomInterfaces;
+using DesignPatterns.CommandPattern;
+using Enemies.Skeleton.Commands;
 using Tools;
 using UnityEngine;
 using Zenject;
 
-namespace Enemies.Skeleton
+namespace Enemies.Skeleton.States
 {
     public class SkeletonIdleState : SkeletonBaseState
     {
@@ -24,7 +26,12 @@ namespace Enemies.Skeleton
 
         public override void OnTick()
         {
-            DrawChaseOverlayAndCheck();
+            ICommand drawChaseOverlayCommand = new SkeletonDrawChaseOverlayCommand(
+                SkeletonStateMachine.SkeletonDrawChaseOverlay, 
+                SkeletonStateMachine.ChaseCollider.transform.position,
+                SkeletonStateMachine.ChaseCollider.radius,
+                SkeletonStateMachine);
+            CommandInvoker.ExecuteCommand(drawChaseOverlayCommand);
         }
 
         public override void OnExit()
@@ -41,25 +48,6 @@ namespace Enemies.Skeleton
         private void CheckIdleWaitFinished()
         {
             SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonPatrolState);
-        }
-        
-        private void DrawChaseOverlayAndCheck()
-        {
-            var results = Physics2D.OverlapCircleAll(SkeletonStateMachine.ChaseCollider.transform.position, SkeletonStateMachine.ChaseCollider.radius);
-            
-            foreach (var result in results)
-            {
-                if (!result) continue;
-
-                if (!result.TryGetComponent(out IPlayer player))
-                    player = result.GetComponentInParent<IPlayer>();
-
-                if (player != null)
-                {
-                    SkeletonStateMachine.SkeletonChaseState.Init(player);
-                    SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonChaseState);
-                }
-            }
         }
     }
 }

@@ -43,6 +43,7 @@ namespace Enemies.Mage
         public override float ChasePositionOffset => chasePositionOffset;
         public override EnemyMover EnemyMover { get; }
         public override EnemyFacing EnemyFacing { get; }
+        public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }
 
         [Inject] public IInstantiator Instantiator;
 

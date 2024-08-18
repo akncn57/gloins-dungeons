@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using DesignPatterns.CommandPattern;
+using Enemies.Commands;
+using UnityEngine;
 using Zenject;
 
-namespace Enemies.Skeleton
+namespace Enemies.Skeleton.States
 {
     public class SkeletonHurtState : SkeletonBaseState
     {
@@ -14,7 +16,9 @@ namespace Enemies.Skeleton
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart += EnemyOnHurtStart;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd += EnemyOnHurtEnd;
             
-            SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
+            ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+            CommandInvoker.ExecuteCommand(stopMoveCommand);
+            
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
             
             SkeletonStateMachine.HurtParticle.Play();

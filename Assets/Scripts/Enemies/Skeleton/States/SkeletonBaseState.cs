@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-namespace Enemies.Skeleton
+namespace Enemies.Skeleton.States
 {
     public class SkeletonBaseState : EnemyBaseState
     {
