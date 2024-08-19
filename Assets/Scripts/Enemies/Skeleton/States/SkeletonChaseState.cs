@@ -10,6 +10,7 @@ namespace Enemies.Skeleton.States
     {
         private readonly int _walkAnimationHash = Animator.StringToHash("Skeleton_Walk");
         private GameObject _playerGameObject;
+        private ICommand _findClosestChasePositionCommand;
 
         public SkeletonChaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
 
@@ -20,13 +21,13 @@ namespace Enemies.Skeleton.States
 
         public override void OnTick()
         {
-             ICommand findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
+            _findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
                  SkeletonStateMachine.EnemyFindClosestChasePoint,
                  SkeletonStateMachine.Rigidbody.position,
                  _playerGameObject.transform.position,
                  SkeletonStateMachine.ChasePositionOffset);
                 
-            ApproachPlayer((Vector3)CommandInvoker.ExecuteCommand(findClosestChasePositionCommand));
+            ApproachPlayer((Vector3)CommandInvoker.ExecuteCommand(_findClosestChasePositionCommand));
         }
 
         public override void OnExit(){}
