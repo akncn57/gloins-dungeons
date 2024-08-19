@@ -1,4 +1,6 @@
-﻿using CustomInterfaces;
+﻿using DesignPatterns.CommandPattern;
+using Enemies.Commands;
+using Enemies.Skeleton.Commands;
 using UnityEngine;
 using Zenject;
 
@@ -8,6 +10,7 @@ namespace Enemies.Skeleton.States
     {
         private readonly int _walkAnimationHash = Animator.StringToHash("Skeleton_Walk");
         private int _patrolIndex;
+        private ICommand _drawChaseOverlayCommand;
         
         public SkeletonPatrolState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
         
@@ -27,7 +30,12 @@ namespace Enemies.Skeleton.States
 
         public override void OnTick()
         {
-            DrawChaseOverlayAndCheck();
+            _drawChaseOverlayCommand = new SkeletonDrawChaseOverlayCommand(
+                SkeletonStateMachine.SkeletonDrawChaseOverlay, 
+                SkeletonStateMachine.ChaseCollider.transform.position,
+                SkeletonStateMachine.ChaseCollider.radius,
+                SkeletonStateMachine);
+            CommandInvoker.ExecuteCommand(_drawChaseOverlayCommand);
             
             if (!SkeletonStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted)
                 GoPatrolCoordinate(SkeletonStateMachine.PatrolCoordinates[_patrolIndex].PatrolCoordinate.position);
@@ -50,43 +58,26 @@ namespace Enemies.Skeleton.States
             if ((SkeletonStateMachine.Rigidbody.transform.position - coordinate).magnitude < 0.1f)
             {
                 SkeletonStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted = true;
-                SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
+                
+                ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+                CommandInvoker.ExecuteCommand(stopMoveCommand);
+                
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
                 return;
             }
-
-            var movement = coordinate - SkeletonStateMachine.Rigidbody.transform.position;
-            SkeletonStateMachine.Rigidbody.velocity = movement.normalized * SkeletonStateMachine.WalkSpeed;
-            Facing(movement.x);
-        }
-        
-        private void Facing(float horizontalMovement)
-        {
-            SkeletonStateMachine.ParentObject.transform.localScale = horizontalMovement switch
-            {
-                > 0 => new Vector3(1f, 1f, 1f),
-                < 0 => new Vector3(-1f, 1f, 1f),
-                _ => SkeletonStateMachine.ParentObject.transform.localScale
-            };
-        }
-        
-        private void DrawChaseOverlayAndCheck()
-        {
-            var results = Physics2D.OverlapCircleAll(SkeletonStateMachine.ChaseCollider.transform.position, SkeletonStateMachine.ChaseCollider.radius);
             
-            foreach (var result in results)
-            {
-                if (!result) continue;
+            ICommand moveCommand = new EnemyMoveCommand(
+                SkeletonStateMachine.EnemyMover,
+                coordinate,
+                SkeletonStateMachine.Rigidbody,
+                SkeletonStateMachine.WalkSpeed);
+            CommandInvoker.ExecuteCommand(moveCommand);
 
-                if (!result.TryGetComponent(out IPlayer player))
-                    player = result.GetComponentInParent<IPlayer>();
-
-                if (player != null)
-                {
-                    SkeletonStateMachine.SkeletonChaseState.Init(player);
-                    SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonChaseState);
-                }
-            }
+            ICommand facingCommand = new EnemyFacingCommand(
+                SkeletonStateMachine.EnemyFacing,
+                SkeletonStateMachine.ParentObject,
+                coordinate.x - SkeletonStateMachine.Rigidbody.transform.position.x);
+            CommandInvoker.ExecuteCommand(facingCommand);
         }
     }
 }

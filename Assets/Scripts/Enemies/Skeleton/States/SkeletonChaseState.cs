@@ -47,7 +47,8 @@ namespace Enemies.Skeleton.States
             
             ICommand moveCommand = new EnemyMoveCommand(
                 SkeletonStateMachine.EnemyMover,
-                playerPosition, SkeletonStateMachine.Rigidbody,
+                playerPosition,
+                SkeletonStateMachine.Rigidbody,
                 SkeletonStateMachine.WalkSpeed);
             CommandInvoker.ExecuteCommand(moveCommand);
 
