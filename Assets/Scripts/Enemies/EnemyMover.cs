@@ -14,5 +14,10 @@ namespace Enemies
         {
             rigidbody.velocity = Vector2.zero;
         }
+        
+        public void KnockBack(Rigidbody2D rigidbody, float hitPositionX, float knockBackStrength)
+        {
+            rigidbody.velocity = new Vector2(hitPositionX * knockBackStrength, rigidbody.velocity.y);
+        }
     }
 }
