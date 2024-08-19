@@ -18,14 +18,12 @@ namespace Player.Commands
             _speed = speed;
         }
         
-        public void Execute()
+        public object Execute()
         {
             _playerMover.Move(_rigidbody, _movement, _speed);
+            return default;
         }
 
-        public void Undo()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void Undo() {}
     }
 }

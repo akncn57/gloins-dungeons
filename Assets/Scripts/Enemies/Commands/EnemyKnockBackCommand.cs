@@ -18,9 +18,10 @@ namespace Enemies.Commands
             _knockBackStrength = knockBackStrength;
         }
         
-        public void Execute()
+        public object Execute()
         {
             _enemyMover.KnockBack(_rigidbody, _hitPositionX, _knockBackStrength);
+            return default;
         }
 
         public void Undo(){}

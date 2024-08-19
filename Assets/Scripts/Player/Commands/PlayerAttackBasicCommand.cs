@@ -25,9 +25,10 @@ namespace Player.Commands
             _playerPosition = playerPosition;
         }
 
-        public void Execute()
+        public object Execute()
         {
             _playerAttackBasic.PlayerOnAttackBasicOpenOverlap(_attackCollider, _attackPower, _hitKnockBackPower, _playerPosition);
+            return default;
         }
 
         public void Undo()

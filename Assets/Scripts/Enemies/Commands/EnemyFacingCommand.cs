@@ -16,9 +16,10 @@ namespace Enemies.Commands
             _horizontalMove = horizontalMove;
         }
 
-        public void Execute()
+        public object Execute()
         {
             _enemyFacing.Facing(_parentObject, _horizontalMove);
+            return default;
         }
 
         public void Undo(){}

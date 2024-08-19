@@ -9,7 +9,7 @@ namespace Enemies.Skeleton.Commands
             
         }
         
-        public void Execute()
+        public object Execute()
         {
             throw new System.NotImplementedException();
         }

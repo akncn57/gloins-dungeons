@@ -14,9 +14,10 @@ namespace Player.Commands
             _rigidbody = rigidbody;
         }
         
-        public void Execute()
+        public object Execute()
         {
             _playerMover.Stop(_rigidbody);
+            return default;
         }
 
         public void Undo(){}

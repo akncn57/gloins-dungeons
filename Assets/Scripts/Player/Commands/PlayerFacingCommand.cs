@@ -16,9 +16,10 @@ namespace Player.Commands
             _horizontalMove = horizontalMove;
         }
 
-        public void Execute()
+        public object Execute()
         {
             _playerFacing.Facing(_parentObject, _horizontalMove);
+            return default;
         }
 
         public void Undo(){}

@@ -18,9 +18,10 @@ namespace Enemies.Commands
             _speed = speed;
         }
         
-        public void Execute()
+        public object Execute()
         {
             _enemyMover.Move(_playerPosition, _rigidbody, _speed);
+            return default;
         }
 
         public void Undo(){}

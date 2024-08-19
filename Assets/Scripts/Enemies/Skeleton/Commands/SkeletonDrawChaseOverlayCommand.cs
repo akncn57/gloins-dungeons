@@ -18,9 +18,10 @@ namespace Enemies.Skeleton.Commands
             _skeletonStateMachine = skeletonStateMachine;
         }
         
-        public void Execute()
+        public object Execute()
         {
             _skeletonDrawChaseOverlay.DrawChaseOverlay(_position, _radius, _skeletonStateMachine);
+            return default;
         }
 
         public void Undo(){}

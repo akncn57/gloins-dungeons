@@ -6,10 +6,10 @@ namespace DesignPatterns.CommandPattern
     {
         private static readonly Stack<ICommand> UndoStack = new Stack<ICommand>();
 
-        public static void ExecuteCommand(ICommand command)
+        public static object ExecuteCommand(ICommand command)
         {
-            command.Execute();
             UndoStack.Push(command);
+            return command.Execute();
         }
         
         public static void UndoCommand()

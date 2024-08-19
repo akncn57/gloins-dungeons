@@ -20,15 +20,13 @@ namespace Enemies.Skeleton.States
 
         public override void OnTick()
         {
-            //TODO: Return biciminde komut calistirmak lazim.
-            // ICommand findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
-            //     SkeletonStateMachine.EnemyFindClosestChasePoint,
-            //     _playerGameObject.transform.position,
-            //     SkeletonStateMachine.Rigidbody.position,
-            //     SkeletonStateMachine.ChasePositionOffset);
-            // CommandInvoker.ExecuteCommand(findClosestChasePositionCommand);
+             ICommand findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
+                 SkeletonStateMachine.EnemyFindClosestChasePoint,
+                 SkeletonStateMachine.Rigidbody.position,
+                 _playerGameObject.transform.position,
+                 SkeletonStateMachine.ChasePositionOffset);
                 
-            ApproachPlayer(FindClosestPosition());
+            ApproachPlayer((Vector3)CommandInvoker.ExecuteCommand(findClosestChasePositionCommand));
         }
 
         public override void OnExit(){}
@@ -57,14 +55,6 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.ParentObject,
                 playerPosition.x - SkeletonStateMachine.Rigidbody.transform.position.x);
             CommandInvoker.ExecuteCommand(facingCommand);
-        }
-        
-        private Vector3 FindClosestPosition()
-        {
-            var playerPosition = _playerGameObject.transform.position;
-            return SkeletonStateMachine.Rigidbody.position.x <= playerPosition.x 
-                ? new Vector3(playerPosition.x - SkeletonStateMachine.ChasePositionOffset, playerPosition.y, 0f) 
-                : new Vector3(playerPosition.x + SkeletonStateMachine.ChasePositionOffset, playerPosition.y, 0f);
         }
 
         public void Init(IPlayer player)

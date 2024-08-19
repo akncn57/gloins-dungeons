@@ -14,9 +14,10 @@ namespace Enemies.Commands
             _rigidbody = rigidbody;
         }
         
-        public void Execute()
+        public object Execute()
         {
             _enemyMover.Stop(_rigidbody);
+            return default;
         }
 
         public void Undo(){}

@@ -14,9 +14,10 @@ namespace Player.Commands
             _damage = damage;
         }
 
-        public void Execute()
+        public object Execute()
         {
             _healthController.SpendHealth(_damage);
+            return default;
         }
 
         public void Undo(){}

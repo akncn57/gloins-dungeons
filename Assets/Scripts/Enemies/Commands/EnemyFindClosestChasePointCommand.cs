@@ -18,14 +18,10 @@ namespace Enemies.Commands
             _offset = offset;
         }
         
-        public void Execute()
+        public object Execute()
         {
-            _enemyFindClosestChasePoint.GetClosestChasePoint(_position, _playerPosition, _offset);
-        }
-
-        public T Execute<T>()
-        {
-            return default;
+            var position = _enemyFindClosestChasePoint.GetClosestChasePoint(_position, _playerPosition, _offset);
+            return position;
         }
 
         public void Undo(){}
