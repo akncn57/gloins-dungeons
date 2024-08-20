@@ -8,6 +8,7 @@ namespace InputSystem
     {
         public Vector2 MovementValue { get; private set; }
         public event Action AttackBasicEvent;
+        public event Action DashEvent;
         public bool IsBlocking { get; private set; }
 
         private Controls _controls;
@@ -45,6 +46,12 @@ namespace InputSystem
             {
                 IsBlocking = false;
             }
+        }
+
+        public void OnDash(InputAction.CallbackContext context)
+        {
+            if (!context.performed) { return; }
+            DashEvent?.Invoke();
         }
     }
 }
