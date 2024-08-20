@@ -19,7 +19,7 @@ namespace Player
         public HealthController HealthController;
         public Rigidbody2D RigidBody;
         public Animator Animator;
-        public TrailRenderer TrailRenderer;
+        public SpriteTrailRenderer.SpriteTrailRenderer TrailRenderer;
         public GameObject ParentObject;
         public CapsuleCollider2D AttackBasicCollider;
         public GameObject BlockColliderObject;

@@ -22,8 +22,6 @@ namespace Player
 
         public void Dash(Rigidbody2D rigidbody, Vector2 dashDirection, float force)
         {
-            // var dir = new Vector2(dashDirection, rigidbody.velocity.y);
-            // rigidbody.velocity = dir.normalized * force;
             rigidbody.AddForce(dashDirection * force, ForceMode2D.Impulse);
         }
     }
