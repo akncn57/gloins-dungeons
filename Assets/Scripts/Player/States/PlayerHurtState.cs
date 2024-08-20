@@ -1,6 +1,7 @@
 using DesignPatterns.CommandPattern;
 using Player.Commands;
 using UnityEngine;
+using Zenject;
 
 namespace Player.States
 {
@@ -10,7 +11,7 @@ namespace Player.States
         
         private readonly int _hurtAnimationHash = Animator.StringToHash("Warrior_Hurt");
 
-        public PlayerHurtState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
+        public PlayerHurtState(PlayerStateMachine playerStateMachine, IInstantiator instantiator) : base(playerStateMachine, instantiator){}
 
         public override void OnEnter()
         {

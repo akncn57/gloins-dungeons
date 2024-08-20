@@ -1,6 +1,7 @@
 using DesignPatterns.CommandPattern;
 using Player.Commands;
 using UnityEngine;
+using Zenject;
 
 namespace Player.States
 {
@@ -10,11 +11,12 @@ namespace Player.States
         
         private readonly int _walkAnimationHash = Animator.StringToHash("Warrior_Walk");
         
-        public PlayerWalkState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
+        public PlayerWalkState(PlayerStateMachine playerStateMachine, IInstantiator instantiator) : base(playerStateMachine, instantiator){}
 
         public override void OnEnter()
         {
             PlayerStateMachine.InputReader.AttackBasicEvent += CheckAttackBasic;
+            PlayerStateMachine.InputReader.DashEvent += CheckDash;
             PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
@@ -43,6 +45,7 @@ namespace Player.States
         public override void OnExit()
         {
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
+            PlayerStateMachine.InputReader.DashEvent -= CheckDash;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
         }
@@ -62,6 +65,11 @@ namespace Player.States
         private void CheckAttackBasic()
         {
             PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerAttackBasicState);
+        }
+        
+        private void CheckDash()
+        {
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerDashState);
         }
         
         private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)

@@ -1,4 +1,5 @@
 using StateMachine;
+using Zenject;
 
 namespace Player.States
 {
@@ -7,10 +8,12 @@ namespace Player.States
     {
         protected abstract PlayerStateEnums StateEnum { get; }
         protected PlayerStateMachine PlayerStateMachine;
+        protected IInstantiator Instantiator;
 
-        protected PlayerBaseState(PlayerStateMachine playerStateMachine)
+        protected PlayerBaseState(PlayerStateMachine playerStateMachine, IInstantiator instantiator)
         {
             PlayerStateMachine = playerStateMachine;
+            Instantiator = instantiator;
         }
     }
     

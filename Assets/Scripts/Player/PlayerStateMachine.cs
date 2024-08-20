@@ -19,6 +19,7 @@ namespace Player
         public HealthController HealthController;
         public Rigidbody2D RigidBody;
         public Animator Animator;
+        public TrailRenderer TrailRenderer;
         public GameObject ParentObject;
         public CapsuleCollider2D AttackBasicCollider;
         public GameObject BlockColliderObject;
@@ -77,6 +78,12 @@ namespace Player
             private set;
         }
         
+        public PlayerDashState PlayerDashState
+        {
+            get;
+            private set;
+        }
+        
         #endregion
 
         private void Start()
@@ -92,6 +99,7 @@ namespace Player
             PlayerHurtState = Instantiator.Instantiate<PlayerHurtState>(new object[]{this});
             PlayerIdleState = Instantiator.Instantiate<PlayerIdleState>(new object[]{this});
             PlayerWalkState = Instantiator.Instantiate<PlayerWalkState>(new object[]{this});
+            PlayerDashState = Instantiator.Instantiate<PlayerDashState>(new object[]{this});
             
             SwitchState(PlayerIdleState);
         }

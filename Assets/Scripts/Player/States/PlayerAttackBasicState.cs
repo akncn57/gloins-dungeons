@@ -1,6 +1,7 @@
 using DesignPatterns.CommandPattern;
 using Player.Commands;
 using UnityEngine;
+using Zenject;
 
 namespace Player.States
 {
@@ -11,7 +12,7 @@ namespace Player.States
         private readonly int _attackBasicAnimationHash = Animator.StringToHash("Warrior_Attack_Basic");
         private ICommand _attackCommand;
         
-        public PlayerAttackBasicState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
+        public PlayerAttackBasicState(PlayerStateMachine playerStateMachine, IInstantiator instantiator) : base(playerStateMachine, instantiator){}
 
         public override void OnEnter()
         {

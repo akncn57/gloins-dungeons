@@ -15,3 +15,5 @@ MonoBehaviour:
   WalkSpeed: 5
   BasicAttackPower: 15
   HitKnockBackPower: 2
+  DashForce: 20
+  DashTime: 0.2

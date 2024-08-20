@@ -16,7 +16,7 @@ namespace Enemies.Skeleton.States
         
         public override void OnEnter()
         {
-            _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{3});
+            _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{3f});
             
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
             _genericTimer.OnTimerFinished += CheckIdleWaitFinished;

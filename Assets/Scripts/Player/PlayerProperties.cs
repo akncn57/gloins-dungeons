@@ -8,5 +8,7 @@ namespace Player
         public float WalkSpeed;
         public int BasicAttackPower;
         public float HitKnockBackPower;
+        public float DashForce;
+        public float DashTime;
     }
 }

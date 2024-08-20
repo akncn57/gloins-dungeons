@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zenject;
 
 namespace Player.States
 {
@@ -10,7 +11,7 @@ namespace Player.States
         private readonly int _blockDownAnimationHash = Animator.StringToHash("Player_Block_Down");
         private readonly int _blockIdleAnimationHash = Animator.StringToHash("Player_Block_Idle");
         
-        public PlayerBlockState(PlayerStateMachine playerStateMachine) : base(playerStateMachine){}
+        public PlayerBlockState(PlayerStateMachine playerStateMachine, IInstantiator instantiator) : base(playerStateMachine, instantiator){}
 
         public override void OnEnter()
         {

@@ -19,5 +19,12 @@ namespace Player
         {
             rigidbody.velocity = new Vector2(hitPositionX * knockBackStrength, rigidbody.velocity.y);
         }
+
+        public void Dash(Rigidbody2D rigidbody, float dashDirection, float force)
+        {
+            // var dir = new Vector2(dashDirection, rigidbody.velocity.y);
+            // rigidbody.velocity = dir.normalized * force;
+            rigidbody.AddForce(new Vector2(dashDirection * force, rigidbody.velocity.y), ForceMode2D.Impulse);
+        }
     }
 }
