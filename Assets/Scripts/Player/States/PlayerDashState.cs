@@ -28,7 +28,7 @@ namespace Player.States
             ICommand dashCommand = new PlayerDashCommand(
                 PlayerStateMachine.PlayerMover, 
                 PlayerStateMachine.RigidBody,
-                PlayerStateMachine.InputReader.MovementValue.x, 
+                PlayerStateMachine.InputReader.MovementValue, 
                 PlayerStateMachine.PlayerProperties.DashForce);
             CommandInvoker.ExecuteCommand(dashCommand);
         }

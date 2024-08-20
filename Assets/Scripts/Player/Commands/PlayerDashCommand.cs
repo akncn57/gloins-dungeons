@@ -7,20 +7,20 @@ namespace Player.Commands
     {
         private readonly PlayerMover _playerMover;
         private readonly Rigidbody2D _rigidbody;
-        private readonly float _dashDirectionX;
+        private readonly Vector2 _dashDirection;
         private readonly float _force;
         
-        public PlayerDashCommand(PlayerMover playerMover, Rigidbody2D rigidbody, float dashDirectionX, float force)
+        public PlayerDashCommand(PlayerMover playerMover, Rigidbody2D rigidbody, Vector2 dashDirection, float force)
         {
             _playerMover = playerMover;
             _rigidbody = rigidbody;
-            _dashDirectionX = dashDirectionX;
+            _dashDirection = dashDirection;
             _force = force;
         }
         
         public object Execute()
         {
-            _playerMover.Dash(_rigidbody, _dashDirectionX, _force);
+            _playerMover.Dash(_rigidbody, _dashDirection, _force);
             return default;
         }
 
