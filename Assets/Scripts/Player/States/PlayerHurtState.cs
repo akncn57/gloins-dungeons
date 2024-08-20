@@ -1,6 +1,8 @@
+using DesignPatterns.CommandPattern;
+using Player.Commands;
 using UnityEngine;
 
-namespace Player
+namespace Player.States
 {
     public class PlayerHurtState : PlayerBaseState
     {
@@ -15,7 +17,9 @@ namespace Player
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtStart += PlayerOnHurtStart;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnHurtEnd += PlayerOnHurtEnd;
             
-            PlayerStateMachine.RigidBody.velocity = Vector2.zero;
+            ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
+            CommandInvoker.ExecuteCommand(stopCommand);
+            
             PlayerStateMachine.HurtParticle.Play();
             PlayerStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
         }
@@ -33,9 +37,18 @@ namespace Player
 
         private void PlayerOnHurtStart()
         {
-            PlayerStateMachine.HealthController.SpendHealth(PlayerStateMachine.HitData.Damage);
+
+            ICommand spendHealthCommand = new PlayerHurtCommand(PlayerStateMachine.HealthController, PlayerStateMachine.HitData.Damage);
+            CommandInvoker.ExecuteCommand(spendHealthCommand);
+            
             Debug.Log("Player Health : " + PlayerStateMachine.HealthController.HealthData.Health);
-            PlayerStateMachine.RigidBody.velocity = new Vector2(PlayerStateMachine.HitData.HitPosition.x * PlayerStateMachine.HitData.KnockBackStrength, PlayerStateMachine.RigidBody.velocity.y);
+
+            ICommand knockBackCommand = new PlayerKnockBackCommand(
+                PlayerStateMachine.PlayerMover,
+                PlayerStateMachine.RigidBody,
+                PlayerStateMachine.HitData.HitPosition.x,
+                PlayerStateMachine.HitData.KnockBackStrength);
+            CommandInvoker.ExecuteCommand(knockBackCommand);
         }
         
         private void PlayerOnHurtEnd()

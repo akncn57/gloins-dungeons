@@ -41,7 +41,10 @@ namespace Enemies.Mage
         public override EnemyHitData HitData { get; set; }
         public override float WalkSpeed => walkSpeed;
         public override float ChasePositionOffset => chasePositionOffset;
-        
+        public override EnemyMover EnemyMover { get; }
+        public override EnemyFacing EnemyFacing { get; }
+        public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }
+
         [Inject] public IInstantiator Instantiator;
 
         public MageChaseState MageChaseState

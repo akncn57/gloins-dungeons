@@ -1,6 +1,8 @@
+using DesignPatterns.CommandPattern;
+using Player.Commands;
 using UnityEngine;
 
-namespace Player
+namespace Player.States
 {
     public class PlayerWalkState : PlayerBaseState
     {
@@ -23,9 +25,19 @@ namespace Player
         {
             CheckStopMoving();
             CheckBlocking();
-            
-            Movement(PlayerStateMachine.InputReader.MovementValue);
-            Facing(PlayerStateMachine.InputReader.MovementValue.x);
+
+            ICommand runCommand = new PlayerMoveCommand(
+                PlayerStateMachine.PlayerMover,
+                PlayerStateMachine.RigidBody,
+                PlayerStateMachine.InputReader.MovementValue,
+                PlayerStateMachine.PlayerProperties.WalkSpeed);
+            CommandInvoker.ExecuteCommand(runCommand);
+
+            ICommand facingCommand = new PlayerFacingCommand(
+                PlayerStateMachine.PlayerFacing,
+                PlayerStateMachine.ParentObject,
+                PlayerStateMachine.InputReader.MovementValue.x);
+            CommandInvoker.ExecuteCommand(facingCommand);
         }
         
         public override void OnExit()
@@ -33,22 +45,6 @@ namespace Player
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
-        }
-
-        private void Movement(Vector2 movement)
-        {
-            movement = movement.normalized * PlayerStateMachine.PlayerProperties.WalkSpeed;
-            PlayerStateMachine.RigidBody.velocity = movement;
-        }
-
-        private void Facing(float horizontalMovement)
-        {
-            PlayerStateMachine.ParentObject.transform.localScale = horizontalMovement switch
-            {
-                > 0 => new Vector3(1f, 1f, 1f),
-                < 0 => new Vector3(-1f, 1f, 1f),
-                _ => PlayerStateMachine.ParentObject.transform.localScale
-            };
         }
 
         private void CheckStopMoving()

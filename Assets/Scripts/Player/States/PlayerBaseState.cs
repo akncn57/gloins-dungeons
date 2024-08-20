@@ -1,6 +1,6 @@
 using StateMachine;
 
-namespace Player
+namespace Player.States
 {
     [System.Serializable]
     public abstract class PlayerBaseState : BaseState

@@ -3,6 +3,7 @@ using CustomInterfaces;
 using HealthSystem;
 using HitData;
 using InputSystem;
+using Player.States;
 using StateMachine;
 using UnityEngine;
 using Zenject;
@@ -24,6 +25,9 @@ namespace Player
         public ParticleSystem HurtParticle;
         public List<Transform> EnemyChasePositionsList;
         public PlayerHitData HitData;
+        public PlayerMover PlayerMover;
+        public PlayerFacing PlayerFacing;
+        public PlayerAttackBasic PlayerAttackBasic;
         
         [Inject] public IInstantiator Instantiator;
 
@@ -77,6 +81,9 @@ namespace Player
 
         private void Start()
         {
+            PlayerMover = new PlayerMover();
+            PlayerFacing = new PlayerFacing();
+            PlayerAttackBasic = new PlayerAttackBasic();
             HealthController = new HealthController(100, 100);
             
             PlayerAttackBasicState = Instantiator.Instantiate<PlayerAttackBasicState>(new object[]{this});

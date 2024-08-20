@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using DesignPatterns.CommandPattern;
+using Enemies.Commands;
+using UnityEngine;
 using Zenject;
 
-namespace Enemies.Skeleton
+namespace Enemies.Skeleton.States
 {
     public class SkeletonHurtState : SkeletonBaseState
     {
@@ -14,7 +16,9 @@ namespace Enemies.Skeleton
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart += EnemyOnHurtStart;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd += EnemyOnHurtEnd;
             
-            SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
+            ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+            CommandInvoker.ExecuteCommand(stopMoveCommand);
+            
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
             
             SkeletonStateMachine.HurtParticle.Play();
@@ -33,9 +37,19 @@ namespace Enemies.Skeleton
 
         private void EnemyOnHurtStart()
         {
-            SkeletonStateMachine.HealthController.SpendHealth(SkeletonStateMachine.HitData.Damage);
+            ICommand spendHealthCommand = new EnemySpendHealthCommand(
+                SkeletonStateMachine.HealthController,
+                SkeletonStateMachine.HitData.Damage);
+            CommandInvoker.ExecuteCommand(spendHealthCommand);
+            
             Debug.Log("Enemy Skeleton Health : " + SkeletonStateMachine.HealthController.HealthData.Health);
-            SkeletonStateMachine.Rigidbody.velocity = new Vector2(SkeletonStateMachine.HitData.HitPosition.x * SkeletonStateMachine.HitData.KnockBackStrength, SkeletonStateMachine.Rigidbody.velocity.y);
+            
+            ICommand knockBackCommand = new EnemyKnockBackCommand(
+                SkeletonStateMachine.EnemyMover,
+                SkeletonStateMachine.Rigidbody,
+                SkeletonStateMachine.HitData.HitPosition.x,
+                SkeletonStateMachine.HitData.KnockBackStrength);
+            CommandInvoker.ExecuteCommand(knockBackCommand);
         }
 
         private void EnemyOnHurtEnd()

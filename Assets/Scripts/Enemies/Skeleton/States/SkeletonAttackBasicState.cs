@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using ColliderController;
+using DesignPatterns.CommandPattern;
+using Enemies.Commands;
 using UnityEngine;
 using Zenject;
 
-namespace Enemies.Skeleton
+namespace Enemies.Skeleton.States
 {
     public class SkeletonAttackBasicState : SkeletonBaseState
     {
@@ -19,8 +21,10 @@ namespace Enemies.Skeleton
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose += SkeletonOnAttackBasicCloseOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += SkeletonOnAttackBasicFinish;
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
+
+            ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+            CommandInvoker.ExecuteCommand(stopMoveCommand);
             
-            SkeletonStateMachine.Rigidbody.velocity = Vector2.zero;
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
         }
 

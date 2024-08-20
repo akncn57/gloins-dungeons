@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Player
+namespace Player.States
 {
     public class PlayerBlockState : PlayerBaseState
     {
