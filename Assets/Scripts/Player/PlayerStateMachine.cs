@@ -6,6 +6,7 @@ using InputSystem;
 using Player.States;
 using StateMachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace Player
@@ -22,9 +23,8 @@ namespace Player
         public SpriteTrailRenderer.SpriteTrailRenderer TrailRenderer;
         public GameObject ParentObject;
         public CapsuleCollider2D AttackBasicCollider;
-        public GameObject BlockColliderObject;
+        public GameObject ShieldObject;
         public ParticleSystem HurtParticle;
-        public List<Transform> EnemyChasePositionsList;
         public PlayerHitData HitData;
         public PlayerMover PlayerMover;
         public PlayerFacing PlayerFacing;
@@ -33,12 +33,6 @@ namespace Player
         [Inject] public IInstantiator Instantiator;
 
         #region Player State Classes
-        
-        public List<Transform> EnemyChasePositions
-        {
-            get => EnemyChasePositionsList;
-            set => EnemyChasePositionsList = value;
-        }
         
         public GameObject GameObject => gameObject;
 

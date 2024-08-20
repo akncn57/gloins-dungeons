@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7be105b1704e27ae86434d9dd51628, type: 3}
   m_Name: ScriptableObject_PlayerProperties
   m_EditorClassIdentifier: 
-  WalkSpeed: 5
+  WalkSpeed: 6
   BasicAttackPower: 15
   HitKnockBackPower: 2
   DashForce: 20
