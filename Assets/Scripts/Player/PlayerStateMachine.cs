@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using CustomInterfaces;
 using HealthSystem;
 using HitData;
@@ -6,7 +5,6 @@ using InputSystem;
 using Player.States;
 using StateMachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Player

@@ -222,10 +222,10 @@ GameObject:
   - component: {fileID: 4238596811791277506}
   - component: {fileID: 8790305917748976453}
   - component: {fileID: 2494869978339683345}
-  - component: {fileID: 4109466710160203311}
+  - component: {fileID: 2998310174018969009}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,7 +239,7 @@ Transform:
   m_GameObject: {fileID: 4450833576362297341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: 0.57, z: 0}
+  m_LocalPosition: {x: 0.78, y: 0.57, z: 0}
   m_LocalScale: {x: -0.5246, y: 0.5246, z: 0.5246}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -318,13 +318,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &4109466710160203311
-CapsuleCollider:
+--- !u!70 &2998310174018969009
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4450833576362297341}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -333,14 +335,24 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.0065335
-  m_Height: 3.9806473
-  m_Direction: 1
-  m_Center: {x: -0.37805283, y: 0, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.4808521, y: 0}
+  m_Size: {x: 2.2082946, y: 3.9806473}
+  m_Direction: 0
 --- !u!1 &5415165778118375842
 GameObject:
   m_ObjectHideFlags: 0
