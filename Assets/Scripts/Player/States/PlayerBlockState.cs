@@ -15,6 +15,7 @@ namespace Player.States
 
         public override void OnEnter()
         {
+            PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
             PlayerStateMachine.ShieldObject.SetActive(true);
@@ -32,6 +33,7 @@ namespace Player.States
 
         public override void OnExit()
         {
+            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
             
             PlayerStateMachine.ShieldObject.SetActive(false);
@@ -45,7 +47,30 @@ namespace Player.States
         
         private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
         {
-            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerHurtState);
+            IsAttackHitFrontOfPlayer(hitPosition);
+        }
+
+        private void IsAttackHitFrontOfPlayer(Vector3 hitDirection)
+        {
+            var transform = PlayerStateMachine.RigidBody.transform;
+            var directionToTarget = (hitDirection - transform.position).normalized;
+            var forward = PlayerStateMachine.ParentObject.transform.localScale.x == 1f ? transform.right : transform.right * -1;
+            var dotProduct = Vector2.Dot(forward, directionToTarget);
+            
+            Debug.Log("\n transform : " + transform + 
+                      "\n directionToTarget : " + directionToTarget + 
+                      "\n forward : " + forward + 
+                      "\n dotProduct : " + dotProduct);
+            
+            if (dotProduct > 0 && PlayerStateMachine.InputReader.IsBlocking)
+            {
+                Debug.Log("Player blocked the attack!");
+
+            }
+            else
+            {
+                PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerHurtState);
+            }
         }
     }
 }

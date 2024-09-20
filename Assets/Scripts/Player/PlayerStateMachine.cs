@@ -20,8 +20,8 @@ namespace Player
         public Animator Animator;
         public SpriteTrailRenderer.SpriteTrailRenderer TrailRenderer;
         public GameObject ParentObject;
-        public CapsuleCollider2D AttackBasicCollider;
         public GameObject ShieldObject;
+        public CapsuleCollider2D AttackBasicCollider;
         public ParticleSystem HurtParticle;
         public PlayerHitData HitData;
         public PlayerMover PlayerMover;

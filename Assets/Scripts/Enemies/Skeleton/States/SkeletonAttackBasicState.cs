@@ -43,17 +43,25 @@ namespace Enemies.Skeleton.States
 
         private void SkeletonOnAttackBasicOpenOverlap()
         {
-            var results = Physics2D.OverlapCapsuleAll(SkeletonStateMachine.AttackBasicCollider.transform.position, SkeletonStateMachine.AttackBasicCollider.size,
-                SkeletonStateMachine.AttackBasicCollider.direction, 0f);
-            Debug.Log("Skeleton Result : " + results);
+            var results = Physics2D.OverlapCapsuleAll(
+                SkeletonStateMachine.AttackBasicCollider.transform.position,
+                SkeletonStateMachine.AttackBasicCollider.size,
+                SkeletonStateMachine.AttackBasicCollider.direction,
+                0f);
+            
             _hittingEnemies.Clear();
             
             foreach (var result in results)
             {
-                if (!result) continue;
-                var enemy = result.GetComponent<ColliderControllerBase>();
-                _hittingEnemies.Add(enemy);
-                enemy.InvokeOnHitStartEvent(10, (enemy.transform.position - SkeletonStateMachine.transform.position).normalized, 2f);
+                if (result.TryGetComponent<ColliderControllerBase>(out var colliderController))
+                {
+                    _hittingEnemies.Add(colliderController);
+                    
+                    colliderController.InvokeOnHitStartEvent(
+                        10,
+                        (colliderController.transform.position - SkeletonStateMachine.transform.position).normalized,
+                        2f);
+                }
             }
         }
         
