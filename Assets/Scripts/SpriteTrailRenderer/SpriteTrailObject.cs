@@ -69,11 +69,11 @@ namespace SpriteTrailRenderer
             }
         }
 
-        public void SetSpawnValues(SpriteRenderer spriteRenderer, SpriteTrailRenderer spriteTrailRenderer, List<Color32> colors)
+        public void SetSpawnValues(SpriteRenderer spriteRenderer, SpriteTrailRenderer spriteTrailRenderer, List<Color32> colors, bool lookLeft)
         {
             _spriteTrailValues = spriteTrailRenderer;
 
-            _spriteRenderer.flipX = spriteRenderer.flipX;
+            _spriteRenderer.flipX = lookLeft;
             _spriteRenderer.flipY = spriteRenderer.flipY;
             _spriteRenderer.sprite = spriteRenderer.sprite;
 

@@ -108,7 +108,11 @@ namespace SpriteTrailRenderer
             newGameobject.transform.localScale = transform.localScale;
 
             SpriteTrailObject trailObject = newGameobject.GetComponent<SpriteTrailObject>();
-            trailObject.SetSpawnValues(_spriteRenderer, this, _rainbowMode ? _rainbowColors : _userSelectedColorPalette);
+            trailObject.SetSpawnValues(
+                _spriteRenderer,
+                this,
+                _rainbowMode ? _rainbowColors : _userSelectedColorPalette,
+                transform.parent.localScale.x < 0);
             newGameobject.name = "SpriteTrailObject";
             return newGameobject;
         }
@@ -120,7 +124,11 @@ namespace SpriteTrailRenderer
             trailObject.transform.position = newPosition;
             trailObject.transform.eulerAngles = transform.eulerAngles;
             trailObject.transform.localScale = transform.localScale;
-            trailObject.SetSpawnValues(_spriteRenderer, this, _rainbowMode ? _rainbowColors : _userSelectedColorPalette);
+            trailObject.SetSpawnValues(
+                _spriteRenderer,
+                this,
+                _rainbowMode ? _rainbowColors : _userSelectedColorPalette,
+                transform.parent.localScale.x < 0);
         }
     }
 }
