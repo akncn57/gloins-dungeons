@@ -3,6 +3,7 @@ using HealthSystem;
 using HitData;
 using InputSystem;
 using Player.States;
+using Sirenix.OdinInspector;
 using StateMachine;
 using UnityEngine;
 using Zenject;
@@ -11,18 +12,22 @@ namespace Player
 {
     public class PlayerStateMachine : BaseStateMachine, IPlayer
     {
-        public InputReader InputReader;
+        [Title("Properties")]
         public PlayerProperties PlayerProperties;
+        [Title("Custom Components")]
+        public InputReader InputReader;
         public PlayerAnimationEventsTrigger PlayerAnimationEventsTrigger;
         public PlayerColliderController PlayerColliderController;
         public HealthController HealthController;
-        public Rigidbody2D RigidBody;
-        public Animator Animator;
         public SpriteTrailRenderer.SpriteTrailRenderer TrailRenderer;
+        [Title("Unity Components")]
+        public Rigidbody2D RigidBody;
+        public CapsuleCollider2D AttackBasicCollider;
+        public Animator Animator;
+        public ParticleSystem HurtParticle;
         public GameObject ParentObject;
         public GameObject ShieldObject;
-        public CapsuleCollider2D AttackBasicCollider;
-        public ParticleSystem HurtParticle;
+        
         public PlayerHitData HitData;
         public PlayerMover PlayerMover;
         public PlayerFacing PlayerFacing;
