@@ -53,7 +53,7 @@ namespace Player.States
         private void IsAttackHitFrontOfPlayer(Vector3 hitDirection)
         {
             var transform = PlayerStateMachine.RigidBody.transform;
-            var directionToTarget = (hitDirection - transform.position).normalized;
+            var directionToTarget = -hitDirection.normalized;
             var forward = PlayerStateMachine.ParentObject.transform.localScale.x == 1f ? transform.right : transform.right * -1;
             var dotProduct = Vector2.Dot(forward, directionToTarget);
             
