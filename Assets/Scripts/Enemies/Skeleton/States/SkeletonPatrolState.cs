@@ -70,7 +70,7 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.EnemyMover,
                 coordinate,
                 SkeletonStateMachine.Rigidbody,
-                SkeletonStateMachine.WalkSpeed);
+                SkeletonStateMachine.EnemyProperties.WalkSpeed);
             CommandInvoker.ExecuteCommand(moveCommand);
 
             ICommand facingCommand = new EnemyFacingCommand(

@@ -8,6 +8,7 @@ namespace Enemies
 {
     public abstract class EnemyBaseStateMachine : BaseStateMachine
     {
+        public abstract EnemyProperties EnemyProperties { get; }
         public abstract HealthController HealthController { get; }
         public abstract EnemyColliderBaseController EnemyColliderController { get; }
         public abstract EnemyAnimationEventTrigger EnemyAnimationEventTrigger { get; }
@@ -20,8 +21,6 @@ namespace Enemies
         public abstract ParticleSystem HurtParticle { get; }
         public abstract List<EnemyPatrolData> PatrolCoordinates { get; }
         public abstract EnemyHitData HitData { get; set; }
-        public abstract float WalkSpeed { get; }
-        public abstract float ChasePositionOffset { get; }
         public abstract EnemyMover EnemyMover { get; }
         public abstract EnemyFacing EnemyFacing { get; }
         public abstract EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }

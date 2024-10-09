@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a30018155c34a48869886b33f8e9791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skeletonProperties: {fileID: 11400000, guid: 1716a64d337a1d64c883b3827b3804ba, type: 2}
   skeletonColliderController: {fileID: 324043654145403356}
   skeletonAnimationEventTrigger: {fileID: 5040623555554517402}
   rigidBody: {fileID: 9197666657248117805}

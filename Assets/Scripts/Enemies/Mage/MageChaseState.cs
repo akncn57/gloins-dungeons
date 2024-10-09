@@ -40,7 +40,7 @@ namespace Enemies.Mage
             }
             
             var movement = playerPosition - MageStateMachine.Rigidbody.transform.position;
-            MageStateMachine.Rigidbody.velocity = movement.normalized * MageStateMachine.WalkSpeed;
+            MageStateMachine.Rigidbody.velocity = movement.normalized * MageStateMachine.EnemyProperties.WalkSpeed;
             Facing(movement.x);
         }
 
@@ -48,8 +48,8 @@ namespace Enemies.Mage
         {
             var playerPosition = _playerGameObject.transform.position;
             return MageStateMachine.Rigidbody.position.x <= playerPosition.x 
-                ? new Vector3(playerPosition.x - MageStateMachine.ChasePositionOffset, playerPosition.y, 0f) 
-                : new Vector3(playerPosition.x + MageStateMachine.ChasePositionOffset, playerPosition.y, 0f);
+                ? new Vector3(playerPosition.x - MageStateMachine.EnemyProperties.ChasePositionOffset, playerPosition.y, 0f) 
+                : new Vector3(playerPosition.x + MageStateMachine.EnemyProperties.ChasePositionOffset, playerPosition.y, 0f);
         }
         
         private void Facing(float horizontalMovement)

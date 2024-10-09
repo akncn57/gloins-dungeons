@@ -25,7 +25,7 @@ namespace Enemies.Skeleton.States
                  SkeletonStateMachine.EnemyFindClosestChasePoint,
                  SkeletonStateMachine.Rigidbody.position,
                  _playerGameObject.transform.position,
-                 SkeletonStateMachine.ChasePositionOffset);
+                 SkeletonStateMachine.EnemyProperties.ChasePositionOffset);
                 
             ApproachPlayer((Vector3)CommandInvoker.ExecuteCommand(_findClosestChasePositionCommand));
         }
@@ -48,7 +48,7 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.EnemyMover,
                 playerPosition,
                 SkeletonStateMachine.Rigidbody,
-                SkeletonStateMachine.WalkSpeed);
+                SkeletonStateMachine.EnemyProperties.WalkSpeed);
             CommandInvoker.ExecuteCommand(moveCommand);
 
             ICommand facingCommand = new EnemyFacingCommand(
