@@ -50,6 +50,7 @@ namespace Player.States
             IsAttackHitFrontOfPlayer(hitPosition);
         }
 
+        //TODO: Ayrı bir Command class olabilir mi ?
         private void IsAttackHitFrontOfPlayer(Vector3 hitDirection)
         {
             var transform = PlayerStateMachine.RigidBody.transform;
@@ -57,10 +58,10 @@ namespace Player.States
             var forward = PlayerStateMachine.ParentObject.transform.localScale.x == 1f ? transform.right : transform.right * -1;
             var dotProduct = Vector2.Dot(forward, directionToTarget);
             
-            Debug.Log("\n transform : " + transform + 
-                      "\n directionToTarget : " + directionToTarget + 
-                      "\n forward : " + forward + 
-                      "\n dotProduct : " + dotProduct);
+            // Debug.Log("\n transform : " + transform + 
+            //           "\n directionToTarget : " + directionToTarget + 
+            //           "\n forward : " + forward + 
+            //           "\n dotProduct : " + dotProduct);
             
             if (dotProduct > 0 && PlayerStateMachine.InputReader.IsBlocking)
             {
