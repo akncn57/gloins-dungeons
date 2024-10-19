@@ -75,7 +75,7 @@ namespace Enemies.Mage
             }
 
             var movement = coordinate - MageStateMachine.Rigidbody.transform.position;
-            MageStateMachine.Rigidbody.linearVelocity = movement.normalized * MageStateMachine.WalkSpeed;
+            MageStateMachine.Rigidbody.linearVelocity = movement.normalized * MageStateMachine.EnemyProperties.WalkSpeed;
             Facing(movement.x);
         }
         

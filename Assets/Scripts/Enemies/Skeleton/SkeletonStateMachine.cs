@@ -10,6 +10,7 @@ namespace Enemies.Skeleton
 {
     public class SkeletonStateMachine : EnemyBaseStateMachine
     {
+        [SerializeField] private EnemyProperties skeletonProperties;
         [SerializeField] private SkeletonColliderController skeletonColliderController;
         [SerializeField] private SkeletonAnimationEventTrigger skeletonAnimationEventTrigger;
         [SerializeField] private Rigidbody2D rigidBody;
@@ -20,8 +21,6 @@ namespace Enemies.Skeleton
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
-        [SerializeField] private float walkSpeed;
-        [SerializeField] private float chasePositionOffset;
         
         private HealthController _healthController;
         private EnemyMover _enemyMover;
@@ -29,6 +28,7 @@ namespace Enemies.Skeleton
         private EnemyFindClosestChasePoint _enemyFindClosestChasePoint;
         private SkeletonDrawChaseOverlay _skeletonDrawChaseOverlay;
 
+        public override EnemyProperties EnemyProperties => skeletonProperties;
         public override HealthController HealthController => _healthController;
         public override EnemyColliderBaseController EnemyColliderController => skeletonColliderController;
         public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => skeletonAnimationEventTrigger;
@@ -41,8 +41,6 @@ namespace Enemies.Skeleton
         public override ParticleSystem HurtParticle => hurtParticle;
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
-        public override float WalkSpeed => walkSpeed;
-        public override float ChasePositionOffset => chasePositionOffset;
         public override EnemyMover EnemyMover => _enemyMover;
         public override EnemyFacing EnemyFacing => _enemyFacing;
         public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint => _enemyFindClosestChasePoint;

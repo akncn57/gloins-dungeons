@@ -20,11 +20,10 @@ namespace Enemies.Mage
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
-        [SerializeField] private float walkSpeed;
-        [SerializeField] private float chasePositionOffset;
         
         private HealthController _healthController;
-        
+
+        public override EnemyProperties EnemyProperties { get; }
         public override HealthController HealthController => _healthController;
         public override EnemyColliderBaseController EnemyColliderController => mageColliderController;
         public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => mageAnimationEventTrigger;
@@ -39,8 +38,6 @@ namespace Enemies.Mage
         public override ParticleSystem HurtParticle => hurtParticle;
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
-        public override float WalkSpeed => walkSpeed;
-        public override float ChasePositionOffset => chasePositionOffset;
         public override EnemyMover EnemyMover { get; }
         public override EnemyFacing EnemyFacing { get; }
         public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }
