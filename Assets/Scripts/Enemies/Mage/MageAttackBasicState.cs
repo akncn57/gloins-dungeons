@@ -14,7 +14,7 @@ namespace Enemies.Mage
             MageStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += InstantiateProjectileObject;
             MageStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += BasicAttackFinish;
             
-            MageStateMachine.Rigidbody.velocity = Vector2.zero;
+            MageStateMachine.Rigidbody.linearVelocity = Vector2.zero;
             MageStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
         }
 

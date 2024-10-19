@@ -69,13 +69,13 @@ namespace Enemies.Mage
             if ((MageStateMachine.Rigidbody.transform.position - coordinate).magnitude < 0.1f)
             {
                 MageStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted = true;
-                MageStateMachine.Rigidbody.velocity = Vector2.zero;
+                MageStateMachine.Rigidbody.linearVelocity = Vector2.zero;
                 MageStateMachine.SwitchState(MageStateMachine.MageIdleState);
                 return;
             }
 
             var movement = coordinate - MageStateMachine.Rigidbody.transform.position;
-            MageStateMachine.Rigidbody.velocity = movement.normalized * MageStateMachine.WalkSpeed;
+            MageStateMachine.Rigidbody.linearVelocity = movement.normalized * MageStateMachine.WalkSpeed;
             Facing(movement.x);
         }
         

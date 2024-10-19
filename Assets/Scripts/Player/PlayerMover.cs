@@ -7,17 +7,17 @@ namespace Player
         public void Move(Rigidbody2D rigidbody, Vector2 movement, float speed)
         {
             movement = movement.normalized * speed;
-            rigidbody.velocity = movement;
+            rigidbody.linearVelocity = movement;
         }
 
         public void Stop(Rigidbody2D rigidbody)
         {
-            rigidbody.velocity = Vector2.zero;
+            rigidbody.linearVelocity = Vector2.zero;
         }
 
         public void KnockBack(Rigidbody2D rigidbody, float hitPositionX, float knockBackStrength)
         {
-            rigidbody.velocity = new Vector2(hitPositionX * knockBackStrength, rigidbody.velocity.y);
+            rigidbody.linearVelocity = new Vector2(hitPositionX * knockBackStrength, rigidbody.linearVelocity.y);
         }
 
         public void Dash(Rigidbody2D rigidbody, Vector2 dashDirection, float force)

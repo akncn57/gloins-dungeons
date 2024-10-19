@@ -14,7 +14,7 @@ namespace Enemies.Mage
             MageStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart += EnemyOnHurtStart;
             MageStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd += EnemyOnHurtEnd;
             
-            MageStateMachine.Rigidbody.velocity = Vector2.zero;
+            MageStateMachine.Rigidbody.linearVelocity = Vector2.zero;
             MageStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
             
             MageStateMachine.HurtParticle.Play();
@@ -35,7 +35,7 @@ namespace Enemies.Mage
         {
             MageStateMachine.HealthController.SpendHealth(MageStateMachine.HitData.Damage);
             Debug.Log("Enemy Mage Health : " + MageStateMachine.HealthController.HealthData.Health);
-            MageStateMachine.Rigidbody.velocity = new Vector2(MageStateMachine.HitData.HitPosition.x * MageStateMachine.HitData.KnockBackStrength, MageStateMachine.Rigidbody.velocity.y);
+            MageStateMachine.Rigidbody.linearVelocity = new Vector2(MageStateMachine.HitData.HitPosition.x * MageStateMachine.HitData.KnockBackStrength, MageStateMachine.Rigidbody.linearVelocity.y);
         }
 
         private void EnemyOnHurtEnd()

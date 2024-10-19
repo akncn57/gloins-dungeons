@@ -40,7 +40,7 @@ namespace Enemies.Mage
             }
             
             var movement = playerPosition - MageStateMachine.Rigidbody.transform.position;
-            MageStateMachine.Rigidbody.velocity = movement.normalized * MageStateMachine.WalkSpeed;
+            MageStateMachine.Rigidbody.linearVelocity = movement.normalized * MageStateMachine.WalkSpeed;
             Facing(movement.x);
         }
 
