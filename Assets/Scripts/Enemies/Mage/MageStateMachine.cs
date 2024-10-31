@@ -41,6 +41,7 @@ namespace Enemies.Mage
         public override EnemyMover EnemyMover { get; }
         public override EnemyFacing EnemyFacing { get; }
         public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }
+        public override EnemyLineOfSight EnemyLineOfSight { get; }
 
         [Inject] public IInstantiator Instantiator;
 

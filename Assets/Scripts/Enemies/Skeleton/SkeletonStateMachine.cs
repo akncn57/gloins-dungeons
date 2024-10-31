@@ -26,6 +26,7 @@ namespace Enemies.Skeleton
         private EnemyMover _enemyMover;
         private EnemyFacing _enemyFacing;
         private EnemyFindClosestChasePoint _enemyFindClosestChasePoint;
+        private EnemyLineOfSight _enemyLineOfSight;
         private SkeletonDrawChaseOverlay _skeletonDrawChaseOverlay;
 
         public override EnemyProperties EnemyProperties => skeletonProperties;
@@ -44,6 +45,7 @@ namespace Enemies.Skeleton
         public override EnemyMover EnemyMover => _enemyMover;
         public override EnemyFacing EnemyFacing => _enemyFacing;
         public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint => _enemyFindClosestChasePoint;
+        public override EnemyLineOfSight EnemyLineOfSight => _enemyLineOfSight;
         public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
 
         [Inject] public IInstantiator Instantiator;
@@ -91,6 +93,7 @@ namespace Enemies.Skeleton
             _enemyMover = new EnemyMover();
             _enemyFacing = new EnemyFacing();
             _enemyFindClosestChasePoint = new EnemyFindClosestChasePoint();
+            _enemyLineOfSight = new EnemyLineOfSight();
             _skeletonDrawChaseOverlay = new SkeletonDrawChaseOverlay();
             
             SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});

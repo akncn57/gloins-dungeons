@@ -24,5 +24,6 @@ namespace Enemies
         public abstract EnemyMover EnemyMover { get; }
         public abstract EnemyFacing EnemyFacing { get; }
         public abstract EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }
+        public abstract EnemyLineOfSight EnemyLineOfSight { get; }
     }
 }
