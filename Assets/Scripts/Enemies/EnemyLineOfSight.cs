@@ -10,9 +10,9 @@ namespace Enemies
             
             foreach (var result in results)
             {
-                //Debug.Log("Ray Object Name : " + result.transform.name + "\nTag: " + result.transform.tag);
+                Debug.Log("Hit to " + result.transform.name);
                 
-                var hasLineOfSight = result.transform.CompareTag(targetTag);
+                var hasLineOfSight = result.collider.CompareTag(targetTag);
 
                 if (hasLineOfSight)
                 {
@@ -20,10 +20,14 @@ namespace Enemies
                     Debug.DrawRay(enemyPosition, playerPosition - enemyPosition, Color.green);
                     return true;
                 }
+                else
+                {
+                    Debug.Log("Ray didn't Hit Player!");
+                    Debug.DrawRay(enemyPosition, playerPosition - enemyPosition, Color.red);
+                    return false;
+                }
             }
             
-            Debug.Log("Ray didn't Hit Player!");
-            Debug.DrawRay(enemyPosition, playerPosition - enemyPosition, Color.red);
             return false;
         }
     }
