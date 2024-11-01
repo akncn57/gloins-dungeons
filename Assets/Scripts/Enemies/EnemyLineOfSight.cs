@@ -10,17 +10,19 @@ namespace Enemies
             
             foreach (var result in results)
             {
-                if (result.collider != null) continue;
+                //Debug.Log("Ray Object Name : " + result.transform.name + "\nTag: " + result.transform.tag);
                 
-                var hasLineOfSight = result.collider.CompareTag(targetTag);
+                var hasLineOfSight = result.transform.CompareTag(targetTag);
 
                 if (hasLineOfSight)
                 {
+                    Debug.Log("Ray Hit Player!");
                     Debug.DrawRay(enemyPosition, playerPosition - enemyPosition, Color.green);
                     return true;
                 }
             }
             
+            Debug.Log("Ray didn't Hit Player!");
             Debug.DrawRay(enemyPosition, playerPosition - enemyPosition, Color.red);
             return false;
         }

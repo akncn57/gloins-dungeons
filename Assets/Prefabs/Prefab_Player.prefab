@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3395432178707661683}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 835681899011389610}
   m_Layer: 0
   m_Name: Parent
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 961568540255855554}
   m_Layer: 0
   m_Name: Shield_Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,6 +571,10 @@ PrefabInstance:
     - target: {fileID: 6741372840659777196, guid: 2db61bae464adbd4ab37ad0c64e5ff43, type: 3}
       propertyPath: m_Name
       value: Prefab_Particle_Player_Blood
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741372840659777196, guid: 2db61bae464adbd4ab37ad0c64e5ff43, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
