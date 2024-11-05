@@ -21,6 +21,17 @@ namespace Enemies.Skeleton.States
 
         public override void OnTick()
         {
+            if (!SkeletonStateMachine.HasLineOfSight)
+            {
+                ICommand stopMoveCommand = new EnemyStopMoveCommand(
+                    SkeletonStateMachine.EnemyMover, 
+                    SkeletonStateMachine.Rigidbody);
+                CommandInvoker.ExecuteCommand(stopMoveCommand);
+                
+                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
+                return;
+            }
+            
             _findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
                  SkeletonStateMachine.EnemyFindClosestChasePoint,
                  SkeletonStateMachine.Rigidbody.position,
@@ -34,22 +45,27 @@ namespace Enemies.Skeleton.States
 
         private void ApproachPlayer(Vector3 playerPosition)
         {
-            if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude > 5f)
+            switch ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude)
             {
-                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
-                return;
-            }
-            
-            if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 0.1f)
-            {
-                SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
-                    ? new Vector3(-1f, 1f, 1f) 
-                    : new Vector3(1f, 1f, 1f);
+                case > 5f:
+                {
+                    ICommand stopMoveCommand = new EnemyStopMoveCommand(
+                        SkeletonStateMachine.EnemyMover, 
+                        SkeletonStateMachine.Rigidbody);
+                    CommandInvoker.ExecuteCommand(stopMoveCommand);
                 
-                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
-                return;
+                    SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
+                    return;
+                }
+                case < 0.1f:
+                    SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
+                        ? new Vector3(-1f, 1f, 1f) 
+                        : new Vector3(1f, 1f, 1f);
+                
+                    SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
+                    return;
             }
-            
+
             ICommand moveCommand = new EnemyMoveCommand(
                 SkeletonStateMachine.EnemyMover,
                 playerPosition,
