@@ -6,7 +6,7 @@ namespace Enemies
     [Serializable]
     public class EnemyPatrolData
     {
-        public Transform PatrolCoordinate;
-        public bool IsCompleted;
+        [SerializeField] public Transform PatrolCoordinate;
+        [SerializeField] public bool IsCompleted;
     }
 }
