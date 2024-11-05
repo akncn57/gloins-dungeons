@@ -34,6 +34,12 @@ namespace Enemies.Skeleton.States
 
         private void ApproachPlayer(Vector3 playerPosition)
         {
+            if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude > 5f)
+            {
+                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
+                return;
+            }
+            
             if ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude < 0.1f)
             {
                 SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 

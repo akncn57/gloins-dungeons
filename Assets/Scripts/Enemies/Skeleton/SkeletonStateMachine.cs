@@ -22,6 +22,9 @@ namespace Enemies.Skeleton
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
         
+        [SerializeField] private Collider2D PlayerCollider;
+        [SerializeField] private LayerMask PlayerLayerMask;
+        
         private HealthController _healthController;
         private EnemyMover _enemyMover;
         private EnemyFacing _enemyFacing;
@@ -47,6 +50,8 @@ namespace Enemies.Skeleton
         public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint => _enemyFindClosestChasePoint;
         public override EnemyLineOfSight EnemyLineOfSight => _enemyLineOfSight;
         public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
+
+        public bool HasLineOfSight => _enemyLineOfSight.HasLineOfSight(collider, PlayerCollider, "Player", PlayerLayerMask);
 
         [Inject] public IInstantiator Instantiator;
 

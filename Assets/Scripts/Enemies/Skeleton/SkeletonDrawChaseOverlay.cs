@@ -7,6 +7,8 @@ namespace Enemies.Skeleton
     {
         public void DrawChaseOverlay(Vector3 position, float radius, SkeletonStateMachine skeletonStateMachine)
         {
+            if (!skeletonStateMachine.HasLineOfSight) return;
+            
             var results = Physics2D.OverlapCircleAll(position, radius);
             
             foreach (var result in results)

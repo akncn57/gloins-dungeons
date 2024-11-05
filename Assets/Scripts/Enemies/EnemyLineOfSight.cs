@@ -4,26 +4,30 @@ namespace Enemies
 {
     public class EnemyLineOfSight
     {
-        public bool HasLineOfSight(Vector2 enemyPosition, Vector2 playerPosition, string targetTag)
+        public bool HasLineOfSight(Collider2D enemyCollider, Collider2D playerCollider, string targetTag, LayerMask layerMask)
         {
-            var results = Physics2D.RaycastAll(enemyPosition, playerPosition - enemyPosition);
+            var results = new RaycastHit2D[10];
+            var enemyOrigin = (Vector2)enemyCollider.transform.position + enemyCollider.offset;
+            var playerOrigin = (Vector2)playerCollider.transform.position + playerCollider.offset;
+            
+            Physics2D.RaycastNonAlloc(enemyOrigin, playerOrigin - enemyOrigin, results, 20f, layerMask);
             
             foreach (var result in results)
             {
                 Debug.Log("Hit to " + result.transform.name);
                 
-                var hasLineOfSight = result.collider.CompareTag(targetTag);
+                var hasLineOfSight = result.transform.gameObject.CompareTag(targetTag);
 
                 if (hasLineOfSight)
                 {
                     Debug.Log("Ray Hit Player!");
-                    Debug.DrawRay(enemyPosition, playerPosition - enemyPosition, Color.green);
+                    Debug.DrawRay(enemyOrigin, playerOrigin - enemyOrigin, Color.green);
                     return true;
                 }
-                else
+                else if (result.collider != enemyCollider)
                 {
                     Debug.Log("Ray didn't Hit Player!");
-                    Debug.DrawRay(enemyPosition, playerPosition - enemyPosition, Color.red);
+                    Debug.DrawRay(enemyOrigin, playerOrigin - enemyOrigin, Color.red);
                     return false;
                 }
             }

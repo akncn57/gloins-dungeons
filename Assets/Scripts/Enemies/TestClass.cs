@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TestClass : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyGameObject;
-    [SerializeField] private GameObject playerGameObject;
+    [SerializeField] private Collider2D enemyGameObject;
+    [SerializeField] private Collider2D playerGameObject;
+    [SerializeField] private LayerMask layerMask;
     
     private EnemyLineOfSight _enemyLineOfSight;
 
@@ -16,6 +17,10 @@ public class TestClass : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _enemyLineOfSight.HasLineOfSight(enemyGameObject.transform.position, playerGameObject.transform.position, "Player");
+        // _enemyLineOfSight.HasLineOfSight(
+        //     enemyGameObject,
+        //     playerGameObject.transform.position + (Vector3)playerGameObject.offset,
+        //     "Player",
+        //     layerMask);
     }
 }
