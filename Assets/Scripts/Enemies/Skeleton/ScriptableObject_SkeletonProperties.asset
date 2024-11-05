@@ -15,6 +15,7 @@ MonoBehaviour:
   WalkSpeed: 3
   BasicAttackPower: 10
   HitKnockBackPower: 2
+  ChaseRadius: 5
   ChasePositionOffset: 1.2
   BlockChange: 0.3
   BlockDuration: 1

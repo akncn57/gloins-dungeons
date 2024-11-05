@@ -7,6 +7,7 @@ namespace Enemies
         public float WalkSpeed;
         public int BasicAttackPower;
         public float HitKnockBackPower;
+        public float ChaseRadius;
         public float ChasePositionOffset;
         public float BlockChange;
         public float BlockDuration;

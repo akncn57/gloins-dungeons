@@ -21,7 +21,6 @@ namespace Enemies.Skeleton
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
-        
         [SerializeField] private Collider2D PlayerCollider;
         [SerializeField] private LayerMask PlayerLayerMask;
         
@@ -40,7 +39,6 @@ namespace Enemies.Skeleton
         public override Collider2D Collider => collider;
         public override CapsuleCollider2D AttackBasicCollider => attackBasicCollider;
         public override GameObject ParentObject => parentObject;
-        public override CircleCollider2D ChaseCollider => chaseCollider;
         public override Animator Animator => animator;
         public override ParticleSystem HurtParticle => hurtParticle;
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
@@ -121,5 +119,13 @@ namespace Enemies.Skeleton
                 coordinate.IsCompleted = false;
             }
         }
+        
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(transform.position, EnemyProperties.ChaseRadius);
+        }
+#endif
     }
 }

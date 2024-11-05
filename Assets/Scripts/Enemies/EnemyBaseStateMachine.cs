@@ -16,7 +16,6 @@ namespace Enemies
         public abstract Collider2D Collider { get; }
         public abstract CapsuleCollider2D AttackBasicCollider { get; }
         public abstract GameObject ParentObject { get; }
-        public abstract CircleCollider2D ChaseCollider { get; }
         public abstract Animator Animator { get; }
         public abstract ParticleSystem HurtParticle { get; }
         public abstract List<EnemyPatrolData> PatrolCoordinates { get; }

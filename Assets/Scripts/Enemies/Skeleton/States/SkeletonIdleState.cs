@@ -28,8 +28,8 @@ namespace Enemies.Skeleton.States
         {
             ICommand drawChaseOverlayCommand = new SkeletonDrawChaseOverlayCommand(
                 SkeletonStateMachine.SkeletonDrawChaseOverlay, 
-                SkeletonStateMachine.ChaseCollider.transform.position,
-                SkeletonStateMachine.ChaseCollider.radius,
+                SkeletonStateMachine.transform.position,
+                SkeletonStateMachine.EnemyProperties.ChaseRadius,
                 SkeletonStateMachine);
             CommandInvoker.ExecuteCommand(drawChaseOverlayCommand);
         }
