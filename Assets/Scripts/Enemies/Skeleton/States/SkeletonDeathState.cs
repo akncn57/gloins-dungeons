@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -16,7 +17,9 @@ namespace Enemies.Skeleton.States
             Debug.Log("Enemy Skeleton Death!");
             SkeletonStateMachine.Collider.enabled = false;
             
-            ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+            ICommand stopMoveCommand = new EnemyStopMovementCommand(
+                SkeletonStateMachine.EnemyStopMovement, 
+                SkeletonStateMachine.GetComponent<NavMeshAgent>());
             CommandInvoker.ExecuteCommand(stopMoveCommand);
             
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_deathAnimationHash, 0.1f);

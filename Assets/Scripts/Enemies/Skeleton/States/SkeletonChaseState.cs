@@ -2,6 +2,7 @@
 using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -23,55 +24,56 @@ namespace Enemies.Skeleton.States
         {
             if (!SkeletonStateMachine.HasLineOfSight)
             {
-                ICommand stopMoveCommand = new EnemyStopMoveCommand(
-                    SkeletonStateMachine.EnemyMover, 
-                    SkeletonStateMachine.Rigidbody);
+                ICommand stopMoveCommand = new EnemyStopMovementCommand(
+                    SkeletonStateMachine.EnemyStopMovement, 
+                    SkeletonStateMachine.GetComponent<NavMeshAgent>());
                 CommandInvoker.ExecuteCommand(stopMoveCommand);
                 
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
                 return;
             }
             
-            _findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
-                 SkeletonStateMachine.EnemyFindClosestChasePoint,
-                 SkeletonStateMachine.Rigidbody.position,
-                 _playerGameObject.transform.position,
-                 SkeletonStateMachine.EnemyProperties.ChasePositionOffset);
-                
-            ApproachPlayer((Vector3)CommandInvoker.ExecuteCommand(_findClosestChasePositionCommand));
+            ApproachPlayer(_playerGameObject.transform.position);
         }
 
         public override void OnExit(){}
 
         private void ApproachPlayer(Vector3 playerPosition)
         {
+            ICommand findClosetPositionCommand = new EnemyFindClosestChasePointCommand(
+                SkeletonStateMachine.EnemyFindClosestChasePoint, 
+                SkeletonStateMachine.transform.position, 
+                _playerGameObject.transform.position,
+                SkeletonStateMachine.EnemyProperties.ChasePositionOffset);
+
+            var newPosition = CommandInvoker.ExecuteCommand(findClosetPositionCommand);
+                
             switch ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude)
             {
                 case > 5f:
                 {
-                    ICommand stopMoveCommand = new EnemyStopMoveCommand(
-                        SkeletonStateMachine.EnemyMover, 
-                        SkeletonStateMachine.Rigidbody);
+                    ICommand stopMoveCommand = new EnemyStopMovementCommand(
+                        SkeletonStateMachine.EnemyStopMovement, 
+                        SkeletonStateMachine.GetComponent<NavMeshAgent>());
                     CommandInvoker.ExecuteCommand(stopMoveCommand);
                 
                     SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
                     return;
                 }
-                case < 0.1f:
+                case < 1.5f:
+                    SkeletonStateMachine.GetComponent<NavMeshAgent>().isStopped = true;
                     SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
                         ? new Vector3(-1f, 1f, 1f) 
                         : new Vector3(1f, 1f, 1f);
-                
                     SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
                     return;
             }
 
-            ICommand moveCommand = new EnemyMoveCommand(
-                SkeletonStateMachine.EnemyMover,
-                playerPosition,
-                SkeletonStateMachine.Rigidbody,
-                SkeletonStateMachine.EnemyProperties.WalkSpeed);
-            CommandInvoker.ExecuteCommand(moveCommand);
+            ICommand setDestinationCommand = new EnemySetDestinationCommand(
+                SkeletonStateMachine.EnemySetDestination,
+                SkeletonStateMachine.GetComponent<NavMeshAgent>(),
+                (Vector3)newPosition);
+            CommandInvoker.ExecuteCommand(setDestinationCommand);
 
             ICommand facingCommand = new EnemyFacingCommand(
                 SkeletonStateMachine.EnemyFacing,
