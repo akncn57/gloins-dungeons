@@ -7,6 +7,7 @@ namespace Enemies
     {
         public void SetDestination(NavMeshAgent agent, Vector3 targetPosition)
         {
+            agent.isStopped = false;
             agent.SetDestination(targetPosition);
         }
     }

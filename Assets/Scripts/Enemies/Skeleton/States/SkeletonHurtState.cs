@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -16,7 +17,9 @@ namespace Enemies.Skeleton.States
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtStart += EnemyOnHurtStart;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnHurtEnd += EnemyOnHurtEnd;
             
-            ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+            ICommand stopMoveCommand = new EnemyStopMovementCommand(
+                SkeletonStateMachine.EnemyStopMovement, 
+                SkeletonStateMachine.GetComponent<NavMeshAgent>());
             CommandInvoker.ExecuteCommand(stopMoveCommand);
             
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
@@ -44,12 +47,12 @@ namespace Enemies.Skeleton.States
             
             Debug.Log("Enemy Skeleton Health : " + SkeletonStateMachine.HealthController.HealthData.Health);
             
-            ICommand knockBackCommand = new EnemyKnockBackCommand(
-                SkeletonStateMachine.EnemyMover,
-                SkeletonStateMachine.Rigidbody,
-                SkeletonStateMachine.HitData.HitPosition.x,
-                SkeletonStateMachine.HitData.KnockBackStrength);
-            CommandInvoker.ExecuteCommand(knockBackCommand);
+            // ICommand knockBackCommand = new EnemyKnockBackCommand(
+            //     SkeletonStateMachine.EnemyMover,
+            //     SkeletonStateMachine.Rigidbody,
+            //     SkeletonStateMachine.HitData.HitPosition.x,
+            //     SkeletonStateMachine.HitData.KnockBackStrength);
+            // CommandInvoker.ExecuteCommand(knockBackCommand);
         }
 
         private void EnemyOnHurtEnd()

@@ -3,6 +3,7 @@ using ColliderController;
 using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -22,7 +23,9 @@ namespace Enemies.Skeleton.States
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += SkeletonOnAttackBasicFinish;
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
 
-            ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+            ICommand stopMoveCommand = new EnemyStopMovementCommand(
+                SkeletonStateMachine.EnemyStopMovement, 
+                SkeletonStateMachine.GetComponent<NavMeshAgent>());
             CommandInvoker.ExecuteCommand(stopMoveCommand);
             
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);

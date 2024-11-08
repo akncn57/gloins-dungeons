@@ -25,11 +25,11 @@ namespace Enemies.Skeleton
         [SerializeField] private LayerMask PlayerLayerMask;
         
         private HealthController _healthController;
-        private EnemyMover _enemyMover;
         private EnemyFacing _enemyFacing;
         private EnemyFindClosestChasePoint _enemyFindClosestChasePoint;
         private EnemyLineOfSight _enemyLineOfSight;
         private EnemySetDestination _enemySetDestination;
+        private EnemyStopMovement _enemyStopMovement;
         private SkeletonDrawChaseOverlay _skeletonDrawChaseOverlay;
 
         public override EnemyProperties EnemyProperties => skeletonProperties;
@@ -44,11 +44,11 @@ namespace Enemies.Skeleton
         public override ParticleSystem HurtParticle => hurtParticle;
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
-        public override EnemyMover EnemyMover => _enemyMover;
         public override EnemyFacing EnemyFacing => _enemyFacing;
         public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint => _enemyFindClosestChasePoint;
         public override EnemyLineOfSight EnemyLineOfSight => _enemyLineOfSight;
         public override EnemySetDestination EnemySetDestination => _enemySetDestination;
+        public override EnemyStopMovement EnemyStopMovement => _enemyStopMovement;
         public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
 
         public bool HasLineOfSight => _enemyLineOfSight.HasLineOfSight(collider, PlayerCollider, "Player", PlayerLayerMask);
@@ -95,11 +95,11 @@ namespace Enemies.Skeleton
         private void Awake()
         {
             _healthController = new HealthController(100, 100);
-            _enemyMover = new EnemyMover();
             _enemyFacing = new EnemyFacing();
             _enemyFindClosestChasePoint = new EnemyFindClosestChasePoint();
             _enemyLineOfSight = new EnemyLineOfSight();
             _enemySetDestination = new EnemySetDestination();
+            _enemyStopMovement = new EnemyStopMovement();
             _skeletonDrawChaseOverlay = new SkeletonDrawChaseOverlay();
             
             SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});

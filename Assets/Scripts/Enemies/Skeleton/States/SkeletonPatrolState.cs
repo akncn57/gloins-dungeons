@@ -56,12 +56,13 @@ namespace Enemies.Skeleton.States
 
         private void GoPatrolCoordinate(Vector3 coordinate)
         {
-            Debug.Log((SkeletonStateMachine.Rigidbody.transform.position - coordinate).magnitude);
             if ((SkeletonStateMachine.Rigidbody.transform.position - coordinate).magnitude < 0.6f)
             {
                 SkeletonStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted = true;
                 
-                ICommand stopMoveCommand = new EnemyStopMoveCommand(SkeletonStateMachine.EnemyMover, SkeletonStateMachine.Rigidbody);
+                ICommand stopMoveCommand = new EnemyStopMovementCommand(
+                    SkeletonStateMachine.EnemyStopMovement, 
+                    SkeletonStateMachine.GetComponent<NavMeshAgent>());
                 CommandInvoker.ExecuteCommand(stopMoveCommand);
                 
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
