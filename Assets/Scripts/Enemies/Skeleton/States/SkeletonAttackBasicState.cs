@@ -25,7 +25,7 @@ namespace Enemies.Skeleton.States
 
             ICommand stopMoveCommand = new EnemyStopMovementCommand(
                 SkeletonStateMachine.EnemyStopMovement, 
-                SkeletonStateMachine.GetComponent<NavMeshAgent>());
+                SkeletonStateMachine.EnemyNavMeshAgent);
             CommandInvoker.ExecuteCommand(stopMoveCommand);
             
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);

@@ -3,6 +3,7 @@ using HealthSystem;
 using HitData;
 using StateMachine;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Enemies
 {
@@ -12,6 +13,7 @@ namespace Enemies
         public abstract HealthController HealthController { get; }
         public abstract EnemyColliderBaseController EnemyColliderController { get; }
         public abstract EnemyAnimationEventTrigger EnemyAnimationEventTrigger { get; }
+        public abstract NavMeshAgent EnemyNavMeshAgent { get; }
         public abstract Rigidbody2D Rigidbody { get; }
         public abstract Collider2D Collider { get; }
         public abstract CapsuleCollider2D AttackBasicCollider { get; }

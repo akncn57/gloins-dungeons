@@ -26,7 +26,7 @@ namespace Enemies.Skeleton.States
             {
                 ICommand stopMoveCommand = new EnemyStopMovementCommand(
                     SkeletonStateMachine.EnemyStopMovement, 
-                    SkeletonStateMachine.GetComponent<NavMeshAgent>());
+                    SkeletonStateMachine.EnemyNavMeshAgent);
                 CommandInvoker.ExecuteCommand(stopMoveCommand);
                 
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
@@ -54,14 +54,14 @@ namespace Enemies.Skeleton.States
                 {
                     ICommand stopMoveCommand = new EnemyStopMovementCommand(
                         SkeletonStateMachine.EnemyStopMovement, 
-                        SkeletonStateMachine.GetComponent<NavMeshAgent>());
+                        SkeletonStateMachine.EnemyNavMeshAgent);
                     CommandInvoker.ExecuteCommand(stopMoveCommand);
                 
                     SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
                     return;
                 }
                 case < 1.5f:
-                    SkeletonStateMachine.GetComponent<NavMeshAgent>().isStopped = true;
+                    SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
                     SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
                         ? new Vector3(-1f, 1f, 1f) 
                         : new Vector3(1f, 1f, 1f);
@@ -71,7 +71,7 @@ namespace Enemies.Skeleton.States
 
             ICommand setDestinationCommand = new EnemySetDestinationCommand(
                 SkeletonStateMachine.EnemySetDestination,
-                SkeletonStateMachine.GetComponent<NavMeshAgent>(),
+                SkeletonStateMachine.EnemyNavMeshAgent,
                 (Vector3)newPosition);
             CommandInvoker.ExecuteCommand(setDestinationCommand);
 

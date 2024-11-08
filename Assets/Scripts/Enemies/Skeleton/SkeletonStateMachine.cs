@@ -4,6 +4,7 @@ using Enemies.Skeleton.States;
 using HealthSystem;
 using HitData;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton
@@ -15,6 +16,7 @@ namespace Enemies.Skeleton
         [SerializeField] private SkeletonAnimationEventTrigger skeletonAnimationEventTrigger;
         [SerializeField] private Rigidbody2D rigidBody;
         [SerializeField] private Animator animator;
+        [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private Collider2D collider;
         [SerializeField] private CapsuleCollider2D attackBasicCollider;
         [SerializeField] private GameObject parentObject;
@@ -36,6 +38,7 @@ namespace Enemies.Skeleton
         public override HealthController HealthController => _healthController;
         public override EnemyColliderBaseController EnemyColliderController => skeletonColliderController;
         public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => skeletonAnimationEventTrigger;
+        public override NavMeshAgent EnemyNavMeshAgent => navMeshAgent;
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
         public override CapsuleCollider2D AttackBasicCollider => attackBasicCollider;

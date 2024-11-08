@@ -62,7 +62,7 @@ namespace Enemies.Skeleton.States
                 
                 ICommand stopMoveCommand = new EnemyStopMovementCommand(
                     SkeletonStateMachine.EnemyStopMovement, 
-                    SkeletonStateMachine.GetComponent<NavMeshAgent>());
+                    SkeletonStateMachine.EnemyNavMeshAgent);
                 CommandInvoker.ExecuteCommand(stopMoveCommand);
                 
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
@@ -71,7 +71,7 @@ namespace Enemies.Skeleton.States
             
             ICommand setDestinationCommand = new EnemySetDestinationCommand(
                 SkeletonStateMachine.EnemySetDestination,
-                SkeletonStateMachine.GetComponent<NavMeshAgent>(),
+                SkeletonStateMachine.EnemyNavMeshAgent,
                 coordinate);
             CommandInvoker.ExecuteCommand(setDestinationCommand);
 

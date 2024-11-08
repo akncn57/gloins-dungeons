@@ -345,6 +345,7 @@ MonoBehaviour:
   skeletonAnimationEventTrigger: {fileID: 5040623555554517402}
   rigidBody: {fileID: 9197666657248117805}
   animator: {fileID: 7737562823756025142}
+  navMeshAgent: {fileID: 3433138627218067338}
   collider: {fileID: 3439191373737910293}
   attackBasicCollider: {fileID: 7028650909807716511}
   parentObject: {fileID: 7675435452589615011}
