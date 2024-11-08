@@ -2,6 +2,7 @@
 using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -32,13 +33,7 @@ namespace Enemies.Skeleton.States
                 return;
             }
             
-            _findClosestChasePositionCommand = new EnemyFindClosestChasePointCommand(
-                 SkeletonStateMachine.EnemyFindClosestChasePoint,
-                 SkeletonStateMachine.Rigidbody.position,
-                 _playerGameObject.transform.position,
-                 SkeletonStateMachine.EnemyProperties.ChasePositionOffset);
-                
-            ApproachPlayer((Vector3)CommandInvoker.ExecuteCommand(_findClosestChasePositionCommand));
+            ApproachPlayer(_playerGameObject.transform.position);
         }
 
         public override void OnExit(){}
@@ -66,12 +61,11 @@ namespace Enemies.Skeleton.States
                     return;
             }
 
-            ICommand moveCommand = new EnemyMoveCommand(
-                SkeletonStateMachine.EnemyMover,
-                playerPosition,
-                SkeletonStateMachine.Rigidbody,
-                SkeletonStateMachine.EnemyProperties.WalkSpeed);
-            CommandInvoker.ExecuteCommand(moveCommand);
+            ICommand setDestinationCommand = new EnemySetDestinationCommand(
+                SkeletonStateMachine.EnemySetDestination,
+                SkeletonStateMachine.GetComponent<NavMeshAgent>(),
+                _playerGameObject.transform.position);
+            CommandInvoker.ExecuteCommand(setDestinationCommand);
 
             ICommand facingCommand = new EnemyFacingCommand(
                 SkeletonStateMachine.EnemyFacing,

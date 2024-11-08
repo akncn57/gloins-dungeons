@@ -2,6 +2,7 @@
 using Enemies.Commands;
 using Enemies.Skeleton.Commands;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -55,7 +56,8 @@ namespace Enemies.Skeleton.States
 
         private void GoPatrolCoordinate(Vector3 coordinate)
         {
-            if ((SkeletonStateMachine.Rigidbody.transform.position - coordinate).magnitude < 0.1f)
+            Debug.Log((SkeletonStateMachine.Rigidbody.transform.position - coordinate).magnitude);
+            if ((SkeletonStateMachine.Rigidbody.transform.position - coordinate).magnitude < 0.6f)
             {
                 SkeletonStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted = true;
                 
@@ -66,12 +68,11 @@ namespace Enemies.Skeleton.States
                 return;
             }
             
-            ICommand moveCommand = new EnemyMoveCommand(
-                SkeletonStateMachine.EnemyMover,
-                coordinate,
-                SkeletonStateMachine.Rigidbody,
-                SkeletonStateMachine.EnemyProperties.WalkSpeed);
-            CommandInvoker.ExecuteCommand(moveCommand);
+            ICommand setDestinationCommand = new EnemySetDestinationCommand(
+                SkeletonStateMachine.EnemySetDestination,
+                SkeletonStateMachine.GetComponent<NavMeshAgent>(),
+                coordinate);
+            CommandInvoker.ExecuteCommand(setDestinationCommand);
 
             ICommand facingCommand = new EnemyFacingCommand(
                 SkeletonStateMachine.EnemyFacing,
