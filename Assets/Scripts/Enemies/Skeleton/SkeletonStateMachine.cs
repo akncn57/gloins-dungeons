@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Enemies.Skeleton.States;
 using HealthSystem;
 using HitData;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
@@ -53,6 +54,7 @@ namespace Enemies.Skeleton
         public override EnemySetDestination EnemySetDestination => _enemySetDestination;
         public override EnemyStopMovement EnemyStopMovement => _enemyStopMovement;
         public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
+        public bool IsBlocking { get; set; }
 
         public bool HasLineOfSight => _enemyLineOfSight.HasLineOfSight(collider, PlayerCollider, "Player", PlayerLayerMask);
 
@@ -94,6 +96,12 @@ namespace Enemies.Skeleton
             private set;
         }
         
+        public SkeletonBlockState SkeletonBlockState
+        {
+            get;
+            private set;
+        }
+        
 
         private void Awake()
         {
@@ -111,6 +119,7 @@ namespace Enemies.Skeleton
             SkeletonIdleState = Instantiator.Instantiate<SkeletonIdleState>(new object[]{this});
             SkeletonPatrolState = Instantiator.Instantiate<SkeletonPatrolState>(new object[]{this});
             SkeletonAttackBasicState = Instantiator.Instantiate<SkeletonAttackBasicState>(new object[]{this});
+            SkeletonBlockState = Instantiator.Instantiate<SkeletonBlockState>(new object[]{this});
 
             navMeshAgent.speed = EnemyProperties.WalkSpeed;
         }
@@ -126,6 +135,12 @@ namespace Enemies.Skeleton
             {
                 coordinate.IsCompleted = false;
             }
+        }
+
+        [Button]
+        public void EnterBlockState()
+        {
+            SwitchState(SkeletonBlockState);
         }
         
 #if UNITY_EDITOR

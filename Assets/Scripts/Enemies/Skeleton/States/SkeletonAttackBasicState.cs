@@ -85,7 +85,8 @@ namespace Enemies.Skeleton.States
         
         private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
         {
-            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonHurtState);
+            if (!SkeletonStateMachine.IsBlocking)
+                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonHurtState);
         }
     }
 }
