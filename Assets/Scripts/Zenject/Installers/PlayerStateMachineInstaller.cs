@@ -8,6 +8,6 @@ public class PlayerStateMachineInstaller : MonoInstaller
     
     public override void InstallBindings()
     {
-        Container.Bind<PlayerStateMachine>().AsSingle().WithArguments(_playerStateMachine).NonLazy();
+        Container.Bind<PlayerStateMachine>().AsSingle().WithArguments(_playerStateMachine);
     }
 }
