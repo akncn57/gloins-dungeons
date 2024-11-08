@@ -111,6 +111,8 @@ namespace Enemies.Skeleton
             SkeletonIdleState = Instantiator.Instantiate<SkeletonIdleState>(new object[]{this});
             SkeletonPatrolState = Instantiator.Instantiate<SkeletonPatrolState>(new object[]{this});
             SkeletonAttackBasicState = Instantiator.Instantiate<SkeletonAttackBasicState>(new object[]{this});
+
+            navMeshAgent.speed = EnemyProperties.WalkSpeed;
         }
 
         private void Start()
