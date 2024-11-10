@@ -61,11 +61,24 @@ namespace Enemies.Skeleton.States
                     return;
                 }
                 case < 1.5f:
-                    SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
-                    SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
-                        ? new Vector3(-1f, 1f, 1f) 
-                        : new Vector3(1f, 1f, 1f);
-                    SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
+                    if (!SkeletonStateMachine.IsBlocking)
+                    {
+                        var randomChance = Random.Range(0f, 1f);
+                        
+                        if (randomChance <= SkeletonStateMachine.EnemyProperties.BlockChange)
+                        {
+                            SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
+                            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonBlockState);
+                        }
+                        else
+                        {
+                            SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
+                            SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
+                                ? new Vector3(-1f, 1f, 1f) 
+                                : new Vector3(1f, 1f, 1f);
+                            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
+                        }
+                    }
                     return;
             }
 

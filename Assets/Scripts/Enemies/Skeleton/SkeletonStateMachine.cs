@@ -136,12 +136,6 @@ namespace Enemies.Skeleton
                 coordinate.IsCompleted = false;
             }
         }
-
-        [Button]
-        public void EnterBlockState()
-        {
-            SwitchState(SkeletonBlockState);
-        }
         
 #if UNITY_EDITOR
         private void OnDrawGizmos()
