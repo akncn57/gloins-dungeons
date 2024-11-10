@@ -1,0 +1,574 @@
+fileFormatVersion: 2
+guid: 18ce789acb222284a8290878aae80108
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 72
+        width: 77
+        height: 47
+      alignment: 9
+      pivot: {x: 0.6, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7e73de26cb8804dbde33734b3d14fb
+      internalID: 1966351767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_1
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 72
+        width: 79
+        height: 47
+      alignment: 9
+      pivot: {x: 0.6, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bf85aab0621844b884ac3dbfc6e1f7
+      internalID: 2005806896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_2
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 72
+        width: 89
+        height: 48
+      alignment: 9
+      pivot: {x: 0.6677966, y: 0.15426128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287f6e80f7ee4ee44824fe26667249d4
+      internalID: -805073529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_3
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 72
+        width: 89
+        height: 66
+      alignment: 9
+      pivot: {x: 0.72390646, y: 0.12747169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae6bc7041f027147829f1abd1bfacab
+      internalID: 2024653293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_4
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 70
+        width: 141
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5432475, y: 0.10128364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e96c8de8b1f41743a97209d0f4d4d90
+      internalID: -863865286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_5
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 66
+        width: 146
+        height: 73
+      alignment: 9
+      pivot: {x: 0.5012826, y: 0.17162605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a651f17d795bd4fb1d038c6a0b014a
+      internalID: -1886539673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_7
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 65
+        width: 148
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5012652, y: 0.18038268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba0f5e9886e9af49bbc2a8df21f86ae
+      internalID: -1054146164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_8
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 66
+        width: 120
+        height: 76
+      alignment: 9
+      pivot: {x: 0.37671, y: 0.16980322}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1fcd1afae73344e8819bc130b9fd2c
+      internalID: -1673373903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_9
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 70
+        width: 101
+        height: 46
+      alignment: 9
+      pivot: {x: 0.27205244, y: 0.17758627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03924c61c828e924a86cf2803ac83d08
+      internalID: 478059821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_10
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 72
+        width: 76
+        height: 44
+      alignment: 9
+      pivot: {x: 0.34907934, y: 0.15242888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07b59e7598c58848947afa2e7d53f78
+      internalID: 565517756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_11
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 72
+        width: 74
+        height: 44
+      alignment: 9
+      pivot: {x: 0.35674223, y: 0.15242888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6881a9d50f9dee546826726e2b5c1cf1
+      internalID: -1576261230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_12
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 72
+        width: 70
+        height: 44
+      alignment: 9
+      pivot: {x: 0.35600236, y: 0.14847928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0625073c2e3cb49956cfbfa08e210a
+      internalID: 993786967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_13
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 72
+        width: 47
+        height: 45
+      alignment: 9
+      pivot: {x: 0.18939598, y: 0.15242887}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa972510a71ec844b91bd1c97554c99c
+      internalID: 221815504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_14
+      rect:
+        serializedVersion: 2
+        x: 2958
+        y: 72
+        width: 60
+        height: 47
+      alignment: 9
+      pivot: {x: 0.34016114, y: 0.13797826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fbc636dc2e67043a21d184102d18f2
+      internalID: 871184585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_15
+      rect:
+        serializedVersion: 2
+        x: 3143
+        y: 72
+        width: 96
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5408198, y: 0.14017227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf6069aca88f0d46acac11449df5a7b
+      internalID: 431953908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_16
+      rect:
+        serializedVersion: 2
+        x: 3361
+        y: 72
+        width: 99
+        height: 47
+      alignment: 9
+      pivot: {x: 0.53437454, y: 0.14236645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03139ea0f09a87a46b4180ed364cb070
+      internalID: 741221730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_17
+      rect:
+        serializedVersion: 2
+        x: 3582
+        y: 72
+        width: 89
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5729953, y: 0.13578422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb0dae2dbca2ab4ca48f902ef3b0d63
+      internalID: -886626729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Attack_Heavy_18
+      rect:
+        serializedVersion: 2
+        x: 3801
+        y: 72
+        width: 82
+        height: 47
+      alignment: 9
+      pivot: {x: 0.63204736, y: 0.14456047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c39b73425c40d44b3be2efc082c095
+      internalID: -220057072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Texture_Skeleton_Attack_Heavy_0: 1966351767
+      Texture_Skeleton_Attack_Heavy_1: 2005806896
+      Texture_Skeleton_Attack_Heavy_10: 565517756
+      Texture_Skeleton_Attack_Heavy_11: -1576261230
+      Texture_Skeleton_Attack_Heavy_12: 993786967
+      Texture_Skeleton_Attack_Heavy_13: 221815504
+      Texture_Skeleton_Attack_Heavy_14: 871184585
+      Texture_Skeleton_Attack_Heavy_15: 431953908
+      Texture_Skeleton_Attack_Heavy_16: 741221730
+      Texture_Skeleton_Attack_Heavy_17: -886626729
+      Texture_Skeleton_Attack_Heavy_18: -220057072
+      Texture_Skeleton_Attack_Heavy_19: -1685710548
+      Texture_Skeleton_Attack_Heavy_2: -805073529
+      Texture_Skeleton_Attack_Heavy_20: 1971411810
+      Texture_Skeleton_Attack_Heavy_21: 2091712221
+      Texture_Skeleton_Attack_Heavy_3: 2024653293
+      Texture_Skeleton_Attack_Heavy_4: -863865286
+      Texture_Skeleton_Attack_Heavy_5: -1886539673
+      Texture_Skeleton_Attack_Heavy_6: -151355426
+      Texture_Skeleton_Attack_Heavy_7: -1054146164
+      Texture_Skeleton_Attack_Heavy_8: -1673373903
+      Texture_Skeleton_Attack_Heavy_9: 478059821
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
