@@ -36,10 +36,15 @@ namespace Enemies.Skeleton.States
             ApproachPlayer(_playerGameObject.transform.position);
         }
 
-        public override void OnExit(){}
+        public override void OnExit()
+        {
+            SkeletonStateMachine.ExclamationMarkObject.SetActive(false);
+        }
 
         private void ApproachPlayer(Vector3 playerPosition)
         {
+            SkeletonStateMachine.ExclamationMarkObject.SetActive(true);
+            
             ICommand findClosetPositionCommand = new EnemyFindClosestChasePointCommand(
                 SkeletonStateMachine.EnemyFindClosestChasePoint, 
                 SkeletonStateMachine.transform.position, 
