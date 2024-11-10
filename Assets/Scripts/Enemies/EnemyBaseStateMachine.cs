@@ -21,6 +21,7 @@ namespace Enemies
         public abstract GameObject ExclamationMarkObject { get; }
         public abstract Animator Animator { get; }
         public abstract ParticleSystem HurtParticle { get; }
+        public abstract ParticleSystem BlockEffectParticle { get; }
         public abstract List<EnemyPatrolData> PatrolCoordinates { get; }
         public abstract EnemyHitData HitData { get; set; }
         public abstract EnemyFacing EnemyFacing { get; }

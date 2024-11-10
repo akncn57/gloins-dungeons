@@ -24,6 +24,7 @@ namespace Enemies.Skeleton
         [SerializeField] private GameObject exclamationMarkObject;
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
+        [SerializeField] private ParticleSystem blockEffectParticle;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
         [SerializeField] private Collider2D PlayerCollider;
         [SerializeField] private LayerMask PlayerLayerMask;
@@ -48,6 +49,7 @@ namespace Enemies.Skeleton
         public override GameObject ExclamationMarkObject => exclamationMarkObject;
         public override Animator Animator => animator;
         public override ParticleSystem HurtParticle => hurtParticle;
+        public override ParticleSystem BlockEffectParticle => blockEffectParticle;
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
         public override EnemyFacing EnemyFacing => _enemyFacing;

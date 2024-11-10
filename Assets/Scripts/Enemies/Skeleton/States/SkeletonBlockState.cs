@@ -16,6 +16,8 @@ namespace Enemies.Skeleton.States
         {
             _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{SkeletonStateMachine.EnemyProperties.BlockDuration});
             _genericTimer.OnTimerFinished += CheckBlockTimeFinished;
+            
+            SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
 
             SkeletonStateMachine.IsBlocking = true;
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_blockUpAnimationHash, 0.1f);
@@ -30,6 +32,8 @@ namespace Enemies.Skeleton.States
         {
             _genericTimer.OnTimerFinished -= CheckBlockTimeFinished;
             
+            SkeletonStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
+            
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_blockDownAnimationHash, 0.1f);
         }
         
@@ -37,6 +41,11 @@ namespace Enemies.Skeleton.States
         {
             SkeletonStateMachine.IsBlocking = false;
             SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
+        }
+        
+        private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+            SkeletonStateMachine.BlockEffectParticle.Play();
         }
     }
 }
