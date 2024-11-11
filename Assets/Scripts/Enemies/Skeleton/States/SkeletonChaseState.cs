@@ -68,20 +68,32 @@ namespace Enemies.Skeleton.States
                 case < 1.5f:
                     if (!SkeletonStateMachine.IsBlocking)
                     {
-                        var randomChance = Random.Range(0f, 1f);
+                        var randomBlockChange = Random.Range(0f, 1f);
+                        var randomAttackChange = Random.Range(0f, 1f);
                         
-                        if (randomChance <= SkeletonStateMachine.EnemyProperties.BlockChange)
+                        if (randomBlockChange <= SkeletonStateMachine.EnemyProperties.BlockChance)
                         {
                             SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
                             SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonBlockState);
                         }
                         else
                         {
-                            SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
-                            SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
-                                ? new Vector3(-1f, 1f, 1f) 
-                                : new Vector3(1f, 1f, 1f);
-                            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
+                            if (randomAttackChange <= SkeletonStateMachine.EnemyProperties.HeavyAttackChance)
+                            {
+                                SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
+                                SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
+                                    ? new Vector3(-1f, 1f, 1f) 
+                                    : new Vector3(1f, 1f, 1f);
+                                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackHeavyState);
+                            }
+                            else
+                            {
+                                SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
+                                SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
+                                    ? new Vector3(-1f, 1f, 1f) 
+                                    : new Vector3(1f, 1f, 1f);
+                                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
+                            }
                         }
                     }
                     return;

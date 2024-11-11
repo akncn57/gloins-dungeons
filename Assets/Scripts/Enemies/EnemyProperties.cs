@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Enemies
 {
@@ -6,10 +7,12 @@ namespace Enemies
     {
         public float WalkSpeed;
         public int BasicAttackPower;
+        public float HeavyAttackChance;
+        public int HeavyAttackPower;
         public float HitKnockBackPower;
         public float ChaseRadius;
         public float ChasePositionOffset;
-        public float BlockChange;
+        public float BlockChance;
         public float BlockDuration;
     }
 }

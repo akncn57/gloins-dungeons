@@ -7,27 +7,27 @@ using Zenject;
 
 namespace Enemies.Skeleton.States
 {
-    public class SkeletonAttackBasicState : SkeletonBaseState
+    public class SkeletonAttackHeavyState : SkeletonBaseState
     {
-        private readonly int _attackBasicAnimationHash = Animator.StringToHash("Skeleton_Attack_Basic");
-        
+        private readonly int _attackHeavyAnimationHash = Animator.StringToHash("Skeleton_Attack_Heavy");
         private readonly List<ColliderControllerBase> _hittingEnemies = new();
-        
-        protected SkeletonAttackBasicState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
 
+        
+        protected SkeletonAttackHeavyState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator) {}
+        
         public override void OnEnter()
         {
-            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += SkeletonOnAttackBasicOpenOverlap;
-            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose += SkeletonOnAttackBasicCloseOverlap;
-            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += SkeletonOnAttackBasicFinish;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyOverlapOpen += SkeletonOnAttackHeavyOpenOverlap;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyOverlapClose += SkeletonOnAttackHeavyCloseOverlap;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyFinished += SkeletonOnAttackHeavyFinish;
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
-
+            
             ICommand stopMoveCommand = new EnemyStopMovementCommand(
                 SkeletonStateMachine.EnemyStopMovement, 
                 SkeletonStateMachine.EnemyNavMeshAgent);
             CommandInvoker.ExecuteCommand(stopMoveCommand);
             
-            SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
+            SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackHeavyAnimationHash, 0.1f);
         }
 
         public override void OnTick()
@@ -37,18 +37,17 @@ namespace Enemies.Skeleton.States
 
         public override void OnExit()
         {
-            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen -= SkeletonOnAttackBasicOpenOverlap;
-            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose -= SkeletonOnAttackBasicCloseOverlap;
-            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished -= SkeletonOnAttackBasicFinish;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyOverlapOpen -= SkeletonOnAttackHeavyOpenOverlap;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyOverlapClose -= SkeletonOnAttackHeavyCloseOverlap;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyFinished -= SkeletonOnAttackHeavyFinish;
             SkeletonStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
         }
 
-        private void SkeletonOnAttackBasicOpenOverlap()
+        private void SkeletonOnAttackHeavyOpenOverlap()
         {
-            var results = Physics2D.OverlapCapsuleAll(
-                SkeletonStateMachine.AttackBasicCollider.transform.position,
-                SkeletonStateMachine.AttackBasicCollider.size,
-                SkeletonStateMachine.AttackBasicCollider.direction,
+            var results = Physics2D.OverlapBoxAll(
+                SkeletonStateMachine.AttackHeavyCollider.transform.position,
+                SkeletonStateMachine.AttackHeavyCollider.size,
                 0f);
             
             _hittingEnemies.Clear();
@@ -60,14 +59,14 @@ namespace Enemies.Skeleton.States
                     _hittingEnemies.Add(colliderController);
                     
                     colliderController.InvokeOnHitStartEvent(
-                        SkeletonStateMachine.EnemyProperties.BasicAttackPower,
+                        SkeletonStateMachine.EnemyProperties.HeavyAttackPower,
                         (colliderController.transform.position - SkeletonStateMachine.transform.position).normalized,
                         SkeletonStateMachine.EnemyProperties.HitKnockBackPower);
                 }
             }
         }
-        
-        private void SkeletonOnAttackBasicCloseOverlap()
+
+        private void SkeletonOnAttackHeavyCloseOverlap()
         {
             foreach (var enemy in _hittingEnemies)
             {
@@ -76,12 +75,12 @@ namespace Enemies.Skeleton.States
             }
             _hittingEnemies.Clear();
         }
-        
-        private void SkeletonOnAttackBasicFinish()
+
+        private void SkeletonOnAttackHeavyFinish()
         {
             SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
         }
-        
+
         private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
         {
             if (!SkeletonStateMachine.IsBlocking)

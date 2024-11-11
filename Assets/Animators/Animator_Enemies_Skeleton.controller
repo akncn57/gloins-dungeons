@@ -145,7 +145,7 @@ AnimatorStateMachine:
     m_Position: {x: -20, y: 570, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5201614230098766401}
-    m_Position: {x: 15, y: 635, z: 0}
+    m_Position: {x: -20, y: 620, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -263,7 +263,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Skeleton_Attack_Heavy
+  m_Name: Skeleton_Attack_Heavy
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
