@@ -19,5 +19,5 @@ MonoBehaviour:
   HitKnockBackPower: 2
   ChaseRadius: 5
   ChasePositionOffset: 1.2
-  BlockChance: 0.5
+  BlockChance: 0.35
   BlockDuration: 1.25
