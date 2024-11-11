@@ -61,6 +61,7 @@ namespace Enemies.Skeleton
         public override EnemyStopMovement EnemyStopMovement => _enemyStopMovement;
         public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
         public bool IsBlocking { get; set; }
+        public bool IsEnemyNearToPlayer { get; set; }
 
         public bool HasLineOfSight => _enemyLineOfSight.HasLineOfSight(collider, PlayerCollider, "Player", PlayerLayerMask);
 
@@ -117,7 +118,7 @@ namespace Enemies.Skeleton
 
         private void Awake()
         {
-            _healthController = new HealthController(100, 100);
+            _healthController = new HealthController(200, 100);
             _enemyFacing = new EnemyFacing();
             _enemyFindClosestChasePoint = new EnemyFindClosestChasePoint();
             _enemyLineOfSight = new EnemyLineOfSight();

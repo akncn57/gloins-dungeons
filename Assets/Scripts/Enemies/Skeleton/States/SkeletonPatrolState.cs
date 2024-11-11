@@ -13,7 +13,7 @@ namespace Enemies.Skeleton.States
         private int _patrolIndex;
         private ICommand _drawChaseOverlayCommand;
         
-        public SkeletonPatrolState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
+        public SkeletonPatrolState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
         
         public override void OnEnter()
         {

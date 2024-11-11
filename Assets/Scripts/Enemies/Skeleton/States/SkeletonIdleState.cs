@@ -12,7 +12,7 @@ namespace Enemies.Skeleton.States
         private readonly int _idleAnimationHash = Animator.StringToHash("Skeleton_Idle");
         private GenericTimer _genericTimer;
         
-        public SkeletonIdleState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
+        public SkeletonIdleState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
         
         public override void OnEnter()
         {

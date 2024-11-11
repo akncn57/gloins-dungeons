@@ -1,8 +1,8 @@
 ﻿using CustomInterfaces;
 using DesignPatterns.CommandPattern;
 using Enemies.Commands;
+using EventInterfaces;
 using UnityEngine;
-using UnityEngine.AI;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -13,10 +13,12 @@ namespace Enemies.Skeleton.States
         private GameObject _playerGameObject;
         private ICommand _findClosestChasePositionCommand;
 
-        public SkeletonChaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
+        public SkeletonChaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
 
         public override void OnEnter()
         {
+            SignalBus.Subscribe<IPlayerEvents.OnPlayerAttacked>(CheckPlayerAttack);
+            
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
         }
 
@@ -38,6 +40,8 @@ namespace Enemies.Skeleton.States
 
         public override void OnExit()
         {
+            SignalBus.Unsubscribe<IPlayerEvents.OnPlayerAttacked>(CheckPlayerAttack);
+            
             SkeletonStateMachine.ExclamationMarkObject.SetActive(false);
         }
 
@@ -57,6 +61,8 @@ namespace Enemies.Skeleton.States
             {
                 case > 5f:
                 {
+                    SkeletonStateMachine.IsEnemyNearToPlayer = false;
+                        
                     ICommand stopMoveCommand = new EnemyStopMovementCommand(
                         SkeletonStateMachine.EnemyStopMovement, 
                         SkeletonStateMachine.EnemyNavMeshAgent);
@@ -66,34 +72,27 @@ namespace Enemies.Skeleton.States
                     return;
                 }
                 case < 1.5f:
+                    SkeletonStateMachine.IsEnemyNearToPlayer = true;
+                    
                     if (!SkeletonStateMachine.IsBlocking)
                     {
-                        var randomBlockChange = Random.Range(0f, 1f);
                         var randomAttackChange = Random.Range(0f, 1f);
                         
-                        if (randomBlockChange <= SkeletonStateMachine.EnemyProperties.BlockChance)
+                        if (randomAttackChange <= SkeletonStateMachine.EnemyProperties.HeavyAttackChance)
                         {
                             SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
-                            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonBlockState);
+                            SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
+                                ? new Vector3(-1f, 1f, 1f) 
+                                : new Vector3(1f, 1f, 1f);
+                            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackHeavyState);
                         }
                         else
                         {
-                            if (randomAttackChange <= SkeletonStateMachine.EnemyProperties.HeavyAttackChance)
-                            {
-                                SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
-                                SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
-                                    ? new Vector3(-1f, 1f, 1f) 
-                                    : new Vector3(1f, 1f, 1f);
-                                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackHeavyState);
-                            }
-                            else
-                            {
-                                SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
-                                SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
-                                    ? new Vector3(-1f, 1f, 1f) 
-                                    : new Vector3(1f, 1f, 1f);
-                                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
-                            }
+                            SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
+                            SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
+                                ? new Vector3(-1f, 1f, 1f) 
+                                : new Vector3(1f, 1f, 1f);
+                            SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonAttackBasicState);
                         }
                     }
                     return;
@@ -115,6 +114,19 @@ namespace Enemies.Skeleton.States
         public void Init(IPlayer player)
         {
             _playerGameObject = player.GameObject;
+        }
+
+        private void CheckPlayerAttack()
+        {
+            if (!SkeletonStateMachine.IsEnemyNearToPlayer) return;
+            
+            var randomBlockChange = Random.Range(0f, 1f);
+            
+            if (randomBlockChange <= SkeletonStateMachine.EnemyProperties.BlockChance)
+            {
+                SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
+                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonBlockState);
+            }
         }
     }
 }

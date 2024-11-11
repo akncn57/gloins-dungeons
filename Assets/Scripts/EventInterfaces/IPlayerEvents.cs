@@ -12,5 +12,10 @@
         {
             public long CurrentHealthLimit;
         }
+
+        public class OnPlayerAttacked
+        {
+            public bool IsAttacked;
+        }
     }
 }

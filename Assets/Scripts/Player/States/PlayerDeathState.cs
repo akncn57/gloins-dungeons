@@ -11,7 +11,7 @@ namespace Player.States
         
         private readonly int _deathAnimationHash = Animator.StringToHash("Warrior_Death");
         
-        public PlayerDeathState(PlayerStateMachine playerStateMachine, IInstantiator instantiator) : base(playerStateMachine, instantiator){}
+        public PlayerDeathState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(playerStateMachine, instantiator, signalBus){}
 
         public override void OnEnter()
         {

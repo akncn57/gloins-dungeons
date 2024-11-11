@@ -9,6 +9,7 @@ namespace Zenject.Installers
             SignalBusInstaller.Install(Container);
         
             Container.DeclareSignal<IPlayerEvents.OnPlayerHealthChanged>();
+            Container.DeclareSignal<IPlayerEvents.OnPlayerAttacked>();
         }
     }
 }

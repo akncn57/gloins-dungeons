@@ -13,7 +13,7 @@ namespace Enemies.Skeleton.States
         private readonly List<ColliderControllerBase> _hittingEnemies = new();
 
         
-        protected SkeletonAttackHeavyState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator) {}
+        protected SkeletonAttackHeavyState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
         
         public override void OnEnter()
         {

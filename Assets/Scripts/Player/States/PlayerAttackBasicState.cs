@@ -1,4 +1,5 @@
 using DesignPatterns.CommandPattern;
+using EventInterfaces;
 using Player.Commands;
 using UnityEngine;
 using Zenject;
@@ -12,10 +13,12 @@ namespace Player.States
         private readonly int _attackBasicAnimationHash = Animator.StringToHash("Warrior_Attack_Basic");
         private ICommand _attackCommand;
         
-        public PlayerAttackBasicState(PlayerStateMachine playerStateMachine, IInstantiator instantiator) : base(playerStateMachine, instantiator){}
+        public PlayerAttackBasicState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(playerStateMachine, instantiator, signalBus){}
 
         public override void OnEnter()
         {
+            SignalBus.Fire<IPlayerEvents.OnPlayerAttacked>();
+            
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapOpen += PlayerOnAttackBasicOpenOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose += PlayerOnAttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished += PlayerOnAttackBasicFinish;

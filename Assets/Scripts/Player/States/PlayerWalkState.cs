@@ -11,7 +11,7 @@ namespace Player.States
         
         private readonly int _walkAnimationHash = Animator.StringToHash("Warrior_Walk");
         
-        public PlayerWalkState(PlayerStateMachine playerStateMachine, IInstantiator instantiator) : base(playerStateMachine, instantiator){}
+        public PlayerWalkState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(playerStateMachine, instantiator, signalBus){}
 
         public override void OnEnter()
         {

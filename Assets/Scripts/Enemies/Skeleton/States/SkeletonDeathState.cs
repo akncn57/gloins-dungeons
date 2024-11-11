@@ -10,7 +10,7 @@ namespace Enemies.Skeleton.States
     {
         private readonly int _deathAnimationHash = Animator.StringToHash("Skeleton_Death");
         
-        public SkeletonDeathState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
+        public SkeletonDeathState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
 
         public override void OnEnter()
         {

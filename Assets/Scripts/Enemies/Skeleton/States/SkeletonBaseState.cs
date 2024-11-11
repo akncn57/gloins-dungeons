@@ -6,11 +6,13 @@ namespace Enemies.Skeleton.States
     {
         protected SkeletonStateMachine SkeletonStateMachine;
         protected IInstantiator Instantiator;
+        protected SignalBus SignalBus;
         
-        protected SkeletonBaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator)
+        protected SkeletonBaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus)
         {
             SkeletonStateMachine = skeletonStateMachine;
             Instantiator = instantiator;
+            SignalBus = signalBus;
         }
 
         public override void OnEnter()

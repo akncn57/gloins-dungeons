@@ -9,11 +9,13 @@ namespace Player.States
         protected abstract PlayerStateEnums StateEnum { get; }
         protected PlayerStateMachine PlayerStateMachine;
         protected IInstantiator Instantiator;
+        protected SignalBus SignalBus;
 
-        protected PlayerBaseState(PlayerStateMachine playerStateMachine, IInstantiator instantiator)
+        protected PlayerBaseState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus)
         {
             PlayerStateMachine = playerStateMachine;
             Instantiator = instantiator;
+            SignalBus = signalBus;
         }
     }
     

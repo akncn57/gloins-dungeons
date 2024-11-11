@@ -2,6 +2,7 @@
 using ColliderController;
 using DesignPatterns.CommandPattern;
 using Enemies.Commands;
+using EventInterfaces;
 using UnityEngine;
 using Zenject;
 
@@ -13,10 +14,11 @@ namespace Enemies.Skeleton.States
         
         private readonly List<ColliderControllerBase> _hittingEnemies = new();
         
-        protected SkeletonAttackBasicState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator){}
+        protected SkeletonAttackBasicState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
 
         public override void OnEnter()
         {
+            SignalBus.Subscribe<IPlayerEvents.OnPlayerAttacked>(CheckPlayerAttack);
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += SkeletonOnAttackBasicOpenOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose += SkeletonOnAttackBasicCloseOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += SkeletonOnAttackBasicFinish;
@@ -37,6 +39,7 @@ namespace Enemies.Skeleton.States
 
         public override void OnExit()
         {
+            SignalBus.Unsubscribe<IPlayerEvents.OnPlayerAttacked>(CheckPlayerAttack);
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen -= SkeletonOnAttackBasicOpenOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose -= SkeletonOnAttackBasicCloseOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished -= SkeletonOnAttackBasicFinish;
@@ -86,6 +89,19 @@ namespace Enemies.Skeleton.States
         {
             if (!SkeletonStateMachine.IsBlocking)
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonHurtState);
+        }
+        
+        private void CheckPlayerAttack()
+        {
+            if (!SkeletonStateMachine.IsEnemyNearToPlayer) return;
+            
+            var randomBlockChange = Random.Range(0f, 1f);
+            
+            if (randomBlockChange <= SkeletonStateMachine.EnemyProperties.BlockChance)
+            {
+                SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
+                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonBlockState);
+            }
         }
     }
 }

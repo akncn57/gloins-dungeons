@@ -10,7 +10,7 @@ namespace Enemies.Skeleton.States
         private readonly int _blockDownAnimationHash = Animator.StringToHash("Skeleton_BlockDown");
         private GenericTimer _genericTimer;
         
-        protected SkeletonBlockState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator) : base(skeletonStateMachine, instantiator) {}
+        protected SkeletonBlockState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
 
         public override void OnEnter()
         {
