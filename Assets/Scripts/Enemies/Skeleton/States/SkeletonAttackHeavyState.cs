@@ -27,6 +27,8 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.EnemyNavMeshAgent);
             CommandInvoker.ExecuteCommand(stopMoveCommand);
             
+            SkeletonStateMachine.WarningObject.SetActive(true);
+            
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_attackHeavyAnimationHash, 0.1f);
         }
 
@@ -41,6 +43,8 @@ namespace Enemies.Skeleton.States
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyOverlapClose -= SkeletonOnAttackHeavyCloseOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyFinished -= SkeletonOnAttackHeavyFinish;
             SkeletonStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
+            
+            SkeletonStateMachine.WarningObject.SetActive(false);
         }
 
         private void SkeletonOnAttackHeavyOpenOverlap()

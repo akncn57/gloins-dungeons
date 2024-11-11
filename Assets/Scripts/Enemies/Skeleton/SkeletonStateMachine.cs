@@ -23,6 +23,7 @@ namespace Enemies.Skeleton
         [SerializeField] private BoxCollider2D attackHeavyCollider;
         [SerializeField] private GameObject parentObject;
         [SerializeField] private GameObject exclamationMarkObject;
+        [SerializeField] private GameObject warningObject;
         [SerializeField] private CircleCollider2D chaseCollider;
         [SerializeField] private ParticleSystem hurtParticle;
         [SerializeField] private ParticleSystem blockEffectParticle;
@@ -49,6 +50,7 @@ namespace Enemies.Skeleton
         public override BoxCollider2D AttackHeavyCollider => attackHeavyCollider;
         public override GameObject ParentObject => parentObject;
         public override GameObject ExclamationMarkObject => exclamationMarkObject;
+        public override GameObject WarningObject => warningObject;
         public override Animator Animator => animator;
         public override ParticleSystem HurtParticle => hurtParticle;
         public override ParticleSystem BlockEffectParticle => blockEffectParticle;
@@ -118,7 +120,7 @@ namespace Enemies.Skeleton
 
         private void Awake()
         {
-            _healthController = new HealthController(200, 100);
+            _healthController = new HealthController(100, 100);
             _enemyFacing = new EnemyFacing();
             _enemyFindClosestChasePoint = new EnemyFindClosestChasePoint();
             _enemyLineOfSight = new EnemyLineOfSight();

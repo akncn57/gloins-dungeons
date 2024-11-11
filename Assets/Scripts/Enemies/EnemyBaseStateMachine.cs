@@ -20,6 +20,7 @@ namespace Enemies
         public abstract BoxCollider2D AttackHeavyCollider { get; }
         public abstract GameObject ParentObject { get; }
         public abstract GameObject ExclamationMarkObject { get; }
+        public abstract GameObject WarningObject { get; }
         public abstract Animator Animator { get; }
         public abstract ParticleSystem HurtParticle { get; }
         public abstract ParticleSystem BlockEffectParticle { get; }
