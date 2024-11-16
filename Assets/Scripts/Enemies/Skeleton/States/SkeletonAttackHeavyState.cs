@@ -41,7 +41,7 @@ namespace Enemies.Skeleton.States
         {
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyOverlapOpen -= SkeletonOnAttackHeavyOpenOverlap;
             SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyOverlapClose -= SkeletonOnAttackHeavyCloseOverlap;
-            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyFinished -= SkeletonOnAttackHeavyFinish;
+            SkeletonStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackHeavyFinished -= SkeletonOnAttackHeavyFinish; 
             SkeletonStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
             
             SkeletonStateMachine.WarningObject.SetActive(false);

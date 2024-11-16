@@ -16,7 +16,7 @@ MonoBehaviour:
   BasicAttackPower: 10
   HeavyAttackChance: 0.2
   HeavyAttackPower: 25
-  HitKnockBackPower: 0
+  HitKnockBackPower: 1
   ChaseRadius: 5
   ChasePositionOffset: 1.2
   BlockChance: 0.2
