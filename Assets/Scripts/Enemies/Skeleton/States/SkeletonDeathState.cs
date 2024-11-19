@@ -21,6 +21,11 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.EnemyStopMovement, 
                 SkeletonStateMachine.EnemyNavMeshAgent);
             CommandInvoker.ExecuteCommand(stopMoveCommand);
+
+            ICommand stopRigidbodyCommand = new EnemyStopRigidbodyCommand(
+                SkeletonStateMachine.EnemyStopRigidbody,
+                SkeletonStateMachine.Rigidbody);
+            CommandInvoker.ExecuteCommand(stopRigidbodyCommand);
             
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_deathAnimationHash, 0.1f);
         }
