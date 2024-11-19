@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ScriptableObject_SkeletonProperties
   m_EditorClassIdentifier: 
   WalkSpeed: 3
-  BasicAttackPower: 10
+  BasicAttackPower: 15
   HeavyAttackChance: 0.2
   HeavyAttackPower: 25
   HitKnockBackPower: 1
