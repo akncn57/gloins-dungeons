@@ -37,6 +37,7 @@ namespace Enemies.Skeleton
         private EnemyLineOfSight _enemyLineOfSight;
         private EnemySetDestination _enemySetDestination;
         private EnemyStopMovement _enemyStopMovement;
+        private EnemyKnockback _enemyKnockback;
         private SkeletonDrawChaseOverlay _skeletonDrawChaseOverlay;
 
         public override EnemyProperties EnemyProperties => skeletonProperties;
@@ -61,6 +62,7 @@ namespace Enemies.Skeleton
         public override EnemyLineOfSight EnemyLineOfSight => _enemyLineOfSight;
         public override EnemySetDestination EnemySetDestination => _enemySetDestination;
         public override EnemyStopMovement EnemyStopMovement => _enemyStopMovement;
+        public override EnemyKnockback EnemyKnockback => _enemyKnockback;
         public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
         public bool IsBlocking { get; set; }
         public bool IsEnemyNearToPlayer { get; set; }
@@ -126,6 +128,7 @@ namespace Enemies.Skeleton
             _enemyLineOfSight = new EnemyLineOfSight();
             _enemySetDestination = new EnemySetDestination();
             _enemyStopMovement = new EnemyStopMovement();
+            _enemyKnockback = new EnemyKnockback();
             _skeletonDrawChaseOverlay = new SkeletonDrawChaseOverlay();
             
             SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});

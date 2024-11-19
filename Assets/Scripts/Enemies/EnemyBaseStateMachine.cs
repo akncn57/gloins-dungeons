@@ -31,5 +31,6 @@ namespace Enemies
         public abstract EnemyLineOfSight EnemyLineOfSight { get; }
         public abstract EnemySetDestination EnemySetDestination { get; }
         public abstract EnemyStopMovement EnemyStopMovement { get; }
+        public abstract EnemyKnockback EnemyKnockback { get; }
     }
 }

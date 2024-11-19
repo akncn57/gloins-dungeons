@@ -47,12 +47,12 @@ namespace Enemies.Skeleton.States
             
             Debug.Log("Enemy Skeleton Health : " + SkeletonStateMachine.HealthController.HealthData.Health);
             
-            // ICommand knockBackCommand = new EnemyKnockBackCommand(
-            //     SkeletonStateMachine.EnemyMover,
-            //     SkeletonStateMachine.Rigidbody,
-            //     SkeletonStateMachine.HitData.HitPosition.x,
-            //     SkeletonStateMachine.HitData.KnockBackStrength);
-            // CommandInvoker.ExecuteCommand(knockBackCommand);
+            ICommand knockBackCommand = new EnemyKnockbackCommand(
+                SkeletonStateMachine.EnemyKnockback,
+                SkeletonStateMachine.Rigidbody,
+                SkeletonStateMachine.HitData.HitPosition.x,
+                SkeletonStateMachine.HitData.KnockBackStrength);
+            CommandInvoker.ExecuteCommand(knockBackCommand);
         }
 
         private void EnemyOnHurtEnd()
