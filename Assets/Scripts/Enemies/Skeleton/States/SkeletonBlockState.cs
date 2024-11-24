@@ -1,4 +1,6 @@
-﻿using Tools;
+﻿using DesignPatterns.CommandPattern;
+using Enemies.Commands;
+using Tools;
 using UnityEngine;
 using Zenject;
 
@@ -18,6 +20,16 @@ namespace Enemies.Skeleton.States
             _genericTimer.OnTimerFinished += CheckBlockTimeFinished;
             
             SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
+            
+            ICommand stopMoveCommand = new EnemyStopMovementCommand(
+                SkeletonStateMachine.EnemyStopMovement, 
+                SkeletonStateMachine.EnemyNavMeshAgent);
+            CommandInvoker.ExecuteCommand(stopMoveCommand);
+            
+            ICommand stopRigidbodyCommand = new EnemyStopRigidbodyCommand(
+                SkeletonStateMachine.EnemyStopRigidbody, 
+                SkeletonStateMachine.Rigidbody);
+            CommandInvoker.ExecuteCommand(stopRigidbodyCommand);
 
             SkeletonStateMachine.IsBlocking = true;
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_blockUpAnimationHash, 0.1f);
