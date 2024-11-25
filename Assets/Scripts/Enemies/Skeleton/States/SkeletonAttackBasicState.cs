@@ -99,7 +99,6 @@ namespace Enemies.Skeleton.States
             
             if (randomBlockChange <= SkeletonStateMachine.EnemyProperties.BlockChance)
             {
-                SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonBlockState);
             }
         }
