@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: dfa1193b9e204574ba65d5b99ae2d4f5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 71
+        width: 78
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6026729, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce68d3bd63b16294d9df9a1a5aaf1944
+      internalID: 665180022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 71
+        width: 83
+        height: 52
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfc59f8e7fe9c14ea80eb6d31fe93bd
+      internalID: -1322377134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_2
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 71
+        width: 83
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452635d28f8e4ba4c8aeac0f937c90da
+      internalID: -602689991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_3
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 71
+        width: 83
+        height: 43
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06c020734dfd5e4d88c7b008ba40814
+      internalID: 973320741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_4
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 70
+        width: 86
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c3fa1469d50654c8ce72d96b2275f0
+      internalID: 247955120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_6
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 50
+        width: 97
+        height: 61
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ace5e787e41074dbff2ade265f4ccd
+      internalID: 471842329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_7
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 47
+        width: 95
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2761c07b168989d4e9f7e494a49323b0
+      internalID: 1059746615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_8
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 47
+        width: 101
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefe2c03062f98d458293c7b585b1215
+      internalID: 629388182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_9
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 47
+        width: 92
+        height: 64
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbbb5feeb7e25d46883a272cf81d6e9
+      internalID: -436693582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_15
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 49
+        width: 105
+        height: 46
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d40ea0636edc344b1ce962729ce3b3
+      internalID: 725039219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_17
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 49
+        width: 111
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1758e2c026880924da4193a3fc6c25db
+      internalID: 657881641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_19
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 47
+        width: 115
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001cfe4f7f10da847a6bac40a0703058
+      internalID: -552102730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Skeleton_Death_22
+      rect:
+        serializedVersion: 2
+        x: 2686
+        y: 48
+        width: 116
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6148373, y: 0.1631339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beecdb89e4d2bea4386e07dfc70200ee
+      internalID: -1631404630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Texture_Skeleton_Death_0: 665180022
+      Texture_Skeleton_Death_1: -1322377134
+      Texture_Skeleton_Death_10: 1356168358
+      Texture_Skeleton_Death_11: -1184632035
+      Texture_Skeleton_Death_12: -1372249472
+      Texture_Skeleton_Death_13: 544677899
+      Texture_Skeleton_Death_14: 895496821
+      Texture_Skeleton_Death_15: 725039219
+      Texture_Skeleton_Death_16: -314435683
+      Texture_Skeleton_Death_17: 657881641
+      Texture_Skeleton_Death_18: -1791985095
+      Texture_Skeleton_Death_19: -552102730
+      Texture_Skeleton_Death_2: -602689991
+      Texture_Skeleton_Death_20: 1992935025
+      Texture_Skeleton_Death_21: 1247100825
+      Texture_Skeleton_Death_22: -1631404630
+      Texture_Skeleton_Death_23: 397402453
+      Texture_Skeleton_Death_24: 1652509442
+      Texture_Skeleton_Death_25: 242467149
+      Texture_Skeleton_Death_26: -260407848
+      Texture_Skeleton_Death_27: 1327342976
+      Texture_Skeleton_Death_3: 973320741
+      Texture_Skeleton_Death_4: 247955120
+      Texture_Skeleton_Death_5: -1038055607
+      Texture_Skeleton_Death_6: 471842329
+      Texture_Skeleton_Death_7: 1059746615
+      Texture_Skeleton_Death_8: 629388182
+      Texture_Skeleton_Death_9: -436693582
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
