@@ -22,7 +22,7 @@ namespace Player
         public SpriteTrailRenderer.SpriteTrailRenderer TrailRenderer;
         [Title("Unity Components")]
         public Rigidbody2D RigidBody;
-        public CapsuleCollider2D AttackBasicCollider;
+        public BoxCollider2D AttackBasicCollider;
         public Animator Animator;
         public ParticleSystem HurtParticle;
         public GameObject ParentObject;

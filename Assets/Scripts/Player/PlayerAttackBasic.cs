@@ -8,9 +8,9 @@ namespace Player
     {
         public List<ColliderControllerBase> HittingEnemies = new();
 
-        public void PlayerOnAttackBasicOpenOverlap(CapsuleCollider2D attackCollider, int attackPower, float hitKnockBackPower, Vector3 playerPosition)
+        public void PlayerOnAttackBasicOpenOverlap(BoxCollider2D attackCollider, int attackPower, float hitKnockBackPower, Vector3 playerPosition)
         {
-            var results = Physics2D.OverlapCapsuleAll(attackCollider.transform.position, attackCollider.size, attackCollider.direction, 0f);
+            var results = Physics2D.OverlapBoxAll(attackCollider.transform.position, attackCollider.size, 0f);
             
             HittingEnemies.Clear();
             
