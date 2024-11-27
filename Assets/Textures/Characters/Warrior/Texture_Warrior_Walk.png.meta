@@ -1,7 +1,25 @@
 fileFormatVersion: 2
-guid: b3d69c44a9689c840848dfa2fc68a2af
+guid: 9aeb26dafab766a4d89da0599dc20554
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7637795279874295586
+    second: Texture_Warrior_Walk_0
+  - first:
+      213: 1572877723508355055
+    second: Texture_Warrior_Walk_1
+  - first:
+      213: -8279225246315182164
+    second: Texture_Warrior_Walk_2
+  - first:
+      213: 6937476760074356550
+    second: Texture_Warrior_Walk_3
+  - first:
+      213: 3344688877784421171
+    second: Texture_Warrior_Walk_4
+  - first:
+      213: 8114665454109765928
+    second: Texture_Warrior_Walk_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +87,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -113,20 +131,20 @@ TextureImporter:
       name: Texture_Warrior_Walk_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 23
-        width: 36
-        height: 47
+        x: 18
+        y: 5
+        width: 30
+        height: 54
       alignment: 9
-      pivot: {x: 0.54, y: 0.15}
+      pivot: {x: 0.5258428, y: 0.13094066}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 85a623323eb151741917423a5e9f97a0
-      internalID: 738890387
+      spriteID: 227001c1756eef960800000000000000
+      internalID: 7637795279874295586
       vertices: []
       indices: 
       edges: []
@@ -135,20 +153,20 @@ TextureImporter:
       name: Texture_Warrior_Walk_1
       rect:
         serializedVersion: 2
-        x: 193
-        y: 24
-        width: 36
-        height: 47
+        x: 145
+        y: 5
+        width: 33
+        height: 54
       alignment: 9
-      pivot: {x: 0.54, y: 0.15}
+      pivot: {x: 0.5253185, y: 0.12761705}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81d758c3602cb4f4a88c4d2fec6c2da4
-      internalID: 39819378
+      spriteID: fef27d0c4fbf3d510800000000000000
+      internalID: 1572877723508355055
       vertices: []
       indices: 
       edges: []
@@ -157,20 +175,20 @@ TextureImporter:
       name: Texture_Warrior_Walk_2
       rect:
         serializedVersion: 2
-        x: 339
-        y: 22
-        width: 33
-        height: 48
+        x: 271
+        y: 5
+        width: 38
+        height: 55
       alignment: 9
-      pivot: {x: 0.54, y: 0.15}
+      pivot: {x: 0.516147, y: 0.12844162}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 18e8650daec5bc84c9e7456171a63992
-      internalID: -1150213396
+      spriteID: ca700f1f0884a1d80800000000000000
+      internalID: -8279225246315182164
       vertices: []
       indices: 
       edges: []
@@ -179,20 +197,20 @@ TextureImporter:
       name: Texture_Warrior_Walk_3
       rect:
         serializedVersion: 2
-        x: 485
-        y: 22
-        width: 28
-        height: 45
+        x: 398
+        y: 5
+        width: 40
+        height: 55
       alignment: 9
-      pivot: {x: 0.54, y: 0.15}
+      pivot: {x: 0.5074425, y: 0.120962456}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9f2c120a0c1d10647abd35f81a0148b1
-      internalID: -1620891025
+      spriteID: 64782c16b5ed64060800000000000000
+      internalID: 6937476760074356550
       vertices: []
       indices: 
       edges: []
@@ -201,20 +219,20 @@ TextureImporter:
       name: Texture_Warrior_Walk_4
       rect:
         serializedVersion: 2
-        x: 630
-        y: 23
-        width: 27
-        height: 47
+        x: 529
+        y: 5
+        width: 36
+        height: 54
       alignment: 9
-      pivot: {x: 0.54, y: 0.15}
+      pivot: {x: 0.47149318, y: 0.13354914}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: badf712b5ec9dba469fa3d82bdb67338
-      internalID: 410931999
+      spriteID: 3335a8c30d8ba6e20800000000000000
+      internalID: 3344688877784421171
       vertices: []
       indices: 
       edges: []
@@ -223,64 +241,20 @@ TextureImporter:
       name: Texture_Warrior_Walk_5
       rect:
         serializedVersion: 2
-        x: 775
-        y: 26
-        width: 29
-        height: 45
+        x: 658
+        y: 5
+        width: 32
+        height: 55
       alignment: 9
-      pivot: {x: 0.54, y: 0.15}
+      pivot: {x: 0.50432396, y: 0.1232368}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7a3b4908f8b20e3458f4d7354c8e2ae5
-      internalID: 1716783273
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Warrior_Walk_6
-      rect:
-        serializedVersion: 2
-        x: 921
-        y: 22
-        width: 26
-        height: 47
-      alignment: 9
-      pivot: {x: 0.54, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 501edca831d293a4f906a05cda7f99e4
-      internalID: 850068380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Warrior_Walk_7
-      rect:
-        serializedVersion: 2
-        x: 1063
-        y: 22
-        width: 28
-        height: 44
-      alignment: 9
-      pivot: {x: 0.54, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be316680098131e4a88ba213f18c19f5
-      internalID: -48724934
+      spriteID: 821b857bc351d9070800000000000000
+      internalID: 8114665454109765928
       vertices: []
       indices: 
       edges: []
@@ -289,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: bfe963bf14ffdb449bc550be5a8155b4
     internalID: 0
     vertices: []
     indices: 
@@ -299,14 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Texture_Warrior_Walk_0: 738890387
-      Texture_Warrior_Walk_1: 39819378
-      Texture_Warrior_Walk_2: -1150213396
-      Texture_Warrior_Walk_3: -1620891025
-      Texture_Warrior_Walk_4: 410931999
-      Texture_Warrior_Walk_5: 1716783273
-      Texture_Warrior_Walk_6: 850068380
-      Texture_Warrior_Walk_7: -48724934
+      Texture_Warrior_Walk_0: 7637795279874295586
+      Texture_Warrior_Walk_1: 1572877723508355055
+      Texture_Warrior_Walk_2: -8279225246315182164
+      Texture_Warrior_Walk_3: 6937476760074356550
+      Texture_Warrior_Walk_4: 3344688877784421171
+      Texture_Warrior_Walk_5: 8114665454109765928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

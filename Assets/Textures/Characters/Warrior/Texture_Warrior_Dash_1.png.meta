@@ -1,25 +1,34 @@
 fileFormatVersion: 2
-guid: 60a49b2ecc9285c419c8b210b5c09d70
+guid: c36baf24f138fd942bc17016fb24cac4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1727590668784540352
-    second: Texture_Warrior_Death_0
+      213: 3098361922288104753
+    second: Texture_Warrior_Dash_1_0
   - first:
-      213: -4610118597737530249
-    second: Texture_Warrior_Death_1
+      213: -2559951080423055345
+    second: Texture_Warrior_Dash_1_1
   - first:
-      213: 1681295161610775321
-    second: Texture_Warrior_Death_2
+      213: 3903960465608788433
+    second: Texture_Warrior_Dash_1_2
   - first:
-      213: -4742185794573149140
-    second: Texture_Warrior_Death_3
+      213: 2719748832487536597
+    second: Texture_Warrior_Dash_1_3
   - first:
-      213: 9180216580016616621
-    second: Texture_Warrior_Death_4
+      213: 1345798201975148941
+    second: Texture_Warrior_Dash_1_4
   - first:
-      213: 5749661075986492805
-    second: Texture_Warrior_Death_5
+      213: 5886800218347615202
+    second: Texture_Warrior_Dash_1_5
+  - first:
+      213: 6811875244587143578
+    second: Texture_Warrior_Dash_1_6
+  - first:
+      213: -2961184877862417783
+    second: Texture_Warrior_Dash_1_7
+  - first:
+      213: -1969496673004907124
+    second: Texture_Warrior_Dash_1_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,133 +137,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Texture_Warrior_Death_0
+      name: Texture_Warrior_Dash_1_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 6
-        width: 42
-        height: 53
+        x: 12
+        y: 7
+        width: 51
+        height: 52
       alignment: 9
-      pivot: {x: 0.4756468, y: 0.11402461}
+      pivot: {x: 0.4168775, y: 0.1331437}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ca9e226f82a9f710800000000000000
-      internalID: 1727590668784540352
+      spriteID: 1353493a0c79ffa20800000000000000
+      internalID: 3098361922288104753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Warrior_Death_1
+      name: Texture_Warrior_Dash_1_2
       rect:
         serializedVersion: 2
-        x: 156
-        y: 6
-        width: 42
+        x: 135
+        y: 7
+        width: 56
         height: 51
       alignment: 9
-      pivot: {x: 0.40274483, y: 0.12010204}
+      pivot: {x: 0.47026035, y: 0.12298178}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77cbe619f819500c0800000000000000
-      internalID: -4610118597737530249
+      spriteID: 1d9c7c10c57ad2630800000000000000
+      internalID: 3903960465608788433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Warrior_Death_2
+      name: Texture_Warrior_Dash_1_4
       rect:
         serializedVersion: 2
         x: 263
-        y: 6
-        width: 65
-        height: 46
+        y: 7
+        width: 56
+        height: 51
       alignment: 9
-      pivot: {x: 0.58322287, y: 0.107608214}
+      pivot: {x: 0.46620506, y: 0.124466114}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91ba466aa09255710800000000000000
-      internalID: 1681295161610775321
+      spriteID: d819618955c3da210800000000000000
+      internalID: 1345798201975148941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Warrior_Death_3
+      name: Texture_Warrior_Dash_1_6
       rect:
         serializedVersion: 2
-        x: 387
-        y: 6
-        width: 77
-        height: 22
+        x: 393
+        y: 7
+        width: 54
+        height: 51
       alignment: 9
-      pivot: {x: 0.4534722, y: 0.26634976}
+      pivot: {x: 0.43691677, y: 0.11110719}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2c509f152f503eb0800000000000000
-      internalID: -4742185794573149140
+      spriteID: a91d4efa174a88e50800000000000000
+      internalID: 6811875244587143578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Warrior_Death_4
+      name: Texture_Warrior_Dash_1_7
       rect:
         serializedVersion: 2
-        x: 515
-        y: 6
-        width: 81
-        height: 22
+        x: 522
+        y: 7
+        width: 53
+        height: 51
       alignment: 9
-      pivot: {x: 0.4230776, y: 0.2805104}
+      pivot: {x: 0.44001165, y: 0.12595043}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da4ba05375ea66f70800000000000000
-      internalID: 9180216580016616621
+      spriteID: 98a80c8ea02c7e6d0800000000000000
+      internalID: -2961184877862417783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Warrior_Death_5
+      name: Texture_Warrior_Dash_1_8
       rect:
         serializedVersion: 2
-        x: 643
-        y: 6
-        width: 82
-        height: 22
+        x: 658
+        y: 7
+        width: 45
+        height: 52
       alignment: 9
-      pivot: {x: 0.41641757, y: 0.26634976}
+      pivot: {x: 0.3410007, y: 0.12217799}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58da01d1946eacf40800000000000000
-      internalID: 5749661075986492805
+      spriteID: c859a33f531faa4e0800000000000000
+      internalID: -1969496673004907124
       vertices: []
       indices: 
       edges: []
@@ -263,7 +272,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7a079f92fa5521f49b1f7e70a6fe54f1
+    spriteID: c8de6ebd02a7d404fb249f7979040e45
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +282,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Texture_Warrior_Death_0: 1727590668784540352
-      Texture_Warrior_Death_1: -4610118597737530249
-      Texture_Warrior_Death_2: 1681295161610775321
-      Texture_Warrior_Death_3: -4742185794573149140
-      Texture_Warrior_Death_4: 9180216580016616621
-      Texture_Warrior_Death_5: 5749661075986492805
+      Texture_Warrior_Dash_1_0: 3098361922288104753
+      Texture_Warrior_Dash_1_1: -2559951080423055345
+      Texture_Warrior_Dash_1_2: 3903960465608788433
+      Texture_Warrior_Dash_1_3: 2719748832487536597
+      Texture_Warrior_Dash_1_4: 1345798201975148941
+      Texture_Warrior_Dash_1_5: 5886800218347615202
+      Texture_Warrior_Dash_1_6: 6811875244587143578
+      Texture_Warrior_Dash_1_7: -2961184877862417783
+      Texture_Warrior_Dash_1_8: -1969496673004907124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

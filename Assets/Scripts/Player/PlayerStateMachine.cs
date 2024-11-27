@@ -26,7 +26,6 @@ namespace Player
         public Animator Animator;
         public ParticleSystem HurtParticle;
         public GameObject ParentObject;
-        public GameObject ShieldObject;
         
         public PlayerHitData HitData;
         public PlayerMover PlayerMover;

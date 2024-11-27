@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 60a49b2ecc9285c419c8b210b5c09d70
+guid: 3e7f61635d5d0e641834ca56528f2a8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1727590668784540352
-    second: Texture_Warrior_Death_0
+      213: 13221270923804367
+    second: Texture_Warrior_Hurt_2_0
   - first:
-      213: -4610118597737530249
-    second: Texture_Warrior_Death_1
+      213: -3480171809691325160
+    second: Texture_Warrior_Hurt_2_1
   - first:
-      213: 1681295161610775321
-    second: Texture_Warrior_Death_2
-  - first:
-      213: -4742185794573149140
-    second: Texture_Warrior_Death_3
-  - first:
-      213: 9180216580016616621
-    second: Texture_Warrior_Death_4
-  - first:
-      213: 5749661075986492805
-    second: Texture_Warrior_Death_5
+      213: 5682399332284454200
+    second: Texture_Warrior_Hurt_2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,133 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Texture_Warrior_Death_0
+      name: Texture_Warrior_Hurt_2_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 6
+        x: 17
+        y: 5
+        width: 36
+        height: 55
+      alignment: 9
+      pivot: {x: 0.45628983, y: 0.11045004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce74e40da8fe2000800000000000000
+      internalID: 13221270923804367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texture_Warrior_Hurt_2_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 5
         width: 42
         height: 53
       alignment: 9
-      pivot: {x: 0.4756468, y: 0.11402461}
+      pivot: {x: 0.4755093, y: 0.114954196}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ca9e226f82a9f710800000000000000
-      internalID: 1727590668784540352
+      spriteID: 81d25068d22f3bfc0800000000000000
+      internalID: -3480171809691325160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Warrior_Death_1
+      name: Texture_Warrior_Hurt_2_2
       rect:
         serializedVersion: 2
-        x: 156
-        y: 6
+        x: 270
+        y: 5
         width: 42
-        height: 51
+        height: 52
       alignment: 9
-      pivot: {x: 0.40274483, y: 0.12010204}
+      pivot: {x: 0.46289355, y: 0.11637955}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77cbe619f819500c0800000000000000
-      internalID: -4610118597737530249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Warrior_Death_2
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 6
-        width: 65
-        height: 46
-      alignment: 9
-      pivot: {x: 0.58322287, y: 0.107608214}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91ba466aa09255710800000000000000
-      internalID: 1681295161610775321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Warrior_Death_3
-      rect:
-        serializedVersion: 2
-        x: 387
-        y: 6
-        width: 77
-        height: 22
-      alignment: 9
-      pivot: {x: 0.4534722, y: 0.26634976}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c2c509f152f503eb0800000000000000
-      internalID: -4742185794573149140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Warrior_Death_4
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 6
-        width: 81
-        height: 22
-      alignment: 9
-      pivot: {x: 0.4230776, y: 0.2805104}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da4ba05375ea66f70800000000000000
-      internalID: 9180216580016616621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Warrior_Death_5
-      rect:
-        serializedVersion: 2
-        x: 643
-        y: 6
-        width: 82
-        height: 22
-      alignment: 9
-      pivot: {x: 0.41641757, y: 0.26634976}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58da01d1946eacf40800000000000000
-      internalID: 5749661075986492805
+      spriteID: 8355bb80610fbde40800000000000000
+      internalID: 5682399332284454200
       vertices: []
       indices: 
       edges: []
@@ -263,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7a079f92fa5521f49b1f7e70a6fe54f1
+    spriteID: 6459c3c75c882644f93d1c083d879a6d
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Texture_Warrior_Death_0: 1727590668784540352
-      Texture_Warrior_Death_1: -4610118597737530249
-      Texture_Warrior_Death_2: 1681295161610775321
-      Texture_Warrior_Death_3: -4742185794573149140
-      Texture_Warrior_Death_4: 9180216580016616621
-      Texture_Warrior_Death_5: 5749661075986492805
+      Texture_Warrior_Hurt_2_0: 13221270923804367
+      Texture_Warrior_Hurt_2_1: -3480171809691325160
+      Texture_Warrior_Hurt_2_2: 5682399332284454200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

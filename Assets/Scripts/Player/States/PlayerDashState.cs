@@ -18,7 +18,7 @@ namespace Player.States
 
         public override void OnEnter()
         {
-            PlayerStateMachine.TrailRenderer.enabled = true;
+            // PlayerStateMachine.TrailRenderer.enabled = true;
             
             _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{PlayerStateMachine.PlayerProperties.DashTime});
             _genericTimer.OnTimerFinished += CheckDashTimeFinish;
@@ -45,7 +45,7 @@ namespace Player.States
 
         private void CheckDashTimeFinish()
         {
-            PlayerStateMachine.TrailRenderer.enabled = false;
+            // PlayerStateMachine.TrailRenderer.enabled = false;
             PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerIdleState);
         }
     }

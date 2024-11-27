@@ -9,7 +9,7 @@ namespace Player.States
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Block;
         
-        private readonly int _idleAnimationHash = Animator.StringToHash("Warrior_Idle");
+        private readonly int _blockAnimationHash = Animator.StringToHash("Warrior_Block_Idle");
         
         public PlayerBlockState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(playerStateMachine, instantiator, signalBus){}
 
@@ -18,9 +18,7 @@ namespace Player.States
             PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
-            PlayerStateMachine.ShieldObject.SetActive(true);
-            
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationHash, 0.1f);
+            PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockAnimationHash, 0.1f);
         }
 
         public override void OnTick()
@@ -35,8 +33,6 @@ namespace Player.States
         {
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
-            
-            PlayerStateMachine.ShieldObject.SetActive(false);
         }
 
         private void CheckBlockingFinished()
