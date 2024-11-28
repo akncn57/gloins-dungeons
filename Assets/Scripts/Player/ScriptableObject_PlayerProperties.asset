@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WalkSpeed: 5
   BasicAttackPower: 15
-  HitKnockBackPower: 3
+  HeavyAttackPower: 35
+  BasicAttackHitKnockBackPower: 3
+  HeavyAttackHitKnockBackPower: 6
   DashForce: 15
   DashTime: 0.2

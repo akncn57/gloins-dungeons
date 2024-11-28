@@ -23,7 +23,7 @@ namespace Player
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                PlayerColliderOnHitStart?.Invoke(playerStateMachine.PlayerProperties.BasicAttackPower, (transform.position - other.transform.position).normalized, playerStateMachine.PlayerProperties.HitKnockBackPower);
+                PlayerColliderOnHitStart?.Invoke(playerStateMachine.PlayerProperties.BasicAttackPower, (transform.position - other.transform.position).normalized, playerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower);
             }
         }
         

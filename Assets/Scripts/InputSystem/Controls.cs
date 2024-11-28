@@ -40,7 +40,16 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""AttackBasic"",
                     ""type"": ""Button"",
                     ""id"": ""202f3bb3-415e-4240-bf94-5ea750a8c9df"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AttackHeavy"",
+                    ""type"": ""Button"",
+                    ""id"": ""d3651136-c18a-47ed-80a8-eaf0e246f9b4"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -199,6 +208,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""62e93773-cb6e-47d1-a1a4-5026caff7090"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackHeavy"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d2ba6a1-0559-4420-a75c-73ec96d65b96"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackHeavy"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""a880157e-2dd1-47ba-ab1a-85455cb6b4cc"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
@@ -250,6 +281,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_AttackBasic = m_Player.FindAction("AttackBasic", throwIfNotFound: true);
+        m_Player_AttackHeavy = m_Player.FindAction("AttackHeavy", throwIfNotFound: true);
         m_Player_Block = m_Player.FindAction("Block", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
     }
@@ -320,6 +352,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_AttackBasic;
+    private readonly InputAction m_Player_AttackHeavy;
     private readonly InputAction m_Player_Block;
     private readonly InputAction m_Player_Dash;
     public struct PlayerActions
@@ -328,6 +361,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @AttackBasic => m_Wrapper.m_Player_AttackBasic;
+        public InputAction @AttackHeavy => m_Wrapper.m_Player_AttackHeavy;
         public InputAction @Block => m_Wrapper.m_Player_Block;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -345,6 +379,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @AttackBasic.started += instance.OnAttackBasic;
             @AttackBasic.performed += instance.OnAttackBasic;
             @AttackBasic.canceled += instance.OnAttackBasic;
+            @AttackHeavy.started += instance.OnAttackHeavy;
+            @AttackHeavy.performed += instance.OnAttackHeavy;
+            @AttackHeavy.canceled += instance.OnAttackHeavy;
             @Block.started += instance.OnBlock;
             @Block.performed += instance.OnBlock;
             @Block.canceled += instance.OnBlock;
@@ -361,6 +398,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @AttackBasic.started -= instance.OnAttackBasic;
             @AttackBasic.performed -= instance.OnAttackBasic;
             @AttackBasic.canceled -= instance.OnAttackBasic;
+            @AttackHeavy.started -= instance.OnAttackHeavy;
+            @AttackHeavy.performed -= instance.OnAttackHeavy;
+            @AttackHeavy.canceled -= instance.OnAttackHeavy;
             @Block.started -= instance.OnBlock;
             @Block.performed -= instance.OnBlock;
             @Block.canceled -= instance.OnBlock;
@@ -388,6 +428,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnAttackBasic(InputAction.CallbackContext context);
+        void OnAttackHeavy(InputAction.CallbackContext context);
         void OnBlock(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
     }

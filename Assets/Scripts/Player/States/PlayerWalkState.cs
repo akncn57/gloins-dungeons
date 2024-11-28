@@ -16,6 +16,7 @@ namespace Player.States
         public override void OnEnter()
         {
             PlayerStateMachine.InputReader.AttackBasicEvent += CheckAttackBasic;
+            PlayerStateMachine.InputReader.AttackHeavyEvent += CheckAttackHeavy;
             PlayerStateMachine.InputReader.DashEvent += CheckDash;
             PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
@@ -45,6 +46,7 @@ namespace Player.States
         public override void OnExit()
         {
             PlayerStateMachine.InputReader.AttackBasicEvent -= CheckAttackBasic;
+            PlayerStateMachine.InputReader.AttackHeavyEvent -= CheckAttackHeavy;
             PlayerStateMachine.InputReader.DashEvent -= CheckDash;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
@@ -65,6 +67,11 @@ namespace Player.States
         private void CheckAttackBasic()
         {
             PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerAttackBasicState);
+        }
+        
+        private void CheckAttackHeavy()
+        {
+            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerAttackHeavyState);
         }
         
         private void CheckDash()

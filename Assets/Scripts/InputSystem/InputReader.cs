@@ -8,6 +8,7 @@ namespace InputSystem
     {
         public Vector2 MovementValue { get; private set; }
         public event Action AttackBasicEvent;
+        public event Action AttackHeavyEvent;
         public event Action DashEvent;
         public bool IsBlocking { get; private set; }
 
@@ -34,6 +35,12 @@ namespace InputSystem
         {
             if (!context.performed) { return; }
             AttackBasicEvent?.Invoke();
+        }
+
+        public void OnAttackHeavy(InputAction.CallbackContext context)
+        {
+            if (!context.performed) { return; }
+            AttackHeavyEvent?.Invoke();
         }
 
         public void OnBlock(InputAction.CallbackContext context)

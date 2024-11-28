@@ -8,6 +8,9 @@ namespace Player
         public event Action PlayerOnAttackBasicOverlapOpen;
         public event Action PlayerOnAttackBasicOverlapClose;
         public event Action PlayerOnAttackBasicFinished;
+        public event Action PlayerOnAttackHeavyOverlapOpen;
+        public event Action PlayerOnAttackHeavyOverlapClose;
+        public event Action PlayerOnAttackHeavyFinished;
         public event Action PlayerOnHurtStart;
         public event Action PlayerOnHurtEnd;
 
@@ -24,6 +27,21 @@ namespace Player
         public void AttackBasicFinished()
         {
             PlayerOnAttackBasicFinished?.Invoke();
+        }
+        
+        public void AttackHeavyColliderOpen()
+        {
+            PlayerOnAttackHeavyOverlapOpen?.Invoke();
+        }
+    
+        public void AttackHeavyColliderClose()
+        {
+            PlayerOnAttackHeavyOverlapClose?.Invoke();
+        }
+        
+        public void AttackHeavyFinished()
+        {
+            PlayerOnAttackHeavyFinished?.Invoke();
         }
 
         public void HurtStart()

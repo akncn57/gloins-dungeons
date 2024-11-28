@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerAttackBasic
+    public class PlayerAttack
     {
         public List<ColliderControllerBase> HittingEnemies = new();
 
-        public void PlayerOnAttackBasicOpenOverlap(BoxCollider2D attackCollider, int attackPower, float hitKnockBackPower, Vector3 playerPosition)
+        public void PlayerOnAttackOpenOverlap(BoxCollider2D attackCollider, int attackPower, float hitKnockBackPower, Vector3 playerPosition)
         {
             var results = Physics2D.OverlapBoxAll(attackCollider.transform.position, attackCollider.size, 0f);
             
@@ -23,7 +23,7 @@ namespace Player
             }
         }
         
-        public void PlayerOnAttackBasicCloseOverlap()
+        public void PlayerOnAttackCloseOverlap()
         {
             foreach (var enemy in HittingEnemies)
             {

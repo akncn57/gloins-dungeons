@@ -194,7 +194,7 @@ AnimatorStateMachine:
     m_Position: {x: 70, y: 540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6205476116387015402}
-    m_Position: {x: 105, y: 605, z: 0}
+    m_Position: {x: 70, y: 590, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -312,7 +312,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Animation_Warrior_Attack_Heavy
+  m_Name: Warrior_Attack_Heavy
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

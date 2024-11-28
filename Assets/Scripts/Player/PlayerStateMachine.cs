@@ -23,6 +23,7 @@ namespace Player
         [Title("Unity Components")]
         public Rigidbody2D RigidBody;
         public BoxCollider2D AttackBasicCollider;
+        public BoxCollider2D AttackHeavyCollider;
         public Animator Animator;
         public ParticleSystem HurtParticle;
         public GameObject ParentObject;
@@ -30,7 +31,7 @@ namespace Player
         public PlayerHitData HitData;
         public PlayerMover PlayerMover;
         public PlayerFacing PlayerFacing;
-        public PlayerAttackBasic PlayerAttackBasic;
+        public PlayerAttack PlayerAttack;
         
         [Inject] public IInstantiator Instantiator;
 
@@ -39,6 +40,12 @@ namespace Player
         public GameObject GameObject => gameObject;
 
         public PlayerAttackBasicState PlayerAttackBasicState
+        {
+            get;
+            private set;
+        }
+        
+        public PlayerAttackHeavyState PlayerAttackHeavyState
         {
             get;
             private set;
@@ -86,10 +93,11 @@ namespace Player
         {
             PlayerMover = new PlayerMover();
             PlayerFacing = new PlayerFacing();
-            PlayerAttackBasic = new PlayerAttackBasic();
+            PlayerAttack = new PlayerAttack();
             HealthController = new HealthController(100, 100);
             
             PlayerAttackBasicState = Instantiator.Instantiate<PlayerAttackBasicState>(new object[]{this});
+            PlayerAttackHeavyState = Instantiator.Instantiate<PlayerAttackHeavyState>(new object[]{this});
             PlayerBlockState = Instantiator.Instantiate<PlayerBlockState>(new object[]{this});
             PlayerDeathState = Instantiator.Instantiate<PlayerDeathState>(new object[]{this});
             PlayerHurtState = Instantiator.Instantiate<PlayerHurtState>(new object[]{this});

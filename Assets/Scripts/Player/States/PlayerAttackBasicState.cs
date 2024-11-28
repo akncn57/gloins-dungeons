@@ -22,7 +22,7 @@ namespace Player.States
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapOpen += PlayerOnAttackBasicOpenOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicOverlapClose += PlayerOnAttackBasicCloseOverlap;
             PlayerStateMachine.PlayerAnimationEventsTrigger.PlayerOnAttackBasicFinished += PlayerOnAttackBasicFinish;
-            PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
+            PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
 
             ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
@@ -44,19 +44,16 @@ namespace Player.States
 
         private void PlayerOnAttackBasicOpenOverlap()
         {
-            _attackCommand = new PlayerAttackBasicCommand(
-                PlayerStateMachine.PlayerAttackBasic,
+            _attackCommand = new PlayerAttackCommand(
+                PlayerStateMachine.PlayerAttack,
                 PlayerStateMachine.AttackBasicCollider,
                 PlayerStateMachine.PlayerProperties.BasicAttackPower,
-                PlayerStateMachine.PlayerProperties.HitKnockBackPower,
+                PlayerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower,
                 PlayerStateMachine.RigidBody.position);
             CommandInvoker.ExecuteCommand(_attackCommand);
         }
         
-        private void PlayerOnAttackBasicCloseOverlap()
-        {
-            CommandInvoker.UndoCommand();
-        }
+        private void PlayerOnAttackBasicCloseOverlap() {}
 
         private void PlayerOnAttackBasicFinish()
         {

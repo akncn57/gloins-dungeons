@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -7,7 +8,9 @@ namespace Player
     {
         public float WalkSpeed;
         public int BasicAttackPower;
-        public float HitKnockBackPower;
+        public int HeavyAttackPower;
+        public float BasicAttackHitKnockBackPower;
+        public float HeavyAttackHitKnockBackPower;
         public float DashForce;
         public float DashTime;
     }
