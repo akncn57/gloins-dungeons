@@ -309,7 +309,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 5
+  m_LinearDamping: 10
   m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -357,7 +357,6 @@ MonoBehaviour:
   Animator: {fileID: 7586337879990168668}
   HurtParticle: {fileID: 2295064625310618213}
   ParentObject: {fileID: 5415165778118375842}
-  ShieldObject: {fileID: 0}
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

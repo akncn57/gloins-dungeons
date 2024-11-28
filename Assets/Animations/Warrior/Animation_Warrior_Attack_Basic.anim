@@ -22,9 +22,9 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 1040483094091108523, guid: d021d3244bba79546859d99fec9d2cf0, type: 3}
-    - time: 0.1
+    - time: 0.11666667
       value: {fileID: -8678507783247846434, guid: d021d3244bba79546859d99fec9d2cf0, type: 3}
-    - time: 0.21666667
+    - time: 0.23333333
       value: {fileID: -9127965934818992219, guid: d021d3244bba79546859d99fec9d2cf0, type: 3}
     - time: 0.35
       value: {fileID: 2968293910498444804, guid: d021d3244bba79546859d99fec9d2cf0, type: 3}
@@ -79,7 +79,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.1
+  - time: 0.11666667
     functionName: AttackBasicColliderOpen
     data: 
     objectReferenceParameter: {fileID: 0}
