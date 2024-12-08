@@ -3,6 +3,7 @@ using DesignPatterns.CommandPattern;
 using Player.Commands;
 using Tools;
 using UnityEngine;
+using UtilScripts;
 using Zenject;
 
 namespace Player.States
@@ -14,7 +15,7 @@ namespace Player.States
         private readonly int _dashAnimationHash = Animator.StringToHash("Warrior_Dash");
         private GenericTimer _genericTimer;
 
-        public PlayerDashState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(playerStateMachine, instantiator, signalBus){}
+        public PlayerDashState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner) : base(playerStateMachine, instantiator, signalBus, coroutineRunner){}
 
         public override void OnEnter()
         {

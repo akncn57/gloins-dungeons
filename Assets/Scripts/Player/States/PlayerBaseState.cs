@@ -1,4 +1,5 @@
 using StateMachine;
+using UtilScripts;
 using Zenject;
 
 namespace Player.States
@@ -10,12 +11,14 @@ namespace Player.States
         protected PlayerStateMachine PlayerStateMachine;
         protected IInstantiator Instantiator;
         protected SignalBus SignalBus;
+        protected CoroutineRunner CoroutineRunner;
 
-        protected PlayerBaseState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus)
+        protected PlayerBaseState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner)
         {
             PlayerStateMachine = playerStateMachine;
             Instantiator = instantiator;
             SignalBus = signalBus;
+            CoroutineRunner = coroutineRunner;
         }
     }
     

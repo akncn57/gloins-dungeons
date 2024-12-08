@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Player
 {
@@ -24,5 +25,17 @@ namespace Player
         {
             rigidbody.AddForce(dashDirection * force, ForceMode2D.Impulse);
         }
+        
+        // public IEnumerator DashCor(Rigidbody2D rigidbody, Vector2 dashDirection, float dashForce, float dashDuration)
+        // {
+        //     var elapsed = 0f;
+        //     
+        //     while (elapsed < dashDuration)
+        //     {
+        //         rigidbody.AddForce(dashDirection * dashForce * Time.deltaTime, ForceMode2D.Force);
+        //         elapsed += Time.deltaTime;
+        //         yield return null;
+        //     }
+        // }
     }
 }

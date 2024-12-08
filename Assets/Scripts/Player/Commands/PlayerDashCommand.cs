@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.CommandPattern;
 using UnityEngine;
+using UtilScripts;
 
 namespace Player.Commands
 {
@@ -21,6 +22,7 @@ namespace Player.Commands
         public object Execute()
         {
             _playerMover.Dash(_rigidbody, _dashDirection, _force);
+            //.TryStartCoroutine(_playerMover.DashCor(_rigidbody, _dashDirection, _force, 1.5f));
             return default;
         }
 

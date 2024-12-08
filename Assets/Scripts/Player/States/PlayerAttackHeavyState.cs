@@ -2,6 +2,7 @@
 using EventInterfaces;
 using Player.Commands;
 using UnityEngine;
+using UtilScripts;
 using Zenject;
 
 namespace Player.States
@@ -13,7 +14,7 @@ namespace Player.States
         private readonly int _attackHeavyAnimationHash = Animator.StringToHash("Warrior_Attack_Heavy");
         private ICommand _attackCommand;
         
-        public PlayerAttackHeavyState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(playerStateMachine, instantiator, signalBus) {}
+        public PlayerAttackHeavyState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner) : base(playerStateMachine, instantiator, signalBus, coroutineRunner){}
         
         public override void OnEnter()
         {

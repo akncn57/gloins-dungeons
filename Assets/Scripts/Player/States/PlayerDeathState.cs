@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.CommandPattern;
 using Player.Commands;
 using UnityEngine;
+using UtilScripts;
 using Zenject;
 
 namespace Player.States
@@ -11,7 +12,7 @@ namespace Player.States
         
         private readonly int _deathAnimationHash = Animator.StringToHash("Warrior_Death");
         
-        public PlayerDeathState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(playerStateMachine, instantiator, signalBus){}
+        public PlayerDeathState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner) : base(playerStateMachine, instantiator, signalBus, coroutineRunner){}
 
         public override void OnEnter()
         {

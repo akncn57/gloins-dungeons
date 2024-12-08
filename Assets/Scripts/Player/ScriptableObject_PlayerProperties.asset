@@ -17,5 +17,5 @@ MonoBehaviour:
   HeavyAttackPower: 35
   BasicAttackHitKnockBackPower: 3
   HeavyAttackHitKnockBackPower: 6
-  DashForce: 15
-  DashTime: 0.2
+  DashForce: 20
+  DashTime: 0.3
