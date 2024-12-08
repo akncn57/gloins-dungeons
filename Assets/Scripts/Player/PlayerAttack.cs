@@ -13,6 +13,8 @@ namespace Player
             var results = Physics2D.OverlapBoxAll(attackCollider.transform.position, attackCollider.size, 0f);
             
             HittingEnemies.Clear();
+
+            if (results == null) return;
             
             foreach (var result in results)
             {
