@@ -12,7 +12,12 @@ namespace Player.States
         
         private readonly int _idleAnimationHash = Animator.StringToHash("Warrior_Idle");
         
-        public PlayerIdleState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner) : base(playerStateMachine, instantiator, signalBus, coroutineRunner){}
+        public PlayerIdleState(
+            PlayerStateMachine playerStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(playerStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
 
         public override void OnEnter()
         {

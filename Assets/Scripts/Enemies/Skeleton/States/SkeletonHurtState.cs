@@ -2,6 +2,7 @@
 using Enemies.Commands;
 using UnityEngine;
 using UnityEngine.AI;
+using UtilScripts;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -10,7 +11,12 @@ namespace Enemies.Skeleton.States
     {
         private readonly int _hurtAnimationHash = Animator.StringToHash("Skeleton_Hurt");
         
-        public SkeletonHurtState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
+        public SkeletonHurtState(
+            SkeletonStateMachine skeletonStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(skeletonStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
 
         public override void OnEnter()
         {

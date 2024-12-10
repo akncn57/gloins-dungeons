@@ -12,13 +12,15 @@ namespace Player.States
         protected IInstantiator Instantiator;
         protected SignalBus SignalBus;
         protected CoroutineRunner CoroutineRunner;
+        protected CameraShake CameraShake;
 
-        protected PlayerBaseState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner)
+        protected PlayerBaseState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner, CameraShake cameraShake)
         {
             PlayerStateMachine = playerStateMachine;
             Instantiator = instantiator;
             SignalBus = signalBus;
             CoroutineRunner = coroutineRunner;
+            CameraShake = cameraShake;
         }
     }
     

@@ -3,6 +3,7 @@ using DesignPatterns.CommandPattern;
 using Enemies.Skeleton.Commands;
 using Tools;
 using UnityEngine;
+using UtilScripts;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -12,7 +13,12 @@ namespace Enemies.Skeleton.States
         private readonly int _idleAnimationHash = Animator.StringToHash("Skeleton_Idle");
         private GenericTimer _genericTimer;
         
-        public SkeletonIdleState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
+        public SkeletonIdleState(
+            SkeletonStateMachine skeletonStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(skeletonStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
         
         public override void OnEnter()
         {

@@ -10,7 +10,7 @@ namespace Enemies
             var enemyOrigin = (Vector2)enemyCollider.transform.position + enemyCollider.offset;
             var playerOrigin = (Vector2)playerCollider.transform.position + playerCollider.offset;
             
-            Physics2D.RaycastNonAlloc(enemyOrigin, playerOrigin - enemyOrigin, results, 20f, layerMask);
+            Physics2D.RaycastNonAlloc(enemyOrigin, playerOrigin - enemyOrigin, results, 100f, layerMask);
             
             foreach (var result in results)
             {

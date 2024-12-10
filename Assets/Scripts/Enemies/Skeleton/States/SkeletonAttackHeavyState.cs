@@ -3,6 +3,7 @@ using ColliderController;
 using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using UnityEngine;
+using UtilScripts;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -13,7 +14,12 @@ namespace Enemies.Skeleton.States
         private readonly List<ColliderControllerBase> _hittingEnemies = new();
 
         
-        protected SkeletonAttackHeavyState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
+        protected SkeletonAttackHeavyState(
+            SkeletonStateMachine skeletonStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(skeletonStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
         
         public override void OnEnter()
         {
@@ -68,6 +74,8 @@ namespace Enemies.Skeleton.States
                         SkeletonStateMachine.EnemyProperties.HitKnockBackPower);
                 }
             }
+
+            CoroutineRunner.StartCoroutine(CameraShake.CameraShakeCor(2f, 0.5f));
         }
 
         private void SkeletonOnAttackHeavyCloseOverlap()

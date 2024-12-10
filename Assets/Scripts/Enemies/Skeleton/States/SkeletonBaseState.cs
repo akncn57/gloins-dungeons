@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using UtilScripts;
+using Zenject;
 
 namespace Enemies.Skeleton.States
 {
@@ -7,12 +8,16 @@ namespace Enemies.Skeleton.States
         protected SkeletonStateMachine SkeletonStateMachine;
         protected IInstantiator Instantiator;
         protected SignalBus SignalBus;
+        protected CoroutineRunner CoroutineRunner;
+        protected CameraShake CameraShake;
         
-        protected SkeletonBaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus)
+        protected SkeletonBaseState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner, CameraShake cameraShake)
         {
             SkeletonStateMachine = skeletonStateMachine;
             Instantiator = instantiator;
             SignalBus = signalBus;
+            CoroutineRunner = coroutineRunner;
+            CameraShake = cameraShake;
         }
 
         public override void OnEnter()

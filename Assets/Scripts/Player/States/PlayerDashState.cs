@@ -15,7 +15,12 @@ namespace Player.States
         private readonly int _dashAnimationHash = Animator.StringToHash("Warrior_Dash");
         private GenericTimer _genericTimer;
 
-        public PlayerDashState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner) : base(playerStateMachine, instantiator, signalBus, coroutineRunner){}
+        public PlayerDashState(
+            PlayerStateMachine playerStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(playerStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
 
         public override void OnEnter()
         {

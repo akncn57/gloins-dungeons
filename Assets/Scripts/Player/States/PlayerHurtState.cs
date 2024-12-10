@@ -12,7 +12,12 @@ namespace Player.States
         
         private readonly int _hurtAnimationHash = Animator.StringToHash("Warrior_Hurt");
 
-        public PlayerHurtState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner) : base(playerStateMachine, instantiator, signalBus, coroutineRunner){}
+        public PlayerHurtState(
+            PlayerStateMachine playerStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(playerStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
 
         public override void OnEnter()
         {

@@ -14,7 +14,12 @@ namespace Player.States
         private readonly int _attackHeavyAnimationHash = Animator.StringToHash("Warrior_Attack_Heavy");
         private ICommand _attackCommand;
         
-        public PlayerAttackHeavyState(PlayerStateMachine playerStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner) : base(playerStateMachine, instantiator, signalBus, coroutineRunner){}
+        public PlayerAttackHeavyState(
+            PlayerStateMachine playerStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(playerStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
         
         public override void OnEnter()
         {
@@ -52,9 +57,14 @@ namespace Player.States
                 PlayerStateMachine.PlayerProperties.HeavyAttackHitKnockBackPower,
                 PlayerStateMachine.RigidBody.position);
             CommandInvoker.ExecuteCommand(_attackCommand);
+            
+            CoroutineRunner.StartCoroutine(CameraShake.CameraShakeCor(2f, 0.5f));
         }
-        
-        private void PlayerOnAttackHeavyCloseOverlap() {}
+
+        private void PlayerOnAttackHeavyCloseOverlap()
+        {
+            
+        }
 
         private void PlayerOnAttackHeavyFinish()
         {

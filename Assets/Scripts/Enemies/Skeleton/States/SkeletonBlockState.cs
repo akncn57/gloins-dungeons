@@ -2,6 +2,7 @@
 using Enemies.Commands;
 using Tools;
 using UnityEngine;
+using UtilScripts;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -12,7 +13,12 @@ namespace Enemies.Skeleton.States
         private readonly int _blockDownAnimationHash = Animator.StringToHash("Skeleton_BlockDown");
         private GenericTimer _genericTimer;
         
-        protected SkeletonBlockState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
+        protected SkeletonBlockState(
+            SkeletonStateMachine skeletonStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(skeletonStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
 
         public override void OnEnter()
         {

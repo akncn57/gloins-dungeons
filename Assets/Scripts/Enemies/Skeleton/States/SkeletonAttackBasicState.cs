@@ -4,6 +4,7 @@ using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using EventInterfaces;
 using UnityEngine;
+using UtilScripts;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -14,7 +15,12 @@ namespace Enemies.Skeleton.States
         
         private readonly List<ColliderControllerBase> _hittingEnemies = new();
         
-        protected SkeletonAttackBasicState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
+        protected SkeletonAttackBasicState(
+            SkeletonStateMachine skeletonStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(skeletonStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
 
         public override void OnEnter()
         {

@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3004049597733000548}
   - component: {fileID: 5671127896370959898}
+  - component: {fileID: 2888464627603161942}
   - component: {fileID: 231235447682303357}
+  - component: {fileID: 6537561343302052534}
   m_Layer: 0
   m_Name: Default_SceneContext
   m_TagString: Untagged
@@ -48,6 +50,8 @@ MonoBehaviour:
   _scriptableObjectInstallers: []
   _monoInstallers:
   - {fileID: 231235447682303357}
+  - {fileID: 6537561343302052534}
+  - {fileID: 2888464627603161942}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -65,6 +69,18 @@ MonoBehaviour:
   _parentNewObjectsUnderSceneContext: 0
   _contractNames: []
   _parentContractNames: []
+--- !u!114 &2888464627603161942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181859121859865449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3984cabd9b562524dba6a301c8161870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &231235447682303357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,3 +94,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerStateMachine: {fileID: 0}
+--- !u!114 &6537561343302052534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181859121859865449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b78e82da9b4571a5ca740d0f4ec6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cameraShake: {fileID: 0}

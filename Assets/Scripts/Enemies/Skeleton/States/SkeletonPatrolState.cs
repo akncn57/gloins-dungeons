@@ -3,6 +3,7 @@ using Enemies.Commands;
 using Enemies.Skeleton.Commands;
 using UnityEngine;
 using UnityEngine.AI;
+using UtilScripts;
 using Zenject;
 
 namespace Enemies.Skeleton.States
@@ -13,7 +14,12 @@ namespace Enemies.Skeleton.States
         private int _patrolIndex;
         private ICommand _drawChaseOverlayCommand;
         
-        public SkeletonPatrolState(SkeletonStateMachine skeletonStateMachine, IInstantiator instantiator, SignalBus signalBus) : base(skeletonStateMachine, instantiator, signalBus){}
+        public SkeletonPatrolState(
+            SkeletonStateMachine skeletonStateMachine,
+            IInstantiator instantiator,
+            SignalBus signalBus,
+            CoroutineRunner coroutineRunner,
+            CameraShake cameraShake) : base(skeletonStateMachine, instantiator, signalBus, coroutineRunner, cameraShake){}
         
         public override void OnEnter()
         {
