@@ -62,6 +62,7 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.EnemyProperties.ChasePositionOffset);
 
             var newPosition = CommandInvoker.ExecuteCommand(findClosetPositionCommand);
+            var enemyPositionToChasePoint = (SkeletonStateMachine.Rigidbody.transform.position - (Vector3)newPosition).magnitude;
                 
             switch ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude)
             {
@@ -77,14 +78,14 @@ namespace Enemies.Skeleton.States
                     SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonIdleState);
                     return;
                 }
-                case < 1.5f:
+                case <= 2f:
                     SkeletonStateMachine.IsEnemyNearToPlayer = true;
                     
-                    if (!SkeletonStateMachine.IsBlocking)
+                    if (enemyPositionToChasePoint <= 1f && !SkeletonStateMachine.IsBlocking)
                     {
-                        var randomAttackChange = Random.Range(0f, 1f);
+                        var randomHeavyAttackChange = Random.Range(0f, 1f);
                         
-                        if (randomAttackChange <= SkeletonStateMachine.EnemyProperties.HeavyAttackChance)
+                        if (randomHeavyAttackChange <= SkeletonStateMachine.EnemyProperties.HeavyAttackChance)
                         {
                             SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
                             SkeletonStateMachine.ParentObject.transform.localScale = _playerGameObject.transform.position.x < SkeletonStateMachine.Rigidbody.position.x 
