@@ -10,7 +10,7 @@ namespace Player.States
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Idle;
         
-        private readonly int _idleAnimationHash = Animator.StringToHash("Warrior_Idle");
+        // private readonly int _idleAnimationHash = Animator.StringToHash("Warrior_Idle");
         
         public PlayerIdleState(
             PlayerStateMachine playerStateMachine,
@@ -32,7 +32,9 @@ namespace Player.States
                 PlayerStateMachine.RigidBody);
             CommandInvoker.ExecuteCommand(stopMoveCommand);
             
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationHash, 0.1f);
+            // PlayerStateMachine.Animator.CrossFadeInFixedTime(_idleAnimationHash, 0.1f);
+            
+            PlayerStateMachine.Animator.Play("Idle-BlendTree");
         }
 
         public override void OnTick()

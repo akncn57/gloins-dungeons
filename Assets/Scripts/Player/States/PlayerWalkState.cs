@@ -10,7 +10,7 @@ namespace Player.States
     {
         protected override PlayerStateEnums StateEnum => PlayerStateEnums.Walk;
         
-        private readonly int _walkAnimationHash = Animator.StringToHash("Warrior_Walk");
+        // private readonly int _walkAnimationHash = Animator.StringToHash("Warrior_Walk");
         
         public PlayerWalkState(
             PlayerStateMachine playerStateMachine,
@@ -27,7 +27,9 @@ namespace Player.States
             PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
+            // PlayerStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
+            
+            PlayerStateMachine.Animator.Play("Walk-BlendTree");
         }
 
         public override void OnTick()
@@ -42,11 +44,20 @@ namespace Player.States
                 PlayerStateMachine.PlayerProperties.WalkSpeed);
             CommandInvoker.ExecuteCommand(runCommand);
 
-            ICommand facingCommand = new PlayerFacingCommand(
-                PlayerStateMachine.PlayerFacing,
-                PlayerStateMachine.ParentObject,
-                PlayerStateMachine.InputReader.MovementValue.x);
-            CommandInvoker.ExecuteCommand(facingCommand);
+            // ICommand facingCommand = new PlayerFacingCommand(
+            //     PlayerStateMachine.PlayerFacing,
+            //     PlayerStateMachine.ParentObject,
+            //     PlayerStateMachine.InputReader.MovementValue.x);
+            // CommandInvoker.ExecuteCommand(facingCommand);
+            
+            PlayerStateMachine.Animator.SetFloat("Horizontal", PlayerStateMachine.InputReader.MovementValue.x);
+            PlayerStateMachine.Animator.SetFloat("Vertical", PlayerStateMachine.InputReader.MovementValue.y);
+
+            if (PlayerStateMachine.InputReader.MovementValue != Vector2.zero)
+            {
+                PlayerStateMachine.Animator.SetFloat("LastHorizontal", PlayerStateMachine.InputReader.MovementValue.x);
+                PlayerStateMachine.Animator.SetFloat("LastVertical", PlayerStateMachine.InputReader.MovementValue.y);
+            }
         }
         
         public override void OnExit()
@@ -56,6 +67,8 @@ namespace Player.States
             PlayerStateMachine.InputReader.DashEvent -= CheckDash;
             PlayerStateMachine.PlayerColliderController.OnHitStart -= CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart -= CheckOnHurt;
+            
+            PlayerStateMachine.Animator.SetBool("IsWalking" , false);
         }
 
         private void CheckStopMoving()
