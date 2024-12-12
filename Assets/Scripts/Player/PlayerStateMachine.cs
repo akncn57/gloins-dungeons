@@ -16,6 +16,7 @@ namespace Player
         public PlayerProperties PlayerProperties;
         [Title("Custom Components")]
         public InputReader InputReader;
+        public PlayerDirectionController PlayerDirectionController;
         public PlayerAnimationEventsTrigger PlayerAnimationEventsTrigger;
         public PlayerColliderController PlayerColliderController;
         public HealthController HealthController;

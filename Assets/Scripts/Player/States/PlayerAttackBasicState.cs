@@ -34,7 +34,7 @@ namespace Player.States
             ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
             CommandInvoker.ExecuteCommand(stopCommand);
             
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
+            // PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
         }
 
         public override void OnTick(){}
@@ -52,7 +52,7 @@ namespace Player.States
         {
             _attackCommand = new PlayerAttackCommand(
                 PlayerStateMachine.PlayerAttack,
-                PlayerStateMachine.AttackBasicCollider,
+                (BoxCollider2D)PlayerStateMachine.PlayerDirectionController.GetBasicAttackCollider(),
                 PlayerStateMachine.PlayerProperties.BasicAttackPower,
                 PlayerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower,
                 PlayerStateMachine.RigidBody.position);
