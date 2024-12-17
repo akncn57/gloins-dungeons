@@ -1,0 +1,1768 @@
+fileFormatVersion: 2
+guid: 2856b3af85124fb489a43baf1ef2897f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7950173758764867970
+    second: Warrior Up_0
+  - first:
+      213: -4524477343885080481
+    second: Warrior Up_1
+  - first:
+      213: 4503238049280227159
+    second: Warrior Up_2
+  - first:
+      213: -6360661449169140687
+    second: Warrior Up_3
+  - first:
+      213: -7795660353062629801
+    second: Warrior Up_4
+  - first:
+      213: -1344061881518392530
+    second: Warrior Up_5
+  - first:
+      213: -2965193451646360843
+    second: Warrior Up_6
+  - first:
+      213: -8858012187630114290
+    second: Warrior Up_7
+  - first:
+      213: 2524430669977471859
+    second: Warrior Up_8
+  - first:
+      213: 4349502672857091329
+    second: Warrior Up_9
+  - first:
+      213: -3344039949119952474
+    second: Warrior Up_10
+  - first:
+      213: 3239074876748637116
+    second: Warrior Up_11
+  - first:
+      213: 2047105520665431727
+    second: Warrior Up_12
+  - first:
+      213: 5643643938885203672
+    second: Warrior Up_13
+  - first:
+      213: 9020309975749159200
+    second: Warrior Up_14
+  - first:
+      213: 190667124726111506
+    second: Warrior Up_15
+  - first:
+      213: -5197985420196745780
+    second: Warrior Up_16
+  - first:
+      213: 4847200938540039898
+    second: Warrior Up_17
+  - first:
+      213: -3447473697854638481
+    second: Warrior Up_18
+  - first:
+      213: 9056898971527773912
+    second: Warrior Up_19
+  - first:
+      213: -5604449424545676813
+    second: Warrior Up_20
+  - first:
+      213: 3446151039972894125
+    second: Warrior Up_21
+  - first:
+      213: -7326662794833302524
+    second: Warrior Up_22
+  - first:
+      213: 49457275788375085
+    second: Warrior Up_23
+  - first:
+      213: 3084177700519469500
+    second: Warrior Up_24
+  - first:
+      213: 4278824339804994499
+    second: Warrior Up_25
+  - first:
+      213: 2590740610358839446
+    second: Warrior Up_26
+  - first:
+      213: -4522123347988261737
+    second: Warrior Up_27
+  - first:
+      213: 3839041165367676048
+    second: Warrior Up_28
+  - first:
+      213: -6609264269258641976
+    second: Warrior Up_29
+  - first:
+      213: 8652060784391462936
+    second: Warrior Up_30
+  - first:
+      213: 8412936141478455456
+    second: Warrior Up_31
+  - first:
+      213: -1053825867793895002
+    second: Warrior Up_32
+  - first:
+      213: 5340829057314442996
+    second: Warrior Up_33
+  - first:
+      213: 8414595523229378249
+    second: Warrior Up_34
+  - first:
+      213: 8373139683384699152
+    second: Warrior Up_35
+  - first:
+      213: -8967822555777259184
+    second: Warrior Up_36
+  - first:
+      213: -8171527836431020810
+    second: Warrior Up_37
+  - first:
+      213: 3834136837616162905
+    second: Warrior Up_38
+  - first:
+      213: 2294462496232897852
+    second: Warrior Up_39
+  - first:
+      213: 6345109171012369793
+    second: Warrior Up_40
+  - first:
+      213: -1815091120934045607
+    second: Warrior Up_41
+  - first:
+      213: 7976856927945514306
+    second: Warrior Up_42
+  - first:
+      213: 891592549176629973
+    second: Warrior Up_43
+  - first:
+      213: -595144326029395822
+    second: Warrior Up_44
+  - first:
+      213: -3975761563696660873
+    second: Warrior Up_45
+  - first:
+      213: -3890166712552898400
+    second: Warrior Up_46
+  - first:
+      213: -2491009930033617105
+    second: Warrior Up_47
+  - first:
+      213: 7465370002678913895
+    second: Warrior Up_48
+  - first:
+      213: 6305682675497733197
+    second: Warrior Up_49
+  - first:
+      213: 3452324580364315197
+    second: Warrior Up_50
+  - first:
+      213: 1291707457740038631
+    second: Warrior Up_51
+  - first:
+      213: -3950785742686237109
+    second: Warrior Up_52
+  - first:
+      213: 975870773693194993
+    second: Warrior Up_53
+  - first:
+      213: -7939861907141859570
+    second: Warrior Up_54
+  - first:
+      213: -4705821956970500034
+    second: Warrior Up_55
+  - first:
+      213: 1868476060094191844
+    second: Warrior Up_56
+  - first:
+      213: -7698464655792294659
+    second: Warrior Up_57
+  - first:
+      213: -5960090119959129771
+    second: Warrior Up_58
+  - first:
+      213: -968239315905680086
+    second: Warrior Up_59
+  - first:
+      213: 8011043242655267038
+    second: Warrior Up_60
+  - first:
+      213: 4272307759494656522
+    second: Warrior Up_61
+  - first:
+      213: -1710428853597469977
+    second: Warrior Up_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior Up_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1199
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e1036961f4ba190800000000000000
+      internalID: -7950173758764867970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1199
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f584d63d3d3d531c0800000000000000
+      internalID: -4524477343885080481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1199
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757fe5a8527be7e30800000000000000
+      internalID: 4503238049280227159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1199
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13480c9bc146ab7a0800000000000000
+      internalID: -6360661449169140687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_4
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1199
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e0b1a463040d390800000000000000
+      internalID: -7795660353062629801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_5
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1199
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2bf3f307dee85de0800000000000000
+      internalID: -1344061881518392530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1071
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2ed48144489d6d0800000000000000
+      internalID: -2965193451646360843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_7
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1071
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ae93cd8d4021580800000000000000
+      internalID: -8858012187630114290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_8
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1072
+        width: 40
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bcb10c154980320800000000000000
+      internalID: 2524430669977471859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1071
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d4245e2a98c5c30800000000000000
+      internalID: 4349502672857091329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_10
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1071
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a96dfd32659791d0800000000000000
+      internalID: -3344039949119952474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_11
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1072
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3ae75607183fc20800000000000000
+      internalID: 3239074876748637116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_12
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 943
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae010100a7c86c10800000000000000
+      internalID: 2047105520665431727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_13
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 943
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6f908d240425e40800000000000000
+      internalID: 5643643938885203672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_14
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 943
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029e07c91249e2d70800000000000000
+      internalID: 9020309975749159200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_15
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 815
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d15af5db265a200800000000000000
+      internalID: 190667124726111506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_16
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 815
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd6389eccb0dd7b0800000000000000
+      internalID: -5197985420196745780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_17
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 815
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade7e907297b44340800000000000000
+      internalID: 4847200938540039898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_18
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 686
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f663fd2ffec1820d0800000000000000
+      internalID: -3447473697854638481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_19
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 674
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de738c01a190bd70800000000000000
+      internalID: 9056898971527773912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_20
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 686
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1005821fef832b0800000000000000
+      internalID: -5604449424545676813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_21
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 686
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da56de3cc1033df20800000000000000
+      internalID: 3446151039972894125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_22
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 686
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ce3e4a107725a90800000000000000
+      internalID: -7326662794833302524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_23
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 672
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24bcea5125bfa000800000000000000
+      internalID: 49457275788375085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_24
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 672
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1e4a727433dca20800000000000000
+      internalID: 3084177700519469500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_25
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 686
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb3f5e1110716b30800000000000000
+      internalID: 4278824339804994499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_26
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 670
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6980e99dbd824f320800000000000000
+      internalID: 2590740610358839446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_27
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 670
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794d8a436c03e31c0800000000000000
+      internalID: -4522123347988261737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_28
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 558
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c87db8993074530800000000000000
+      internalID: 3839041165367676048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_29
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 546
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd282c1a2d2744a0800000000000000
+      internalID: -6609264269258641976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_30
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 558
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 810adbc517b421870800000000000000
+      internalID: 8652060784391462936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_31
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 558
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a86ed6d8d0c0c470800000000000000
+      internalID: 8412936141478455456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_32
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 558
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1f607e4fe0061f0800000000000000
+      internalID: -1053825867793895002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_33
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 544
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fecf4f0bbf6e1a40800000000000000
+      internalID: 5340829057314442996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_34
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 544
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6eda2cb06a6c470800000000000000
+      internalID: 8414595523229378249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_35
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 558
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0192fd2ed2e533470800000000000000
+      internalID: 8373139683384699152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_36
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 542
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059292a26e4eb8380800000000000000
+      internalID: -8967822555777259184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_37
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 542
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc00553ab6e89e80800000000000000
+      internalID: -8171527836431020810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_38
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 431
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958d952c327953530800000000000000
+      internalID: 3834136837616162905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_39
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 431
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3dfa66db7197df10800000000000000
+      internalID: 2294462496232897852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_40
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 431
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18df3475c2b5e0850800000000000000
+      internalID: 6345109171012369793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_41
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 303
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958b2c50e308fc6e0800000000000000
+      internalID: -1815091120934045607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 305
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d5e4edc1d73be60800000000000000
+      internalID: 7976856927945514306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_43
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 303
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dade0a13b29f5c00800000000000000
+      internalID: 891592549176629973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_44
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 302
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298bde0836f9db7f0800000000000000
+      internalID: -595144326029395822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_45
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 302
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e753c1ce143d8c0800000000000000
+      internalID: -3975761563696660873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_46
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 302
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a04c356cf9530ac0800000000000000
+      internalID: -3890166712552898400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_47
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 303
+        width: 51
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f272064aaa72e6dd0800000000000000
+      internalID: -2491009930033617105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_48
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 302
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b9886d6725a9760800000000000000
+      internalID: 7465370002678913895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_49
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 302
+        width: 52
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c80630cf8428750800000000000000
+      internalID: 6305682675497733197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_50
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 303
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ae6f52aee19ef20800000000000000
+      internalID: 3452324580364315197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_51
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 302
+        width: 53
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1615cc6111de110800000000000000
+      internalID: 1291707457740038631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_52
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 175
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e42879c4dfb29c0800000000000000
+      internalID: -3950785742686237109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_53
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 174
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f22bac5c4dfa8d00800000000000000
+      internalID: 975870773693194993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_54
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 171
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e076723a9a1ffc190800000000000000
+      internalID: -7939861907141859570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_55
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 174
+        width: 72
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e303a86dcdf81beb0800000000000000
+      internalID: -4705821956970500034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_56
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 174
+        width: 60
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e85c39b3192ee910800000000000000
+      internalID: 1868476060094191844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_57
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 174
+        width: 64
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4b99b0f2f892590800000000000000
+      internalID: -7698464655792294659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_58
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 175
+        width: 87
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55155822d91894da0800000000000000
+      internalID: -5960090119959129771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_59
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 47
+        width: 83
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2defddd87f1092f0800000000000000
+      internalID: -968239315905680086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_60
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 36
+        width: 67
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8b2c68261fc2f60800000000000000
+      internalID: 8011043242655267038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_61
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 47
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02f2d785494a4b30800000000000000
+      internalID: 4272307759494656522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Up_62
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 47
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e28eb715065348e0800000000000000
+      internalID: -1710428853597469977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Warrior Up_0: -7950173758764867970
+      Warrior Up_1: -4524477343885080481
+      Warrior Up_10: -3344039949119952474
+      Warrior Up_11: 3239074876748637116
+      Warrior Up_12: 2047105520665431727
+      Warrior Up_13: 5643643938885203672
+      Warrior Up_14: 9020309975749159200
+      Warrior Up_15: 190667124726111506
+      Warrior Up_16: -5197985420196745780
+      Warrior Up_17: 4847200938540039898
+      Warrior Up_18: -3447473697854638481
+      Warrior Up_19: 9056898971527773912
+      Warrior Up_2: 4503238049280227159
+      Warrior Up_20: -5604449424545676813
+      Warrior Up_21: 3446151039972894125
+      Warrior Up_22: -7326662794833302524
+      Warrior Up_23: 49457275788375085
+      Warrior Up_24: 3084177700519469500
+      Warrior Up_25: 4278824339804994499
+      Warrior Up_26: 2590740610358839446
+      Warrior Up_27: -4522123347988261737
+      Warrior Up_28: 3839041165367676048
+      Warrior Up_29: -6609264269258641976
+      Warrior Up_3: -6360661449169140687
+      Warrior Up_30: 8652060784391462936
+      Warrior Up_31: 8412936141478455456
+      Warrior Up_32: -1053825867793895002
+      Warrior Up_33: 5340829057314442996
+      Warrior Up_34: 8414595523229378249
+      Warrior Up_35: 8373139683384699152
+      Warrior Up_36: -8967822555777259184
+      Warrior Up_37: -8171527836431020810
+      Warrior Up_38: 3834136837616162905
+      Warrior Up_39: 2294462496232897852
+      Warrior Up_4: -7795660353062629801
+      Warrior Up_40: 6345109171012369793
+      Warrior Up_41: -1815091120934045607
+      Warrior Up_42: 7976856927945514306
+      Warrior Up_43: 891592549176629973
+      Warrior Up_44: -595144326029395822
+      Warrior Up_45: -3975761563696660873
+      Warrior Up_46: -3890166712552898400
+      Warrior Up_47: -2491009930033617105
+      Warrior Up_48: 7465370002678913895
+      Warrior Up_49: 6305682675497733197
+      Warrior Up_5: -1344061881518392530
+      Warrior Up_50: 3452324580364315197
+      Warrior Up_51: 1291707457740038631
+      Warrior Up_52: -3950785742686237109
+      Warrior Up_53: 975870773693194993
+      Warrior Up_54: -7939861907141859570
+      Warrior Up_55: -4705821956970500034
+      Warrior Up_56: 1868476060094191844
+      Warrior Up_57: -7698464655792294659
+      Warrior Up_58: -5960090119959129771
+      Warrior Up_59: -968239315905680086
+      Warrior Up_6: -2965193451646360843
+      Warrior Up_60: 8011043242655267038
+      Warrior Up_61: 4272307759494656522
+      Warrior Up_62: -1710428853597469977
+      Warrior Up_7: -8858012187630114290
+      Warrior Up_8: 2524430669977471859
+      Warrior Up_9: 4349502672857091329
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

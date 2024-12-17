@@ -1,0 +1,1586 @@
+fileFormatVersion: 2
+guid: 6b871adbc984b574ba193569e2d9babb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3993161142932101476
+    second: Warrior Left_0
+  - first:
+      213: 1137288327897486408
+    second: Warrior Left_1
+  - first:
+      213: 4377054050691719812
+    second: Warrior Left_2
+  - first:
+      213: -1454237643364675031
+    second: Warrior Left_3
+  - first:
+      213: -9042881144947277116
+    second: Warrior Left_4
+  - first:
+      213: -5576259876522514347
+    second: Warrior Left_5
+  - first:
+      213: -4532278109100436752
+    second: Warrior Left_6
+  - first:
+      213: -4286993268360403718
+    second: Warrior Left_7
+  - first:
+      213: -6172562591631908680
+    second: Warrior Left_8
+  - first:
+      213: 1362461761754519652
+    second: Warrior Left_9
+  - first:
+      213: -6450973422468550842
+    second: Warrior Left_10
+  - first:
+      213: -5760267445768325452
+    second: Warrior Left_11
+  - first:
+      213: 1970920647344058370
+    second: Warrior Left_12
+  - first:
+      213: -3355438756236847059
+    second: Warrior Left_13
+  - first:
+      213: 862919565795955760
+    second: Warrior Left_14
+  - first:
+      213: 6696700530944091618
+    second: Warrior Left_15
+  - first:
+      213: -5203594681980565908
+    second: Warrior Left_16
+  - first:
+      213: -3116953959953903226
+    second: Warrior Left_17
+  - first:
+      213: 824583133773209781
+    second: Warrior Left_18
+  - first:
+      213: 6316151137885606457
+    second: Warrior Left_19
+  - first:
+      213: -6093771883103171838
+    second: Warrior Left_20
+  - first:
+      213: -1231898437250091931
+    second: Warrior Left_21
+  - first:
+      213: 2287523046439843896
+    second: Warrior Left_22
+  - first:
+      213: 7784560993705471731
+    second: Warrior Left_23
+  - first:
+      213: 4912020200882799346
+    second: Warrior Left_24
+  - first:
+      213: -2731182268432249095
+    second: Warrior Left_25
+  - first:
+      213: 8862637963241890324
+    second: Warrior Left_26
+  - first:
+      213: 3200649204261242187
+    second: Warrior Left_27
+  - first:
+      213: 3397602419651656153
+    second: Warrior Left_28
+  - first:
+      213: -6328905839330791245
+    second: Warrior Left_29
+  - first:
+      213: -979744602553409974
+    second: Warrior Left_30
+  - first:
+      213: -6325478754779632717
+    second: Warrior Left_31
+  - first:
+      213: -8459070789708204028
+    second: Warrior Left_32
+  - first:
+      213: 4755690551952334817
+    second: Warrior Left_33
+  - first:
+      213: -8137473638708900864
+    second: Warrior Left_34
+  - first:
+      213: -5206318483899492263
+    second: Warrior Left_35
+  - first:
+      213: 2050212319000694903
+    second: Warrior Left_36
+  - first:
+      213: 8541198974352776148
+    second: Warrior Left_37
+  - first:
+      213: 891946094149402654
+    second: Warrior Left_38
+  - first:
+      213: 4522646841845408944
+    second: Warrior Left_39
+  - first:
+      213: -5472979895329811292
+    second: Warrior Left_40
+  - first:
+      213: 5055676518583567131
+    second: Warrior Left_41
+  - first:
+      213: 6453327036225212294
+    second: Warrior Left_42
+  - first:
+      213: 8053867941253412171
+    second: Warrior Left_43
+  - first:
+      213: -6082585752902800767
+    second: Warrior Left_44
+  - first:
+      213: 488247988520856336
+    second: Warrior Left_45
+  - first:
+      213: 6903101736698801665
+    second: Warrior Left_46
+  - first:
+      213: -3621216123758724694
+    second: Warrior Left_47
+  - first:
+      213: 4607568664873380809
+    second: Warrior Left_48
+  - first:
+      213: 539100025909867293
+    second: Warrior Left_49
+  - first:
+      213: 8777474565870612682
+    second: Warrior Left_50
+  - first:
+      213: 1239198279076531418
+    second: Warrior Left_51
+  - first:
+      213: -9043458130238329177
+    second: Warrior Left_52
+  - first:
+      213: -4324174868399399988
+    second: Warrior Left_53
+  - first:
+      213: -5703664649507700787
+    second: Warrior Left_54
+  - first:
+      213: -2385147275439006802
+    second: Warrior Left_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior Left_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1199
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4695c5f17ee8a6730800000000000000
+      internalID: 3993161142932101476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1199
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844178765b578cf00800000000000000
+      internalID: 1137288327897486408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_2
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1199
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4822a2ee77b6ebc30800000000000000
+      internalID: 4377054050691719812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1199
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9225f38719281dbe0800000000000000
+      internalID: -1454237643364675031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1199
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c20759828b318280800000000000000
+      internalID: -9042881144947277116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_5
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1199
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558ac94cf252d92b0800000000000000
+      internalID: -5576259876522514347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1071
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f21ac3a21d1a11c0800000000000000
+      internalID: -4532278109100436752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_7
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1071
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af423ecf55a8184c0800000000000000
+      internalID: -4286993268360403718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1071
+        width: 38
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b06aebc607a65aa0800000000000000
+      internalID: -6172562591631908680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_9
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1071
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4685e61f0cf68e210800000000000000
+      internalID: 1362461761754519652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_10
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1071
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64fa64ad9d98976a0800000000000000
+      internalID: -6450973422468550842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_11
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1071
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b67bbbf64b6f00b0800000000000000
+      internalID: -5760267445768325452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 943
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200fc69e2ed1a5b10800000000000000
+      internalID: 1970920647344058370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_13
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 943
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d289ce4aa361f61d0800000000000000
+      internalID: -3355438756236847059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_14
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 943
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034900de5c4b9fb00800000000000000
+      internalID: 862919565795955760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_15
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 815
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5a71af6a57fec50800000000000000
+      internalID: 6696700530944091618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_16
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 815
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66cf61e43e19c7b0800000000000000
+      internalID: -5203594681980565908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_17
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 815
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68153b343ea5eb4d0800000000000000
+      internalID: -3116953959953903226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_18
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 687
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0a458cdf1817b00800000000000000
+      internalID: 824583133773209781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_19
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 687
+        width: 48
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932d959def977a750800000000000000
+      internalID: 6316151137885606457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_20
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 688
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b4f5d22c29e6ba0800000000000000
+      internalID: -6093771883103171838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_21
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 687
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5647950f5ea67eee0800000000000000
+      internalID: -1231898437250091931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_22
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 687
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838f096471aeebf10800000000000000
+      internalID: 2287523046439843896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_23
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 687
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe2d2abaf0580c60800000000000000
+      internalID: 7784560993705471731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_24
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 687
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2892309500b2440800000000000000
+      internalID: 4912020200882799346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_25
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 687
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe00418234e81ad0800000000000000
+      internalID: -2731182268432249095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_26
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 687
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412ace3754a6efa70800000000000000
+      internalID: 8862637963241890324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_27
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 559
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45c0a65e7dfa6c20800000000000000
+      internalID: 3200649204261242187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_28
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 559
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9385f3665b62f20800000000000000
+      internalID: 3397602419651656153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_29
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 560
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0facdcba53b28a0800000000000000
+      internalID: -6328905839330791245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_30
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 559
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e9232997f3762f0800000000000000
+      internalID: -979744602553409974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_31
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 559
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb641b16926738a0800000000000000
+      internalID: -6325478754779632717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_32
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 559
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4083f815fe75b9a80800000000000000
+      internalID: -8459070789708204028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_33
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 559
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1efdcca3c5b9ff140800000000000000
+      internalID: 4755690551952334817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_34
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 559
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c86abf6d2e11f80800000000000000
+      internalID: -8137473638708900864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_35
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 559
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958de935ce07fb7b0800000000000000
+      internalID: -5206318483899492263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_36
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 431
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7709a2cdd31d37c10800000000000000
+      internalID: 2050212319000694903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_37
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 431
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db5a36c63f688670800000000000000
+      internalID: 8541198974352776148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_38
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 431
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1082943f34d06c00800000000000000
+      internalID: 891946094149402654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_39
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 303
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4ecb4375ba3ce30800000000000000
+      internalID: 4522646841845408944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_40
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 303
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4130448c11c04b0800000000000000
+      internalID: -5472979895329811292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_41
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 303
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13057de10f592640800000000000000
+      internalID: 5055676518583567131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_42
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 303
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68fc0ad8fb2de8950800000000000000
+      internalID: 6453327036225212294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_43
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 303
+        width: 81
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45f05aa83615cf60800000000000000
+      internalID: 8053867941253412171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_44
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 303
+        width: 82
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a60621c70569ba0800000000000000
+      internalID: -6082585752902800767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_45
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 175
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ba51e65fa96c600800000000000000
+      internalID: 488247988520856336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_46
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 175
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e6050947ebccf50800000000000000
+      internalID: 6903101736698801665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_47
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 175
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9b1781f1bdebdc0800000000000000
+      internalID: -3621216123758724694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_48
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 175
+        width: 77
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cbaffbe94f51ff30800000000000000
+      internalID: 4607568664873380809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_49
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 175
+        width: 76
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d13f2c60e944b7700800000000000000
+      internalID: 539100025909867293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_50
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 175
+        width: 68
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac07eb3dc9adfc970800000000000000
+      internalID: 8777474565870612682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_51
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 175
+        width: 53
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcc1aee444823110800000000000000
+      internalID: 1239198279076531418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_52
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 47
+        width: 72
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aea60eaebe2f7280800000000000000
+      internalID: -9043458130238329177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_53
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 47
+        width: 75
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbd16e1ed17df3c0800000000000000
+      internalID: -4324174868399399988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_54
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 47
+        width: 60
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcff328783388d0b0800000000000000
+      internalID: -5703664649507700787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior Left_55
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 47
+        width: 40
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab9776a03146eed0800000000000000
+      internalID: -2385147275439006802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Warrior Left_0: 3993161142932101476
+      Warrior Left_1: 1137288327897486408
+      Warrior Left_10: -6450973422468550842
+      Warrior Left_11: -5760267445768325452
+      Warrior Left_12: 1970920647344058370
+      Warrior Left_13: -3355438756236847059
+      Warrior Left_14: 862919565795955760
+      Warrior Left_15: 6696700530944091618
+      Warrior Left_16: -5203594681980565908
+      Warrior Left_17: -3116953959953903226
+      Warrior Left_18: 824583133773209781
+      Warrior Left_19: 6316151137885606457
+      Warrior Left_2: 4377054050691719812
+      Warrior Left_20: -6093771883103171838
+      Warrior Left_21: -1231898437250091931
+      Warrior Left_22: 2287523046439843896
+      Warrior Left_23: 7784560993705471731
+      Warrior Left_24: 4912020200882799346
+      Warrior Left_25: -2731182268432249095
+      Warrior Left_26: 8862637963241890324
+      Warrior Left_27: 3200649204261242187
+      Warrior Left_28: 3397602419651656153
+      Warrior Left_29: -6328905839330791245
+      Warrior Left_3: -1454237643364675031
+      Warrior Left_30: -979744602553409974
+      Warrior Left_31: -6325478754779632717
+      Warrior Left_32: -8459070789708204028
+      Warrior Left_33: 4755690551952334817
+      Warrior Left_34: -8137473638708900864
+      Warrior Left_35: -5206318483899492263
+      Warrior Left_36: 2050212319000694903
+      Warrior Left_37: 8541198974352776148
+      Warrior Left_38: 891946094149402654
+      Warrior Left_39: 4522646841845408944
+      Warrior Left_4: -9042881144947277116
+      Warrior Left_40: -5472979895329811292
+      Warrior Left_41: 5055676518583567131
+      Warrior Left_42: 6453327036225212294
+      Warrior Left_43: 8053867941253412171
+      Warrior Left_44: -6082585752902800767
+      Warrior Left_45: 488247988520856336
+      Warrior Left_46: 6903101736698801665
+      Warrior Left_47: -3621216123758724694
+      Warrior Left_48: 4607568664873380809
+      Warrior Left_49: 539100025909867293
+      Warrior Left_5: -5576259876522514347
+      Warrior Left_50: 8777474565870612682
+      Warrior Left_51: 1239198279076531418
+      Warrior Left_52: -9043458130238329177
+      Warrior Left_53: -4324174868399399988
+      Warrior Left_54: -5703664649507700787
+      Warrior Left_55: -2385147275439006802
+      Warrior Left_6: -4532278109100436752
+      Warrior Left_7: -4286993268360403718
+      Warrior Left_8: -6172562591631908680
+      Warrior Left_9: 1362461761754519652
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
