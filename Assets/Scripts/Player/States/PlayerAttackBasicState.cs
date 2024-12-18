@@ -34,7 +34,7 @@ namespace Player.States
             ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
             CommandInvoker.ExecuteCommand(stopCommand);
             
-            // PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackBasicAnimationHash, 0.1f);
+            PlayerStateMachine.Animator.Play("AttackBasic-BlendTree");
         }
 
         public override void OnTick(){}
@@ -50,13 +50,14 @@ namespace Player.States
 
         private void PlayerOnAttackBasicOpenOverlap()
         {
-            _attackCommand = new PlayerAttackCommand(
-                PlayerStateMachine.PlayerAttack,
-                (BoxCollider2D)PlayerStateMachine.PlayerDirectionController.GetBasicAttackCollider(),
-                PlayerStateMachine.PlayerProperties.BasicAttackPower,
-                PlayerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower,
-                PlayerStateMachine.RigidBody.position);
-            CommandInvoker.ExecuteCommand(_attackCommand);
+            //TODO: Collider ayarla sonra burayı aç.
+            // _attackCommand = new PlayerAttackCommand(
+            //     PlayerStateMachine.PlayerAttack,
+            //     (BoxCollider2D)PlayerStateMachine.PlayerDirectionController.GetBasicAttackCollider(),
+            //     PlayerStateMachine.PlayerProperties.BasicAttackPower,
+            //     PlayerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower,
+            //     PlayerStateMachine.RigidBody.position);
+            // CommandInvoker.ExecuteCommand(_attackCommand);
         }
         
         private void PlayerOnAttackBasicCloseOverlap() {}

@@ -26,7 +26,7 @@ namespace Player.States
             ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
             CommandInvoker.ExecuteCommand(stopCommand);
             
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_deathAnimationHash, 0.1f);
+            PlayerStateMachine.Animator.Play("Death-BlendTree");
         }
 
         public override void OnTick(){}

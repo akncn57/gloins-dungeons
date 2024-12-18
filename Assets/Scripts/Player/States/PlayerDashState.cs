@@ -29,7 +29,7 @@ namespace Player.States
             _genericTimer = Instantiator.Instantiate<GenericTimer>(new object[]{PlayerStateMachine.PlayerProperties.DashTime});
             _genericTimer.OnTimerFinished += CheckDashTimeFinish;
             
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_dashAnimationHash, 0.1f);
+            PlayerStateMachine.Animator.Play("Dash-BlendTree");
             
             ICommand dashCommand = new PlayerDashCommand(
                 PlayerStateMachine.PlayerMover, 

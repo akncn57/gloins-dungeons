@@ -28,7 +28,7 @@ namespace Player.States
             CommandInvoker.ExecuteCommand(stopCommand);
             
             PlayerStateMachine.HurtParticle.Play();
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_hurtAnimationHash, 0.1f);
+            PlayerStateMachine.Animator.Play("Hurt-BlendTree");
         }
 
         public override void OnTick()

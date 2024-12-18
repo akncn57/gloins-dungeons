@@ -24,7 +24,7 @@ namespace Player.States
             PlayerStateMachine.PlayerColliderController.OnHitStart += CheckOnHurt;
             PlayerStateMachine.PlayerColliderController.PlayerColliderOnHitStart += CheckOnHurt;
             
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_blockAnimationHash, 0.1f);
+            PlayerStateMachine.Animator.Play("Block-BlendTree");
         }
 
         public override void OnTick()

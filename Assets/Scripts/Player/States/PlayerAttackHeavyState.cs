@@ -34,7 +34,7 @@ namespace Player.States
             ICommand stopCommand = new PlayerStopMoveCommand(PlayerStateMachine.PlayerMover, PlayerStateMachine.RigidBody);
             CommandInvoker.ExecuteCommand(stopCommand);
             
-            PlayerStateMachine.Animator.CrossFadeInFixedTime(_attackHeavyAnimationHash, 0.1f);
+            PlayerStateMachine.Animator.Play("AttackHeavy-BlendTree");
         }
 
         public override void OnTick() {}
