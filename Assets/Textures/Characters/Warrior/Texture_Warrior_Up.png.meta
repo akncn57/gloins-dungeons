@@ -306,8 +306,8 @@ TextureImporter:
         y: 1199
         width: 41
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5737569, y: 0.13097909}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,8 +328,8 @@ TextureImporter:
         y: 1199
         width: 40
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5612961, y: 0.12876025}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,8 +350,8 @@ TextureImporter:
         y: 1199
         width: 40
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56299895, y: 0.12789617}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -372,8 +372,8 @@ TextureImporter:
         y: 1199
         width: 40
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5633606, y: 0.122290514}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,8 +394,8 @@ TextureImporter:
         y: 1199
         width: 41
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5721406, y: 0.12525353}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -416,8 +416,8 @@ TextureImporter:
         y: 1199
         width: 41
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5731246, y: 0.124645524}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -438,8 +438,8 @@ TextureImporter:
         y: 1071
         width: 40
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5645176, y: 0.14969108}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -460,8 +460,8 @@ TextureImporter:
         y: 1071
         width: 38
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5656232, y: 0.15018956}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,8 +482,8 @@ TextureImporter:
         y: 1072
         width: 40
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.58741075, y: 0.15123554}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -504,8 +504,8 @@ TextureImporter:
         y: 1071
         width: 40
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56298983, y: 0.14989765}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -526,8 +526,8 @@ TextureImporter:
         y: 1071
         width: 39
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5757947, y: 0.148696}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -548,8 +548,8 @@ TextureImporter:
         y: 1072
         width: 41
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57195747, y: 0.1536243}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -570,8 +570,8 @@ TextureImporter:
         y: 943
         width: 41
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57098204, y: 0.11943054}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -592,8 +592,8 @@ TextureImporter:
         y: 943
         width: 44
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57737833, y: 0.11257875}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -614,8 +614,8 @@ TextureImporter:
         y: 943
         width: 42
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.58345324, y: 0.09675389}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -637,7 +637,7 @@ TextureImporter:
         width: 41
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -659,7 +659,7 @@ TextureImporter:
         width: 44
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -681,7 +681,7 @@ TextureImporter:
         width: 42
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -699,11 +699,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 46
-        y: 686
+        y: 675
         width: 36
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5127046, y: 0.27333966}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -717,37 +717,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_19
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 674
-        width: 6
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8de738c01a190bd70800000000000000
-      internalID: 9056898971527773912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_20
       rect:
         serializedVersion: 2
         x: 174
-        y: 686
+        y: 671
         width: 36
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5127051, y: 0.320922}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -765,11 +743,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 302
-        y: 686
+        y: 671
         width: 36
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5127046, y: 0.3151245}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -787,11 +765,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 430
-        y: 686
+        y: 673
         width: 36
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5139754, y: 0.29353637}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -805,28 +783,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_23
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 672
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d24bcea5125bfa000800000000000000
-      internalID: 49457275788375085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_24
       rect:
         serializedVersion: 2
@@ -834,8 +790,8 @@ TextureImporter:
         y: 672
         width: 36
         height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5127055, y: 0.30546203}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -856,8 +812,8 @@ TextureImporter:
         y: 686
         width: 36
         height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5152452, y: 0.13170744}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -871,59 +827,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_26
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 670
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6980e99dbd824f320800000000000000
-      internalID: 2590740610358839446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior Up_27
-      rect:
-        serializedVersion: 2
-        x: 322
-        y: 670
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 794d8a436c03e31c0800000000000000
-      internalID: -4522123347988261737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_28
       rect:
         serializedVersion: 2
         x: 46
-        y: 558
+        y: 547
         width: 36
-        height: 57
+        height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -937,37 +849,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_29
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 546
-        width: 6
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8cd282c1a2d2744a0800000000000000
-      internalID: -6609264269258641976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_30
       rect:
         serializedVersion: 2
         x: 174
-        y: 558
+        y: 543
         width: 36
-        height: 57
+        height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -985,11 +875,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 302
-        y: 558
+        y: 543
         width: 36
-        height: 57
+        height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1007,11 +897,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 430
-        y: 558
+        y: 545
         width: 36
-        height: 57
+        height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1025,28 +915,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_33
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 544
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4fecf4f0bbf6e1a40800000000000000
-      internalID: 5340829057314442996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_34
       rect:
         serializedVersion: 2
@@ -1055,7 +923,7 @@ TextureImporter:
         width: 36
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1077,7 +945,7 @@ TextureImporter:
         width: 36
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1091,50 +959,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_36
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 542
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 059292a26e4eb8380800000000000000
-      internalID: -8967822555777259184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior Up_37
-      rect:
-        serializedVersion: 2
-        x: 322
-        y: 542
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fc00553ab6e89e80800000000000000
-      internalID: -8171527836431020810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_38
       rect:
         serializedVersion: 2
@@ -1142,8 +966,8 @@ TextureImporter:
         y: 431
         width: 40
         height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5368782, y: 0.10442324}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1164,8 +988,8 @@ TextureImporter:
         y: 431
         width: 39
         height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.551212, y: 0.11835716}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1186,8 +1010,8 @@ TextureImporter:
         y: 431
         width: 39
         height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5514174, y: 0.11414119}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1208,8 +1032,8 @@ TextureImporter:
         y: 303
         width: 44
         height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57915497, y: 0.114743836}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1223,37 +1047,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_42
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 305
-        width: 17
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 24d5e4edc1d73be60800000000000000
-      internalID: 7976856927945514306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_43
       rect:
         serializedVersion: 2
-        x: 175
+        x: 161
         y: 303
-        width: 35
+        width: 49
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6434015, y: 0.122434765}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1267,37 +1069,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_44
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 302
-        width: 17
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 298bde0836f9db7f0800000000000000
-      internalID: -595144326029395822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_45
       rect:
         serializedVersion: 2
-        x: 303
+        x: 287
         y: 302
-        width: 46
+        width: 62
         height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5411111, y: 0.11268989}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1311,37 +1091,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_46
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 302
-        width: 24
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a04c356cf9530ac0800000000000000
-      internalID: -3890166712552898400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_47
       rect:
         serializedVersion: 2
-        x: 430
+        x: 407
         y: 303
-        width: 51
+        width: 74
         height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5484083, y: 0.1992396}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1355,37 +1113,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_48
-      rect:
-        serializedVersion: 2
-        x: 530
-        y: 302
-        width: 29
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 76b9886d6725a9760800000000000000
-      internalID: 7465370002678913895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_49
       rect:
         serializedVersion: 2
-        x: 559
+        x: 531
         y: 302
-        width: 52
+        width: 80
         height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49569398, y: 0.21914437}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1399,37 +1135,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Warrior Up_50
-      rect:
-        serializedVersion: 2
-        x: 656
-        y: 303
-        width: 30
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3ae6f52aee19ef20800000000000000
-      internalID: 3452324580364315197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Warrior Up_51
       rect:
         serializedVersion: 2
-        x: 686
+        x: 657
         y: 302
-        width: 53
+        width: 82
         height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.52856374, y: 0.25358817}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1450,8 +1164,8 @@ TextureImporter:
         y: 175
         width: 41
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57342434, y: 0.12189131}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1472,8 +1186,8 @@ TextureImporter:
         y: 174
         width: 39
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.60049164, y: 0.14607456}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1494,8 +1208,8 @@ TextureImporter:
         y: 171
         width: 39
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6013293, y: 0.20040952}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1516,8 +1230,8 @@ TextureImporter:
         y: 174
         width: 72
         height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5872277, y: 0.07807583}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1538,8 +1252,8 @@ TextureImporter:
         y: 174
         width: 60
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.470342, y: 0.07476425}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1560,8 +1274,8 @@ TextureImporter:
         y: 174
         width: 64
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49100494, y: 0.08434019}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1582,8 +1296,8 @@ TextureImporter:
         y: 175
         width: 87
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.31531745, y: 0.12710126}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1604,8 +1318,8 @@ TextureImporter:
         y: 47
         width: 83
         height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.2827586, y: 0.15038835}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1626,8 +1340,8 @@ TextureImporter:
         y: 36
         width: 67
         height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5599085, y: 0.22697434}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1648,8 +1362,8 @@ TextureImporter:
         y: 47
         width: 68
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6101514, y: 0.094113395}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1670,8 +1384,8 @@ TextureImporter:
         y: 47
         width: 56
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.74001694, y: 0.12895052}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1688,7 +1402,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 50c70276f8400534d988b4bb659949c4
     internalID: 0
     vertices: []
     indices: 
