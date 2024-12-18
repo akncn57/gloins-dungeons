@@ -18,6 +18,7 @@ namespace Player
             
             foreach (var result in results)
             {
+                if (result.CompareTag("Player")) return;
                 if (!result) continue;
                 var enemy = result.GetComponent<ColliderControllerBase>();
                 HittingEnemies.Add(enemy);

@@ -50,14 +50,13 @@ namespace Player.States
 
         private void PlayerOnAttackBasicOpenOverlap()
         {
-            //TODO: Collider ayarla sonra burayı aç.
-            // _attackCommand = new PlayerAttackCommand(
-            //     PlayerStateMachine.PlayerAttack,
-            //     (BoxCollider2D)PlayerStateMachine.PlayerDirectionController.GetBasicAttackCollider(),
-            //     PlayerStateMachine.PlayerProperties.BasicAttackPower,
-            //     PlayerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower,
-            //     PlayerStateMachine.RigidBody.position);
-            // CommandInvoker.ExecuteCommand(_attackCommand);
+             _attackCommand = new PlayerAttackCommand(
+                 PlayerStateMachine.PlayerAttack,
+                 (BoxCollider2D)PlayerStateMachine.PlayerDirectionController.GetBasicAttackCollider(),
+                 PlayerStateMachine.PlayerProperties.BasicAttackPower,
+                 PlayerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower,
+                 PlayerStateMachine.RigidBody.position);
+             CommandInvoker.ExecuteCommand(_attackCommand);
         }
         
         private void PlayerOnAttackBasicCloseOverlap() {}
