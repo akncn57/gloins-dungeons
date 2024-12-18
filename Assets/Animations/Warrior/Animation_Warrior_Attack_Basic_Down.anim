@@ -22,11 +22,11 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -2250634986803199350, guid: 21cdda166ccd0aa4c9b4c99050a83add, type: 3}
-    - time: 0.13333334
+    - time: 0.11666667
       value: {fileID: -8966429812628197093, guid: 21cdda166ccd0aa4c9b4c99050a83add, type: 3}
-    - time: 0.28333333
+    - time: 0.26666668
       value: {fileID: -1904193077109360117, guid: 21cdda166ccd0aa4c9b4c99050a83add, type: 3}
-    - time: 0.41666666
+    - time: 0.38333333
       value: {fileID: -2034460391720581541, guid: 21cdda166ccd0aa4c9b4c99050a83add, type: 3}
     attribute: m_Sprite
     path: 
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.43333334
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -79,21 +79,21 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.13333334
+  - time: 0.11666667
     functionName: AttackBasicColliderOpen
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.41666666
+  - time: 0.38333333
     functionName: AttackBasicColliderClose
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.43333334
+  - time: 0.4
     functionName: AttackBasicFinished
     data: 
     objectReferenceParameter: {fileID: 0}

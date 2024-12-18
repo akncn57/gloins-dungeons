@@ -24,9 +24,9 @@ AnimationClip:
       value: {fileID: -968239315905680086, guid: 2856b3af85124fb489a43baf1ef2897f, type: 3}
     - time: 0.15
       value: {fileID: 8011043242655267038, guid: 2856b3af85124fb489a43baf1ef2897f, type: 3}
-    - time: 0.26666668
+    - time: 0.23333333
       value: {fileID: 4272307759494656522, guid: 2856b3af85124fb489a43baf1ef2897f, type: 3}
-    - time: 0.41666666
+    - time: 0.38333333
       value: {fileID: -1710428853597469977, guid: 2856b3af85124fb489a43baf1ef2897f, type: 3}
     attribute: m_Sprite
     path: 
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.43333334
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -86,14 +86,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.41666666
+  - time: 0.38333333
     functionName: AttackBasicColliderClose
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.43333334
+  - time: 0.4
     functionName: AttackBasicFinished
     data: 
     objectReferenceParameter: {fileID: 0}
