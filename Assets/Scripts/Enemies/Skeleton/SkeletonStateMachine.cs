@@ -33,7 +33,6 @@ namespace Enemies.Skeleton
         
         private HealthController _healthController;
         private EnemyFacing _enemyFacing;
-        private EnemyFindClosestChasePoint _enemyFindClosestChasePoint;
         private EnemyLineOfSight _enemyLineOfSight;
         private EnemySetDestination _enemySetDestination;
         private EnemyStopMovement _enemyStopMovement;
@@ -59,7 +58,6 @@ namespace Enemies.Skeleton
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
         public override EnemyFacing EnemyFacing => _enemyFacing;
-        public override EnemyFindClosestChasePoint EnemyFindClosestChasePoint => _enemyFindClosestChasePoint;
         public override EnemyLineOfSight EnemyLineOfSight => _enemyLineOfSight;
         public override EnemySetDestination EnemySetDestination => _enemySetDestination;
         public override EnemyStopMovement EnemyStopMovement => _enemyStopMovement;
@@ -126,7 +124,6 @@ namespace Enemies.Skeleton
         {
             _healthController = new HealthController(100, 100);
             _enemyFacing = new EnemyFacing();
-            _enemyFindClosestChasePoint = new EnemyFindClosestChasePoint();
             _enemyLineOfSight = new EnemyLineOfSight();
             _enemySetDestination = new EnemySetDestination();
             _enemyStopMovement = new EnemyStopMovement();

@@ -27,7 +27,6 @@ namespace Enemies
         public abstract List<EnemyPatrolData> PatrolCoordinates { get; }
         public abstract EnemyHitData HitData { get; set; }
         public abstract EnemyFacing EnemyFacing { get; }
-        public abstract EnemyFindClosestChasePoint EnemyFindClosestChasePoint { get; }
         public abstract EnemyLineOfSight EnemyLineOfSight { get; }
         public abstract EnemySetDestination EnemySetDestination { get; }
         public abstract EnemyStopMovement EnemyStopMovement { get; }

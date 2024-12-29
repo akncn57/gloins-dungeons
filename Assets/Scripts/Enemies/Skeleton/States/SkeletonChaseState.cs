@@ -24,6 +24,7 @@ namespace Enemies.Skeleton.States
         public override void OnEnter()
         {
             SignalBus.Subscribe<IPlayerEvents.OnPlayerAttacked>(CheckPlayerAttack);
+            SkeletonStateMachine.EnemyColliderController.OnHitStart += CheckOnHurt;
             
             SkeletonStateMachine.Animator.CrossFadeInFixedTime(_walkAnimationHash, 0.1f);
         }
@@ -47,6 +48,7 @@ namespace Enemies.Skeleton.States
         public override void OnExit()
         {
             SignalBus.Unsubscribe<IPlayerEvents.OnPlayerAttacked>(CheckPlayerAttack);
+            SkeletonStateMachine.EnemyColliderController.OnHitStart -= CheckOnHurt;
             
             SkeletonStateMachine.ExclamationMarkObject.SetActive(false);
         }
@@ -55,14 +57,14 @@ namespace Enemies.Skeleton.States
         {
             SkeletonStateMachine.ExclamationMarkObject.SetActive(true);
             
-            ICommand findClosetPositionCommand = new EnemyFindClosestChasePointCommand(
-                SkeletonStateMachine.EnemyFindClosestChasePoint, 
-                SkeletonStateMachine.transform.position, 
-                _playerGameObject.transform.position,
-                SkeletonStateMachine.EnemyProperties.ChasePositionOffset);
+            // ICommand findClosetPositionCommand = new EnemyFindClosestChasePointCommand(
+            //     SkeletonStateMachine.EnemyFindClosestChasePoint, 
+            //     SkeletonStateMachine.transform.position, 
+            //     _playerGameObject.transform.position,
+            //     SkeletonStateMachine.EnemyProperties.ChasePositionOffset);
 
-            var newPosition = CommandInvoker.ExecuteCommand(findClosetPositionCommand);
-            var enemyPositionToChasePoint = (SkeletonStateMachine.Rigidbody.transform.position - (Vector3)newPosition).magnitude;
+            // var newPosition = CommandInvoker.ExecuteCommand(findClosetPositionCommand);
+            var enemyPositionToChasePoint = (SkeletonStateMachine.Rigidbody.transform.position - _playerGameObject.transform.position).magnitude;
                 
             switch ((SkeletonStateMachine.Rigidbody.transform.position - playerPosition).magnitude)
             {
@@ -108,7 +110,7 @@ namespace Enemies.Skeleton.States
             ICommand setDestinationCommand = new EnemySetDestinationCommand(
                 SkeletonStateMachine.EnemySetDestination,
                 SkeletonStateMachine.EnemyNavMeshAgent,
-                (Vector3)newPosition);
+                _playerGameObject.transform.position);
             CommandInvoker.ExecuteCommand(setDestinationCommand);
 
             ICommand facingCommand = new EnemyFacingCommand(
@@ -134,6 +136,12 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.EnemyNavMeshAgent.isStopped = true;
                 SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonBlockState);
             }
+        }
+        
+        private void CheckOnHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+            if (!SkeletonStateMachine.IsBlocking)
+                SkeletonStateMachine.SwitchState(SkeletonStateMachine.SkeletonHurtState);
         }
     }
 }
