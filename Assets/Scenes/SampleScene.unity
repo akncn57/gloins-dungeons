@@ -4826,18 +4826,6 @@ PrefabInstance:
       value: Prefab_Enemy_Orc_Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6118366840503811270, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118366840503811270, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118366840503811270, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6118366840503811270, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.81
       objectReference: {fileID: 0}
@@ -4877,6 +4865,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7399188440886599914, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
+      propertyPath: patrolCoordinates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399188440886599914, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
+      propertyPath: patrolCoordinates.Array.data[0].PatrolCoordinate
+      value: 
+      objectReference: {fileID: 1108171886}
+    - target: {fileID: 7399188440886599914, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
+      propertyPath: patrolCoordinates.Array.data[1].PatrolCoordinate
+      value: 
+      objectReference: {fileID: 612545887}
+    - target: {fileID: 7399188440886599914, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
+      propertyPath: patrolCoordinates.Array.data[2].PatrolCoordinate
+      value: 
+      objectReference: {fileID: 249193562}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

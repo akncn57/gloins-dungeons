@@ -506,8 +506,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.015072018, y: 0.41656396}
-  m_Size: {x: 0.58060443, y: 0.90521836}
+  m_Offset: {x: 0, y: 0.42750606}
+  m_Size: {x: 0.6793756, y: 0.8863963}
   m_Direction: 0
 --- !u!195 &3433138627218067338
 NavMeshAgent:
@@ -555,6 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f91aef6f71b4c0c9d9e536dc2cfbf42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidBody: {fileID: 9197666657248117805}
+  collider: {fileID: 3439191373737910293}
   animator: {fileID: 7737562823756025142}
   navMeshAgent: {fileID: 3433138627218067338}
   patrolCoordinates: []
@@ -566,5 +568,10 @@ Transform:
 --- !u!95 &7737562823756025142 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 238956328840157771, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
+  m_PrefabInstance: {fileID: 7507968864620533629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &9197666657248117805 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1699269865990050640, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
   m_PrefabInstance: {fileID: 7507968864620533629}
   m_PrefabAsset: {fileID: 0}

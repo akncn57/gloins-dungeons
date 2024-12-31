@@ -32,7 +32,7 @@ namespace Enemies.Orc.States
         
         private void CheckIdleTimeFinished()
         {
-            //TODO: Switch patrol state.
+            OrcStateMachine.SwitchState(OrcStateMachine.OrcPatrolState);
         }
     }
 }
