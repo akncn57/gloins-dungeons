@@ -10,130 +10,187 @@ namespace Enemies.Orc.States
     {
         private int _patrolIndex; // Tracks the current patrol coordinate index
         private Vector3 _lastPosition; // Stores the last recorded position for movement calculation
+        private static readonly int Horizontal = Animator.StringToHash("Horizontal"); // Hash for Horizontal animation parameter
+        private static readonly int Vertical = Animator.StringToHash("Vertical"); // Hash for Vertical animation parameter
+        private static readonly int LastHorizontal = Animator.StringToHash("LastHorizontal"); // Hash for LastHorizontal animation parameter
+        private static readonly int LastVertical = Animator.StringToHash("LastVertical"); // Hash for LastVertical animation parameter
 
-        protected OrcPatrolState(OrcStateMachine orcStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner, CameraShake cameraShake) 
+        /// <summary>
+        /// Initializes the patrol state with necessary dependencies.
+        /// </summary>
+        protected OrcPatrolState(
+            OrcStateMachine orcStateMachine, 
+            IInstantiator instantiator, 
+            SignalBus signalBus, 
+            CoroutineRunner coroutineRunner, 
+            CameraShake cameraShake) 
             : base(orcStateMachine, instantiator, signalBus, coroutineRunner, cameraShake)
         {
         }
 
+        /// <summary>
+        /// Called when entering the patrol state.
+        /// </summary>
         public override void OnEnter()
         {
             _lastPosition = OrcStateMachine.EnemyNavMeshAgent.transform.position; // Initialize the last position
-            
-            // Play the walking animation
-            OrcStateMachine.Animator.Play("Walk-BlendTree");
-
-            // Initialize or reset patrol state
-            HandlePatrolInitialization();
+            OrcStateMachine.Animator.Play("Walk-BlendTree"); // Play the walking animation
+            HandlePatrolInitialization(); // Initialize or reset patrol state
         }
 
+        /// <summary>
+        /// Called once per frame during the patrol state.
+        /// </summary>
         public override void OnTick()
         {
-            // Proceed to the patrol coordinate if not yet completed
+            // Check if a player is within the chase area
+            var drawChaseOverlayCommand = new EnemyDrawChaseOverlayCommand(
+                OrcStateMachine.EnemyDrawChaseOverlay,
+                OrcStateMachine.Rigidbody.position, 
+                OrcStateMachine.EnemyProperties.ChaseRadius, 
+                OrcStateMachine);
+            
+            var isPlayerWithinChaseArea = (bool)CommandInvoker.ExecuteCommand(drawChaseOverlayCommand);
+
+            if (isPlayerWithinChaseArea && OrcStateMachine.HasLineOfSight)
+            {
+                // Stop the NavMeshAgent to halt navigation-based movement
+                var stopAgentCommand = new EnemyStopMovementCommand(
+                    OrcStateMachine.EnemyStopMovement, 
+                    OrcStateMachine.EnemyNavMeshAgent);
+                CommandInvoker.ExecuteCommand(stopAgentCommand);
+                
+                // Switch to chase state if a player is detected
+                OrcStateMachine.SwitchState(OrcStateMachine.OrcChaseState);
+                return;
+            }
+
+            // Continue patrolling if the current coordinate is not completed
             if (!OrcStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted)
             {
                 MoveToPatrolCoordinate(OrcStateMachine.PatrolCoordinates[_patrolIndex].PatrolCoordinate.position);
             }
-            
-            // Calculate movement direction
-            var movement = OrcStateMachine.EnemyNavMeshAgent.transform.position - _lastPosition;
-            var movementDirection = new Vector2(movement.x, movement.y).normalized;
 
             // Update animation parameters for movement direction
-            OrcStateMachine.Animator.SetFloat("Horizontal", movementDirection.x);
-            OrcStateMachine.Animator.SetFloat("Vertical", movementDirection.y);
+            UpdateMovementAnimations();
 
-            // Store the last movement direction if the orc is moving
-            if (OrcStateMachine.EnemyNavMeshAgent.speed != 0f)
-            {
-                OrcStateMachine.Animator.SetFloat("LastHorizontal", movementDirection.x);
-                OrcStateMachine.Animator.SetFloat("LastVertical", movementDirection.y);
-            }
-            
             _lastPosition = OrcStateMachine.EnemyNavMeshAgent.transform.position; // Update the last position
         }
 
+        /// <summary>
+        /// Called when exiting the patrol state.
+        /// </summary>
         public override void OnExit()
         {
-            // Update the patrol index when exiting the state
             UpdatePatrolIndex();
         }
 
+        /// <summary>
+        /// Initializes the patrol logic by setting or resetting patrol coordinates and indices.
+        /// </summary>
         private void HandlePatrolInitialization()
         {
-            // Ensure patrol coordinates are set
             if (OrcStateMachine.PatrolCoordinates == null || OrcStateMachine.PatrolCoordinates.Count == 0)
             {
                 Debug.LogError("Patrol coordinates are not set.");
                 return;
             }
 
-            // Check if the patrol index exceeds the list bounds
             if (_patrolIndex >= OrcStateMachine.PatrolCoordinates.Count - 1)
             {
-                // Reset all patrol statuses
-                OrcStateMachine.ResetPatrolCoordinateStatus();
-                
-                // Reverse the patrol route
-                OrcStateMachine.PatrolCoordinates.Reverse();
-
-                // Reset patrol index to start of reversed path
-                _patrolIndex = 0;
+                OrcStateMachine.ResetPatrolCoordinateStatus(); // Reset all patrol statuses
+                OrcStateMachine.PatrolCoordinates.Reverse(); // Reverse the patrol route
+                _patrolIndex = 0; // Reset patrol index to start of reversed path
             }
         }
 
+        /// <summary>
+        /// Updates the patrol index to ensure the orc continues to the next patrol point.
+        /// </summary>
         private void UpdatePatrolIndex()
         {
-            // Increment patrol index and ensure it wraps around
             _patrolIndex = (_patrolIndex + 1) % OrcStateMachine.PatrolCoordinates.Count;
         }
 
+        /// <summary>
+        /// Moves the orc to the specified patrol coordinate.
+        /// If the coordinate is reached, marks it as complete.
+        /// </summary>
+        /// <param name="coordinate">Target patrol coordinate.</param>
         private void MoveToPatrolCoordinate(Vector3 coordinate)
         {
-            // Check if the orc has reached the target patrol coordinate
             if (HasReachedCoordinate(coordinate))
             {
                 CompletePatrolCoordinate();
                 return;
             }
 
-            // Set a new destination for the orc
             SetPatrolDestination(coordinate);
         }
 
+        /// <summary>
+        /// Determines if the orc has reached the given coordinate.
+        /// </summary>
+        /// <param name="coordinate">Target coordinate to check.</param>
+        /// <returns>True if the orc is within a small threshold of the target coordinate, otherwise false.</returns>
         private bool HasReachedCoordinate(Vector3 coordinate)
         {
-            // Determine if the orc is within a small threshold of the target coordinate
             return (OrcStateMachine.Rigidbody.transform.position - coordinate).magnitude < 0.6f;
         }
 
+        /// <summary>
+        /// Marks the current patrol coordinate as completed and transitions to idle state.
+        /// </summary>
         private void CompletePatrolCoordinate()
         {
-            // Mark the current patrol coordinate as completed
             OrcStateMachine.PatrolCoordinates[_patrolIndex].IsCompleted = true;
 
-            // Stop the orc's movement
             ExecuteCommand(new EnemyStopMovementCommand(
                 OrcStateMachine.EnemyStopMovement, 
                 OrcStateMachine.EnemyNavMeshAgent));
 
-            // Switch to idle state
-            OrcStateMachine.SwitchState(OrcStateMachine.OrcIdleState);
+            OrcStateMachine.SwitchState(OrcStateMachine.OrcIdleState); // Switch to idle state
         }
 
+        /// <summary>
+        /// Sets the patrol destination for the orc's NavMeshAgent.
+        /// </summary>
+        /// <param name="coordinate">Target destination coordinate.</param>
         private void SetPatrolDestination(Vector3 coordinate)
         {
-            // Set a new navigation destination for the orc
+            OrcStateMachine.EnemyNavMeshAgent.speed = OrcStateMachine.EnemyProperties.WalkSpeed;
+            
             ExecuteCommand(new EnemySetDestinationCommand(
                 OrcStateMachine.EnemySetDestination,
                 OrcStateMachine.EnemyNavMeshAgent,
                 coordinate));
         }
 
+        /// <summary>
+        /// Executes a given command using the command pattern.
+        /// </summary>
+        /// <param name="command">Command to execute.</param>
         private void ExecuteCommand(ICommand command)
         {
-            // Execute the given command using the command pattern
             CommandInvoker.ExecuteCommand(command);
+        }
+
+        /// <summary>
+        /// Updates animation parameters based on the orc's movement direction.
+        /// </summary>
+        private void UpdateMovementAnimations()
+        {
+            var movement = OrcStateMachine.EnemyNavMeshAgent.transform.position - _lastPosition;
+            var movementDirection = new Vector2(movement.x, movement.y).normalized;
+
+            OrcStateMachine.Animator.SetFloat(Horizontal, movementDirection.x);
+            OrcStateMachine.Animator.SetFloat(Vertical, movementDirection.y);
+
+            if (OrcStateMachine.EnemyNavMeshAgent.speed != 0f)
+            {
+                OrcStateMachine.Animator.SetFloat(LastHorizontal, movementDirection.x);
+                OrcStateMachine.Animator.SetFloat(LastVertical, movementDirection.y);
+            }
         }
     }
 }

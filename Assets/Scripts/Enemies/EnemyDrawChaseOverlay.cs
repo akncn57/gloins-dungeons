@@ -1,14 +1,13 @@
 ﻿using CustomInterfaces;
+using Enemies.Skeleton;
 using UnityEngine;
 
-namespace Enemies.Skeleton
+namespace Enemies
 {
-    public class SkeletonDrawChaseOverlay
+    public class EnemyDrawChaseOverlay
     {
-        public void DrawChaseOverlay(Vector3 position, float radius, SkeletonStateMachine skeletonStateMachine)
+        public bool IsPlayerWithinRadius(Vector3 position, float radius, EnemyBaseStateMachine enemyBaseStateMachine)
         {
-            if (!skeletonStateMachine.HasLineOfSight) return;
-            
             var results = Physics2D.OverlapCircleAll(position, radius);
             
             foreach (var result in results)
@@ -20,10 +19,11 @@ namespace Enemies.Skeleton
 
                 if (player != null)
                 {
-                    skeletonStateMachine.SkeletonChaseState.Init(player);
-                    skeletonStateMachine.SwitchState(skeletonStateMachine.SkeletonChaseState);
+                    return true;
                 }
             }
+
+            return false;
         }
     }
 }

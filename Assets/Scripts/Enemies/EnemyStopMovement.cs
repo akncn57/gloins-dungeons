@@ -1,4 +1,5 @@
-﻿using UnityEngine.AI;
+﻿using UnityEngine;
+using UnityEngine.AI;
 
 namespace Enemies
 {
@@ -7,6 +8,8 @@ namespace Enemies
         public void StopMovement(NavMeshAgent agent)
         {
             agent.isStopped = true;
+            agent.stoppingDistance = 0f;
+            agent.velocity = Vector3.zero;
         }
     }
 }

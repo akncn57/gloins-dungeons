@@ -38,7 +38,7 @@ namespace Enemies.Skeleton
         private EnemyStopMovement _enemyStopMovement;
         private EnemyStopRigidbody _enemyStopRigidbody;
         private EnemyKnockback _enemyKnockback;
-        private SkeletonDrawChaseOverlay _skeletonDrawChaseOverlay;
+        private EnemyDrawChaseOverlay _enemyDrawChaseOverlay;
 
         public override EnemyProperties EnemyProperties => skeletonProperties;
         public override HealthController HealthController => _healthController;
@@ -63,7 +63,7 @@ namespace Enemies.Skeleton
         public override EnemyStopMovement EnemyStopMovement => _enemyStopMovement;
         public override EnemyStopRigidbody EnemyStopRigidbody => _enemyStopRigidbody;
         public override EnemyKnockback EnemyKnockback => _enemyKnockback;
-        public SkeletonDrawChaseOverlay SkeletonDrawChaseOverlay => _skeletonDrawChaseOverlay;
+        public override EnemyDrawChaseOverlay EnemyDrawChaseOverlay => _enemyDrawChaseOverlay;
         public bool IsBlocking { get; set; }
         public bool IsEnemyNearToPlayer { get; set; }
 
@@ -129,7 +129,7 @@ namespace Enemies.Skeleton
             _enemyStopMovement = new EnemyStopMovement();
             _enemyStopRigidbody = new EnemyStopRigidbody();
             _enemyKnockback = new EnemyKnockback();
-            _skeletonDrawChaseOverlay = new SkeletonDrawChaseOverlay();
+            _enemyDrawChaseOverlay = new EnemyDrawChaseOverlay();
             
             SkeletonChaseState = Instantiator.Instantiate<SkeletonChaseState>(new object[]{this});
             SkeletonDeathState = Instantiator.Instantiate<SkeletonDeathState>(new object[]{this});

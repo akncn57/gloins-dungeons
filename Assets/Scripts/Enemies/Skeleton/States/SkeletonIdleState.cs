@@ -1,5 +1,6 @@
 ﻿using CustomInterfaces;
 using DesignPatterns.CommandPattern;
+using Enemies.Commands;
 using Enemies.Skeleton.Commands;
 using Tools;
 using UnityEngine;
@@ -32,8 +33,8 @@ namespace Enemies.Skeleton.States
 
         public override void OnTick()
         {
-            ICommand drawChaseOverlayCommand = new SkeletonDrawChaseOverlayCommand(
-                SkeletonStateMachine.SkeletonDrawChaseOverlay, 
+            ICommand drawChaseOverlayCommand = new EnemyDrawChaseOverlayCommand(
+                SkeletonStateMachine.EnemyDrawChaseOverlay, 
                 SkeletonStateMachine.transform.position,
                 SkeletonStateMachine.EnemyProperties.ChaseRadius,
                 SkeletonStateMachine);

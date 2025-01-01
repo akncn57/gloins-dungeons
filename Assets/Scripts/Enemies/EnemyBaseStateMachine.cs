@@ -32,5 +32,6 @@ namespace Enemies
         public abstract EnemyStopMovement EnemyStopMovement { get; }
         public abstract EnemyStopRigidbody EnemyStopRigidbody { get; }
         public abstract EnemyKnockback EnemyKnockback { get; }
+        public abstract EnemyDrawChaseOverlay EnemyDrawChaseOverlay { get; }
     }
 }

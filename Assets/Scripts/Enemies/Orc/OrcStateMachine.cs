@@ -4,6 +4,7 @@ using HealthSystem;
 using HitData;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace Enemies.Orc
@@ -11,14 +12,21 @@ namespace Enemies.Orc
     public class OrcStateMachine : EnemyBaseStateMachine
     {
         [Inject] public IInstantiator Instantiator;
-        
+
+        [SerializeField] private OrcProperties _orcProperties;
         [SerializeField] private Rigidbody2D rigidBody;
         [SerializeField] private Collider2D collider;
         [SerializeField] private Animator animator;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
+        [SerializeField] private Collider2D playerCollider;
+        [SerializeField] private LayerMask PlayerLayerMask;
         
-        public override EnemyProperties EnemyProperties { get; }
+        
+        public bool HasLineOfSight => _enemyLineOfSight.HasLineOfSight(collider, PlayerCollider, "Player", PlayerLayerMask);
+        public Collider2D PlayerCollider => playerCollider;
+
+        public override EnemyProperties EnemyProperties => _orcProperties;
         public override HealthController HealthController { get; }
         public override EnemyColliderBaseController EnemyColliderController { get; }
         public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger { get; }
@@ -36,14 +44,42 @@ namespace Enemies.Orc
         public override List<EnemyPatrolData> PatrolCoordinates => patrolCoordinates;
         public override EnemyHitData HitData { get; set; }
         public override EnemyFacing EnemyFacing { get; }
-        public override EnemyLineOfSight EnemyLineOfSight { get; }
+        public override EnemyLineOfSight EnemyLineOfSight => _enemyLineOfSight;
         public override EnemySetDestination EnemySetDestination => _enemySetDestination;
         public override EnemyStopMovement EnemyStopMovement => _enemyStopMovement;
-        public override EnemyStopRigidbody EnemyStopRigidbody { get; }
+        public override EnemyStopRigidbody EnemyStopRigidbody => _enemyStopRigidbody;
         public override EnemyKnockback EnemyKnockback { get; }
+        public override EnemyDrawChaseOverlay EnemyDrawChaseOverlay => _enemyDrawChaseOverlay;
 
         public OrcIdleState OrcIdleState { get; private set; }
         public OrcPatrolState OrcPatrolState { get; private set; }
+        public OrcChaseState OrcChaseState { get; private set; }
+        
+        private EnemySetDestination _enemySetDestination;
+        private EnemyStopMovement _enemyStopMovement;
+        private EnemyStopRigidbody _enemyStopRigidbody;
+        private EnemyDrawChaseOverlay _enemyDrawChaseOverlay;
+        private EnemyLineOfSight _enemyLineOfSight;
+
+        private void Awake()
+        {
+            OrcIdleState = Instantiator.Instantiate<OrcIdleState>(new object[]{this});
+            OrcPatrolState = Instantiator.Instantiate<OrcPatrolState>(new object[]{this});
+            OrcChaseState = Instantiator.Instantiate<OrcChaseState>(new object[] { this });
+            
+            _enemySetDestination = new EnemySetDestination();
+            _enemyStopMovement = new EnemyStopMovement();
+            _enemyStopRigidbody = new EnemyStopRigidbody();
+            _enemyDrawChaseOverlay = new EnemyDrawChaseOverlay();
+            _enemyLineOfSight = new EnemyLineOfSight();
+            
+            navMeshAgent.speed = EnemyProperties.WalkSpeed;
+        }
+        
+        private void Start()
+        {
+            SwitchState(OrcIdleState);
+        }
         
         public void ResetPatrolCoordinateStatus()
         {
@@ -53,23 +89,12 @@ namespace Enemies.Orc
             }
         }
         
-        private EnemySetDestination _enemySetDestination;
-        private EnemyStopMovement _enemyStopMovement;
-
-        private void Awake()
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
         {
-            OrcIdleState = Instantiator.Instantiate<OrcIdleState>(new object[]{this});
-            OrcPatrolState = Instantiator.Instantiate<OrcPatrolState>(new object[]{this});
-            
-            _enemySetDestination = new EnemySetDestination();
-            _enemyStopMovement = new EnemyStopMovement();
-            
-            navMeshAgent.speed = 3f;
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, EnemyProperties.ChaseRadius);
         }
-        
-        private void Start()
-        {
-            SwitchState(OrcIdleState);
-        }
+#endif
     }
 }

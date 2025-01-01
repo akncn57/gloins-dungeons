@@ -37,8 +37,8 @@ namespace Enemies.Skeleton.States
 
         public override void OnTick()
         {
-            _drawChaseOverlayCommand = new SkeletonDrawChaseOverlayCommand(
-                SkeletonStateMachine.SkeletonDrawChaseOverlay, 
+            _drawChaseOverlayCommand = new EnemyDrawChaseOverlayCommand(
+                SkeletonStateMachine.EnemyDrawChaseOverlay, 
                 SkeletonStateMachine.transform.position,
                 SkeletonStateMachine.EnemyProperties.ChaseRadius,
                 SkeletonStateMachine);

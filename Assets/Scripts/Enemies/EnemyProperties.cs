@@ -6,6 +6,7 @@ namespace Enemies
     public abstract class EnemyProperties : ScriptableObject
     {
         public float WalkSpeed;
+        public float RunSpeed;
         public int BasicAttackPower;
         public float HeavyAttackChance;
         public int HeavyAttackPower;
