@@ -112,8 +112,14 @@ namespace Enemies.Orc.States
 
             if (distanceToPlayer <= 1f)
             {
+                // Stop the NavMeshAgent to halt navigation-based movement
+                var stopAgentCommand = new EnemyStopMovementCommand(
+                    OrcStateMachine.EnemyStopMovement, 
+                    OrcStateMachine.EnemyNavMeshAgent);
+                CommandInvoker.ExecuteCommand(stopAgentCommand);
+                
                 // If close to the player, prepare to attack
-                Debug.Log("Orc ready to Attack!");
+                OrcStateMachine.SwitchState(OrcStateMachine.OrcBasicAttackState);
             }
             else if (distanceToPlayer >= 4f)
             {

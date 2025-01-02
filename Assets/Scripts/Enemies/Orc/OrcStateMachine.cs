@@ -54,6 +54,7 @@ namespace Enemies.Orc
         public OrcIdleState OrcIdleState { get; private set; }
         public OrcPatrolState OrcPatrolState { get; private set; }
         public OrcChaseState OrcChaseState { get; private set; }
+        public OrcBasicAttackState OrcBasicAttackState { get; private set; }
         
         private EnemySetDestination _enemySetDestination;
         private EnemyStopMovement _enemyStopMovement;
@@ -66,6 +67,7 @@ namespace Enemies.Orc
             OrcIdleState = Instantiator.Instantiate<OrcIdleState>(new object[]{this});
             OrcPatrolState = Instantiator.Instantiate<OrcPatrolState>(new object[]{this});
             OrcChaseState = Instantiator.Instantiate<OrcChaseState>(new object[] { this });
+            OrcBasicAttackState = Instantiator.Instantiate<OrcBasicAttackState>(new object[] { this });
             
             _enemySetDestination = new EnemySetDestination();
             _enemyStopMovement = new EnemyStopMovement();
