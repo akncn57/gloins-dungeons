@@ -161,6 +161,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbf6ed6b57956b4d9119b5aae30ac20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &515139158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6537561343302052534, guid: de805db96d3a5654486ab81357746f7d, type: 3}
+  m_PrefabInstance: {fileID: 3296963417624817986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b78e82da9b4571a5ca740d0f4ec6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &515139160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2888464627603161942, guid: de805db96d3a5654486ab81357746f7d, type: 3}
+  m_PrefabInstance: {fileID: 3296963417624817986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3984cabd9b562524dba6a301c8161870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,11 +5429,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5671127896370959898, guid: de805db96d3a5654486ab81357746f7d, type: 3}
+      propertyPath: _monoInstallers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671127896370959898, guid: de805db96d3a5654486ab81357746f7d, type: 3}
+      propertyPath: '_monoInstallers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 515139158}
+    - target: {fileID: 5671127896370959898, guid: de805db96d3a5654486ab81357746f7d, type: 3}
+      propertyPath: '_monoInstallers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 515139160}
     - target: {fileID: 6537561343302052534, guid: de805db96d3a5654486ab81357746f7d, type: 3}
       propertyPath: _cameraShake
       value: 
       objectReference: {fileID: 1729865441}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 231235447682303357, guid: de805db96d3a5654486ab81357746f7d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
