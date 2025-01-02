@@ -180,16 +180,15 @@ namespace Enemies.Orc.States
         /// </summary>
         private void UpdateMovementAnimations()
         {
-            var movement = OrcStateMachine.EnemyNavMeshAgent.transform.position - _lastPosition;
-            var movementDirection = new Vector2(movement.x, movement.y).normalized;
+            var agentVelocity = OrcStateMachine.EnemyNavMeshAgent.velocity.normalized;
 
-            OrcStateMachine.Animator.SetFloat(Horizontal, movementDirection.x);
-            OrcStateMachine.Animator.SetFloat(Vertical, movementDirection.y);
+            OrcStateMachine.Animator.SetFloat(Horizontal, agentVelocity.x);
+            OrcStateMachine.Animator.SetFloat(Vertical, agentVelocity.y);
 
             if (OrcStateMachine.EnemyNavMeshAgent.speed != 0f)
             {
-                OrcStateMachine.Animator.SetFloat(LastHorizontal, movementDirection.x);
-                OrcStateMachine.Animator.SetFloat(LastVertical, movementDirection.y);
+                OrcStateMachine.Animator.SetFloat(LastHorizontal, agentVelocity.x);
+                OrcStateMachine.Animator.SetFloat(LastVertical, agentVelocity.y);
             }
         }
     }
