@@ -78,16 +78,19 @@ namespace Enemies.Orc.States
         /// <param name="movementDirection">The normalized direction of movement.</param>
         private void UpdateAnimationParameters(Vector3 movementDirection)
         {
-            OrcStateMachine.Animator.SetFloat(Horizontal, movementDirection.x);
-            OrcStateMachine.Animator.SetFloat(Vertical, movementDirection.y);
+            float horizontal = Mathf.RoundToInt(movementDirection.x);
+            float vertical = Mathf.RoundToInt(movementDirection.y);
 
-            if (OrcStateMachine.EnemyNavMeshAgent.speed > 0f)
+            OrcStateMachine.Animator.SetFloat(Horizontal, horizontal);
+            OrcStateMachine.Animator.SetFloat(Vertical, vertical);
+
+            if (OrcStateMachine.EnemyNavMeshAgent.speed != 0f)
             {
-                OrcStateMachine.Animator.SetFloat(LastHorizontal, movementDirection.x);
-                OrcStateMachine.Animator.SetFloat(LastVertical, movementDirection.y);
+                OrcStateMachine.Animator.SetFloat(LastHorizontal, horizontal);
+                OrcStateMachine.Animator.SetFloat(LastVertical, vertical);
             }
-
-            if (OrcStateMachine.EnemyNavMeshAgent.velocity.magnitude < 0.01f)
+            
+            if (OrcStateMachine.EnemyNavMeshAgent.isStopped)
             {
                 OrcStateMachine.Animator.SetFloat(Horizontal, 0f);
                 OrcStateMachine.Animator.SetFloat(Vertical, 0f);

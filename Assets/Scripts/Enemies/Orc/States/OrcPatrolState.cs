@@ -76,7 +76,7 @@ namespace Enemies.Orc.States
 
             _lastPosition = OrcStateMachine.EnemyNavMeshAgent.transform.position; // Update the last position
 
-            Debug.Log("Orc Velocity : " + OrcStateMachine.EnemyNavMeshAgent.velocity);
+            Debug.Log("Orc Velocity : " + OrcStateMachine.EnemyNavMeshAgent.velocity.magnitude);
         }
 
         /// <summary>
@@ -183,17 +183,19 @@ namespace Enemies.Orc.States
         private void UpdateMovementAnimations()
         {
             var agentVelocity = OrcStateMachine.EnemyNavMeshAgent.velocity.normalized;
+            float horizontal = Mathf.RoundToInt(agentVelocity.x);
+            float vertical = Mathf.RoundToInt(agentVelocity.y);
 
-            OrcStateMachine.Animator.SetFloat(Horizontal, agentVelocity.x);
-            OrcStateMachine.Animator.SetFloat(Vertical, agentVelocity.y);
+            OrcStateMachine.Animator.SetFloat(Horizontal, horizontal);
+            OrcStateMachine.Animator.SetFloat(Vertical, vertical);
 
             if (OrcStateMachine.EnemyNavMeshAgent.speed != 0f)
             {
-                OrcStateMachine.Animator.SetFloat(LastHorizontal, agentVelocity.x);
-                OrcStateMachine.Animator.SetFloat(LastVertical, agentVelocity.y);
+                OrcStateMachine.Animator.SetFloat(LastHorizontal, horizontal);
+                OrcStateMachine.Animator.SetFloat(LastVertical, vertical);
             }
             
-            if (OrcStateMachine.EnemyNavMeshAgent.velocity.magnitude < 0.01f)
+            if (OrcStateMachine.EnemyNavMeshAgent.isStopped)
             {
                 OrcStateMachine.Animator.SetFloat(Horizontal, 0f);
                 OrcStateMachine.Animator.SetFloat(Vertical, 0f);
