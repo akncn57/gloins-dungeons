@@ -86,6 +86,12 @@ namespace Enemies.Orc.States
                 OrcStateMachine.Animator.SetFloat(LastHorizontal, movementDirection.x);
                 OrcStateMachine.Animator.SetFloat(LastVertical, movementDirection.y);
             }
+
+            if (OrcStateMachine.EnemyNavMeshAgent.velocity.magnitude < 0.01f)
+            {
+                OrcStateMachine.Animator.SetFloat(Horizontal, 0f);
+                OrcStateMachine.Animator.SetFloat(Vertical, 0f);
+            }
         }
 
         /// <summary>
