@@ -36,7 +36,26 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnTick()
         {
-            // No specific logic required during idle state ticks
+            // Check if a player is within the chase area
+            var drawChaseOverlayCommand = new EnemyDrawChaseOverlayCommand(
+                OrcStateMachine.EnemyDrawChaseOverlay,
+                OrcStateMachine.Rigidbody.position, 
+                OrcStateMachine.EnemyProperties.ChaseRadius, 
+                OrcStateMachine);
+            
+            var isPlayerWithinChaseArea = (bool)CommandInvoker.ExecuteCommand(drawChaseOverlayCommand);
+
+            if (isPlayerWithinChaseArea && OrcStateMachine.HasLineOfSight)
+            {
+                // Stop the NavMeshAgent to halt navigation-based movement
+                var stopAgentCommand = new EnemyStopMovementCommand(
+                    OrcStateMachine.EnemyStopMovement, 
+                    OrcStateMachine.EnemyNavMeshAgent);
+                CommandInvoker.ExecuteCommand(stopAgentCommand);
+                
+                // Switch to chase state if a player is detected
+                OrcStateMachine.SwitchState(OrcStateMachine.OrcChaseState);
+            }
         }
 
         /// <summary>

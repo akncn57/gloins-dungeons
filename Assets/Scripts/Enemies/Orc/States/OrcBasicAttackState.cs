@@ -16,6 +16,10 @@ namespace Enemies.Orc.States
         {
             OrcStateMachine.Animator.Play(BasicAttackAnimationHash);
             
+            OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += OrcAttackOpenOverlap;
+            OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose += OrcAttackCloseOverlap;
+            OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += OrcAttackFinish;
+            
             var attackHorizontal = OrcStateMachine.Animator.GetFloat("LastHorizontal");
             var attackVertical = OrcStateMachine.Animator.GetFloat("LastVertical");
             
@@ -44,6 +48,21 @@ namespace Enemies.Orc.States
             }
         }
 
+        private void OrcAttackOpenOverlap()
+        {
+            
+        }
+        
+        private void OrcAttackCloseOverlap()
+        {
+            
+        }
+        
+        private void OrcAttackFinish()
+        {
+            OrcStateMachine.SwitchState(OrcStateMachine.OrcIdleState);
+        }
+
         public override void OnTick()
         {
             
@@ -51,7 +70,9 @@ namespace Enemies.Orc.States
 
         public override void OnExit()
         {
-            
+            OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen -= OrcAttackOpenOverlap;
+            OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose -= OrcAttackCloseOverlap;
+            OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished -= OrcAttackFinish;
         }
     }
 }

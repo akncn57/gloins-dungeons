@@ -14,6 +14,7 @@ namespace Enemies.Orc
         [Inject] public IInstantiator Instantiator;
 
         [SerializeField] private OrcProperties _orcProperties;
+        [SerializeField] private OrcAnimationEventTrigger _orcAnimationEventTrigger;
         [SerializeField] private Rigidbody2D rigidBody;
         [SerializeField] private Collider2D collider;
         [SerializeField] private Animator animator;
@@ -29,7 +30,7 @@ namespace Enemies.Orc
         public override EnemyProperties EnemyProperties => _orcProperties;
         public override HealthController HealthController { get; }
         public override EnemyColliderBaseController EnemyColliderController { get; }
-        public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger { get; }
+        public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => _orcAnimationEventTrigger;
         public override NavMeshAgent EnemyNavMeshAgent => navMeshAgent;
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
