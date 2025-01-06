@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ColliderController;
-using Enemies.Skeleton;
 using UnityEngine;
 using UtilScripts;
 using Zenject;
@@ -13,12 +12,22 @@ namespace Enemies.Orc.States
         private static readonly int BasicAttackAnimationHash = Animator.StringToHash("AttackBasic_BlendTree");
         private readonly List<ColliderControllerBase> _hittingEnemies = new();
         
+        private float _lastAttackTime;
+        
         protected OrcBasicAttackState(OrcStateMachine orcStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner, CameraShake cameraShake) : base(orcStateMachine, instantiator, signalBus, coroutineRunner, cameraShake)
         {
         }
 
         public override void OnEnter()
         {
+            if (Time.time - _lastAttackTime < OrcStateMachine.EnemyProperties.BasicAttackCoolDown)
+            {
+                OrcStateMachine.SwitchState(OrcStateMachine.OrcIdleState);
+                return;
+            }
+
+            _lastAttackTime = Time.time;
+            
             OrcStateMachine.Animator.Play(BasicAttackAnimationHash);
             
             OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += OrcAttackOpenOverlap;
@@ -32,6 +41,7 @@ namespace Enemies.Orc.States
             var contactFilter = new ContactFilter2D();
             
             contactFilter.SetLayerMask(OrcStateMachine.PlayerLayer);
+            contactFilter.useTriggers = true;
             
             var count = Physics2D.OverlapCollider(GetAttackCollider(), contactFilter, detectedEnemies);
             
@@ -44,7 +54,9 @@ namespace Enemies.Orc.States
                 if (enemy != null)
                 {
                     _hittingEnemies.Add(enemy);
-                    enemy.InvokeOnHitStartEvent(OrcStateMachine.EnemyProperties.BasicAttackPower, (enemy.transform.position - OrcStateMachine.transform.position).normalized, OrcStateMachine.EnemyProperties.HitKnockBackPower);
+                    enemy.InvokeOnHitStartEvent(OrcStateMachine.EnemyProperties.BasicAttackPower, 
+                        (enemy.transform.position - OrcStateMachine.transform.position).normalized, 
+                        OrcStateMachine.EnemyProperties.HitKnockBackPower);
                 }
             }
         }
@@ -66,7 +78,7 @@ namespace Enemies.Orc.States
 
         public override void OnTick()
         {
-            
+            // Saldırı sırasında yapılacak ek işler buraya eklenebilir.
         }
 
         public override void OnExit()
@@ -83,31 +95,19 @@ namespace Enemies.Orc.States
             
             if (Mathf.Approximately(attackHorizontal, 1))
             {
-                Debug.Log("Orc attack Right!");
-                return OrcStateMachine.BasicAttackColliderUp;
-
+                return OrcStateMachine.BasicAttackColliderRight;
             }
             if (Mathf.Approximately(attackHorizontal, -1))
             {
-                Debug.Log("Orc attack Left!");
-                return OrcStateMachine.BasicAttackColliderUp;
-                
+                return OrcStateMachine.BasicAttackColliderLeft;
             }
             if (Mathf.Approximately(attackVertical, 1))
             {
-                Debug.Log("Orc attack Up!");
                 return OrcStateMachine.BasicAttackColliderUp;
-                
             }
             if (Mathf.Approximately(attackVertical, -1))
             {
-                Debug.Log("Orc attack Down!");
-                return OrcStateMachine.BasicAttackColliderUp;
-            }
-            else
-            {
-                Debug.Log("HEHEHE!!");
-                return OrcStateMachine.BasicAttackColliderUp;
+                return OrcStateMachine.BasicAttackColliderDown;
             }
 
             return null;

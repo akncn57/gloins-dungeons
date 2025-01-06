@@ -17,6 +17,9 @@ namespace Enemies
         public abstract Rigidbody2D Rigidbody { get; }
         public abstract Collider2D Collider { get; }
         public abstract Collider2D BasicAttackColliderUp { get; }
+        public abstract Collider2D BasicAttackColliderDown { get; }
+        public abstract Collider2D BasicAttackColliderLeft { get; }
+        public abstract Collider2D BasicAttackColliderRight { get; }
         public abstract BoxCollider2D AttackHeavyCollider { get; }
         public abstract GameObject ParentObject { get; }
         public abstract GameObject ExclamationMarkObject { get; }

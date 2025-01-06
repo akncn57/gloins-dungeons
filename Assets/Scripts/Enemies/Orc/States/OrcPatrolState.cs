@@ -75,8 +75,6 @@ namespace Enemies.Orc.States
             UpdateMovementAnimations();
 
             _lastPosition = OrcStateMachine.EnemyNavMeshAgent.transform.position; // Update the last position
-
-            Debug.Log("Orc Velocity : " + OrcStateMachine.EnemyNavMeshAgent.velocity.magnitude);
         }
 
         /// <summary>
@@ -189,16 +187,10 @@ namespace Enemies.Orc.States
             OrcStateMachine.Animator.SetFloat(Horizontal, horizontal);
             OrcStateMachine.Animator.SetFloat(Vertical, vertical);
 
-            if (OrcStateMachine.EnemyNavMeshAgent.speed != 0f)
+            if (OrcStateMachine.EnemyNavMeshAgent.velocity != Vector3.zero)
             {
                 OrcStateMachine.Animator.SetFloat(LastHorizontal, horizontal);
                 OrcStateMachine.Animator.SetFloat(LastVertical, vertical);
-            }
-            
-            if (OrcStateMachine.EnemyNavMeshAgent.isStopped)
-            {
-                OrcStateMachine.Animator.SetFloat(Horizontal, 0f);
-                OrcStateMachine.Animator.SetFloat(Vertical, 0f);
             }
         }
     }

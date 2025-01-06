@@ -8,6 +8,7 @@ namespace Enemies
         public float WalkSpeed;
         public float RunSpeed;
         public int BasicAttackPower;
+        public float BasicAttackCoolDown;
         public float HeavyAttackChance;
         public int HeavyAttackPower;
         public float HitKnockBackPower;

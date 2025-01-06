@@ -18,6 +18,9 @@ namespace Enemies.Orc
         [SerializeField] private Rigidbody2D rigidBody;
         [SerializeField] private Collider2D collider;
         [SerializeField] private Collider2D basicAttackColliderUp;
+        [SerializeField] private Collider2D basicAttackColliderDown;
+        [SerializeField] private Collider2D basicAttackColliderLeft;
+        [SerializeField] private Collider2D basicAttackColliderRight;
         [SerializeField] private Animator animator;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
@@ -37,6 +40,9 @@ namespace Enemies.Orc
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
         public override Collider2D BasicAttackColliderUp => basicAttackColliderUp;
+        public override Collider2D BasicAttackColliderDown => basicAttackColliderDown;
+        public override Collider2D BasicAttackColliderLeft => basicAttackColliderLeft;
+        public override Collider2D BasicAttackColliderRight => basicAttackColliderRight;
         public override BoxCollider2D AttackHeavyCollider { get; }
         public override GameObject ParentObject { get; }
         public override GameObject ExclamationMarkObject { get; }

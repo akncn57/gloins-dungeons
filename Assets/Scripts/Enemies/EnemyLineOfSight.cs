@@ -14,19 +14,18 @@ namespace Enemies
             
             foreach (var result in results)
             {
-                Debug.Log("Hit to " + result.transform.name);
-                
                 var hasLineOfSight = result.transform.gameObject.CompareTag(targetTag);
 
                 if (hasLineOfSight)
                 {
-                    Debug.Log("Ray Hit Player!");
+                    // Debug.Log("Ray Hit Player!");
                     Debug.DrawRay(enemyOrigin, playerOrigin - enemyOrigin, Color.green);
                     return true;
                 }
-                else if (result.collider != enemyCollider)
+                
+                if (result.collider != enemyCollider)
                 {
-                    Debug.Log("Ray didn't Hit Player!");
+                    // Debug.Log("Ray didn't Hit Player!");
                     Debug.DrawRay(enemyOrigin, playerOrigin - enemyOrigin, Color.red);
                     return false;
                 }

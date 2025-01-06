@@ -48,6 +48,9 @@ namespace Enemies.Skeleton
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
         public override Collider2D BasicAttackColliderUp { get; }
+        public override Collider2D BasicAttackColliderDown { get; }
+        public override Collider2D BasicAttackColliderLeft { get; }
+        public override Collider2D BasicAttackColliderRight { get; }
         public override BoxCollider2D AttackHeavyCollider => attackHeavyCollider;
         public override GameObject ParentObject => parentObject;
         public override GameObject ExclamationMarkObject => exclamationMarkObject;
