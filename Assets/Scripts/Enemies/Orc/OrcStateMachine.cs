@@ -4,7 +4,6 @@ using HealthSystem;
 using HitData;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Enemies.Orc
@@ -14,9 +13,11 @@ namespace Enemies.Orc
         [Inject] public IInstantiator Instantiator;
 
         [SerializeField] private OrcProperties _orcProperties;
+        [SerializeField] private OrcColliderController _orcColliderController;
         [SerializeField] private OrcAnimationEventTrigger _orcAnimationEventTrigger;
         [SerializeField] private Rigidbody2D rigidBody;
         [SerializeField] private Collider2D collider;
+        [SerializeField] private Collider2D basicAttackColliderUp;
         [SerializeField] private Animator animator;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private List<EnemyPatrolData> patrolCoordinates;
@@ -26,15 +27,16 @@ namespace Enemies.Orc
         
         public bool HasLineOfSight => _enemyLineOfSight.HasLineOfSight(collider, PlayerCollider, "Player", PlayerLayerMask);
         public Collider2D PlayerCollider => playerCollider;
+        public LayerMask PlayerLayer => PlayerLayerMask;
 
         public override EnemyProperties EnemyProperties => _orcProperties;
         public override HealthController HealthController { get; }
-        public override EnemyColliderBaseController EnemyColliderController { get; }
+        public override EnemyColliderBaseController EnemyColliderController => _orcColliderController;
         public override EnemyAnimationEventTrigger EnemyAnimationEventTrigger => _orcAnimationEventTrigger;
         public override NavMeshAgent EnemyNavMeshAgent => navMeshAgent;
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
-        public override CapsuleCollider2D AttackBasicCollider { get; }
+        public override Collider2D BasicAttackColliderUp => basicAttackColliderUp;
         public override BoxCollider2D AttackHeavyCollider { get; }
         public override GameObject ParentObject { get; }
         public override GameObject ExclamationMarkObject { get; }

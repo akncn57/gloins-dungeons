@@ -47,7 +47,7 @@ namespace Enemies.Skeleton
         public override NavMeshAgent EnemyNavMeshAgent => navMeshAgent;
         public override Rigidbody2D Rigidbody => rigidBody;
         public override Collider2D Collider => collider;
-        public override CapsuleCollider2D AttackBasicCollider => attackBasicCollider;
+        public override Collider2D BasicAttackColliderUp { get; }
         public override BoxCollider2D AttackHeavyCollider => attackHeavyCollider;
         public override GameObject ParentObject => parentObject;
         public override GameObject ExclamationMarkObject => exclamationMarkObject;

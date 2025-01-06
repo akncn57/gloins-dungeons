@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ColliderController;
+using Enemies.Skeleton;
+using UnityEngine;
 using UtilScripts;
 using Zenject;
 
@@ -7,6 +11,7 @@ namespace Enemies.Orc.States
     public class OrcBasicAttackState : OrcBaseState
     {
         private static readonly int BasicAttackAnimationHash = Animator.StringToHash("AttackBasic_BlendTree");
+        private readonly List<ColliderControllerBase> _hittingEnemies = new();
         
         protected OrcBasicAttackState(OrcStateMachine orcStateMachine, IInstantiator instantiator, SignalBus signalBus, CoroutineRunner coroutineRunner, CameraShake cameraShake) : base(orcStateMachine, instantiator, signalBus, coroutineRunner, cameraShake)
         {
@@ -19,43 +24,39 @@ namespace Enemies.Orc.States
             OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen += OrcAttackOpenOverlap;
             OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose += OrcAttackCloseOverlap;
             OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished += OrcAttackFinish;
-            
-            var attackHorizontal = OrcStateMachine.Animator.GetFloat("LastHorizontal");
-            var attackVertical = OrcStateMachine.Animator.GetFloat("LastVertical");
-            
-            if (Mathf.Approximately(attackHorizontal, 1))
-            {
-                Debug.Log("Orc attack Right!");
-                
-            }
-            else if (Mathf.Approximately(attackHorizontal, -1))
-            {
-                Debug.Log("Orc attack Left!");
-                
-            }
-            else if (Mathf.Approximately(attackVertical, 1))
-            {
-                Debug.Log("Orc attack Up!");
-                
-            }
-            else if (Mathf.Approximately(attackVertical, -1))
-            {
-                Debug.Log("Orc attack Down!");
-            }
-            else
-            {
-                Debug.Log("HEHEHE!!");
-            }
         }
 
         private void OrcAttackOpenOverlap()
         {
+            var detectedEnemies = new Collider2D[20];
+            var contactFilter = new ContactFilter2D();
             
+            contactFilter.SetLayerMask(OrcStateMachine.PlayerLayer);
+            
+            var count = Physics2D.OverlapCollider(GetAttackCollider(), contactFilter, detectedEnemies);
+            
+            _hittingEnemies.Clear();
+            
+            for (var i = 0; i < count; i++)
+            {
+                var enemy = detectedEnemies[i].GetComponent<ColliderControllerBase>();
+                
+                if (enemy != null)
+                {
+                    _hittingEnemies.Add(enemy);
+                    enemy.InvokeOnHitStartEvent(OrcStateMachine.EnemyProperties.BasicAttackPower, (enemy.transform.position - OrcStateMachine.transform.position).normalized, OrcStateMachine.EnemyProperties.HitKnockBackPower);
+                }
+            }
         }
         
         private void OrcAttackCloseOverlap()
         {
-            
+            foreach (var enemy in _hittingEnemies.Where(enemy => enemy))
+            {
+                enemy.InvokeOnHitEndEvent();
+            }
+
+            _hittingEnemies.Clear();
         }
         
         private void OrcAttackFinish()
@@ -73,6 +74,43 @@ namespace Enemies.Orc.States
             OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapOpen -= OrcAttackOpenOverlap;
             OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicOverlapClose -= OrcAttackCloseOverlap;
             OrcStateMachine.EnemyAnimationEventTrigger.EnemyOnAttackBasicFinished -= OrcAttackFinish;
+        }
+
+        private Collider2D GetAttackCollider()
+        {
+            var attackHorizontal = OrcStateMachine.Animator.GetFloat("LastHorizontal");
+            var attackVertical = OrcStateMachine.Animator.GetFloat("LastVertical");
+            
+            if (Mathf.Approximately(attackHorizontal, 1))
+            {
+                Debug.Log("Orc attack Right!");
+                return OrcStateMachine.BasicAttackColliderUp;
+
+            }
+            if (Mathf.Approximately(attackHorizontal, -1))
+            {
+                Debug.Log("Orc attack Left!");
+                return OrcStateMachine.BasicAttackColliderUp;
+                
+            }
+            if (Mathf.Approximately(attackVertical, 1))
+            {
+                Debug.Log("Orc attack Up!");
+                return OrcStateMachine.BasicAttackColliderUp;
+                
+            }
+            if (Mathf.Approximately(attackVertical, -1))
+            {
+                Debug.Log("Orc attack Down!");
+                return OrcStateMachine.BasicAttackColliderUp;
+            }
+            else
+            {
+                Debug.Log("HEHEHE!!");
+                return OrcStateMachine.BasicAttackColliderUp;
+            }
+
+            return null;
         }
     }
 }

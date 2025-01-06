@@ -54,26 +54,26 @@ namespace Enemies.Skeleton.States
 
         private void SkeletonOnAttackBasicOpenOverlap()
         {
-            var results = Physics2D.OverlapCapsuleAll(
-                SkeletonStateMachine.AttackBasicCollider.transform.position,
-                SkeletonStateMachine.AttackBasicCollider.size,
-                SkeletonStateMachine.AttackBasicCollider.direction,
-                0f);
-            
-            _hittingEnemies.Clear();
-            
-            foreach (var result in results)
-            {
-                if (result.TryGetComponent<ColliderControllerBase>(out var colliderController))
-                {
-                    _hittingEnemies.Add(colliderController);
-                    
-                    colliderController.InvokeOnHitStartEvent(
-                        SkeletonStateMachine.EnemyProperties.BasicAttackPower,
-                        (colliderController.transform.position - SkeletonStateMachine.transform.position).normalized,
-                        SkeletonStateMachine.EnemyProperties.HitKnockBackPower);
-                }
-            }
+            // var results = Physics2D.OverlapCapsuleAll(
+            //     SkeletonStateMachine.AttackBasicCollider.transform.position,
+            //     SkeletonStateMachine.AttackBasicCollider.size,
+            //     SkeletonStateMachine.AttackBasicCollider.direction,
+            //     0f);
+            //
+            // _hittingEnemies.Clear();
+            //
+            // foreach (var result in results)
+            // {
+            //     if (result.TryGetComponent<ColliderControllerBase>(out var colliderController))
+            //     {
+            //         _hittingEnemies.Add(colliderController);
+            //         
+            //         colliderController.InvokeOnHitStartEvent(
+            //             SkeletonStateMachine.EnemyProperties.BasicAttackPower,
+            //             (colliderController.transform.position - SkeletonStateMachine.transform.position).normalized,
+            //             SkeletonStateMachine.EnemyProperties.HitKnockBackPower);
+            //     }
+            // }
         }
         
         private void SkeletonOnAttackBasicCloseOverlap()
