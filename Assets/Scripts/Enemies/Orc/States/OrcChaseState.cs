@@ -6,9 +6,6 @@ using Zenject;
 
 namespace Enemies.Orc.States
 {
-    /// <summary>
-    /// Represents the Orc's chasing state, where the Orc pursues the player.
-    /// </summary>
     public class OrcChaseState : OrcBaseState
     {
         private Vector3 _lastPosition; // Stores the last recorded position for movement calculation
