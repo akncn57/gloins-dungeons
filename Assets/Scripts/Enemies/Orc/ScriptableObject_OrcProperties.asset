@@ -19,7 +19,7 @@ MonoBehaviour:
   HeavyAttackChance: 0
   HeavyAttackPower: 0
   HitKnockBackPower: 0
-  ChaseRadius: 3
+  ChaseRadius: 4.5
   ChasePositionOffset: 0
   BlockChance: 0
   BlockDuration: 0
