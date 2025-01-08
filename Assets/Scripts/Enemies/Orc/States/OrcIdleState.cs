@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.CommandPattern;
 using Enemies.Commands;
 using Tools;
+using UnityEngine;
 using UtilScripts;
 using Zenject;
 
@@ -137,7 +138,7 @@ namespace Enemies.Orc.States
             {
                 TransitionToAttackState();
             }
-            else
+            else if (distanceToPlayer <= OrcStateMachine.EnemyProperties.ChaseRadius)
             {
                 TransitionToChaseState();
             }

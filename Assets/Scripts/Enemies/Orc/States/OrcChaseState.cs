@@ -121,7 +121,7 @@ namespace Enemies.Orc.States
                 // If close to the player, prepare to attack
                 OrcStateMachine.SwitchState(OrcStateMachine.OrcBasicAttackState);
             }
-            else if (distanceToPlayer >= 4f)
+            else if (distanceToPlayer >= OrcStateMachine.EnemyProperties.ChaseRadius)
             {
                 // If the player is too far, switch to idle state
                 OrcStateMachine.SwitchState(OrcStateMachine.OrcIdleState);
