@@ -67,6 +67,7 @@ namespace Enemies.Orc
         public OrcChaseState OrcChaseState { get; private set; }
         public OrcBasicAttackState OrcBasicAttackState { get; private set; }
         public OrcHurtState OrcHurtState { get; private set; }
+        public OrcDeathState OrcDeathState { get; private set; }
 
         private HealthController _healthController;
         private EnemySetDestination _enemySetDestination;
@@ -83,6 +84,7 @@ namespace Enemies.Orc
             OrcChaseState = Instantiator.Instantiate<OrcChaseState>(new object[] { this });
             OrcBasicAttackState = Instantiator.Instantiate<OrcBasicAttackState>(new object[] { this });
             OrcHurtState = Instantiator.Instantiate<OrcHurtState>(new object[] { this });
+            OrcDeathState = Instantiator.Instantiate<OrcDeathState>(new object[] { this });
 
             _healthController = new HealthController(EnemyProperties.Health, EnemyProperties.Health);
             

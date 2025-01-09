@@ -13,6 +13,7 @@ namespace Enemies
         public event Action EnemyOnAttackHeavyFinished;
         public event Action EnemyOnHurtStart;
         public event Action EnemyOnHurtEnd;
+        public event Action EnemyDeath;
         
         public void AttackBasicColliderOpen()
         {
@@ -52,6 +53,11 @@ namespace Enemies
         public void HurtEnd()
         {
             EnemyOnHurtEnd?.Invoke();
+        }
+
+        public void Death()
+        {
+            EnemyDeath?.Invoke();
         }
     }
 }

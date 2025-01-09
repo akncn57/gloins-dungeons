@@ -57,8 +57,8 @@ namespace Enemies.Orc.States
         
         private void CheckDeath()
         {
-            //TODO: Switch the Death State.
-            // if (OrcStateMachine.HealthController.HealthData.Health <= 0) OrcStateMachine.SwitchState(OrcStateMachine.);
+            
+            if (OrcStateMachine.HealthController.HealthData.Health <= 0) OrcStateMachine.SwitchState(OrcStateMachine.OrcDeathState);
         }
     }
 }
