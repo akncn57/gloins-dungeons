@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Enemies
 {
     public abstract class EnemyProperties : ScriptableObject
     {
+        public int Health;
         public float WalkSpeed;
         public float RunSpeed;
         public int BasicAttackPower;

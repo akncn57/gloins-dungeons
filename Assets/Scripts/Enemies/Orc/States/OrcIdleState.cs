@@ -26,6 +26,8 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnEnter()
         {
+            OrcStateMachine.EnemyColliderController.OnHitStart += CheckHurt;
+            
             StopMovement();     // Ensure the Orc halts all movement
             PlayIdleAnimation(); // Transition to the idle animation
             StartIdleTimer();    // Begin the idle timer
@@ -47,6 +49,8 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnExit()
         {
+            OrcStateMachine.EnemyColliderController.OnHitStart -= CheckHurt;
+            
             UnsubscribeFromTimer(); // Prevent memory leaks by unsubscribing from the timer event
         }
 
@@ -175,6 +179,11 @@ namespace Enemies.Orc.States
         private void ExecuteCommand(ICommand command)
         {
             CommandInvoker.ExecuteCommand(command);
+        }
+
+        private void CheckHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+             OrcStateMachine.SwitchState(OrcStateMachine.OrcHurtState);
         }
     }
 }

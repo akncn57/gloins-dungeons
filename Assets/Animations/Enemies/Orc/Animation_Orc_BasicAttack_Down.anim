@@ -22,19 +22,19 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1459632630486504175, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.06666667
+    - time: 0.1
       value: {fileID: 9052120870403060394, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.16666667
+    - time: 0.23333333
       value: {fileID: 7445535814382389512, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.21666667
-      value: {fileID: 4325132614591300427, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
     - time: 0.28333333
+      value: {fileID: 4325132614591300427, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
+    - time: 0.38333333
       value: {fileID: -2266132824719722812, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.36666667
-      value: {fileID: -6951926677087998833, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.43333334
-      value: {fileID: 2566801441112676559, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
     - time: 0.5
+      value: {fileID: -6951926677087998833, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
+    - time: 0.56666666
+      value: {fileID: 2566801441112676559, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
+    - time: 0.6666667
       value: {fileID: 9083741465043326541, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
     attribute: m_Sprite
     path: 
@@ -71,7 +71,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -91,21 +91,21 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.16666667
+  - time: 0.23333333
     functionName: AttackBasicColliderOpen
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.36666667
+  - time: 0.5
     functionName: AttackBasicColliderClose
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.51666665
+  - time: 0.68333334
     functionName: AttackBasicFinished
     data: 
     objectReferenceParameter: {fileID: 0}

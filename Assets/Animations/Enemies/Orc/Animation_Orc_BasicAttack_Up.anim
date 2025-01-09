@@ -22,19 +22,19 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -2090171585303833420, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.06666667
+    - time: 0.083333336
       value: {fileID: -1882217219249422085, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.15
+    - time: 0.2
       value: {fileID: -1314009764107779635, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.21666667
-      value: {fileID: 5896345051488477779, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
     - time: 0.28333333
+      value: {fileID: 5896345051488477779, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
+    - time: 0.38333333
       value: {fileID: -787675763247117579, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.35
+    - time: 0.46666667
       value: {fileID: 8582950131985011519, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.43333334
+    - time: 0.5833333
       value: {fileID: -7601089136935490775, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
-    - time: 0.5
+    - time: 0.6666667
       value: {fileID: -2567584039384428469, guid: 0c3f4e39514dbf04ebb7fe0f41abb12d, type: 3}
     attribute: m_Sprite
     path: 
@@ -71,7 +71,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -91,21 +91,21 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.15
+  - time: 0.2
     functionName: AttackBasicColliderOpen
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.35
+  - time: 0.46666667
     functionName: AttackBasicColliderClose
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.51666665
+  - time: 0.68333334
     functionName: AttackBasicFinished
     data: 
     objectReferenceParameter: {fileID: 0}

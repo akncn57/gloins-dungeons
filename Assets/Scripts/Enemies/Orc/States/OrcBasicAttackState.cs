@@ -9,7 +9,7 @@ namespace Enemies.Orc.States
 {
     public class OrcBasicAttackState : OrcBaseState
     {
-        private static readonly int BasicAttackAnimationHash = Animator.StringToHash("AttackBasic_BlendTree");
+        private static readonly int BasicAttackAnimationHash = Animator.StringToHash("AttackBasic-BlendTree");
         private readonly List<ColliderControllerBase> _hittingEnemies = new(); // List of enemies hit during the attack
         private float _lastAttackTime; // Tracks the time of the last attack
         
@@ -28,6 +28,8 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnEnter()
         {
+            OrcStateMachine.EnemyColliderController.OnHitStart += CheckHurt;
+            
             if (IsAttackOnCooldown())
             {
                 OrcStateMachine.SwitchState(OrcStateMachine.OrcIdleState);
@@ -49,6 +51,8 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnExit()
         {
+            OrcStateMachine.EnemyColliderController.OnHitStart -= CheckHurt;
+            
             UnregisterAnimationEvents();
         }
 
@@ -186,6 +190,11 @@ namespace Enemies.Orc.States
                 return OrcStateMachine.BasicAttackColliderDown;
 
             return null;
+        }
+        
+        private void CheckHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+            OrcStateMachine.SwitchState(OrcStateMachine.OrcHurtState);
         }
     }
 }

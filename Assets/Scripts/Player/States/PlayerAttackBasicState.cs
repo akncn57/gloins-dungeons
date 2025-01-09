@@ -68,7 +68,7 @@ namespace Player.States
         
         private void CheckOnHurt(int damage, Vector3 hitPosition, float knockBackStrength)
         {
-            PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerHurtState);
+            // PlayerStateMachine.SwitchState(PlayerStateMachine.PlayerHurtState);
         }
     }
 }

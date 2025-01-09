@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cf5d0d0299ed940956461bec83b243, type: 3}
   m_Name: ScriptableObject_OrcProperties
   m_EditorClassIdentifier: 
+  Health: 100
   WalkSpeed: 2
   RunSpeed: 3
   BasicAttackPower: 15

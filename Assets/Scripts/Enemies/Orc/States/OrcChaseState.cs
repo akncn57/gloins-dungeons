@@ -32,6 +32,8 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnEnter()
         {
+            OrcStateMachine.EnemyColliderController.OnHitStart += CheckHurt;
+            
             OrcStateMachine.Animator.Play("Run-BlendTree"); // Play the running animation
         }
 
@@ -49,7 +51,7 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnExit()
         {
-            
+            OrcStateMachine.EnemyColliderController.OnHitStart -= CheckHurt;
         }
 
         /// <summary>
@@ -126,6 +128,11 @@ namespace Enemies.Orc.States
                 // If the player is too far, switch to idle state
                 OrcStateMachine.SwitchState(OrcStateMachine.OrcIdleState);
             }
+        }
+        
+        private void CheckHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+            OrcStateMachine.SwitchState(OrcStateMachine.OrcHurtState);
         }
     }
 }

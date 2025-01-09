@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ScriptableObject_PlayerProperties
   m_EditorClassIdentifier: 
   WalkSpeed: 5
-  BasicAttackPower: 15
+  BasicAttackPower: 20
   HeavyAttackPower: 35
-  BasicAttackHitKnockBackPower: 3
+  BasicAttackHitKnockBackPower: 10
   HeavyAttackHitKnockBackPower: 6
   DashForce: 20
   DashTime: 0.3

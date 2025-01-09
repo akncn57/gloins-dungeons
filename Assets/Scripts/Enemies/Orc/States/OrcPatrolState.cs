@@ -33,6 +33,8 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnEnter()
         {
+            OrcStateMachine.EnemyColliderController.OnHitStart += CheckHurt;
+            
             _lastPosition = OrcStateMachine.EnemyNavMeshAgent.transform.position; // Initialize the last position
             OrcStateMachine.Animator.Play("Walk-BlendTree"); // Play the walking animation
             HandlePatrolInitialization(); // Initialize or reset patrol state
@@ -82,6 +84,8 @@ namespace Enemies.Orc.States
         /// </summary>
         public override void OnExit()
         {
+            OrcStateMachine.EnemyColliderController.OnHitStart -= CheckHurt;
+            
             UpdatePatrolIndex();
         }
 
@@ -192,6 +196,11 @@ namespace Enemies.Orc.States
                 OrcStateMachine.Animator.SetFloat(LastHorizontal, horizontal);
                 OrcStateMachine.Animator.SetFloat(LastVertical, vertical);
             }
+        }
+        
+        private void CheckHurt(int damage, Vector3 knockBackPosition, float knockBackPower)
+        {
+            OrcStateMachine.SwitchState(OrcStateMachine.OrcHurtState);
         }
     }
 }

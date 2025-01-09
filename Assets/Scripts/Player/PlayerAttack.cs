@@ -18,11 +18,21 @@ namespace Player
             
             foreach (var result in results)
             {
-                if (result.CompareTag("Player")) return;
-                if (!result) continue;
-                var enemy = result.GetComponent<ColliderControllerBase>();
-                HittingEnemies.Add(enemy);
-                enemy.InvokeOnHitStartEvent(attackPower, (enemy.transform.position - playerPosition).normalized, hitKnockBackPower);
+                // if (result.CompareTag("Player")) return;
+                // if (!result) continue;
+                // var enemy = result.GetComponent<ColliderControllerBase>();
+                // if (enemy != null) continue;
+                // HittingEnemies.Add(enemy);
+                // enemy.InvokeOnHitStartEvent(attackPower, (enemy.transform.position - playerPosition).normalized, hitKnockBackPower);
+
+                if (!result.CompareTag("Player"))
+                {
+                    if (result.TryGetComponent(out ColliderControllerBase colliderController))
+                    {
+                        HittingEnemies.Add(colliderController);
+                        colliderController.InvokeOnHitStartEvent(attackPower, (colliderController.transform.position - playerPosition).normalized, hitKnockBackPower);
+                    }
+                }
             }
         }
         
