@@ -57,6 +57,7 @@ namespace Enemies.Skeleton.States
                 SkeletonStateMachine.EnemyKnockback,
                 SkeletonStateMachine.Rigidbody,
                 SkeletonStateMachine.HitData.HitPosition.x,
+                SkeletonStateMachine.HitData.HitPosition.y,
                 SkeletonStateMachine.HitData.KnockBackStrength);
             CommandInvoker.ExecuteCommand(knockBackCommand);
         }

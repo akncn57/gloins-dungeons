@@ -45,6 +45,7 @@ namespace Enemies.Orc.States
                 OrcStateMachine.EnemyKnockback,
                 OrcStateMachine.Rigidbody,
                 OrcStateMachine.HitData.HitPosition.x,
+                OrcStateMachine.HitData.HitPosition.y,
                 OrcStateMachine.HitData.KnockBackStrength);
             CommandInvoker.ExecuteCommand(knockBackCommand);
         }
