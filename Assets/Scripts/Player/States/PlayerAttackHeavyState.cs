@@ -52,9 +52,9 @@ namespace Player.States
         {
             _attackCommand = new PlayerAttackCommand(
                 PlayerStateMachine.PlayerAttack,
-                PlayerStateMachine.AttackHeavyCollider,
-                PlayerStateMachine.PlayerProperties.HeavyAttackPower,
-                PlayerStateMachine.PlayerProperties.HeavyAttackHitKnockBackPower,
+                (BoxCollider2D)PlayerStateMachine.PlayerDirectionController.GetHeavyAttackCollider(),
+                PlayerStateMachine.PlayerProperties.BasicAttackPower,
+                PlayerStateMachine.PlayerProperties.BasicAttackHitKnockBackPower,
                 PlayerStateMachine.RigidBody.position);
             CommandInvoker.ExecuteCommand(_attackCommand);
             

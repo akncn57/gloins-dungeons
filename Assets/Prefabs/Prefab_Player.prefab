@@ -750,6 +750,10 @@ MonoBehaviour:
   basicAttackLeftCollider: {fileID: 3868520734177678660}
   basicAttackUpCollider: {fileID: 3794485781780387671}
   basicAttackDownCollider: {fileID: 5245088161942402942}
+  heavyAttackRightCollider: {fileID: 1882909084379045973}
+  heavyAttackLeftCollider: {fileID: 9159663591609886295}
+  heavyAttackUpCollider: {fileID: 434912494287382217}
+  heavyAttackDownCollider: {fileID: 7620080108220604081}
 --- !u!114 &1893331197882160776
 MonoBehaviour:
   m_ObjectHideFlags: 0
