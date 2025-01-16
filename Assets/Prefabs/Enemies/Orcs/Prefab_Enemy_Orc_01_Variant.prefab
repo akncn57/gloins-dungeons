@@ -5619,7 +5619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7927619508846127338, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
       propertyPath: m_Name
-      value: Prefab_Enemy_Orc_Variant
+      value: Prefab_Enemy_Orc_01_Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7927619508846127338, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
       propertyPath: m_Layer
