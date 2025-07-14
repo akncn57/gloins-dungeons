@@ -5156,6 +5156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Enemy_Orc_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 447305621094317975, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6118366840503811270, guid: 123b6ffd1a95c7c429a708e75d493ce9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.81

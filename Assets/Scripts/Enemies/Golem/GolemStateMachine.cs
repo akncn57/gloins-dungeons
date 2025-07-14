@@ -1,12 +1,9 @@
 ﻿using System.Collections.Generic;
 using Enemies.Golem.States;
-using Enemies.Orc;
-using Enemies.Orc.States;
 using HealthSystem;
 using HitData;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Enemies.Golem
