@@ -5080,7 +5080,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7466461592652858937}
   - component: {fileID: 8136253145253717278}
-  - component: {fileID: 3139736609117279370}
   m_Layer: 0
   m_Name: Sprite_Warning
   m_TagString: Untagged
@@ -5158,102 +5157,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3139736609117279370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4185173560167469291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e92d851d820b48b1e54d4f5ca8771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sequenceOnEnable: 0
-  enableLoop: 1
-  enableLoopCount: -1
-  sequences:
-  - name: 
-    TweenDatas:
-    - IsTransformAutoSet: 0
-      objectToTween: {fileID: 7466461592652858937}
-      tweenType: 4
-      moveType: 0
-      targetVector: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      jumpPowerRange: {x: 0, y: 0}
-      targetVisual: 1
-      targetColor: {r: 0, g: 0, b: 0, a: 0}
-      alpha: 1
-      useCurve: 0
-      ease: 0
-      curve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      duration: 0.25
-      join: 0
-      insert: 0
-      insertPoint: 0
-      callback: 0
-      unityEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    - IsTransformAutoSet: 0
-      objectToTween: {fileID: 7466461592652858937}
-      tweenType: 4
-      moveType: 0
-      targetVector: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      jumpPowerRange: {x: 0, y: 0}
-      targetVisual: 1
-      targetColor: {r: 0, g: 0, b: 0, a: 1}
-      alpha: 0
-      useCurve: 0
-      ease: 0
-      curve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      duration: 0.25
-      join: 0
-      insert: 0
-      insertPoint: 0
-      callback: 0
-      unityEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    - IsTransformAutoSet: 0
-      objectToTween: {fileID: 7466461592652858937}
-      tweenType: 4
-      moveType: 0
-      targetVector: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      jumpPowerRange: {x: 0, y: 0}
-      targetVisual: 1
-      targetColor: {r: 0, g: 0, b: 0, a: 0}
-      alpha: 1
-      useCurve: 0
-      ease: 0
-      curve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      duration: 0.25
-      join: 0
-      insert: 0
-      insertPoint: 0
-      callback: 0
-      unityEvent:
-        m_PersistentCalls:
-          m_Calls: []
 --- !u!1 &5226658368026351913
 GameObject:
   m_ObjectHideFlags: 0
@@ -5671,19 +5574,7 @@ PrefabInstance:
       addedObject: {fileID: 3439191373737910293}
     - targetCorrespondingSourceObject: {fileID: 7927619508846127338, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3433138627218067338}
-    - targetCorrespondingSourceObject: {fileID: 7927619508846127338, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5308112020274465003}
-    - targetCorrespondingSourceObject: {fileID: 7927619508846127338, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2439591653755735775}
-    - targetCorrespondingSourceObject: {fileID: 7927619508846127338, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7399188440886599914}
-    - targetCorrespondingSourceObject: {fileID: 2870852903471532876, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 2105838561149740633}
   m_SourcePrefab: {fileID: 100100000, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
 --- !u!1 &447305621094317975 stripped
 GameObject:
@@ -5727,28 +5618,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.42750606}
   m_Size: {x: 0.6793756, y: 0.8863963}
   m_Direction: 0
---- !u!195 &3433138627218067338
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447305621094317975}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &5308112020274465003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5761,77 +5630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e39f6090724e4a4a8aadeb042afa2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2439591653755735775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447305621094317975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82abb36c43bc413598c4ac19cd4410f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyBaseStateMachine: {fileID: 7399188440886599914}
---- !u!114 &7399188440886599914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447305621094317975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f91aef6f71b4c0c9d9e536dc2cfbf42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _orcProperties: {fileID: 11400000, guid: 60217bb30f6d2344fa989713378a6a67, type: 2}
-  _orcColliderController: {fileID: 2439591653755735775}
-  _orcAnimationEventTrigger: {fileID: 2105838561149740633}
-  rigidBody: {fileID: 9197666657248117805}
-  collider: {fileID: 3439191373737910293}
-  basicAttackColliderUp: {fileID: 7338497038867438673}
-  basicAttackColliderDown: {fileID: 69053242769544902}
-  basicAttackColliderLeft: {fileID: 7543978137178075262}
-  basicAttackColliderRight: {fileID: 9196643754093485087}
-  animator: {fileID: 7737562823756025142}
-  navMeshAgent: {fileID: 3433138627218067338}
-  patrolCoordinates: []
-  _bloodParticle: {fileID: 6422862922965006203}
-  playerCollider: {fileID: 0}
-  PlayerLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!4 &2135900426838073759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8472845367005656802, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
-  m_PrefabInstance: {fileID: 7507968864620533629}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5757562290907356209 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2870852903471532876, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
-  m_PrefabInstance: {fileID: 7507968864620533629}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2105838561149740633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5757562290907356209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b688523b3941418bd6bb6c72fdf823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &7737562823756025142 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 238956328840157771, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
-  m_PrefabInstance: {fileID: 7507968864620533629}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &9197666657248117805 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1699269865990050640, guid: 15c5a13c5c284cb40a5d68f30e0ad285, type: 3}
   m_PrefabInstance: {fileID: 7507968864620533629}
   m_PrefabAsset: {fileID: 0}
