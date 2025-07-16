@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 507000679476120397}
   - component: {fileID: 1367954976438784724}
   - component: {fileID: 7586337879990168668}
+  - component: {fileID: 423159597482188430}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Player
@@ -77,15 +78,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7132224447251892258, guid: 21cdda166ccd0aa4c9b4c99050a83add, type: 3}
+  m_Sprite: {fileID: -3725521666771283068, guid: d67854d39c1b95048936721028dd10b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.1875, y: 1.71875}
+  m_Size: {x: 1.5372549, y: 1.53125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7586337879990168668
@@ -98,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 1175852810858650023}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 482aba5578fdf5248bd3b7d1007f7fae, type: 2}
+  m_Controller: {fileID: 9100000, guid: 39606f81226413b48a2844488464a25d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,6 +111,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &423159597482188430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175852810858650023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96fbdee0d6a4446be57ad303f5c4e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5415165778118375842
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +167,7 @@ GameObject:
   - component: {fileID: 7176032953458692562}
   - component: {fileID: 8141660944448092658}
   - component: {fileID: 3668276198034107764}
+  - component: {fileID: 7327931628910246600}
   m_Layer: 7
   m_Name: Prefab_Player
   m_TagString: Player
@@ -216,6 +230,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e619b15793da04b837bdb5bd294c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7327931628910246600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866446098461063905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98c83025d63c9947be529b6f4a7812e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  heavyAttackCooldown: 3
+  joystick: {fileID: 0}
+  rb: {fileID: 8141660944448092658}
+  animator: {fileID: 7586337879990168668}
+  spriteRenderer: {fileID: 1367954976438784724}
+  lightAttackButton: {fileID: 0}
+  heavyAttackButton: {fileID: 0}
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0
