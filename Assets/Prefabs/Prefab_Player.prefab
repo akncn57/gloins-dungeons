@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98c83025d63c9947be529b6f4a7812e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 5
   heavyAttackCooldown: 3
   joystick: {fileID: 0}
   rb: {fileID: 8141660944448092658}
@@ -250,6 +250,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1367954976438784724}
   lightAttackButton: {fileID: 0}
   heavyAttackButton: {fileID: 0}
+  testHurtButton: {fileID: 0}
+  testDeathButton: {fileID: 0}
+  resetButton: {fileID: 0}
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

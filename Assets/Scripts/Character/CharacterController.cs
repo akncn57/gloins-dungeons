@@ -1,6 +1,7 @@
 using System.Collections;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
@@ -13,6 +14,9 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Button lightAttackButton;
     [SerializeField] private Button heavyAttackButton;
+    [SerializeField] private Button testHurtButton;
+    [SerializeField] private Button testDeathButton;
+    [SerializeField] private Button resetButton;
 
     private Vector2 _movement;
     private bool _isAttacking;
@@ -20,8 +24,13 @@ public class CharacterController : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
+        
         lightAttackButton.onClick.AddListener(PlayLightAttack);
         heavyAttackButton.onClick.AddListener(PlayHeavyAttack);
+        testHurtButton.onClick.AddListener(TestHurt);
+        testDeathButton.onClick.AddListener(TestDeath);
+        resetButton.onClick.AddListener(ResetLevel);
     }
 
     private void Update()
@@ -83,9 +92,24 @@ public class CharacterController : MonoBehaviour
         yield return new WaitForSeconds(heavyAttackCooldown);
         _isHeavyAttackOnCooldown = false;
     }
-
+    
     public void OnAttackEnd()
     {
         _isAttacking = false;
+    }
+    
+    private void TestHurt()
+    {
+        animator.SetTrigger("hurt");
+    }
+
+    private void TestDeath()
+    {
+        animator.SetTrigger("death");
+    }
+
+    private void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
