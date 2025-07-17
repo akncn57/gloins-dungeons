@@ -5000,7 +5000,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7176032953458692562}
   - component: {fileID: 8141660944448092658}
-  - component: {fileID: 3668276198034107764}
   - component: {fileID: 7327931628910246600}
   m_Layer: 7
   m_Name: Prefab_Player
@@ -5052,18 +5051,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3668276198034107764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5866446098461063905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89e619b15793da04b837bdb5bd294c6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7327931628910246600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5154,7 +5141,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
