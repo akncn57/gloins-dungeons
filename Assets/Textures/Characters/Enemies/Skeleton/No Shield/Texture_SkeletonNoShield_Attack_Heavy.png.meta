@@ -1,49 +1,73 @@
 fileFormatVersion: 2
-guid: ed948ed03a262df4b99ca7701e8660b9
+guid: 0196f351d2aa76a4d8e8947c7f39315f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8477146886089112094
-    second: Skeleton - animations-with rusty sword-atk2_0
+      213: 768631900184135543
+    second: Skeleton - animations-with rusty sword-atk 1_0
   - first:
-      213: -9159724511769393656
-    second: Skeleton - animations-with rusty sword-atk2_1
+      213: 8557723347421492822
+    second: Skeleton - animations-with rusty sword-atk 1_1
   - first:
-      213: -6657835430487297980
-    second: Skeleton - animations-with rusty sword-atk2_2
+      213: -4104381279879466697
+    second: Skeleton - animations-with rusty sword-atk 1_2
   - first:
-      213: -9130571086226870330
-    second: Skeleton - animations-with rusty sword-atk2_3
+      213: 1795585615866217755
+    second: Skeleton - animations-with rusty sword-atk 1_3
   - first:
-      213: 6990810688330962493
-    second: Skeleton - animations-with rusty sword-atk2_4
+      213: -4716883574743891771
+    second: Skeleton - animations-with rusty sword-atk 1_4
   - first:
-      213: -5241703937803514737
-    second: Skeleton - animations-with rusty sword-atk2_5
+      213: -1253972964415257924
+    second: Skeleton - animations-with rusty sword-atk 1_5
   - first:
-      213: 4423944352078507215
-    second: Skeleton - animations-with rusty sword-atk2_6
+      213: -684727498154316907
+    second: Skeleton - animations-with rusty sword-atk 1_6
   - first:
-      213: 3864358266581927905
-    second: Skeleton - animations-with rusty sword-atk2_7
+      213: 1385473434363948085
+    second: Skeleton - animations-with rusty sword-atk 1_7
   - first:
-      213: -4528608427458938043
-    second: Skeleton - animations-with rusty sword-atk2_8
+      213: 2321143486678940440
+    second: Skeleton - animations-with rusty sword-atk 1_8
   - first:
-      213: 7073678776567726977
-    second: Skeleton - animations-with rusty sword-atk2_9
+      213: 4678316698162701071
+    second: Skeleton - animations-with rusty sword-atk 1_9
   - first:
-      213: 2935165634407437537
-    second: Skeleton - animations-with rusty sword-atk2_10
+      213: -5659851733250553776
+    second: Skeleton - animations-with rusty sword-atk 1_10
   - first:
-      213: -3757903426295938589
-    second: Skeleton - animations-with rusty sword-atk2_11
+      213: -3107335072828817752
+    second: Skeleton - animations-with rusty sword-atk 1_11
   - first:
-      213: 948431819183001146
-    second: Skeleton - animations-with rusty sword-atk2_12
+      213: -8537687163740353226
+    second: Skeleton - animations-with rusty sword-atk 1_12
   - first:
-      213: 2934172660441162458
-    second: Skeleton - animations-with rusty sword-atk2_13
+      213: 7820094209531369339
+    second: Skeleton - animations-with rusty sword-atk 1_13
+  - first:
+      213: 5419737234719186041
+    second: Skeleton - animations-with rusty sword-atk 1_14
+  - first:
+      213: 5375393794181457159
+    second: Skeleton - animations-with rusty sword-atk 1_15
+  - first:
+      213: -5885432532808371442
+    second: Skeleton - animations-with rusty sword-atk 1_16
+  - first:
+      213: 1159412412081646979
+    second: Skeleton - animations-with rusty sword-atk 1_17
+  - first:
+      213: 1347075128842237307
+    second: Skeleton - animations-with rusty sword-atk 1_18
+  - first:
+      213: -6542874037726076347
+    second: Skeleton - animations-with rusty sword-atk 1_19
+  - first:
+      213: -8046389509141088773
+    second: Skeleton - animations-with rusty sword-atk 1_20
+  - first:
+      213: 5314424950489000776
+    second: Skeleton - animations-with rusty sword-atk 1_21
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -90,7 +114,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,7 +135,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -152,309 +176,397 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_0
+      name: Skeleton - animations-with rusty sword-atk 1_0
       rect:
         serializedVersion: 2
         x: 65
         y: 71
         width: 73
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.63837266, y: 0.036841102}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1a7626dd20e4a570800000000000000
-      internalID: 8477146886089112094
+      spriteID: 777428d04aabaaa00800000000000000
+      internalID: 768631900184135543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_1
+      name: Skeleton - animations-with rusty sword-atk 1_1
       rect:
         serializedVersion: 2
         x: 284
         y: 71
         width: 73
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6671251, y: 0.031486668}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8060c8b361f12e080800000000000000
-      internalID: -9159724511769393656
+      spriteID: 656ff113b0423c670800000000000000
+      internalID: 8557723347421492822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_2
+      name: Skeleton - animations-with rusty sword-atk 1_2
       rect:
         serializedVersion: 2
-        x: 499
-        y: 71
-        width: 67
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4407bc063fd9a93a0800000000000000
-      internalID: -6657835430487297980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_3
-      rect:
-        serializedVersion: 2
-        x: 562
-        y: 84
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cfaef019f1b94180800000000000000
-      internalID: -9130571086226870330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_4
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 71
-        width: 69
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3698f93849540160800000000000000
-      internalID: 6990810688330962493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_5
-      rect:
-        serializedVersion: 2
-        x: 939
-        y: 63
-        width: 108
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f8c84715a0ab147b0800000000000000
-      internalID: -5241703937803514737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_6
-      rect:
-        serializedVersion: 2
-        x: 1166
-        y: 64
-        width: 104
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fcc2cbbf2f1056d30800000000000000
-      internalID: 4423944352078507215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_7
-      rect:
-        serializedVersion: 2
-        x: 1387
-        y: 69
-        width: 104
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e7c5748e55f0a530800000000000000
-      internalID: 3864358266581927905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_8
-      rect:
-        serializedVersion: 2
-        x: 1641
-        y: 70
-        width: 71
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 54b387af0a62721c0800000000000000
-      internalID: -4528608427458938043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_9
-      rect:
-        serializedVersion: 2
-        x: 1849
-        y: 71
-        width: 84
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1830a8c8e51ca2260800000000000000
-      internalID: 7073678776567726977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_10
-      rect:
-        serializedVersion: 2
-        x: 2043
+        x: 494
         y: 71
         width: 82
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 50
+      alignment: 9
+      pivot: {x: 0.72717285, y: 0.035609435}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e41ac3e79dcbb820800000000000000
-      internalID: 2935165634407437537
+      spriteID: 731750ec8fe4a07c0800000000000000
+      internalID: -4104381279879466697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_11
+      name: Skeleton - animations-with rusty sword-atk 1_3
       rect:
         serializedVersion: 2
-        x: 2265
+        x: 713
         y: 71
-        width: 69
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 80
+        height: 68
+      alignment: 9
+      pivot: {x: 0.79516447, y: 0.02349416}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e148677ebe39dbc0800000000000000
-      internalID: -3757903426295938589
+      spriteID: b15c18daa933be810800000000000000
+      internalID: 1795585615866217755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_12
+      name: Skeleton - animations-with rusty sword-atk 1_4
       rect:
         serializedVersion: 2
-        x: 2483
-        y: 71
-        width: 73
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 932
+        y: 69
+        width: 143
+        height: 71
+      alignment: 9
+      pivot: {x: 0.54361707, y: 0.06075448}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3e841ce6b1892d00800000000000000
-      internalID: 948431819183001146
+      spriteID: 5c0048041634a8eb0800000000000000
+      internalID: -4716883574743891771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-atk2_13
+      name: Skeleton - animations-with rusty sword-atk 1_5
       rect:
         serializedVersion: 2
-        x: 2702
-        y: 71
-        width: 76
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1155
+        y: 65
+        width: 148
+        height: 75
+      alignment: 9
+      pivot: {x: 0.50270206, y: 0.101930946}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad2224f1d7648b820800000000000000
-      internalID: 2934172660441162458
+      spriteID: cb2c5129b3ef89ee0800000000000000
+      internalID: -1253972964415257924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_7
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 64
+        width: 150
+        height: 77
+      alignment: 9
+      pivot: {x: 0.5050049, y: 0.108073644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ce00d7fb03a3310800000000000000
+      internalID: 1385473434363948085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_8
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 65
+        width: 122
+        height: 78
+      alignment: 9
+      pivot: {x: 0.38308766, y: 0.091924615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bb53404bb563020800000000000000
+      internalID: 2321143486678940440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_9
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 69
+        width: 97
+        height: 48
+      alignment: 9
+      pivot: {x: 0.22138898, y: 0.06521686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0324cc0048bce040800000000000000
+      internalID: 4678316698162701071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_10
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 71
+        width: 72
+        height: 46
+      alignment: 9
+      pivot: {x: 0.3039822, y: 0.03652158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058c836f5da2471b0800000000000000
+      internalID: -5659851733250553776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_11
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 71
+        width: 70
+        height: 46
+      alignment: 9
+      pivot: {x: 0.3069615, y: 0.033257693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aefce1f63780e4d0800000000000000
+      internalID: -3107335072828817752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_12
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 71
+        width: 65
+        height: 46
+      alignment: 9
+      pivot: {x: 0.28980243, y: 0.033257693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d08d952ca048980800000000000000
+      internalID: -8537687163740353226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_13
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 71
+        width: 49
+        height: 47
+      alignment: 9
+      pivot: {x: 0.1598872, y: 0.03679933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77d43d304e868c60800000000000000
+      internalID: 7820094209531369339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_14
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 71
+        width: 62
+        height: 49
+      alignment: 9
+      pivot: {x: 0.30384877, y: 0.03732082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c156bcc46c63b40800000000000000
+      internalID: 5419737234719186041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_15
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 71
+        width: 98
+        height: 49
+      alignment: 9
+      pivot: {x: 0.53064215, y: 0.03732082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705660efc2c399a40800000000000000
+      internalID: 5375393794181457159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_16
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 71
+        width: 101
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5118928, y: 0.040385034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03fd643b4eb25ea0800000000000000
+      internalID: -5885432532808371442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_17
+      rect:
+        serializedVersion: 2
+        x: 3581
+        y: 71
+        width: 91
+        height: 49
+      alignment: 9
+      pivot: {x: 0.56104857, y: 0.040385034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d2e4a227f071010800000000000000
+      internalID: 1159412412081646979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton - animations-with rusty sword-atk 1_18
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 71
+        width: 77
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6793895, y: 0.03425676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75b76c41b5c1b210800000000000000
+      internalID: 1347075128842237307
       vertices: []
       indices: 
       edges: []
@@ -463,7 +575,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 22426000c9cc9574a82145ac7fe62aff
     internalID: 0
     vertices: []
     indices: 
@@ -473,20 +585,28 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Skeleton - animations-with rusty sword-atk2_0: 8477146886089112094
-      Skeleton - animations-with rusty sword-atk2_1: -9159724511769393656
-      Skeleton - animations-with rusty sword-atk2_10: 2935165634407437537
-      Skeleton - animations-with rusty sword-atk2_11: -3757903426295938589
-      Skeleton - animations-with rusty sword-atk2_12: 948431819183001146
-      Skeleton - animations-with rusty sword-atk2_13: 2934172660441162458
-      Skeleton - animations-with rusty sword-atk2_2: -6657835430487297980
-      Skeleton - animations-with rusty sword-atk2_3: -9130571086226870330
-      Skeleton - animations-with rusty sword-atk2_4: 6990810688330962493
-      Skeleton - animations-with rusty sword-atk2_5: -5241703937803514737
-      Skeleton - animations-with rusty sword-atk2_6: 4423944352078507215
-      Skeleton - animations-with rusty sword-atk2_7: 3864358266581927905
-      Skeleton - animations-with rusty sword-atk2_8: -4528608427458938043
-      Skeleton - animations-with rusty sword-atk2_9: 7073678776567726977
+      Skeleton - animations-with rusty sword-atk 1_0: 768631900184135543
+      Skeleton - animations-with rusty sword-atk 1_1: 8557723347421492822
+      Skeleton - animations-with rusty sword-atk 1_10: -5659851733250553776
+      Skeleton - animations-with rusty sword-atk 1_11: -3107335072828817752
+      Skeleton - animations-with rusty sword-atk 1_12: -8537687163740353226
+      Skeleton - animations-with rusty sword-atk 1_13: 7820094209531369339
+      Skeleton - animations-with rusty sword-atk 1_14: 5419737234719186041
+      Skeleton - animations-with rusty sword-atk 1_15: 5375393794181457159
+      Skeleton - animations-with rusty sword-atk 1_16: -5885432532808371442
+      Skeleton - animations-with rusty sword-atk 1_17: 1159412412081646979
+      Skeleton - animations-with rusty sword-atk 1_18: 1347075128842237307
+      Skeleton - animations-with rusty sword-atk 1_19: -6542874037726076347
+      Skeleton - animations-with rusty sword-atk 1_2: -4104381279879466697
+      Skeleton - animations-with rusty sword-atk 1_20: -8046389509141088773
+      Skeleton - animations-with rusty sword-atk 1_21: 5314424950489000776
+      Skeleton - animations-with rusty sword-atk 1_3: 1795585615866217755
+      Skeleton - animations-with rusty sword-atk 1_4: -4716883574743891771
+      Skeleton - animations-with rusty sword-atk 1_5: -1253972964415257924
+      Skeleton - animations-with rusty sword-atk 1_6: -684727498154316907
+      Skeleton - animations-with rusty sword-atk 1_7: 1385473434363948085
+      Skeleton - animations-with rusty sword-atk 1_8: 2321143486678940440
+      Skeleton - animations-with rusty sword-atk 1_9: 4678316698162701071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

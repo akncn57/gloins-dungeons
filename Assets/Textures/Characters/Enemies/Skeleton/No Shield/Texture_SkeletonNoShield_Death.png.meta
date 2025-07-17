@@ -162,7 +162,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -183,7 +183,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -231,8 +231,8 @@ TextureImporter:
         y: 71
         width: 73
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.64118373, y: 0.03425567}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -253,8 +253,8 @@ TextureImporter:
         y: 71
         width: 80
         height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.63865626, y: 0.030518176}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,8 +275,8 @@ TextureImporter:
         y: 71
         width: 80
         height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6318916, y: 0.043073017}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -295,10 +295,10 @@ TextureImporter:
         serializedVersion: 2
         x: 721
         y: 71
-        width: 59
+        width: 80
         height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.63358307, y: 0.04384205}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -312,37 +312,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_4
-      rect:
-        serializedVersion: 2
-        x: 779
-        y: 90
-        width: 22
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e40639b3da91271b0800000000000000
-      internalID: -5660433549831741362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Skeleton - animations-with rusty sword-death_5
       rect:
         serializedVersion: 2
         x: 940
         y: 70
-        width: 58
+        width: 83
         height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6189759, y: 0.16007976}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,59 +334,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_6
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 93
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ce32b1f5993e2e10800000000000000
-      internalID: 2174738986234429123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_7
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 88
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33a2bb535b3cb0210800000000000000
-      internalID: 1300348100484475443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Skeleton - animations-with rusty sword-death_8
       rect:
         serializedVersion: 2
         x: 1158
         y: 47
-        width: 59
+        width: 89
         height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.62615484, y: 0.46135008}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -422,37 +356,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_9
-      rect:
-        serializedVersion: 2
-        x: 1223
-        y: 85
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45a40567415279fb0800000000000000
-      internalID: -4641200121167459756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Skeleton - animations-with rusty sword-death_10
       rect:
         serializedVersion: 2
         x: 1375
         y: 50
-        width: 60
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 94
+        height: 63
+      alignment: 9
+      pivot: {x: 0.6444494, y: 0.27691057}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -471,10 +383,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1595
         y: 48
-        width: 60
+        width: 94
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6368473, y: 0.35483813}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -493,10 +405,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1810
         y: 48
-        width: 64
+        width: 100
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.64769286, y: 0.3287835}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -510,125 +422,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_13
-      rect:
-        serializedVersion: 2
-        x: 774
-        y: 71
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc48fa79fffd5f4f0800000000000000
-      internalID: -795483470306507571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_14
-      rect:
-        serializedVersion: 2
-        x: 995
-        y: 73
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22e615793ac7ef3e0800000000000000
-      internalID: -2018038540955193822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_15
-      rect:
-        serializedVersion: 2
-        x: 1216
-        y: 72
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78005d9135649b1a0800000000000000
-      internalID: -6793321240182062969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_16
-      rect:
-        serializedVersion: 2
-        x: 1230
-        y: 80
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d09657fbddf59a830800000000000000
-      internalID: 4082899943192619277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_17
-      rect:
-        serializedVersion: 2
-        x: 1444
-        y: 74
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e4cdf500451b39900800000000000000
-      internalID: 690090142259469390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Skeleton - animations-with rusty sword-death_18
       rect:
         serializedVersion: 2
         x: 2028
         y: 48
-        width: 66
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 103
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6549558, y: 0.5357319}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -647,10 +449,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2247
         y: 48
-        width: 67
+        width: 105
         height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6474656, y: 0.6429282}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -669,10 +471,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2466
         y: 48
-        width: 68
+        width: 106
         height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.64832234, y: 0.6429282}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -691,10 +493,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2686
         y: 48
-        width: 68
+        width: 105
         height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.65880996, y: 0.6361221}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -707,363 +509,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_22
-      rect:
-        serializedVersion: 2
-        x: 1437
-        y: 66
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df34c233511e5dd00800000000000000
-      internalID: 996950373701534717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_23
-      rect:
-        serializedVersion: 2
-        x: 1451
-        y: 70
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0941a2850b9859330800000000000000
-      internalID: 3717028457950614672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_24
-      rect:
-        serializedVersion: 2
-        x: 1657
-        y: 67
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7d2f2871ae793d90800000000000000
-      internalID: -7117518504111166085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_25
-      rect:
-        serializedVersion: 2
-        x: 1671
-        y: 63
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69d9659d8f489f110800000000000000
-      internalID: 1295212572178816406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_26
-      rect:
-        serializedVersion: 2
-        x: 1877
-        y: 61
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c63d985aa6fe0460800000000000000
-      internalID: 7209971264958314176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_27
-      rect:
-        serializedVersion: 2
-        x: 1892
-        y: 62
-        width: 15
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5804a61042ab7dd00800000000000000
-      internalID: 997470506291183749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_28
-      rect:
-        serializedVersion: 2
-        x: 2097
-        y: 61
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2aff6730ce1a9e2d0800000000000000
-      internalID: -3248887621128618078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_29
-      rect:
-        serializedVersion: 2
-        x: 2114
-        y: 62
-        width: 15
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ae0d9b71c2c333d0800000000000000
-      internalID: -3228022371636146526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_30
-      rect:
-        serializedVersion: 2
-        x: 2317
-        y: 60
-        width: 16
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e89f2beaaa1e2f080800000000000000
-      internalID: -9155006969299142258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_31
-      rect:
-        serializedVersion: 2
-        x: 2537
-        y: 66
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4fba6e034e0776350800000000000000
-      internalID: 6009896353124494324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_32
-      rect:
-        serializedVersion: 2
-        x: 2757
-        y: 66
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4075225a9c3226140800000000000000
-      internalID: 4711367509148849924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_33
-      rect:
-        serializedVersion: 2
-        x: 2334
-        y: 60
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddd16e336a5fd9c30800000000000000
-      internalID: 4367917307803344349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_34
-      rect:
-        serializedVersion: 2
-        x: 2545
-        y: 60
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 438e9eba718c87610800000000000000
-      internalID: 1619264070033729588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_35
-      rect:
-        serializedVersion: 2
-        x: 2554
-        y: 60
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd3de2aec37924360800000000000000
-      internalID: 7152445446100538335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_36
-      rect:
-        serializedVersion: 2
-        x: 2765
-        y: 60
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1c37d6ead63447190800000000000000
-      internalID: -7965667702554659903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skeleton - animations-with rusty sword-death_37
-      rect:
-        serializedVersion: 2
-        x: 2774
-        y: 60
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8fa46eb9532272a10800000000000000
-      internalID: 1884512582722013944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a6aee78f15ac0524e873482a960c0d9e
     internalID: 0
     vertices: []
     indices: 
