@@ -244,12 +244,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   heavyAttackCooldown: 3
+  dashSpeed: 15
+  dashDuration: 0.2
   joystick: {fileID: 0}
   rb: {fileID: 8141660944448092658}
   animator: {fileID: 7586337879990168668}
   spriteRenderer: {fileID: 1367954976438784724}
   lightAttackButton: {fileID: 0}
   heavyAttackButton: {fileID: 0}
+  dashButton: {fileID: 0}
   testHurtButton: {fileID: 0}
   testDeathButton: {fileID: 0}
   resetButton: {fileID: 0}
@@ -319,6 +322,6 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.015072018, y: 0.55274045}
-  m_Size: {x: 0.43803138, y: 0.81595016}
+  m_Offset: {x: -0.015071988, y: 0.7476438}
+  m_Size: {x: 0.6506535, y: 1.3900297}
   m_Direction: 0
