@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float dashSpeed = 10f;
     [SerializeField] private float dashDuration = 0.2f;
     [SerializeField] private int dashCooldown = 3;
+    [SerializeField] private ParticleSystem dashEffect;
     [SerializeField] private Joystick joystick;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
@@ -125,6 +126,8 @@ public class CharacterController : MonoBehaviour
         {
             _dashDirection = spriteRenderer.flipX ? Vector2.left : Vector2.right;
         }
+        
+        dashEffect.Play();
 
         StartCoroutine(DashRoutine());
     }
