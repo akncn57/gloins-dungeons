@@ -13,10 +13,10 @@ namespace Character
         
         public void EndAttack()
         {
-            if (_characterController != null)
-            {
-                _characterController.OnAttackEnd();
-            }
+            // if (_characterController != null)
+            // {
+            //     _characterController.OnAttackEnd();
+            // }
         }
     }
 }

@@ -36,6 +36,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1367954976438784724
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -54,6 +55,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -75,9 +78,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -3725521666771283068, guid: d67854d39c1b95048936721028dd10b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -87,7 +92,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7586337879990168668
 Animator:
@@ -4881,7 +4885,7 @@ ParticleSystem:
     vectorLabel1_3: W
 --- !u!199 &6144154423814040951
 ParticleSystemRenderer:
-  serializedVersion: 6
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4900,6 +4904,8 @@ ParticleSystemRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4921,9 +4927,11 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
+  m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4955,7 +4963,6 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
-  m_MaskInteraction: 0
 --- !u!1 &5415165778118375842
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,22 +5070,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98c83025d63c9947be529b6f4a7812e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  heavyAttackCooldown: 3
-  dashSpeed: 15
-  dashDuration: 0.2
-  dashCooldown: 3
-  dashEffect: {fileID: 1963916658784275977}
+  <Rb>k__BackingField: {fileID: 8141660944448092658}
+  <Animator>k__BackingField: {fileID: 7586337879990168668}
+  <SpriteRenderer>k__BackingField: {fileID: 1367954976438784724}
+  <DashEffect>k__BackingField: {fileID: 1963916658784275977}
+  <CharacterStats>k__BackingField: {fileID: 11400000, guid: 9c46df322529c6047ba536fc2b5f3c90, type: 2}
   joystick: {fileID: 0}
-  rb: {fileID: 8141660944448092658}
-  animator: {fileID: 7586337879990168668}
-  spriteRenderer: {fileID: 1367954976438784724}
-  lightAttackButton: {fileID: 0}
-  heavyAttackButton: {fileID: 0}
-  dashButton: {fileID: 0}
-  testHurtButton: {fileID: 0}
-  testDeathButton: {fileID: 0}
-  resetButton: {fileID: 0}
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

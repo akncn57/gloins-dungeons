@@ -3,7 +3,7 @@ using StateMachine;
 
 namespace Character
 {
-    public class PlayerStateMachine : BaseStateMachine<CharacterController>
+    public class CharacterStateMachine : BaseStateMachine<CharacterController>
     {
         public IdleState IdleState { get; }
         public WalkState WalkState { get; }
@@ -13,7 +13,7 @@ namespace Character
         public HurtState HurtState { get; }
         public DeathState DeathState { get; }
         
-        public PlayerStateMachine(CharacterController context)
+        public CharacterStateMachine(CharacterController context)
         {
             IdleState = new IdleState(context, this);
             WalkState = new WalkState(context, this);

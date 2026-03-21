@@ -1,6 +1,6 @@
 ﻿namespace StateMachine
 {
-    public abstract class StateMachine<T>
+    public abstract class BaseStateMachine<T>
     {
         public State<T> CurrentState { get; protected set; }
     

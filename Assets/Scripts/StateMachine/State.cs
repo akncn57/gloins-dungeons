@@ -1,14 +1,19 @@
-﻿public abstract class State
+﻿namespace StateMachine
 {
-    protected StateMachine StateMachine;
-
-    protected State(StateMachine stateMachine)
+    public abstract class State<T>
     {
-        StateMachine = stateMachine;
-    }
+        protected BaseStateMachine<T> BaseStateMachine;
+        protected T Context;
 
-    public virtual void Enter() { }
-    public virtual void Exit() { }
-    public virtual void Update() { }
-    public virtual void FixedUpdate() { }
+        protected State(T context, BaseStateMachine<T> baseStateMachine)
+        {
+            Context = context;
+            BaseStateMachine = baseStateMachine;
+        }
+
+        public virtual void Enter() { }
+        public virtual void Exit() { }
+        public virtual void Update() { }
+        public virtual void FixedUpdate() { }
+    }
 }
