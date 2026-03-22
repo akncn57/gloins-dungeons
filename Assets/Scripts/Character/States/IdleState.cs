@@ -27,5 +27,10 @@ namespace Character.States
                 CharacterStateMachine.ChangeState(CharacterStateMachine.DashState);
             }
         }
+
+        public override void OnLightAttackCommand()
+        {
+            CharacterStateMachine.ChangeState(CharacterStateMachine.LightAttackState);
+        }
     }
 }

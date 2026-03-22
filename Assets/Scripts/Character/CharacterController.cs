@@ -60,6 +60,11 @@ namespace Character
         {
             return Time.time >= LastDashTime + CharacterStats.DashCooldown;
         }
+        
+        public void OnLightAttackAnimationEnd()
+        {
+            _characterStateMachine.OnLightAttackAnimationEnd();
+        }
 
         // [SerializeField] private float moveSpeed = 5f;
         // [SerializeField] private int heavyAttackCooldown = 3;

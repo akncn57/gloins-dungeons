@@ -30,6 +30,11 @@ namespace Character
         {
             (CurrentState as CharacterStateBase)?.OnLightAttackCommand();
         }
+        
+        public void OnLightAttackAnimationEnd()
+        {
+            (CurrentState as CharacterStateBase)?.OnLightAttackAnimationEndCommand();
+        }
 
         public void OnHeavyAttackPressed()
         {
