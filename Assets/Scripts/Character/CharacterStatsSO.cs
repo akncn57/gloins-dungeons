@@ -15,6 +15,6 @@ namespace Character
         [Title("Dash Settings", "Dash ability settings")]
         [field: SerializeField] public float DashSpeed { get; private set; } = 10f;
         [field: SerializeField] public float DashDuration { get; private set; } = 0.2f;
-        [field: SerializeField] public int DashCooldown { get; private set; } = 3;
+        [field: SerializeField] public float DashCooldown { get; set; } = 3;
     }
 }

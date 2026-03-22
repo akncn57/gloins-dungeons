@@ -25,5 +25,20 @@ namespace Character
             
             Initialize(IdleState);
         }
+        
+        public void OnLightAttackPressed()
+        {
+            (CurrentState as CharacterStateBase)?.OnLightAttackCommand();
+        }
+
+        public void OnHeavyAttackPressed()
+        {
+            (CurrentState as CharacterStateBase)?.OnHeavyAttackCommand();
+        }
+
+        public void OnDashPressed()
+        {
+            (CurrentState as CharacterStateBase)?.OnDashCommand();
+        }
     }
 }

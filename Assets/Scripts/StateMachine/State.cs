@@ -2,13 +2,13 @@
 {
     public abstract class State<T>
     {
-        protected BaseStateMachine<T> BaseStateMachine;
+        protected BaseStateMachine<T> StateMachine;
         protected T Context;
 
-        protected State(T context, BaseStateMachine<T> baseStateMachine)
+        protected State(T context, BaseStateMachine<T> stateMachine)
         {
             Context = context;
-            BaseStateMachine = baseStateMachine;
+            StateMachine = stateMachine;
         }
 
         public virtual void Enter() { }

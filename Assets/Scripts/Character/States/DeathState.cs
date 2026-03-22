@@ -1,9 +1,9 @@
-﻿using StateMachine;
+﻿using UnityEngine;
 
 namespace Character.States
 {
-    public class DeathState : State<CharacterController>
+    public class DeathState : CharacterStateBase
     {
-        public DeathState(CharacterController context, BaseStateMachine<CharacterController> baseStateMachine) : base(context, baseStateMachine) {}
+        public DeathState(CharacterController context, CharacterStateMachine stateMachine) : base(context, stateMachine) {}
     }
 }
