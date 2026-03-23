@@ -27,6 +27,7 @@ namespace Character
         
         public Vector2 MovementInput { get; private set; }
         public float LastDashTime { get; set; } = -100f;
+        public float LastHeavyAttackTime { get; set; } = -100f;
         
         private CharacterStateMachine _characterStateMachine;
 
@@ -61,9 +62,19 @@ namespace Character
             return Time.time >= LastDashTime + CharacterStats.DashCooldown;
         }
         
+        public bool CanHeavyAttack()
+        {
+            return Time.time >= LastHeavyAttackTime + CharacterStats.HeavyAttackCooldown;
+        }
+        
         public void OnLightAttackAnimationEnd()
         {
             _characterStateMachine.OnLightAttackAnimationEnd();
+        }
+        
+        public void OnHeavyAttackAnimationEnd()
+        {
+            _characterStateMachine.OnHeavyAttackAnimationEnd();
         }
 
         // [SerializeField] private float moveSpeed = 5f;

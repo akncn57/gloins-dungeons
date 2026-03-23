@@ -11,9 +11,14 @@ namespace Character
             _characterController = GetComponentInParent<CharacterController>();
         }
         
-        public void EndAttack()
+        public void EndLightAttack()
         {
             _characterController.OnLightAttackAnimationEnd();
+        }
+        
+        public void EndHeavyAttack()
+        {
+            _characterController.OnHeavyAttackAnimationEnd();
         }
     }
 }

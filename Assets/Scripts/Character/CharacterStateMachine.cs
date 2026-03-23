@@ -40,6 +40,11 @@ namespace Character
         {
             (CurrentState as CharacterStateBase)?.OnHeavyAttackCommand();
         }
+        
+        public void OnHeavyAttackAnimationEnd()
+        {
+            (CurrentState as CharacterStateBase)?.OnHeavyAttackAnimationEndCommand();
+        }
 
         public void OnDashPressed()
         {

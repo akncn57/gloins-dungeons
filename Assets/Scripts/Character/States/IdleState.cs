@@ -32,5 +32,13 @@ namespace Character.States
         {
             CharacterStateMachine.ChangeState(CharacterStateMachine.LightAttackState);
         }
+
+        public override void OnHeavyAttackCommand()
+        {
+            if (Context.CanHeavyAttack())
+            {
+                CharacterStateMachine.ChangeState(CharacterStateMachine.HeavyAttackState);
+            }
+        }
     }
 }
