@@ -50,5 +50,10 @@ namespace Character
         {
             (CurrentState as CharacterStateBase)?.OnDashCommand();
         }
+
+        public void OnHurtAnimationEnd()
+        {
+            (CurrentState as CharacterStateBase)?.OnHurtAnimationEndCommand();
+        }
     }
 }

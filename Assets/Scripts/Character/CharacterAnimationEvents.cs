@@ -20,5 +20,10 @@ namespace Character
         {
             _characterController.OnHeavyAttackAnimationEnd();
         }
+
+        public void EndHurt()
+        {
+            _characterController.OnHurtAnimationEnd();
+        }
     }
 }
