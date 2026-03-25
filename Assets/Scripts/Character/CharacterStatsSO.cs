@@ -6,6 +6,9 @@ namespace Character
     [CreateAssetMenu(fileName = "NewCharacterStats", menuName = "Game Data/Character Stats")]
     public class CharacterStatsSO : ScriptableObject
     {
+        [Title("Health Settings", "Health and defense settings")]
+        [field: SerializeField] public int MaxHealth { get; private set; } = 100;
+        
         [Title("Movement Settings", "Basic movement settings")]
         [field: SerializeField] public float MoveSpeed { get; private set; } = 5f;
 

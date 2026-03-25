@@ -40,5 +40,10 @@ namespace Character.States
                 CharacterStateMachine.ChangeState(CharacterStateMachine.HeavyAttackState);
             }
         }
+
+        public override void OnHurtCommand()
+        {
+            CharacterStateMachine.ChangeState(CharacterStateMachine.HurtState);
+        }
     }
 }

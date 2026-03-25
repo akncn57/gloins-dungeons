@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
+using Health;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Character
@@ -13,6 +11,7 @@ namespace Character
         [field: SerializeField, BoxGroup("Components")] public Animator Animator { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public SpriteRenderer SpriteRenderer { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public ParticleSystem DashEffect { get; private set; }
+        [field: SerializeField, BoxGroup("Components")] public HealthController HealthController { get; private set; }
         
         [field: SerializeField, BoxGroup("Stats"),Required] public CharacterStatsSO CharacterStats { get; private set; }
         
@@ -36,6 +35,7 @@ namespace Character
             Application.targetFrameRate = 60;
             
             _characterStateMachine = new CharacterStateMachine(this);
+            HealthController.Initialize(CharacterStats.MaxHealth);
         }
 
         private void Start()
@@ -43,6 +43,7 @@ namespace Character
             lightAttackButton.onClick.AddListener(() => _characterStateMachine.OnLightAttackPressed());
             heavyAttackButton.onClick.AddListener(() => _characterStateMachine.OnHeavyAttackPressed());
             dashButton.onClick.AddListener(() => _characterStateMachine.OnDashPressed());
+            testHurtButton.onClick.AddListener(() => _characterStateMachine.OnHurt());
         }
 
         private void Update()

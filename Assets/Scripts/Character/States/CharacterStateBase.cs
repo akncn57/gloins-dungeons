@@ -16,6 +16,7 @@ namespace Character.States
         public virtual void OnHeavyAttackCommand() { }
         public virtual void OnHeavyAttackAnimationEndCommand() { }
         public virtual void OnDashCommand() { }
+        public virtual void OnHurtCommand() { }
         public virtual void OnHurtAnimationEndCommand() { }
     }
 }

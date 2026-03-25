@@ -5008,6 +5008,7 @@ GameObject:
   - component: {fileID: 7176032953458692562}
   - component: {fileID: 8141660944448092658}
   - component: {fileID: 7327931628910246600}
+  - component: {fileID: 6714986189394194241}
   m_Layer: 7
   m_Name: Prefab_Player
   m_TagString: Player
@@ -5074,8 +5075,27 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 7586337879990168668}
   <SpriteRenderer>k__BackingField: {fileID: 1367954976438784724}
   <DashEffect>k__BackingField: {fileID: 1963916658784275977}
+  <HealthController>k__BackingField: {fileID: 6714986189394194241}
   <CharacterStats>k__BackingField: {fileID: 11400000, guid: 9c46df322529c6047ba536fc2b5f3c90, type: 2}
   joystick: {fileID: 0}
+  lightAttackButton: {fileID: 0}
+  heavyAttackButton: {fileID: 0}
+  dashButton: {fileID: 0}
+  testHurtButton: {fileID: 0}
+  testDeathButton: {fileID: 0}
+  resetButton: {fileID: 0}
+--- !u!114 &6714986189394194241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866446098461063905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68affa770c148d89e9d3aa854c0930a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health.HealthController
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0
