@@ -11,6 +11,7 @@ namespace Character.States
             Context.Rb.linearVelocity = Vector2.zero;
             Context.Animator.SetTrigger(CharacterAnimatorHashes.Hurt);
             Context.HealthController.TakeDamage(25);
+            Context.BloodVFX.SetActive(true);
         }
 
         public override void OnHurtAnimationEndCommand()

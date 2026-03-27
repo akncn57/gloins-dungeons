@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7564298212614340742}
   - component: {fileID: 8497600705831904715}
   - component: {fileID: 8948211868393559163}
+  - component: {fileID: 1510182621083822821}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -114,6 +115,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1510182621083822821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746397090600791020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1289bfe92e499d879aace6154e3eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Utils.DisableAfterAnimation
 --- !u!1 &6249717056909997152
 GameObject:
   m_ObjectHideFlags: 0

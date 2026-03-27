@@ -14,6 +14,7 @@ namespace Character
         
         [field: SerializeField, BoxGroup("VFX")] public GameObject DashVFXLeft { get; private set; }
         [field: SerializeField, BoxGroup("VFX")] public GameObject DashVFXRight { get; private set; }
+        [field: SerializeField, BoxGroup("VFX")] public GameObject BloodVFX { get; private set; }
         
         [field: SerializeField, BoxGroup("Stats"),Required] public CharacterStatsSO CharacterStats { get; private set; }
         

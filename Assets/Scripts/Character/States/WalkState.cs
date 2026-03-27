@@ -26,5 +26,31 @@
         {
             Context.Rb.linearVelocity = Context.MovementInput.normalized * Context.CharacterStats.MoveSpeed;
         }
+        
+        public override void OnDashCommand()
+        {
+            if (Context.CanDash())
+            {
+                CharacterStateMachine.ChangeState(CharacterStateMachine.DashState);
+            }
+        }
+        
+        public override void OnLightAttackCommand()
+        {
+            CharacterStateMachine.ChangeState(CharacterStateMachine.LightAttackState);
+        }
+
+        public override void OnHeavyAttackCommand()
+        {
+            if (Context.CanHeavyAttack())
+            {
+                CharacterStateMachine.ChangeState(CharacterStateMachine.HeavyAttackState);
+            }
+        }
+
+        public override void OnHurtCommand()
+        {
+            CharacterStateMachine.ChangeState(CharacterStateMachine.HurtState);
+        }
     }
 }

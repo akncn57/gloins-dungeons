@@ -243,6 +243,7 @@ MonoBehaviour:
   <HealthController>k__BackingField: {fileID: 6714986189394194241}
   <DashVFXLeft>k__BackingField: {fileID: 6769255987439727345}
   <DashVFXRight>k__BackingField: {fileID: 718608238643106328}
+  <BloodVFX>k__BackingField: {fileID: 380432418212592673}
   <CharacterStats>k__BackingField: {fileID: 11400000, guid: 9c46df322529c6047ba536fc2b5f3c90, type: 2}
   joystick: {fileID: 0}
   lightAttackButton: {fileID: 0}
@@ -472,6 +473,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a9c749ab36699741b359906234891b2, type: 3}
+--- !u!1 &380432418212592673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6249717056909997152, guid: 7a9c749ab36699741b359906234891b2, type: 3}
+  m_PrefabInstance: {fileID: 6051964654208108609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1731736329693357834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5473202640039554891, guid: 7a9c749ab36699741b359906234891b2, type: 3}
