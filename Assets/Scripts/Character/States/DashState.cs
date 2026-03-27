@@ -24,9 +24,13 @@ namespace Character.States
                 _dashDirection = Context.SpriteRenderer.flipX ? Vector2.left : Vector2.right;
             }
 
-            if (Context.DashEffect != null)
+            if (Context.SpriteRenderer.flipX)
             {
-                Context.DashEffect.Play();
+                Context.DashVFXRight.SetActive(true);
+            }
+            else
+            {
+                Context.DashVFXLeft.SetActive(true);
             }
         }
 

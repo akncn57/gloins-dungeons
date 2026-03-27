@@ -10,8 +10,10 @@ namespace Character
         [field: SerializeField, BoxGroup("Components")] public Rigidbody2D Rb { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public Animator Animator { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public SpriteRenderer SpriteRenderer { get; private set; }
-        [field: SerializeField, BoxGroup("Components")] public ParticleSystem DashEffect { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public HealthController HealthController { get; private set; }
+        
+        [field: SerializeField, BoxGroup("VFX")] public GameObject DashVFXLeft { get; private set; }
+        [field: SerializeField, BoxGroup("VFX")] public GameObject DashVFXRight { get; private set; }
         
         [field: SerializeField, BoxGroup("Stats"),Required] public CharacterStatsSO CharacterStats { get; private set; }
         

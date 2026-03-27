@@ -10,6 +10,7 @@ namespace Character.States
         {
             Context.Rb.linearVelocity = Vector2.zero;
             Context.Animator.SetTrigger(CharacterAnimatorHashes.Hurt);
+            Context.HealthController.TakeDamage(25);
         }
 
         public override void OnHurtAnimationEndCommand()
