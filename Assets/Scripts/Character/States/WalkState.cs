@@ -26,7 +26,12 @@
         {
             Context.Rb.linearVelocity = Context.MovementInput.normalized * Context.CharacterStats.MoveSpeed;
         }
-        
+
+        public override void Exit()
+        {
+            Context.Animator.SetBool(CharacterAnimatorHashes.IsMoving, false);
+        }
+
         public override void OnDashCommand()
         {
             if (Context.CanDash())
