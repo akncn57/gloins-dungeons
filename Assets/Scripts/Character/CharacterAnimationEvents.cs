@@ -5,10 +5,12 @@ namespace Character
     public class CharacterAnimationEvents : MonoBehaviour
     {
         private CharacterController _characterController;
+        private CharacterAudioController _characterAudioController;
         
         private void Awake()
         {
             _characterController = GetComponentInParent<CharacterController>();
+            _characterAudioController = GetComponentInParent<CharacterAudioController>();
         }
         
         public void EndLightAttack()
@@ -24,6 +26,16 @@ namespace Character
         public void EndHurt()
         {
             _characterController.OnHurtAnimationEnd();
+        }
+
+        private void PlayLightAttackSound()
+        {
+            _characterAudioController.PlayLightAttack();
+        }
+
+        private void PlayWalkSound()
+        {
+            _characterAudioController.PlayWalk();
         }
     }
 }
