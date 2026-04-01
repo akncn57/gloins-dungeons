@@ -20,6 +20,8 @@
             {
                 Context.SpriteRenderer.flipX = Context.MovementInput.x < 0;
             }
+            
+            Context.CameraShake.TriggerShake(0.3f, 0.3f);
         }
 
         public override void FixedUpdate()

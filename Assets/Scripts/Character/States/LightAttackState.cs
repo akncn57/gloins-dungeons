@@ -10,6 +10,7 @@ namespace Character.States
         {
             Context.Rb.linearVelocity = Vector2.zero;
             Context.Animator.SetTrigger(CharacterAnimatorHashes.LightAttack);
+            Context.CameraShake.TriggerShake(0.5f, 0.3f);
         }
 
         public override void OnLightAttackAnimationEndCommand()

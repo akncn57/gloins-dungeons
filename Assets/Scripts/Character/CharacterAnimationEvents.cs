@@ -32,6 +32,11 @@ namespace Character
         {
             _characterAudioController.PlayLightAttack();
         }
+        
+        private void PlayHeavyAttackSound()
+        {
+            _characterAudioController.PlayHeavyAttack();
+        }
 
         private void PlayWalkSound()
         {

@@ -12,6 +12,8 @@ namespace Character.States
             
             Context.Rb.linearVelocity = Vector2.zero;
             Context.Animator.SetTrigger(CharacterAnimatorHashes.HeavyAttack);
+
+            Context.CameraShake.TriggerShake(1, 0.3f);
         }
 
         public override void OnHeavyAttackAnimationEndCommand()

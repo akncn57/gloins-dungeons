@@ -18,7 +18,7 @@ namespace Character
         {
             if (characterSoundsData.walkSounds is not { Length: > 0 }) return;
             
-            var randomIndex = UnityEngine.Random.Range(0, characterSoundsData.walkSounds.Length);
+            var randomIndex = Random.Range(0, characterSoundsData.walkSounds.Length);
             PlaySound(characterSoundsData.walkSounds[randomIndex]);
         }
         

@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7f0f4e1770a9a0941925aa6c93bfeb70, type: 3}
   - {fileID: 8300000, guid: f9801fa0cbf29ca45b363e0d25755c9a, type: 3}
   lightAttackSound: {fileID: 8300000, guid: d4b9682e96c0661408221117aa4325d8, type: 3}
-  heavyAttackSound: {fileID: 0}
+  heavyAttackSound: {fileID: 8300000, guid: 821775306b50c9c4083822bc3ec10227, type: 3}
   dashSound: {fileID: 0}
   hurtSound: {fileID: 0}
   deathSound: {fileID: 0}
