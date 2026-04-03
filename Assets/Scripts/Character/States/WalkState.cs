@@ -1,4 +1,4 @@
-﻿namespace Character.States
+namespace Character.States
 {
     public class WalkState : CharacterStateBase
     {
@@ -7,6 +7,7 @@
         public override void Enter()
         {
             Context.Animator.SetBool(CharacterAnimatorHashes.IsMoving, true);
+            Context.StartWalkBounce(); // Yürüyüş yaylanmasını başlat
         }
 
         public override void Update()
@@ -32,6 +33,7 @@
         public override void Exit()
         {
             Context.Animator.SetBool(CharacterAnimatorHashes.IsMoving, false);
+            Context.StopWalkBounce(); // Yaylanmayı durdur ve eski haline dön
         }
 
         public override void OnDashCommand()

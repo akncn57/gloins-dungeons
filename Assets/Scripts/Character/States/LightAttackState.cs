@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Character.States
 {
@@ -11,6 +11,10 @@ namespace Character.States
             Context.Rb.linearVelocity = Vector2.zero;
             Context.Animator.SetTrigger(CharacterAnimatorHashes.LightAttack);
             Context.CameraShake.TriggerShake(0.5f, 0.3f);
+            
+            // GAME FEEL: Hafif vuruş, çok seri ve anlık bir eylemdir. Bu yüzden sadece çok küçük
+            // bir esneme (1.1x yatay, 0.9x dikey) yapıyoruz ve süresini çok kısa tutuyoruz (0.1s).
+            Context.SquashAndStretch(new Vector2(1.2f, 0.9f), 0.1f);
         }
 
         public override void OnLightAttackAnimationEndCommand()

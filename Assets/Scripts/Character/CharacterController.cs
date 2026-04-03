@@ -3,6 +3,7 @@ using Health;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 using Utils;
 
 namespace Character
@@ -105,6 +106,39 @@ namespace Character
         public void OnHurtAnimationEnd()
         {
             _characterStateMachine.OnHurtAnimationEnd();
+        }
+
+        public void SquashAndStretch(Vector2 targetScale, float duration)
+        {
+            // Varsa önceki DOTween animasyonunu iptal et
+            SpriteRenderer.transform.DOKill();
+            
+            // Boyutu önce normale (1, 1, 1) al
+            SpriteRenderer.transform.localScale = Vector3.one;
+
+            // DOTween ile büyüklüğe git (sürecin yarısında git) ve sonra geri gel (Yoyo)
+            SpriteRenderer.transform.DOScale(targetScale, duration / 2f)
+                .SetLoops(2, DG.Tweening.LoopType.Yoyo)
+                .SetEase(DG.Tweening.Ease.OutQuad);
+        }
+
+        public void StartWalkBounce()
+        {
+            SpriteRenderer.transform.DOKill();
+            SpriteRenderer.transform.localScale = Vector3.one;
+            
+            // Yürüyüşte sürekli bir yaylanma (dikeyde hafifçe bastırıp uzat)
+            // Süre 0.2f olursa = 0.4 saniyede bir tam adım hissi verir.
+            SpriteRenderer.transform.DOScale(new Vector3(1.03f, 0.97f, 1f), 0.2f)
+                .SetLoops(-1, LoopType.Yoyo)
+                .SetEase(Ease.InOutSine);
+        }
+
+        public void StopWalkBounce()
+        {
+            // O anki esnemeyi durdur ve yumuşakça orijinal haline dön
+            SpriteRenderer.transform.DOKill();
+            SpriteRenderer.transform.DOScale(Vector3.one, 0.1f);
         }
     }
 }

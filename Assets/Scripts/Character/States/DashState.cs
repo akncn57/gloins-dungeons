@@ -1,4 +1,4 @@
-﻿using StateMachine;
+using StateMachine;
 using UnityEngine;
 
 namespace Character.States
@@ -32,6 +32,9 @@ namespace Character.States
             {
                 Context.DashVFXLeft.SetActive(true);
             }
+            
+            // GAME FEEL: Dash atarken karakteri yatayda uzatıp (1.4x), dikeyde basıklaştırıyoruz (0.6f)
+            Context.SquashAndStretch(new Vector2(1.4f, 0.6f), Context.CharacterStats.DashDuration);
         }
 
         public override void FixedUpdate()
