@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,10 +18,10 @@ public class VariableJoystick : Joystick
         if(joystickType == JoystickType.Fixed)
         {
             background.anchoredPosition = fixedPosition;
-            background.gameObject.SetActive(true);
         }
-        else
-            background.gameObject.SetActive(false);
+        
+        // Daima görünür olmasını istediğimiz için buradan SetActive(false) ı kaldırdık
+        background.gameObject.SetActive(true);
     }
 
     protected override void Start()
@@ -44,7 +44,11 @@ public class VariableJoystick : Joystick
     public override void OnPointerUp(PointerEventData eventData)
     {
         if(joystickType != JoystickType.Fixed)
-            background.gameObject.SetActive(false);
+        {
+            // Parmağı çekince gizlemek yerine orijinal konumuna dönsün
+            background.anchoredPosition = fixedPosition;
+            // background.gameObject.SetActive(false); // Kaldırıldı
+        }
 
         base.OnPointerUp(eventData);
     }
