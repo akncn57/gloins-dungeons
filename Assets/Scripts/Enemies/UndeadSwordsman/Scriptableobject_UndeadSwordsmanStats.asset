@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Scriptableobject_UndeadSwordsmanStats
   m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadSwordsman.UndeadSwordsmanStatsSO
   <MaxHealth>k__BackingField: 50
+  <KnockbackForce>k__BackingField: 5
   <MoveSpeed>k__BackingField: 3
-  <ChaseRange>k__BackingField: 8
+  <ChaseRange>k__BackingField: 5
   <HitFlashDuration>k__BackingField: 0.2
-  <LightAttackRange>k__BackingField: 1.5
+  <LightAttackRange>k__BackingField: 0.75
+  <FlankDistance>k__BackingField: 0.75
   <LightAttackDamage>k__BackingField: 10
   <HeavyAttackDamage>k__BackingField: 10
   <LightAttackAttackCooldown>k__BackingField: 2

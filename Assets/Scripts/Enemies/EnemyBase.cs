@@ -93,5 +93,31 @@ namespace Enemies
             
             _flashCoroutine = null;
         }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (EnemyStats != null)
+            {
+                // Pivot ayaklarda olduğu için, alanı görsel olarak (varsa) Collider'ın ortasına, 
+                // ya da manuel olarak ayaklardan hafif yukarı çiziyoruz ki gövdeyi kaplasın.
+                Vector3 center = Collider != null ? Collider.bounds.center : transform.position + Vector3.up * 1f;
+
+                // Chase Area (Kovalamaca Alanı) - Sarı Çember
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawWireSphere(center, EnemyStats.ChaseRange);
+
+                // Eğer statlar UndeadSwordsmanStatsSO ise özel menzillerini çiz
+                if (EnemyStats is UndeadSwordsman.UndeadSwordsmanStatsSO swordsmanStats)
+                {
+                    // Saldırı Menzili (Kırmızı) - Kılıcın ucunun vuracağı maksimum yer
+                    Gizmos.color = Color.red;
+                    Gizmos.DrawWireSphere(center, swordsmanStats.LightAttackRange);
+                    
+                    // Flank Distance (Mavi) - Düşmanın yaklaşmak için hedeflediği duruş noktası
+                    Gizmos.color = Color.cyan;
+                    Gizmos.DrawWireSphere(center, swordsmanStats.FlankDistance);
+                }
+            }
+        }
     }
 }
