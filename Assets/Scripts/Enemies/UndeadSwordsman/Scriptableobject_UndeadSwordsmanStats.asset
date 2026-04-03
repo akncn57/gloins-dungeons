@@ -15,6 +15,7 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 50
   <MoveSpeed>k__BackingField: 3
   <ChaseRange>k__BackingField: 8
+  <HitFlashDuration>k__BackingField: 0.2
   <LightAttackRange>k__BackingField: 1.5
   <LightAttackDamage>k__BackingField: 10
   <HeavyAttackDamage>k__BackingField: 10

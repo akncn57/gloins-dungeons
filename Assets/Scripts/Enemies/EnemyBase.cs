@@ -1,4 +1,5 @@
 
+using System.Collections;
 using Health;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,17 +10,23 @@ namespace Enemies
     {
         [field: SerializeField, BoxGroup("Components")] public Rigidbody2D Rb { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public Collider2D Collider { get; private set; }
+        [field: SerializeField, BoxGroup("Components")] public SpriteRenderer SpriteRenderer { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public Animator Animator { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public HealthController HealthController { get; private set; }
         
         [field: SerializeField, BoxGroup("Stats")] public EnemyStatsSO EnemyStats { get; set; }
+        [field: SerializeField, BoxGroup("Settings")] private Material FlashMaterial { get; set; }
         
         [field: SerializeField] public Transform PlayerTarget { get; private set; }
         [field: SerializeField] public EnemyStateMachine StateMachine { get; protected set; }
+        
+        private Material _originalMaterial;
+        private Coroutine _flashCoroutine;
 
         protected virtual void Awake()
         {
             PlayerTarget = GameObject.FindGameObjectWithTag("Player").transform;
+            _originalMaterial = SpriteRenderer.material;
         }
         
         protected virtual void Start()
@@ -51,6 +58,7 @@ namespace Enemies
         
         protected virtual void HandleTakeDamage(int currentHealth)
         {
+            Flash();
             StateMachine.ChangeState(StateMachine.HurtState);
         }
 
@@ -58,6 +66,25 @@ namespace Enemies
         {
             StateMachine.ChangeState(StateMachine.DeathState);
             Collider.enabled = false;
+        }
+        
+        private void Flash()
+        {
+            if (_flashCoroutine != null)
+            {
+                StopCoroutine(_flashCoroutine);
+            }
+            
+            _flashCoroutine = StartCoroutine(FlashRoutine());
+        }
+
+        private IEnumerator FlashRoutine()
+        {
+            SpriteRenderer.material = FlashMaterial;
+            yield return new WaitForSecondsRealtime(EnemyStats.HitFlashDuration);
+            SpriteRenderer.material = _originalMaterial;
+            
+            _flashCoroutine = null;
         }
     }
 }

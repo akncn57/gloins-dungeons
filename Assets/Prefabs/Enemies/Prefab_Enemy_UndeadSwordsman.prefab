@@ -108,9 +108,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadSwordsman.UndeadSwordsmanController
   <Rb>k__BackingField: {fileID: 3694103415681973964}
   <Collider>k__BackingField: {fileID: 7041871979337938321}
+  <SpriteRenderer>k__BackingField: {fileID: 7750233828330960208}
   <Animator>k__BackingField: {fileID: 2777356781056883476}
   <HealthController>k__BackingField: {fileID: 7241926854291798755}
   <EnemyStats>k__BackingField: {fileID: 11400000, guid: 53983a08880fb0c4cbcde060b58482c4, type: 2}
+  <FlashMaterial>k__BackingField: {fileID: 2100000, guid: fbb0ddbea9eed0b4e939890e0615ee98, type: 2}
   <PlayerTarget>k__BackingField: {fileID: 0}
 --- !u!1 &6624445308632459068
 GameObject:
