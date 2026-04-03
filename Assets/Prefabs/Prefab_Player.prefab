@@ -161,7 +161,39 @@ Transform:
   - {fileID: 1731736329693357834}
   - {fileID: 1492606972890286387}
   - {fileID: 4665436967631038938}
+  - {fileID: 1544103345215843853}
   m_Father: {fileID: 7176032953458692562}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5834535962946309862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544103345215843853}
+  m_Layer: 0
+  m_Name: Attack_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1544103345215843853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834535962946309862}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.229, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 835681899011389610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5866446098461063905
 GameObject:
@@ -177,6 +209,7 @@ GameObject:
   - component: {fileID: 7327931628910246600}
   - component: {fileID: 6714986189394194241}
   - component: {fileID: 3583508561893126780}
+  - component: {fileID: 692443189710157737}
   m_Layer: 7
   m_Name: Prefab_Player
   m_TagString: Player
@@ -340,7 +373,7 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 7586337879990168668}
   <SpriteRenderer>k__BackingField: {fileID: 1367954976438784724}
   <HealthController>k__BackingField: {fileID: 6714986189394194241}
-  <AudioController>k__BackingField: {fileID: 3583508561893126780}
+  <CameraShake>k__BackingField: {fileID: 0}
   <DashVFXLeft>k__BackingField: {fileID: 6769255987439727345}
   <DashVFXRight>k__BackingField: {fileID: 718608238643106328}
   <BloodVFX>k__BackingField: {fileID: 380432418212592673}
@@ -378,6 +411,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Character.CharacterAudioController
   audioSource: {fileID: 6966325941562829891}
   characterSoundsData: {fileID: 11400000, guid: 6307d477586827349aa4314345369f44, type: 2}
+--- !u!114 &692443189710157737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866446098461063905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e0e79cfd334304bd3a4ef13609a8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Character.Combat.CharacterCombatController
+  attackPoint: {fileID: 1544103345215843853}
+  attackRadius: 0.5
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

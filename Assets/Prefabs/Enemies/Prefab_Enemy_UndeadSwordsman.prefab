@@ -43,8 +43,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3470084773617670799}
   - component: {fileID: 3694103415681973964}
-  m_Layer: 0
-  m_Name: Prefab_Enemy_SkeletonNoShield
+  - component: {fileID: 3128120316492335185}
+  m_Layer: 6
+  m_Name: Prefab_Enemy_UndeadSwordsman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,6 +94,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3128120316492335185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597170333855828079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3641f63697374b94ad1e56f1bf882268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadSwordsman.UndeadSwordsmanController
+  <Rb>k__BackingField: {fileID: 3694103415681973964}
+  <Collider>k__BackingField: {fileID: 7041871979337938321}
+  <Animator>k__BackingField: {fileID: 2777356781056883476}
+  <HealthController>k__BackingField: {fileID: 0}
+  <PlayerTarget>k__BackingField: {fileID: 0}
 --- !u!1 &6624445308632459068
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +146,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7750233828330960208
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -146,6 +165,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -167,9 +188,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 8479355541349622725, guid: 2175b3841aa80d944ad2e7d879b78523, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -179,7 +202,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2777356781056883476
 Animator:
@@ -213,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3874511693970554694}
   - component: {fileID: 7041871979337938321}
+  - component: {fileID: 7241926854291798755}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -272,3 +295,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.010013342, y: 0.6526236}
   m_Size: {x: 0.65020037, y: 1.2653536}
   m_Direction: 0
+--- !u!114 &7241926854291798755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881912299941983307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68affa770c148d89e9d3aa854c0930a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health.HealthController

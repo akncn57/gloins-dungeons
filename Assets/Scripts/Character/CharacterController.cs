@@ -1,3 +1,4 @@
+using System.Collections;
 using Health;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -71,6 +72,24 @@ namespace Character
         public bool CanHeavyAttack()
         {
             return Time.time >= LastHeavyAttackTime + CharacterStats.HeavyAttackCooldown;
+        }
+        
+        public void HitStop(float duration = 0.05f) 
+        {
+            StartCoroutine(HitStopRoutine(duration));
+        }
+
+        private IEnumerator HitStopRoutine(float duration)
+        {
+            // 1. Oyunu tamamen dondur (Zaman akışı = 0)
+            Time.timeScale = 0f; 
+
+            // 2. DİKKAT: Zaman durduğu için normal WaitForSeconds ÇALIŞMAZ!
+            // Gerçek dünya zamanına göre (Realtime) beklemeliyiz:
+            yield return new WaitForSecondsRealtime(duration); 
+
+            // 3. Süre doldu, zamanı normale (1) döndür
+            Time.timeScale = 1f; 
         }
         
         public void OnLightAttackAnimationEnd()
