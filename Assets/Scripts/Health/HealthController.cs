@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace Health
 {
     public class HealthController : MonoBehaviour, IDamageable
     {
-        public event Action<int> OnTakeDamage;
+        public event Action<int, Vector2> OnTakeDamage;
         public event Action OnDeath;
         public event Action<int, int> OnHealthChanged; 
         
@@ -22,11 +22,11 @@ namespace Health
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
 
-        public void TakeDamage(int damageTaken)
+        public void TakeDamage(int damageTaken, Vector2 damageSourcePosition = default)
         {
             if (_isDead) return;
             CurrentHealth = Mathf.Max(CurrentHealth - damageTaken, 0);
-            OnTakeDamage?.Invoke(CurrentHealth);
+            OnTakeDamage?.Invoke(CurrentHealth, damageSourcePosition);
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
 
             if (CurrentHealth <= 0)

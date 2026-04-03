@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Health; // Senin yazdığın IDamageable ve HealthController'ın olduğu namespace
 
 namespace Character.Combat
@@ -35,7 +35,7 @@ namespace Character.Combat
                 // Sadece "Sen hasar alabilen bir şey misin?" diye soruyoruz.
                 if (hitCollider.TryGetComponent(out IDamageable damageable))
                 {
-                    damageable.TakeDamage(damageAmount);
+                    damageable.TakeDamage(damageAmount, transform.position);
                     hitSuccess = true; // En az bir şeye vurduk!
                     Debug.Log($"<b><color=green>[Combat] BAŞARILI VURUŞ!</color></b> {hitCollider.name} isimli hedefe <b>{damageAmount}</b> hasar verildi.");
                 }

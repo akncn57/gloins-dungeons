@@ -56,10 +56,17 @@ namespace Enemies
             StateMachine.FixedUpdate();
         }
         
-        protected virtual void HandleTakeDamage(int currentHealth)
+        protected virtual void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition)
         {
             Flash();
             StateMachine.ChangeState(StateMachine.HurtState);
+
+            if (damageSourcePosition != Vector2.zero)
+            {
+                Vector2 knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
+                Rb.linearVelocity = Vector2.zero; // Clear current momentum
+                Rb.AddForce(knockbackDirection * EnemyStats.KnockbackForce, ForceMode2D.Impulse);
+            }
         }
 
         protected virtual void HandleDeath()
