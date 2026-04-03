@@ -1055,7 +1055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3597170333855828079, guid: 0f90f5962d0b9414eb38b1d43dda72fb, type: 3}
       propertyPath: m_Name
-      value: Prefab_Enemy_SkeletonNoShield
+      value: Prefab_Enemy_UndeadSwordsman
       objectReference: {fileID: 0}
     - target: {fileID: 6624445308632459068, guid: 0f90f5962d0b9414eb38b1d43dda72fb, type: 3}
       propertyPath: m_Layer

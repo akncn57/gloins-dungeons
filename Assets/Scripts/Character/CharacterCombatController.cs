@@ -18,6 +18,18 @@ namespace Character.Combat
             _characterController = GetComponent<CharacterController>();
         }
 
+        private void Update()
+        {
+            if (attackPoint != null && _characterController != null && _characterController.SpriteRenderer != null)
+            {
+                // Kılıç vuruş noktasını (attackPoint) karakterin baktığı yöne göre dinamik olarak çevir (flipX)
+                float absX = Mathf.Abs(attackPoint.localPosition.x);
+                float targetX = _characterController.SpriteRenderer.flipX ? -absX : absX;
+                
+                attackPoint.localPosition = new Vector3(targetX, attackPoint.localPosition.y, attackPoint.localPosition.z);
+            }
+        }
+
         // Bu metot Animasyon Event'i ile kılıcın tam hedefe ulaştığı karede çağrılacak!
         public void PerformMeleeAttack(int damageAmount)
         {
