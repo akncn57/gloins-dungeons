@@ -1,5 +1,4 @@
 using Enemies.UndeadSwordsman.States;
-using StateMachine;
 
 namespace Enemies.UndeadSwordsman
 {

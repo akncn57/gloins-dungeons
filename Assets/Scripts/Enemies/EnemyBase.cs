@@ -1,15 +1,18 @@
 
 using Health;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Enemies
 {
     public class EnemyBase : MonoBehaviour
     {
-        [field: SerializeField] public Rigidbody2D Rb { get; private set; }
-        [field: SerializeField] public Collider2D Collider { get; private set; }
-        [field: SerializeField] public Animator Animator { get; private set; }
-        [field: SerializeField] public HealthController HealthController { get; private set; }
+        [field: SerializeField, BoxGroup("Components")] public Rigidbody2D Rb { get; private set; }
+        [field: SerializeField, BoxGroup("Components")] public Collider2D Collider { get; private set; }
+        [field: SerializeField, BoxGroup("Components")] public Animator Animator { get; private set; }
+        [field: SerializeField, BoxGroup("Components")] public HealthController HealthController { get; private set; }
+        
+        [field: SerializeField, BoxGroup("Stats")] public EnemyStatsSO EnemyStats { get; set; }
         
         [field: SerializeField] public Transform PlayerTarget { get; private set; }
         [field: SerializeField] public EnemyStateMachine StateMachine { get; protected set; }
@@ -21,7 +24,7 @@ namespace Enemies
         
         protected virtual void Start()
         {
-            // Health.Initialize(Stats.MaxHealth);
+            HealthController.Initialize(EnemyStats.MaxHealth);
 
             HealthController.OnTakeDamage += HandleTakeDamage;
             HealthController.OnDeath += HandleDeath;
