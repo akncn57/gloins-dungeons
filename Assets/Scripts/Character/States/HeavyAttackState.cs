@@ -10,7 +10,24 @@ namespace Character.States
         {
             Context.LastHeavyAttackTime = Time.time;
             
-            Context.Rb.linearVelocity = Vector2.zero;
+            // Soft Lock-on & Lunge 
+            Transform target = Context.CombatController.CurrentTarget;
+            if (target == null) target = Context.CombatController.GetBestTarget(Context.MovementInput);
+            
+            if (target != null)
+            {
+                // Yüzünü hedefe dön
+                Context.SpriteRenderer.flipX = target.position.x < Context.transform.position.x;
+                
+                // Lunge (Atılma - Ağır vuruşta biraz daha ileri atılabilir)
+                Vector2 lungeDirection = (target.position - Context.transform.position).normalized;
+                Context.Rb.linearVelocity = lungeDirection * 6f; 
+            }
+            else
+            {
+                Context.Rb.linearVelocity = Vector2.zero;
+            }
+
             Context.Animator.SetTrigger(CharacterAnimatorHashes.HeavyAttack);
 
             Context.CameraShake.TriggerShake(1, 0.3f);

@@ -1,5 +1,6 @@
 using UnityEngine;
-using Health; // Senin yazdığın IDamageable ve HealthController'ın olduğu namespace
+using Health;
+using DG.Tweening;
 
 namespace Character.Combat
 {
@@ -9,6 +10,17 @@ namespace Character.Combat
         [SerializeField] private Transform attackPoint; // Vuruşun merkez noktası
         [SerializeField] private float attackRadius = 0.5f; // Vuruşun büyüklüğü (yarıçapı)
         [SerializeField] private LayerMask damageableLayer; // Sadece bu layer'daki objelere vur (Performans için)
+        
+        [Header("Auto-Targeting")]
+        [SerializeField] private float targetingRadius = 5f;
+        [SerializeField] private GameObject indicatorPrefab;
+        [SerializeField] private Vector3 indicatorOffset = new Vector3(0, 1.5f, 0);
+        
+        private GameObject _activeIndicator;
+        private SpriteRenderer _indicatorSpriteRenderer;
+        private bool _isIndicatorFadingOut;
+        
+        public Transform CurrentTarget { get; private set; }
         
         // Bu referansı Hit-Stop yapmak için kullanacağız
         private CharacterController _characterController;
@@ -20,6 +32,64 @@ namespace Character.Combat
 
         private void Update()
         {
+            if (_characterController != null)
+            {
+                CurrentTarget = GetBestTarget(_characterController.MovementInput);
+                
+                if (CurrentTarget != null && indicatorPrefab != null)
+                {
+                    if (_activeIndicator == null)
+                    {
+                        _activeIndicator = Instantiate(indicatorPrefab);
+                        _activeIndicator.SetActive(false); // Prefab varsayılan olarak açıksa diye zorla kapatıyoruz ki alttaki Fade In bloğu tetiklensin!
+                        _indicatorSpriteRenderer = _activeIndicator.GetComponentInChildren<SpriteRenderer>();
+                        
+                        // Başlangıçta görünmez (Alpha 0) yap
+                        if (_indicatorSpriteRenderer != null)
+                        {
+                            Color c = _indicatorSpriteRenderer.color;
+                            c.a = 0f;
+                            _indicatorSpriteRenderer.color = c;
+                        }
+                    }
+                    
+                    // Eğer kapalıysa veya şu an sönerek kapanmaktaysa, tekrar aydınlanarak aç (Fade In)
+                    if (!_activeIndicator.activeSelf || _isIndicatorFadingOut)
+                    {
+                        _activeIndicator.SetActive(true);
+                        _isIndicatorFadingOut = false;
+                        
+                        if (_indicatorSpriteRenderer != null)
+                        {
+                            _indicatorSpriteRenderer.DOKill();
+                            _indicatorSpriteRenderer.DOFade(1f, 0.2f); // 0.2 saniyede belirginleş
+                        }
+                    }
+                    
+                    _activeIndicator.transform.position = CurrentTarget.position + indicatorOffset;
+                }
+                else if (_activeIndicator != null && _activeIndicator.activeSelf && !_isIndicatorFadingOut)
+                {
+                    _isIndicatorFadingOut = true;
+                    
+                    if (_indicatorSpriteRenderer != null)
+                    {
+                        // 0.2 saniyede soluklaş (Fade Out), bitince objeyi kapat
+                        _indicatorSpriteRenderer.DOKill();
+                        _indicatorSpriteRenderer.DOFade(0f, 0.2f).OnComplete(() => 
+                        {
+                            _activeIndicator.SetActive(false);
+                            _isIndicatorFadingOut = false;
+                        });
+                    }
+                    else
+                    {
+                        _activeIndicator.SetActive(false);
+                        _isIndicatorFadingOut = false;
+                    }
+                }
+            }
+
             if (attackPoint != null && _characterController != null && _characterController.SpriteRenderer != null)
             {
                 // Kılıç vuruş noktasını (attackPoint) karakterin baktığı yöne göre dinamik olarak çevir (flipX)
@@ -72,9 +142,58 @@ namespace Character.Combat
         // Unity Editöründe vuruş alanını (çemberi) görmek için harika bir yardımcı metot
         private void OnDrawGizmosSelected()
         {
-            if (attackPoint == null) return;
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+            if (attackPoint != null)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+            }
+            
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, targetingRadius);
+        }
+
+        public Transform GetBestTarget(Vector2 movementInput)
+        {
+            Collider2D[] potentialTargets = Physics2D.OverlapCircleAll(transform.position, targetingRadius, damageableLayer);
+            
+            Transform bestTarget = null;
+            float bestScore = -float.MaxValue;
+
+            foreach (var col in potentialTargets)
+            {
+                // Hasar alabilen bir şey mi?
+                if (!col.TryGetComponent(out IDamageable _)) continue;
+
+                // Karakterin kendisine çarpmasını engelle
+                if (col.gameObject == gameObject) continue;
+
+                Vector2 directionToTarget = (col.transform.position - transform.position).normalized;
+                float distance = Vector2.Distance(transform.position, col.transform.position);
+
+                float score = 0;
+
+                if (movementInput.magnitude > 0.1f)
+                {
+                    // Oyuncu hareket ediyorsa, gittiği yöne olan açıyı (Dot Product) baz al
+                    float dot = Vector2.Dot(movementInput.normalized, directionToTarget);
+                    
+                    // Açıyı uzaklıktan daha çok önemsemek için yüksek katsayı ile çarpıyoruz
+                    score = dot * 10f - distance; 
+                }
+                else
+                {
+                    // Duruyorsa sadece mesafeye göre puanla (Mesafe kısaldıkça skor yükselir)
+                    score = -distance; 
+                }
+
+                if (score > bestScore)
+                {
+                    bestScore = score;
+                    bestTarget = col.transform;
+                }
+            }
+
+            return bestTarget;
         }
     }
 }

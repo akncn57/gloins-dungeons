@@ -12,13 +12,16 @@ namespace Enemies.UndeadSwordsman.States
         }
         public override void Update()
         {
-            if (Context.PlayerTarget != null)
+            CheckDistanceToPlayer();
+        }
+
+        private void CheckDistanceToPlayer()
+        {
+            var dist = Vector2.Distance(Context.transform.position, Context.PlayerTarget.position);
+
+            if (dist <= Context.EnemyStats.ChaseRange)
             {
-                float dist = Vector2.Distance(Context.transform.position, Context.PlayerTarget.position);
-                if (dist <= Context.EnemyStats.ChaseRange)
-                {
-                    StateMachine.ChangeState(UndeadSwordsmanStateMachine.ChaseState);
-                }
+                StateMachine.ChangeState(UndeadSwordsmanStateMachine.ChaseState);
             }
         }
     }

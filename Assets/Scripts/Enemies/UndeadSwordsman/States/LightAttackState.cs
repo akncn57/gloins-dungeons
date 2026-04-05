@@ -11,7 +11,6 @@ namespace Enemies.UndeadSwordsman.States
             Context.Animator.SetTrigger(UndeadSwordsmanAnimatorHashes.LightAttack);
             Context.Rb.linearVelocity = UnityEngine.Vector2.zero;
             
-            // Düşmanın vurma bekleme süresini stat dosyasından çekip başlatıyoruz
             _attackTimer = ((UndeadSwordsmanStatsSO)Context.EnemyStats).LightAttackAttackCooldown;
         }
 
@@ -21,8 +20,6 @@ namespace Enemies.UndeadSwordsman.States
 
             if (_attackTimer <= 0)
             {
-                // Saldırı bitti! Eğer oyuncu kaçmışsa tekrar kovalaması için State makinesini resetliyoruz.
-                // IdleState otomatik olarak menzil kontrolü yapacak ve uzaktaysa ChaseState'e geçecektir.
                 StateMachine.ChangeState(UndeadSwordsmanStateMachine.IdleState);
             }
         }

@@ -374,6 +374,7 @@ MonoBehaviour:
   <SpriteRenderer>k__BackingField: {fileID: 1367954976438784724}
   <HealthController>k__BackingField: {fileID: 6714986189394194241}
   <CameraShake>k__BackingField: {fileID: 0}
+  <CombatController>k__BackingField: {fileID: 692443189710157737}
   <DashVFXLeft>k__BackingField: {fileID: 6769255987439727345}
   <DashVFXRight>k__BackingField: {fileID: 718608238643106328}
   <BloodVFX>k__BackingField: {fileID: 380432418212592673}
@@ -428,6 +429,9 @@ MonoBehaviour:
   damageableLayer:
     serializedVersion: 2
     m_Bits: 64
+  targetingRadius: 5
+  indicatorPrefab: {fileID: 3902611601866106315, guid: 2bb4deef87f6b344f8c4c401ea4412d3, type: 3}
+  indicatorOffset: {x: 0, y: 1.75, z: 0}
 --- !u!1 &6903877863259661129
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using Utils;
+using Character.Combat;
 
 namespace Character
 {
@@ -15,6 +16,7 @@ namespace Character
         [field: SerializeField, BoxGroup("Components")] public SpriteRenderer SpriteRenderer { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public HealthController HealthController { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public CameraShake CameraShake { get; private set; }
+        [field: SerializeField, BoxGroup("Components")] public CharacterCombatController CombatController { get; private set; }
         
         [field: SerializeField, BoxGroup("VFX")] public GameObject DashVFXLeft { get; private set; }
         [field: SerializeField, BoxGroup("VFX")] public GameObject DashVFXRight { get; private set; }

@@ -8,7 +8,25 @@ namespace Character.States
 
         public override void Enter()
         {
-            Context.Rb.linearVelocity = Vector2.zero;
+            // Soft Lock-on & Lunge
+            Transform target = Context.CombatController.CurrentTarget;
+            // Fallback (eğer Update döngüsü henüz yakalayamadıysa anlık hesapla)
+            if (target == null) target = Context.CombatController.GetBestTarget(Context.MovementInput);
+            
+            if (target != null)
+            {
+                // Yüzünü hedefe dön
+                Context.SpriteRenderer.flipX = target.position.x < Context.transform.position.x;
+                
+                // Lunge (Atılma - Hissi kuvvetlendirir)
+                Vector2 lungeDirection = (target.position - Context.transform.position).normalized;
+                Context.Rb.linearVelocity = lungeDirection * 4f; 
+            }
+            else
+            {
+                Context.Rb.linearVelocity = Vector2.zero;
+            }
+
             Context.Animator.SetTrigger(CharacterAnimatorHashes.LightAttack);
             Context.CameraShake.TriggerShake(0.5f, 0.3f);
             
