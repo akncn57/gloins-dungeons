@@ -20,56 +20,143 @@ namespace Enemies.UndeadSwordsman.States
         public override void FixedUpdate()
         {
             if (Context.PlayerTarget == null) return;
-            
-            // FLANKING MANTIĞI: Oyuncunun sağına mı soluna mı gitmeliyiz?
-            // Düşman oyuncunun solundaysa sol hizaya (Player.x - Range)
-            // Sağındaysa sağ hizaya gidecek. Y ekseninde ise tam oyuncu ile hizalanacak.
-            float flankDist = ((UndeadSwordsmanStatsSO)Context.EnemyStats).FlankDistance;
-            float targetX = Context.transform.position.x < Context.PlayerTarget.position.x 
-                ? Context.PlayerTarget.position.x - flankDist 
-                : Context.PlayerTarget.position.x + flankDist;
-                
-            Vector2 targetPos = new Vector2(targetX, Context.PlayerTarget.position.y);
-            
-            // Yöne doğru hareket
-            Vector2 direction = (targetPos - (Vector2)Context.transform.position);
-            
-            if (direction.magnitude > 0.1f)
-            {
-                Context.Rb.linearVelocity = direction.normalized * Context.EnemyStats.MoveSpeed;
-                
-                // Karakteri yürüdüğü yöne çevir
-                Context.SpriteRenderer.flipX = Context.Rb.linearVelocity.x < 0;
-            }
-            else
-            {
-                Context.Rb.linearVelocity = Vector2.zero;
-                // Eğer ulaştıysak yüzümüzü oyuncuya dönelim
-                Context.SpriteRenderer.flipX = Context.PlayerTarget.position.x < Context.transform.position.x;
-            }
-        }
 
+            HandleMovement();
+        }
+        
         public override void Update()
         {
             if (Context.PlayerTarget == null) return;
 
-            float distToPlayer = Vector2.Distance(Context.transform.position, Context.PlayerTarget.position);
-            float flankDist = ((UndeadSwordsmanStatsSO)Context.EnemyStats).FlankDistance;
+            CheckStateTransitions();
+        }
+        
+        private void HandleMovement()
+        {
+            var targetPos = CalculateFlankPosition();
+            var distanceToTarget = (targetPos - (Vector2)Context.transform.position);
             
-            // X ekseninde uygun mesafede mi ve Y ekseninde (dikine) hemen hemen aynı hizada mı?
-            bool inXRange = Mathf.Abs(Context.transform.position.x - Context.PlayerTarget.position.x) <= flankDist + 0.2f;
-            bool inYRange = Mathf.Abs(Context.transform.position.y - Context.PlayerTarget.position.y) <= 0.2f;
+            var moveDirection = distanceToTarget.normalized;
+            var separation = CalculateSeparation();
+            
+            // Add separation to avoid pushing other enemies and bulldozing the player
+            moveDirection = (moveDirection + separation * 1.5f).normalized;
 
-            if (inXRange && inYRange)
+            if (distanceToTarget.magnitude > 0.1f)
             {
-                Context.SpriteRenderer.flipX = Context.PlayerTarget.position.x < Context.transform.position.x;
-                StateMachine.ChangeState(UndeadSwordsmanStateMachine.LightAttackState);
+                Context.Rb.linearVelocity = moveDirection * Context.EnemyStats.MoveSpeed;
+                UpdateFacingDirection(distanceToTarget.x < 0);
             }
-            // Oyuncu ChaseRange'den çıktıysa kovalamayı bırak
-            else if (distToPlayer > Context.EnemyStats.ChaseRange)
+            else
+            {
+                Context.Rb.linearVelocity = Vector2.zero;
+                FacePlayer();
+            }
+        }
+
+        private Vector2 CalculateSeparation()
+        {
+            Vector2 separation = Vector2.zero;
+            int count = 0;
+            
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(Context.transform.position, 1.5f);
+            var stats = (UndeadSwordsmanStatsSO)Context.EnemyStats;
+            
+            foreach (var col in colliders)
+            {
+                if (col.gameObject == Context.gameObject) continue;
+
+                // Separate from other enemies so they don't clump up and push each other
+                if (col.TryGetComponent<EnemyBase>(out _))
+                {
+                    Vector2 awayFromEnemy = Context.transform.position - col.transform.position;
+                    float distance = awayFromEnemy.magnitude;
+                    if (distance < 0.1f) distance = 0.1f;
+                    
+                    separation += awayFromEnemy.normalized / distance; 
+                    count++;
+                }
+                // Separate from player if getting too close to prevent pushing them
+                else if (col.CompareTag("Player"))
+                {
+                    Vector2 awayFromPlayer = Context.transform.position - col.transform.position;
+                    float distance = awayFromPlayer.magnitude;
+                    
+                    if (distance < stats.FlankDistance * 0.9f) 
+                    {
+                        if (distance < 0.1f) distance = 0.1f;
+                        // Stronger separation for player to ensure no bulldozing
+                        separation += (awayFromPlayer.normalized / distance) * 2.0f; 
+                        count++;
+                    }
+                }
+            }
+            
+            if (count > 0)
+            {
+                separation /= count;
+            }
+            
+            return separation;
+        }
+
+        private Vector2 CalculateFlankPosition()
+        {
+            var flankDist = ((UndeadSwordsmanStatsSO)Context.EnemyStats).FlankDistance;
+            var targetX = Context.transform.position.x < Context.PlayerTarget.position.x 
+                ? Context.PlayerTarget.position.x - flankDist 
+                : Context.PlayerTarget.position.x + flankDist;
+                
+            return new Vector2(targetX, Context.PlayerTarget.position.y);
+        }
+
+        private void UpdateFacingDirection(bool lookLeft)
+        {
+            Context.SpriteRenderer.flipX = lookLeft;
+        }
+
+        private void FacePlayer()
+        {
+            Context.SpriteRenderer.flipX = Context.PlayerTarget.position.x < Context.transform.position.x;
+        }
+        
+        private void CheckStateTransitions()
+        {
+            if (IsWithinAttackRange())
+            {
+                FacePlayer();
+
+                var stats = (UndeadSwordsmanStatsSO)Context.EnemyStats;
+                var doHeavyAttack = Random.value <= stats.HeavyAttackChance;
+
+                if (doHeavyAttack)
+                {
+                    StateMachine.ChangeState(UndeadSwordsmanStateMachine.HeavyAttackState);
+                }
+                else
+                {
+                    StateMachine.ChangeState(UndeadSwordsmanStateMachine.LightAttackState);
+                }
+            }
+            else if (HasTargetEscaped())
             {
                 StateMachine.ChangeState(UndeadSwordsmanStateMachine.IdleState);
             }
+        }
+
+        private bool IsWithinAttackRange()
+        {
+            var flankDist = ((UndeadSwordsmanStatsSO)Context.EnemyStats).FlankDistance;
+            var inXRange = Mathf.Abs(Context.transform.position.x - Context.PlayerTarget.position.x) <= flankDist + 0.2f;
+            var inYRange = Mathf.Abs(Context.transform.position.y - Context.PlayerTarget.position.y) <= 0.2f;
+            
+            return inXRange && inYRange;
+        }
+
+        private bool HasTargetEscaped()
+        {
+            var distToPlayer = Vector2.Distance(Context.transform.position, Context.PlayerTarget.position);
+            return distToPlayer > Context.EnemyStats.ChaseRange;
         }
     }
 }
