@@ -45,6 +45,7 @@ namespace Health
         private void Die()
         {
             if (_isDead) return;
+            _isDead = true;
             OnDeath?.Invoke();
         }
     }

@@ -53,6 +53,38 @@ namespace Character
             heavyAttackButton.onClick.AddListener(() => _characterStateMachine.OnHeavyAttackPressed());
             dashButton.onClick.AddListener(() => _characterStateMachine.OnDashPressed());
             testHurtButton.onClick.AddListener(() => _characterStateMachine.OnHurt());
+            
+            HealthController.OnTakeDamage += HandleTakeDamage;
+            HealthController.OnDeath += HandleDeath;
+        }
+
+        private void OnDestroy()
+        {
+            if (HealthController != null)
+            {
+                HealthController.OnTakeDamage -= HandleTakeDamage;
+                HealthController.OnDeath -= HandleDeath;
+            }
+        }
+
+        private void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition)
+        {
+            _characterStateMachine.OnHurt();
+            
+            // Apply knockback to character if desired
+            if (damageSourcePosition != Vector2.zero)
+            {
+                Vector2 knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
+                Rb.linearVelocity = Vector2.zero;
+                Rb.AddForce(knockbackDirection * 5f, ForceMode2D.Impulse); // Hardcoded 5f since CharacterStats lacks knockback currently
+            }
+        }
+
+        private void HandleDeath()
+        {
+            // The character state machine might handle death or we can force it
+            // Assuming we just call OnHurt for now or directly go to DeathState if possible
+            _characterStateMachine.ChangeState(_characterStateMachine.DeathState);
         }
 
         private void Update()

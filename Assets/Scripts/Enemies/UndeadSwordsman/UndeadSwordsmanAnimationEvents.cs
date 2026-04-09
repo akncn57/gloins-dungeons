@@ -36,17 +36,30 @@ namespace Enemies.UndeadSwordsman
             _undeadSwordsmanController?.OnHurtAnimationEnd();
         }
 
-        // --- Combat Trigger Events --- //
-        
         public void TriggerLightAttackHit()
         {
-            // Placeholder for when you add a CombatController or damage dealer script to UndeadSwordsman
-            // Example: _undeadSwordsmanController.CombatController.PerformMeleeAttack(LightDamage);
+            Debug.Log($"<color=cyan>[AnimationEvent]</color> TriggerLightAttackHit fired by Unity!");
+            
+            if (_undeadSwordsmanController == null)
+            {
+                Debug.LogError("<color=cyan>[AnimationEvent]</color> _undeadSwordsmanController is null!");
+                return;
+            }
+            if (_undeadSwordsmanController.CombatController == null)
+            {
+                Debug.LogError("<color=cyan>[AnimationEvent]</color> CombatController is null! Did you forget to add UndeadSwordsmanCombatController to the Game Object?");
+                return;
+            }
+            
+            var stats = (UndeadSwordsmanStatsSO)_undeadSwordsmanController.EnemyStats;
+            _undeadSwordsmanController.CombatController.PerformMeleeAttack(stats.LightAttackDamage);
         }
 
         public void TriggerHeavyAttackHit()
         {
-            // Similar to Light Attack Hit
+            if (_undeadSwordsmanController == null || _undeadSwordsmanController.CombatController == null) return;
+            var stats = (UndeadSwordsmanStatsSO)_undeadSwordsmanController.EnemyStats;
+            _undeadSwordsmanController.CombatController.PerformMeleeAttack(stats.HeavyAttackDamage);
         }
     }
 }

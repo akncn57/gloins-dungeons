@@ -46,11 +46,13 @@ namespace Enemies.UndeadSwordsman.States
             {
                 Context.Rb.linearVelocity = moveDirection * Context.EnemyStats.MoveSpeed;
                 UpdateFacingDirection(distanceToTarget.x < 0);
+                Context.Animator.SetBool(UndeadSwordsmanAnimatorHashes.IsWalking, true);
             }
             else
             {
                 Context.Rb.linearVelocity = Vector2.zero;
                 FacePlayer();
+                Context.Animator.SetBool(UndeadSwordsmanAnimatorHashes.IsWalking, false);
             }
         }
 

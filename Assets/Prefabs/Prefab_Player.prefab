@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1367954976438784724}
   - component: {fileID: 7586337879990168668}
   - component: {fileID: 423159597482188430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835681899011389610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Parent
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1544103345215843853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack_Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -442,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3861632257688820086}
   - component: {fileID: 4599766792962230047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -509,6 +509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 835681899011389610}
     m_Modifications:
+    - target: {fileID: 746397090600791020, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5473202640039554891, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
@@ -558,6 +562,10 @@ PrefabInstance:
       value: Prefab_VFX_Dash_Left
       objectReference: {fileID: 0}
     - target: {fileID: 6249717056909997152, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249717056909997152, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -588,6 +596,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 835681899011389610}
     m_Modifications:
+    - target: {fileID: 746397090600791020, guid: 7a9c749ab36699741b359906234891b2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5473202640039554891, guid: 7a9c749ab36699741b359906234891b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09
@@ -633,6 +645,10 @@ PrefabInstance:
       value: Prefab_VFX_Blood
       objectReference: {fileID: 0}
     - target: {fileID: 6249717056909997152, guid: 7a9c749ab36699741b359906234891b2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249717056909997152, guid: 7a9c749ab36699741b359906234891b2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -659,6 +675,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 835681899011389610}
     m_Modifications:
+    - target: {fileID: 746397090600791020, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5473202640039554891, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.99
@@ -702,6 +722,10 @@ PrefabInstance:
     - target: {fileID: 6249717056909997152, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
       propertyPath: m_Name
       value: Prefab_VFX_Dash_Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249717056909997152, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6249717056909997152, guid: ce6b36e8db317a1448a4f17a5168fdc1, type: 3}
       propertyPath: m_IsActive

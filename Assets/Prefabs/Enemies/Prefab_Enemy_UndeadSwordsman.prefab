@@ -31,6 +31,7 @@ Transform:
   m_Children:
   - {fileID: 3020965824077904930}
   - {fileID: 3874511693970554694}
+  - {fileID: 4778220839220607610}
   m_Father: {fileID: 3470084773617670799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3597170333855828079
@@ -44,6 +45,7 @@ GameObject:
   - component: {fileID: 3470084773617670799}
   - component: {fileID: 3694103415681973964}
   - component: {fileID: 3128120316492335185}
+  - component: {fileID: -3160917056909553216}
   m_Layer: 6
   m_Name: Prefab_Enemy_UndeadSwordsman
   m_TagString: Untagged
@@ -115,6 +117,54 @@ MonoBehaviour:
   <EnemyStats>k__BackingField: {fileID: 11400000, guid: 53983a08880fb0c4cbcde060b58482c4, type: 2}
   <FlashMaterial>k__BackingField: {fileID: 2100000, guid: fbb0ddbea9eed0b4e939890e0615ee98, type: 2}
   <PlayerTarget>k__BackingField: {fileID: 0}
+--- !u!114 &-3160917056909553216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597170333855828079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86ef536aca8197499e733c1df3a7e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadSwordsman.UndeadSwordsmanCombatController
+  attackPoint: {fileID: 4778220839220607610}
+  attackRadius: 1.5
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!1 &4196327311535655320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4778220839220607610}
+  m_Layer: 0
+  m_Name: Attack_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4778220839220607610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4196327311535655320}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.151, y: 0.459, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 753674205144590510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6624445308632459068
 GameObject:
   m_ObjectHideFlags: 0

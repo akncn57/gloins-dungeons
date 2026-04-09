@@ -8,9 +8,8 @@ namespace Character.States
 
         public override void Enter()
         {
-            Context.Rb.linearVelocity = Vector2.zero;
+            // Context.Rb.linearVelocity = Vector2.zero; (Knockback effect in CharacterController should not be overwritten)
             Context.Animator.SetTrigger(CharacterAnimatorHashes.Hurt);
-            Context.HealthController.TakeDamage(25);
             Context.BloodVFX.SetActive(true);
             
             // GAME FEEL: Oyuncu hasar aldığında dikeyde ezilmiş hissiyatı vermek için (üstten yumruk yemiş gibi)

@@ -1,4 +1,4 @@
-﻿using StateMachine;
+using StateMachine;
 
 namespace Character.States
 {
@@ -16,7 +16,12 @@ namespace Character.States
         public virtual void OnHeavyAttackCommand() { }
         public virtual void OnHeavyAttackAnimationEndCommand() { }
         public virtual void OnDashCommand() { }
-        public virtual void OnHurtCommand() { }
+        
+        public virtual void OnHurtCommand() 
+        { 
+            CharacterStateMachine.ChangeState(CharacterStateMachine.HurtState); 
+        }
+        
         public virtual void OnHurtAnimationEndCommand() { }
     }
 }
