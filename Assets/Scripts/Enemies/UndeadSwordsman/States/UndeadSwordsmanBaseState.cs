@@ -12,5 +12,9 @@ namespace Enemies.UndeadSwordsman.States
             UndeadSwordsmanStateMachine = stateMachine;
             Context = context;
         }
+        
+        public virtual void OnLightAttackAnimationEndCommand() { }
+        public virtual void OnHeavyAttackAnimationEndCommand() { }
+        public virtual void OnHurtAnimationEndCommand() { }
     }
 }

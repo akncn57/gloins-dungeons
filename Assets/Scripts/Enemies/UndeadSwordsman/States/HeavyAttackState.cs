@@ -1,11 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Enemies.UndeadSwordsman.States
 {
     public class HeavyAttackState : UndeadSwordsmanBaseState
     {
-        private float _attackTimer;
-        
         public HeavyAttackState(UndeadSwordsmanController context, UndeadSwordsmanStateMachine stateMachine) : base(context, stateMachine) {}
 
         public override void Enter()
@@ -15,17 +13,16 @@ namespace Enemies.UndeadSwordsman.States
             
             Context.CameraShake.TriggerShake(2, 0.3f);
             
-            _attackTimer = ((UndeadSwordsmanStatsSO)Context.EnemyStats).LightAttackAttackCooldown;
+            Context.LastAttackTime = Time.time;
         }
         
         public override void Update()
         {
-            _attackTimer -= Time.deltaTime;
+        }
 
-            if (_attackTimer <= 0)
-            {
-                StateMachine.ChangeState(UndeadSwordsmanStateMachine.IdleState);
-            }
+        public override void OnHeavyAttackAnimationEndCommand()
+        {
+            StateMachine.ChangeState(UndeadSwordsmanStateMachine.IdleState);
         }
     }
 }

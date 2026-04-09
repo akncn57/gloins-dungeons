@@ -2,15 +2,30 @@ namespace Enemies.UndeadSwordsman
 {
     public class UndeadSwordsmanController : EnemyBase
     {
+        public float LastAttackTime { get; set; } = -100f;
+        
+        private UndeadSwordsmanStateMachine _undeadSwordsmanStateMachine;
+
         protected override void Awake()
         {
-            StateMachine = new UndeadSwordsmanStateMachine(this);
-            // 1. Base sınıftaki Awake'i çağırırız. Bu, Rb, Animator gibi bileşenleri alır 
-            // ve StateMachine'i (EnemyStateMachine) otomatik olarak oluşturur!
+            _undeadSwordsmanStateMachine = new UndeadSwordsmanStateMachine(this);
+            StateMachine = _undeadSwordsmanStateMachine;
             base.Awake();
+        }
 
-            // 3. Makineyi Idle state ile başlatıyoruz.
-            // StateMachine.Initialize(StateMachine.IdleState);
+        public void OnLightAttackAnimationEnd()
+        {
+            _undeadSwordsmanStateMachine.OnLightAttackAnimationEnd();
+        }
+
+        public void OnHeavyAttackAnimationEnd()
+        {
+            _undeadSwordsmanStateMachine.OnHeavyAttackAnimationEnd();
+        }
+
+        public void OnHurtAnimationEnd()
+        {
+            _undeadSwordsmanStateMachine.OnHurtAnimationEnd();
         }
     }
 }

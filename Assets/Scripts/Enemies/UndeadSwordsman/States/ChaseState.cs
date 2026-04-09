@@ -127,15 +127,21 @@ namespace Enemies.UndeadSwordsman.States
                 FacePlayer();
 
                 var stats = (UndeadSwordsmanStatsSO)Context.EnemyStats;
-                var doHeavyAttack = Random.value <= stats.HeavyAttackChance;
+                
+                // Attack cooldown check
+                var cooldown = stats.LightAttackAttackCooldown; // Using light as baseline or heavy if separated later
+                if (Time.time >= Context.LastAttackTime + cooldown)
+                {
+                    var doHeavyAttack = Random.value <= stats.HeavyAttackChance;
 
-                if (doHeavyAttack)
-                {
-                    StateMachine.ChangeState(UndeadSwordsmanStateMachine.HeavyAttackState);
-                }
-                else
-                {
-                    StateMachine.ChangeState(UndeadSwordsmanStateMachine.LightAttackState);
+                    if (doHeavyAttack)
+                    {
+                        StateMachine.ChangeState(UndeadSwordsmanStateMachine.HeavyAttackState);
+                    }
+                    else
+                    {
+                        StateMachine.ChangeState(UndeadSwordsmanStateMachine.LightAttackState);
+                    }
                 }
             }
             else if (HasTargetEscaped())

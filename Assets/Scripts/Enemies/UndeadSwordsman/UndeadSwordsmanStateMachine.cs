@@ -20,5 +20,20 @@ namespace Enemies.UndeadSwordsman
             
             Initialize(IdleState);
         }
+        
+        public void OnLightAttackAnimationEnd()
+        {
+            (CurrentState as UndeadSwordsmanBaseState)?.OnLightAttackAnimationEndCommand();
+        }
+        
+        public void OnHeavyAttackAnimationEnd()
+        {
+            (CurrentState as UndeadSwordsmanBaseState)?.OnHeavyAttackAnimationEndCommand();
+        }
+        
+        public void OnHurtAnimationEnd()
+        {
+            (CurrentState as UndeadSwordsmanBaseState)?.OnHurtAnimationEndCommand();
+        }
     }
 }
