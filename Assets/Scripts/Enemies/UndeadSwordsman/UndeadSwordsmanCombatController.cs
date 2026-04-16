@@ -1,5 +1,7 @@
 using Health;
 using UnityEngine;
+using Zenject;
+using Zenject.Signals.Combat;
 
 namespace Enemies.UndeadSwordsman
 {
@@ -11,6 +13,13 @@ namespace Enemies.UndeadSwordsman
         [SerializeField] private LayerMask damageableLayer;
         
         private UndeadSwordsmanController _controller;
+        private SignalBus _signalBus;
+
+        [Inject]
+        private void Construct(SignalBus signalBus)
+        {
+            _signalBus = signalBus;
+        }
 
         private void Awake()
         {
@@ -53,6 +62,7 @@ namespace Enemies.UndeadSwordsman
                     if (damageable != null)
                     {
                         damageable.TakeDamage(damageAmount, transform.position);
+                        
                         Debug.Log($"<color=green>[Enemy Combat]</color> UndeadSwordsman hit Player for {damageAmount} damage!");
                         break;
                     }

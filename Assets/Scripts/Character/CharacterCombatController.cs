@@ -1,6 +1,8 @@
 using UnityEngine;
 using Health;
 using DG.Tweening;
+using Zenject;
+using Zenject.Signals.Combat;
 
 namespace Character.Combat
 {
@@ -24,6 +26,15 @@ namespace Character.Combat
         
         // Bu referansı Hit-Stop yapmak için kullanacağız
         private CharacterController _characterController;
+        private SignalBus _signalBus;
+        private Transform _previousTarget; // 3. Değişimi anlamak için eski hedefi tut
+        private HealthController _currentTargetHealth;
+
+        [Inject]
+        private void Construct(SignalBus signalBus)
+        {
+            _signalBus = signalBus;
+        }
 
         private void Awake()
         {
@@ -35,6 +46,8 @@ namespace Character.Combat
             if (_characterController != null)
             {
                 CurrentTarget = GetBestTarget(_characterController.MovementInput);
+                
+                HandleTargetSignal();
                 
                 if (CurrentTarget != null && indicatorPrefab != null)
                 {
@@ -119,6 +132,16 @@ namespace Character.Combat
                 {
                     damageable.TakeDamage(damageAmount, transform.position);
                     hitSuccess = true; // En az bir şeye vurduk!
+
+                    if (hitCollider.TryGetComponent(out HealthController healthController))
+                    {
+                        _signalBus.Fire(new HealthChangedSignal 
+                        { 
+                            CurrentHealth = healthController.CurrentHealth, 
+                            MaxHealth = healthController.MaxHealth 
+                        });
+                    }
+                    
                     Debug.Log($"<b><color=green>[Combat] BAŞARILI VURUŞ!</color></b> {hitCollider.name} isimli hedefe <b>{damageAmount}</b> hasar verildi.");
                 }
                 else
@@ -194,6 +217,45 @@ namespace Character.Combat
             }
 
             return bestTarget;
+        }
+        
+        private void HandleTargetSignal()
+        {
+            // Eğer hedef bir önceki kareden farklıysa (Yeni birine geçtik veya hedefi kaybettik)
+            if (CurrentTarget != _previousTarget)
+            {
+                _previousTarget = CurrentTarget;
+
+                if (CurrentTarget != null)
+                {
+                    // Yeni hedefin HealthSystem bileşenini bir kez alıyoruz (Cache)
+                    _currentTargetHealth = CurrentTarget.GetComponent<HealthController>();
+
+                    if (_currentTargetHealth != null)
+                    {
+                        // Sinyali Ateşle!
+                        _signalBus.Fire(new TargetChangedSignal 
+                        {
+                            EnemyName = CurrentTarget.name,
+                            CurrentHealth = _currentTargetHealth.CurrentHealth,
+                            MaxHealth = _currentTargetHealth.MaxHealth,
+                            HasTarget = true
+                        });
+                    }
+                }
+                else
+                {
+                    // Hedef kaybedildi, UI kapansın diye boş sinyal gönder
+                    _currentTargetHealth = null;
+                    _signalBus.Fire(new TargetChangedSignal { HasTarget = false });
+                }
+            }
+            // Eğer hedef aynı ama canı değişmişse (Hasar anında güncelleme için)
+            else if (CurrentTarget != null && _currentTargetHealth != null)
+            {
+                // Opsiyonel: Buraya can değişimi için ayrı bir sinyal de eklenebilir 
+                // veya basitçe her karede UI güncellenmesin diye bir "lastHealth" kontrolü yapılabilir.
+            }
         }
     }
 }
