@@ -1,4 +1,3 @@
-using Enemies.UndeadSwordsman;
 using UnityEngine;
 
 namespace Enemies.UndeadSwordsman
@@ -10,8 +9,6 @@ namespace Enemies.UndeadSwordsman
         protected override void Awake()
         {
             base.Awake();
-            
-            // Cast down to the specific controller to access its specific methods.
             _undeadSwordsmanController = GetComponentInParent<UndeadSwordsmanController>();
         }
 
@@ -27,12 +24,11 @@ namespace Enemies.UndeadSwordsman
 
         public void EndHurt()
         {
-            Debug.Log("EndHurt animation event fired by Unity!");
             if (_undeadSwordsmanController == null)
             {
                 Debug.LogError("_undeadSwordsmanController is NULL! GetComponentInParent could not find the controller.");
             }
-            // Then call the specific end hurt wrapper so state machine can transition out of hurt state
+            
             _undeadSwordsmanController?.OnHurtAnimationEnd();
         }
 
@@ -58,6 +54,7 @@ namespace Enemies.UndeadSwordsman
         public void TriggerHeavyAttackHit()
         {
             if (_undeadSwordsmanController == null || _undeadSwordsmanController.CombatController == null) return;
+            
             var stats = (UndeadSwordsmanStatsSO)_undeadSwordsmanController.EnemyStats;
             _undeadSwordsmanController.CombatController.PerformMeleeAttack(stats.HeavyAttackDamage);
         }

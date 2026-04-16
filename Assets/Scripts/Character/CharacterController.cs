@@ -29,9 +29,6 @@ namespace Character
         [field: SerializeField, BoxGroup("UI")] private Button lightAttackButton;
         [field: SerializeField, BoxGroup("UI")] private Button heavyAttackButton;
         [field: SerializeField, BoxGroup("UI")] private Button dashButton;
-        [field: SerializeField, BoxGroup("UI")] private Button testHurtButton;
-        [field: SerializeField, BoxGroup("UI")] private Button testDeathButton;
-        [field: SerializeField, BoxGroup("UI")] private Button resetButton;
         
         public Vector2 MovementInput { get; private set; }
         public float LastDashTime { get; set; } = -100f;
@@ -52,7 +49,6 @@ namespace Character
             lightAttackButton.onClick.AddListener(() => _characterStateMachine.OnLightAttackPressed());
             heavyAttackButton.onClick.AddListener(() => _characterStateMachine.OnHeavyAttackPressed());
             dashButton.onClick.AddListener(() => _characterStateMachine.OnDashPressed());
-            testHurtButton.onClick.AddListener(() => _characterStateMachine.OnHurt());
             
             HealthController.OnTakeDamage += HandleTakeDamage;
             HealthController.OnDeath += HandleDeath;
@@ -71,19 +67,16 @@ namespace Character
         {
             _characterStateMachine.OnHurt();
             
-            // Apply knockback to character if desired
             if (damageSourcePosition != Vector2.zero)
             {
-                Vector2 knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
+                var knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
                 Rb.linearVelocity = Vector2.zero;
-                Rb.AddForce(knockbackDirection * 5f, ForceMode2D.Impulse); // Hardcoded 5f since CharacterStats lacks knockback currently
+                Rb.AddForce(knockbackDirection * 5f, ForceMode2D.Impulse);
             }
         }
 
         private void HandleDeath()
         {
-            // The character state machine might handle death or we can force it
-            // Assuming we just call OnHurt for now or directly go to DeathState if possible
             _characterStateMachine.ChangeState(_characterStateMachine.DeathState);
         }
 
@@ -116,14 +109,8 @@ namespace Character
 
         private IEnumerator HitStopRoutine(float duration)
         {
-            // 1. Oyunu tamamen dondur (Zaman akışı = 0)
             Time.timeScale = 0f; 
-
-            // 2. DİKKAT: Zaman durduğu için normal WaitForSeconds ÇALIŞMAZ!
-            // Gerçek dünya zamanına göre (Realtime) beklemeliyiz:
             yield return new WaitForSecondsRealtime(duration); 
-
-            // 3. Süre doldu, zamanı normale (1) döndür
             Time.timeScale = 1f; 
         }
         
@@ -144,13 +131,8 @@ namespace Character
 
         public void SquashAndStretch(Vector2 targetScale, float duration)
         {
-            // Varsa önceki DOTween animasyonunu iptal et
             SpriteRenderer.transform.DOKill();
-            
-            // Boyutu önce normale (1, 1, 1) al
             SpriteRenderer.transform.localScale = Vector3.one;
-
-            // DOTween ile büyüklüğe git (sürecin yarısında git) ve sonra geri gel (Yoyo)
             SpriteRenderer.transform.DOScale(targetScale, duration / 2f)
                 .SetLoops(2, DG.Tweening.LoopType.Yoyo)
                 .SetEase(DG.Tweening.Ease.OutQuad);
@@ -160,9 +142,6 @@ namespace Character
         {
             SpriteRenderer.transform.DOKill();
             SpriteRenderer.transform.localScale = Vector3.one;
-            
-            // Yürüyüşte sürekli bir yaylanma (dikeyde hafifçe bastırıp uzat)
-            // Süre 0.2f olursa = 0.4 saniyede bir tam adım hissi verir.
             SpriteRenderer.transform.DOScale(new Vector3(1.03f, 0.97f, 1f), 0.2f)
                 .SetLoops(-1, LoopType.Yoyo)
                 .SetEase(Ease.InOutSine);
@@ -170,7 +149,6 @@ namespace Character
 
         public void StopWalkBounce()
         {
-            // O anki esnemeyi durdur ve yumuşakça orijinal haline dön
             SpriteRenderer.transform.DOKill();
             SpriteRenderer.transform.DOScale(Vector3.one, 0.1f);
         }

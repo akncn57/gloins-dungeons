@@ -22,8 +22,8 @@ namespace Enemies.UndeadSwordsman
             if (attackPoint != null && _controller != null && _controller.SpriteRenderer != null)
             {
                 // Flip the attack point horizontally based on the sprite orientation
-                float absX = Mathf.Abs(attackPoint.localPosition.x);
-                float targetX = _controller.SpriteRenderer.flipX ? -absX : absX;
+                var absX = Mathf.Abs(attackPoint.localPosition.x);
+                var targetX = _controller.SpriteRenderer.flipX ? -absX : absX;
                 
                 attackPoint.localPosition = new Vector3(targetX, attackPoint.localPosition.y, attackPoint.localPosition.z);
             }
@@ -39,16 +39,15 @@ namespace Enemies.UndeadSwordsman
                 return;
             }
             
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, damageableLayer);
+            var hitColliders = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, damageableLayer);
             Debug.Log($"<color=yellow>[Enemy Combat]</color> OverlapCircleAll found {hitColliders.Length} colliders.");
 
-            foreach (Collider2D hitCollider in hitColliders)
+            foreach (var hitCollider in hitColliders)
             {
                 Debug.Log($"<color=yellow>[Enemy Combat]</color> Investigating collider: {hitCollider.name} (Tag: {hitCollider.tag})");
                 
                 if (hitCollider.CompareTag("Player"))
                 {
-                    // Oyuncunun Collider'ı ile Scriptlerinin farklı objelerde olma (Parent-Child) ihtimaline karşı:
                     var damageable = hitCollider.GetComponentInParent<IDamageable>();
                     
                     if (damageable != null)
