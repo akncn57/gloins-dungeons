@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 7041871979337938321}
   - component: {fileID: 7241926854291798755}
   m_Layer: 0
-  m_Name: Collider
+  m_Name: Undead Swordsman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

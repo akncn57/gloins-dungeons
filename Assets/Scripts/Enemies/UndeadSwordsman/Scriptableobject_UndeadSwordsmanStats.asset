@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213503b7e7d42358efff268adc32a07, type: 3}
   m_Name: Scriptableobject_UndeadSwordsmanStats
   m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadSwordsman.UndeadSwordsmanStatsSO
+  <Name>k__BackingField: Undead Swordsman
   <MaxHealth>k__BackingField: 50
   <KnockbackForce>k__BackingField: 5
   <MoveSpeed>k__BackingField: 3
