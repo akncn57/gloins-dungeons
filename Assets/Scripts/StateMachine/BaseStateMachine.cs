@@ -1,21 +1,30 @@
-using UnityEngine;
-
-namespace StateMachine
+﻿namespace StateMachine
 {
-    public class BaseStateMachine : MonoBehaviour
+    public abstract class BaseStateMachine<T>
     {
-        private BaseState _currentState;
-
-        private void Update()
+        public State<T> CurrentState { get; protected set; }
+    
+        public void Initialize(State<T> startingState)
         {
-            _currentState?.OnTick();
+            CurrentState = startingState;
+            CurrentState?.Enter();
         }
-        
-        public void SwitchState(BaseState newState)
+
+        public void ChangeState(State<T> newState)
         {
-            _currentState?.OnExit();
-            _currentState = newState;
-            _currentState?.OnEnter();
+            CurrentState?.Exit();
+            CurrentState = newState;
+            CurrentState?.Enter();
+        }
+
+        public virtual void Update()
+        {
+            CurrentState?.Update();
+        }
+
+        public virtual void FixedUpdate()
+        {
+            CurrentState?.FixedUpdate();
         }
     }
 }
