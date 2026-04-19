@@ -1,7 +1,25 @@
 fileFormatVersion: 2
-guid: fae0e958848d37e4a8638128d4758b0b
+guid: fe361b3ed8d83dc4cbcd7bdb292cd14b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8122427048460646264
+    second: Mage Skeleton - animations-atk 1-initial stage_0
+  - first:
+      213: 8126773585303283698
+    second: Mage Skeleton - animations-atk 1-initial stage_1
+  - first:
+      213: 2894190698417010285
+    second: Mage Skeleton - animations-atk 1-initial stage_2
+  - first:
+      213: -1657192469075412295
+    second: Mage Skeleton - animations-atk 1-initial stage_3
+  - first:
+      213: 1663664045571184039
+    second: Mage Skeleton - animations-atk 1-initial stage_4
+  - first:
+      213: -6654387787476087389
+    second: Mage Skeleton - animations-atk 1-initial stage_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +87,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,207 +124,137 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_0
+      name: Mage Skeleton - animations-atk 1-initial stage_0
       rect:
         serializedVersion: 2
-        x: 66
-        y: 72
-        width: 77
+        x: 75
+        y: 71
+        width: 63
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8777589bd58a8b070800000000000000
+      internalID: 8122427048460646264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 71
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7a702b48918c070800000000000000
+      internalID: 8126773585303283698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 71
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d66b26b2b1b3a2820800000000000000
+      internalID: 2894190698417010285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_3
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 71
+        width: 43
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9babe44ca387009e0800000000000000
+      internalID: -1657192469075412295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_4
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 71
+        width: 66
         height: 47
-      alignment: 9
-      pivot: {x: 0.6115903, y: 0.14887433}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d70de8699ad04c647a8c161f6096ef12
-      internalID: -1704433235
+      spriteID: 7a51cdd82a5861710800000000000000
+      internalID: 1663664045571184039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_1
+      name: Mage Skeleton - animations-atk 1-initial stage_5
       rect:
         serializedVersion: 2
-        x: 282
-        y: 72
-        width: 81
-        height: 49
-      alignment: 9
-      pivot: {x: 0.6172312, y: 0.14142017}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee51f0488fc97d74eab13ea0c17fabb4
-      internalID: -1810534844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_2
-      rect:
-        serializedVersion: 2
-        x: 499
-        y: 72
-        width: 84
-        height: 49
-      alignment: 9
-      pivot: {x: 0.6313615, y: 0.14344585}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61315ceb3781ae74da412ced55d753c5
-      internalID: -509131519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_3
-      rect:
-        serializedVersion: 2
-        x: 718
-        y: 72
-        width: 88
-        height: 48
-      alignment: 9
-      pivot: {x: 0.614547, y: 0.14511108}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec6b6ebc300fb394d94c35f8ca53c584
-      internalID: -1246623152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_4
-      rect:
-        serializedVersion: 2
-        x: 937
-        y: 72
-        width: 89
+        x: 1200
+        y: 71
+        width: 69
         height: 47
-      alignment: 9
-      pivot: {x: 0.6310521, y: 0.14634947}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c53dc9b4944e51542b5aa80077cf373e
-      internalID: -1045895040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_5
-      rect:
-        serializedVersion: 2
-        x: 1157
-        y: 72
-        width: 86
-        height: 47
-      alignment: 9
-      pivot: {x: 0.65207976, y: 0.14995688}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e4be5b90ac8b4a49ad2c305db00eb4e
-      internalID: -2027466883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_6
-      rect:
-        serializedVersion: 2
-        x: 1376
-        y: 72
-        width: 88
-        height: 47
-      alignment: 9
-      pivot: {x: 0.6484028, y: 0.14776887}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2f09fff6d5aad8448e59d86e5aafb2d
-      internalID: 26890101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Texture_Skeleton_Hurt_7
-      rect:
-        serializedVersion: 2
-        x: 1597
-        y: 72
-        width: 86
-        height: 47
-      alignment: 9
-      pivot: {x: 0.65185124, y: 0.14818898}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00be2a4864636ea4eb96c7888f5cb4e3
-      internalID: -1389869176
+      spriteID: 3ad4ac1509dd6a3a0800000000000000
+      internalID: -6654387787476087389
       vertices: []
       indices: 
       edges: []
@@ -315,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -325,14 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Texture_Skeleton_Hurt_0: -1704433235
-      Texture_Skeleton_Hurt_1: -1810534844
-      Texture_Skeleton_Hurt_2: -509131519
-      Texture_Skeleton_Hurt_3: -1246623152
-      Texture_Skeleton_Hurt_4: -1045895040
-      Texture_Skeleton_Hurt_5: -2027466883
-      Texture_Skeleton_Hurt_6: 26890101
-      Texture_Skeleton_Hurt_7: -1389869176
+      Mage Skeleton - animations-atk 1-initial stage_0: 8122427048460646264
+      Mage Skeleton - animations-atk 1-initial stage_1: 8126773585303283698
+      Mage Skeleton - animations-atk 1-initial stage_2: 2894190698417010285
+      Mage Skeleton - animations-atk 1-initial stage_3: -1657192469075412295
+      Mage Skeleton - animations-atk 1-initial stage_4: 1663664045571184039
+      Mage Skeleton - animations-atk 1-initial stage_5: -6654387787476087389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
