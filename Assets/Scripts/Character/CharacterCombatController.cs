@@ -130,7 +130,16 @@ namespace Character.Combat
                 // Sadece "Sen hasar alabilen bir şey misin?" diye soruyoruz.
                 if (hitCollider.TryGetComponent(out IDamageable damageable))
                 {
-                    damageable.TakeDamage(damageAmount, transform.position);
+                    AttackType attackType = AttackType.Light; // Default to Light
+                    if (_characterController != null && _characterController.StateMachine != null)
+                    {
+                        if (_characterController.StateMachine.CurrentState == _characterController.StateMachine.HeavyAttackState)
+                        {
+                            attackType = AttackType.Heavy;
+                        }
+                    }
+
+                    damageable.TakeDamage(damageAmount, transform.position, attackType);
                     hitSuccess = true; // En az bir şeye vurduk!
 
                     if (hitCollider.TryGetComponent(out HealthController healthController))

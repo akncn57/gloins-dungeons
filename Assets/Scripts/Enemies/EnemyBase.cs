@@ -59,7 +59,7 @@ namespace Enemies
             StateMachine.FixedUpdate();
         }
         
-        protected virtual void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition)
+        protected virtual void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition, Health.AttackType attackType)
         {
             Flash();
             StateMachine.ChangeState(StateMachine.HurtState);
@@ -68,7 +68,12 @@ namespace Enemies
             {
                 Vector2 knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
                 Rb.linearVelocity = Vector2.zero; // Clear current momentum
-                Rb.AddForce(knockbackDirection * EnemyStats.KnockbackForce, ForceMode2D.Impulse);
+                
+                float knockbackForce = attackType == Health.AttackType.Heavy 
+                    ? EnemyStats.HeavyAttackKnockbackForce 
+                    : EnemyStats.LightAttackKnockbackForce;
+                    
+                Rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
             }
         }
 
