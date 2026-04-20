@@ -1,4 +1,4 @@
-﻿using StateMachine;
+using StateMachine;
 
 namespace Enemies.UndeadMage.States
 {
@@ -12,5 +12,10 @@ namespace Enemies.UndeadMage.States
             UndeadMageStateMachine = stateMachine;
             Context = context;
         }
+
+        public virtual void OnLightAttackInitAnimationEndCommand() {}
+        public virtual void OnLightAttackFinalAnimationEndCommand() {}
+        public virtual void OnHeavyAttackAnimationEndCommand() {}
+        public virtual void OnHurtAnimationEndCommand() {}
     }
 }
