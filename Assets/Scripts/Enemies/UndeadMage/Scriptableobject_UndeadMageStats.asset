@@ -19,7 +19,7 @@ MonoBehaviour:
   <MoveSpeed>k__BackingField: 2
   <ChaseRange>k__BackingField: 8
   <HitFlashDuration>k__BackingField: 0.5
-  <LightAttackRange>k__BackingField: 6
+  <LightAttackRange>k__BackingField: 5
   <RetreatDistance>k__BackingField: 2
   <RetreatReactionDelay>k__BackingField: 0.6
   <HeavyAttackRange>k__BackingField: 1
