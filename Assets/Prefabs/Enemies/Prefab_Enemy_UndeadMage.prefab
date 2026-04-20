@@ -43,6 +43,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3470084773617670799}
   - component: {fileID: 3694103415681973964}
+  - component: {fileID: 1948054657864393373}
+  - component: {fileID: 6350173298827155524}
   m_Layer: 6
   m_Name: Prefab_Enemy_UndeadMage
   m_TagString: Untagged
@@ -93,6 +95,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1948054657864393373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597170333855828079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9a2c476f154175bd561a9270830ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadMage.UndeadMageController
+  <Rb>k__BackingField: {fileID: 3694103415681973964}
+  <Collider>k__BackingField: {fileID: 7041871979337938321}
+  <SpriteRenderer>k__BackingField: {fileID: 7750233828330960208}
+  <Animator>k__BackingField: {fileID: 2777356781056883476}
+  <HealthController>k__BackingField: {fileID: 9181550311733525654}
+  <CameraShake>k__BackingField: {fileID: 0}
+  <EnemyStats>k__BackingField: {fileID: 11400000, guid: 2d22ef41f4a4ba64e9d829750de990d4, type: 2}
+  <FlashMaterial>k__BackingField: {fileID: 2100000, guid: fbb0ddbea9eed0b4e939890e0615ee98, type: 2}
+  <PlayerTarget>k__BackingField: {fileID: 0}
+--- !u!114 &6350173298827155524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597170333855828079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c0323c5974454599f09f9eb97dac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadMage.UndeadMageCombatController
 --- !u!1 &6624445308632459068
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +139,7 @@ GameObject:
   - component: {fileID: 3020965824077904930}
   - component: {fileID: 7750233828330960208}
   - component: {fileID: 2777356781056883476}
+  - component: {fileID: 9202296289108234183}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -207,6 +243,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9202296289108234183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6624445308632459068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128d7fb84b9b4af298a76db535183243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadMage.UndeadMageAnimationEvents
 --- !u!1 &8881912299941983307
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3874511693970554694}
   - component: {fileID: 7041871979337938321}
+  - component: {fileID: 9181550311733525654}
   m_Layer: 0
   m_Name: Undead Mage
   m_TagString: Untagged
@@ -276,3 +325,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.010013342, y: 0.6}
   m_Size: {x: 0.77, y: 1.27}
   m_Direction: 0
+--- !u!114 &9181550311733525654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881912299941983307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68affa770c148d89e9d3aa854c0930a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health.HealthController
