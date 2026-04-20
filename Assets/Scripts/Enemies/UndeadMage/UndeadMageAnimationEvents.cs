@@ -45,6 +45,7 @@ namespace Enemies.UndeadMage
             
             var stats = (UndeadMageStatsSO)_undeadMageController.EnemyStats;
             _undeadMageController.CombatController.PerformMeleeAttack(stats.HeavyAttackDamage);
+            _undeadMageController?.OnHeavyAttackAnimationHit();
         }
     }
 }

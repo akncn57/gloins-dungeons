@@ -18,12 +18,15 @@ MonoBehaviour:
   <MoveSpeed>k__BackingField: 2
   <ChaseRange>k__BackingField: 8
   <HitFlashDuration>k__BackingField: 0.5
-  <LightAttackRange>k__BackingField: 4
+  <LightAttackRange>k__BackingField: 6
   <RetreatDistance>k__BackingField: 2
+  <RetreatReactionDelay>k__BackingField: 0.6
   <HeavyAttackRange>k__BackingField: 1
   <LightAttackDamage>k__BackingField: 15
   <HeavyAttackDamage>k__BackingField: 25
   <LightAttackCooldown>k__BackingField: 3
   <HeavyAttackCooldown>k__BackingField: 2
   <ProjectilePrefab>k__BackingField: {fileID: 8205378615932170427, guid: 7fbc8ed1b727901449375ac6d6861a23, type: 3}
-  <ProjectileSpeed>k__BackingField: 5
+  <ProjectileSpeed>k__BackingField: 10
+  <ProjectileDelay>k__BackingField: 0.5
+  <HeavyAttackVFXPrefab>k__BackingField: {fileID: 0}

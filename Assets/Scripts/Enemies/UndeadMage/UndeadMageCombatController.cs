@@ -57,6 +57,24 @@ namespace Enemies.UndeadMage
                     }
                 }
             }
+
+            var stats = _controller.EnemyStats as UndeadMageStatsSO;
+
+            // Camera Shake Trigger
+            var cameraShake = Object.FindFirstObjectByType<Utils.CameraShake>();
+            if (cameraShake != null)
+            {
+                // Güçlü bir sarsıntı verelim: şiddet=3f, süre=0.25f (isteye göre değiştirilebilir)
+                cameraShake.TriggerShake(3f, 0.25f);
+            }
+
+            // Spawn VFX
+            if (stats != null && stats.HeavyAttackVFXPrefab != null)
+            {
+                var vfx = Instantiate(stats.HeavyAttackVFXPrefab, attackPoint.position, Quaternion.identity);
+                // Eğer VFX prefabında otomatik yok edici yoksa temizleyelim
+                Destroy(vfx, 3f); 
+            }
         }
 
         public void FireProjectile()
@@ -68,9 +86,8 @@ namespace Enemies.UndeadMage
             Vector2 playerDir;
             if (_controller.PlayerTarget != null)
             {
-                // Hedef oyuncunun merkezi olsun (biraz offset ekleyebiliriz y ekseninde gerekirse)
                 Vector2 targetPos = _controller.PlayerTarget.position;
-                targetPos.y += 0.5f; // oyuncunun merkezine doğru atması için
+                targetPos.y += 0.5f; 
                 playerDir = targetPos - (Vector2)spawnPoint;
             }
             else
@@ -81,7 +98,7 @@ namespace Enemies.UndeadMage
             var projGO = Instantiate(stats.ProjectilePrefab, spawnPoint, Quaternion.identity);
             if (projGO.TryGetComponent<UndeadMageProjectile>(out var projectile))
             {
-                projectile.Setup(playerDir, stats.ProjectileSpeed, stats.LightAttackDamage);
+                projectile.Setup(playerDir, stats.ProjectileSpeed, stats.LightAttackDamage, stats.ProjectileDelay);
             }
         }
 

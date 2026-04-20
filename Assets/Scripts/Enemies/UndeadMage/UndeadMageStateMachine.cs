@@ -30,6 +30,11 @@ namespace Enemies.UndeadMage
         {
             (CurrentState as UndeadMageBaseState)?.OnLightAttackFinalAnimationEndCommand();
         }
+        
+        public void OnHeavyAttackAnimationHit()
+        {
+            (CurrentState as UndeadMageBaseState)?.OnHeavyAttackAnimationHitCommand();
+        }
 
         public void OnHeavyAttackAnimationEnd()
         {

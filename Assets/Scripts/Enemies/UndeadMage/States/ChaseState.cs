@@ -4,11 +4,14 @@ namespace Enemies.UndeadMage.States
 {
     public class ChaseState : UndeadMageBaseState
     {
+        private float _retreatTimer;
+
         public ChaseState(UndeadMageController context, UndeadMageStateMachine stateMachine) : base(context, stateMachine) {}
 
         public override void Enter()
         {
             Context.Animator.SetBool(UndeadMageAnimatorHashes.IsWalking, true);
+            _retreatTimer = 0f;
         }
 
         public override void Exit()
@@ -47,16 +50,33 @@ namespace Enemies.UndeadMage.States
                 moveDirection.y = distToPlayerY > 0 ? -1 : 1;
             }
             
-            // X ekseninde retreat veya safe distance ayarı
+            // X ekseninde retreat durumu
             if (absDistX < stats.RetreatDistance)
             {
-                // Çok yakın, geriye doğru kaç
-                moveDirection.x = distToPlayerX > 0 ? 1 : -1;
+                // Hemen kaçmasın diye bi reaksiyon süresi ekledik
+                _retreatTimer += Time.fixedDeltaTime;
+
+                if (_retreatTimer >= stats.RetreatReactionDelay)
+                {
+                    // Şaşkinlık geçti, kaçmaya başla
+                    moveDirection.x = distToPlayerX > 0 ? 1 : -1;
+                }
+                else
+                {
+                    // Beklediği süre boyunca x ekseninde hareket yok, sadece durur
+                    moveDirection.x = 0; 
+                }
             }
-            else if (absDistX > stats.LightAttackRange)
+            else 
             {
-                // Uzak, oyuncuya yaklaş
-                moveDirection.x = distToPlayerX > 0 ? -1 : 1;
+                // Menzil dışına çıkıldıysa timer'ı sıfırla ki geri yaklaşınca yine bi afallasın
+                _retreatTimer = 0f;
+
+                if (absDistX > stats.LightAttackRange)
+                {
+                    // Uzak, oyuncuya yaklaş
+                    moveDirection.x = distToPlayerX > 0 ? -1 : 1;
+                }
             }
 
             moveDirection = moveDirection.normalized;
@@ -64,11 +84,17 @@ namespace Enemies.UndeadMage.States
             var separation = CalculateSeparation();
             moveDirection = (moveDirection + separation * 1.5f).normalized;
 
-            if (moveDirection.magnitude > 0.1f && (absDistX < stats.RetreatDistance || absDistX > stats.LightAttackRange || Mathf.Abs(distToPlayerY) > 0.2f))
+            // Hareket etme kondisyonu (Timer'a göre de ayarladık)
+            bool shouldMove = moveDirection.magnitude > 0.1f && 
+                              (absDistX > stats.LightAttackRange || 
+                               (absDistX < stats.RetreatDistance && _retreatTimer >= stats.RetreatReactionDelay) || 
+                               Mathf.Abs(distToPlayerY) > 0.2f);
+
+            if (shouldMove)
             {
                 Context.Rb.linearVelocity = moveDirection * Context.EnemyStats.MoveSpeed;
                 
-                // Geri geri kaçarken oyuncuya bakmasını sağla
+                // Oyuncuya bakmasını sağla
                 FacePlayer();
                 
                 Context.Animator.SetBool(UndeadMageAnimatorHashes.IsWalking, true);

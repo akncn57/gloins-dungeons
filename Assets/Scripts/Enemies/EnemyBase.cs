@@ -15,6 +15,7 @@ namespace Enemies
         [field: SerializeField, BoxGroup("Components")] public Animator Animator { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public HealthController HealthController { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public CameraShake CameraShake { get; private set; }
+        [field: SerializeField, BoxGroup("VFX")] public GameObject HeavyAttackVFX { get; private set; }
         
         [field: SerializeField, BoxGroup("Stats")] public EnemyStatsSO EnemyStats { get; set; }
         [field: SerializeField, BoxGroup("Settings")] private Material FlashMaterial { get; set; }

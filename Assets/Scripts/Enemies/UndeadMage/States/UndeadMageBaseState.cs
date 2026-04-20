@@ -15,6 +15,7 @@ namespace Enemies.UndeadMage.States
 
         public virtual void OnLightAttackInitAnimationEndCommand() {}
         public virtual void OnLightAttackFinalAnimationEndCommand() {}
+        public virtual void OnHeavyAttackAnimationHitCommand() {}
         public virtual void OnHeavyAttackAnimationEndCommand() {}
         public virtual void OnHurtAnimationEndCommand() {}
     }

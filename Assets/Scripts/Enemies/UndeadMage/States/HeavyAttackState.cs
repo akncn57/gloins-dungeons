@@ -12,10 +12,16 @@ namespace Enemies.UndeadMage.States
             Context.Rb.linearVelocity = Vector2.zero;
         }
 
+        public override void OnHeavyAttackAnimationHitCommand()
+        {
+            Context.HeavyAttackVFX.SetActive(true);
+        }
+
         public override void OnHeavyAttackAnimationEndCommand()
         {
             Context.LastHeavyAttackTime = Time.time;
             StateMachine.ChangeState(UndeadMageStateMachine.ChaseState);
+            Context.HeavyAttackVFX.SetActive(false);
         }
     }
 }

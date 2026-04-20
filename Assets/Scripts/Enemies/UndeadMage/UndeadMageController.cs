@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Enemies.UndeadMage
 {
     public class UndeadMageController : EnemyBase
@@ -24,6 +26,11 @@ namespace Enemies.UndeadMage
         public void OnLightAttackFinalAnimationEnd()
         {
             _undeadMageStateMachine.OnLightAttackFinalAnimationEnd();
+        }
+        
+        public void OnHeavyAttackAnimationHit()
+        {
+            _undeadMageStateMachine.OnHeavyAttackAnimationHit();
         }
 
         public void OnHeavyAttackAnimationEnd()
