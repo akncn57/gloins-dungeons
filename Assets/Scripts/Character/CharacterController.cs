@@ -34,6 +34,7 @@ namespace Character
         public float LastDashTime { get; set; } = -100f;
         public float LastHeavyAttackTime { get; set; } = -100f;
         
+        public CharacterStateMachine StateMachine => _characterStateMachine;
         private CharacterStateMachine _characterStateMachine;
 
         private void Awake()
@@ -63,9 +64,12 @@ namespace Character
             }
         }
 
-        private void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition)
+        private void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition, AttackType attackType)
         {
-            _characterStateMachine.OnHurt();
+            if (currentHealth > 0)
+            {
+                _characterStateMachine.OnHurt();
+            }
             
             if (damageSourcePosition != Vector2.zero)
             {

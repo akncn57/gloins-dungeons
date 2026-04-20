@@ -5,7 +5,7 @@ namespace Health
 {
     public class HealthController : MonoBehaviour, IDamageable
     {
-        public event Action<int, Vector2> OnTakeDamage;
+        public event Action<int, Vector2, AttackType> OnTakeDamage;
         public event Action OnDeath;
         public event Action<int, int> OnHealthChanged; 
         
@@ -22,11 +22,11 @@ namespace Health
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
 
-        public void TakeDamage(int damageTaken, Vector2 damageSourcePosition = default)
+        public void TakeDamage(int damageTaken, Vector2 damageSourcePosition = default, AttackType attackType = AttackType.General)
         {
             if (_isDead) return;
             CurrentHealth = Mathf.Max(CurrentHealth - damageTaken, 0);
-            OnTakeDamage?.Invoke(CurrentHealth, damageSourcePosition);
+            OnTakeDamage?.Invoke(CurrentHealth, damageSourcePosition, attackType);
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
 
             if (CurrentHealth <= 0)

@@ -15,6 +15,7 @@ namespace Enemies
         [field: SerializeField, BoxGroup("Components")] public Animator Animator { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public HealthController HealthController { get; private set; }
         [field: SerializeField, BoxGroup("Components")] public CameraShake CameraShake { get; private set; }
+        [field: SerializeField, BoxGroup("VFX")] public GameObject HeavyAttackVFX { get; private set; }
         
         [field: SerializeField, BoxGroup("Stats")] public EnemyStatsSO EnemyStats { get; set; }
         [field: SerializeField, BoxGroup("Settings")] private Material FlashMaterial { get; set; }
@@ -58,16 +59,25 @@ namespace Enemies
             StateMachine.FixedUpdate();
         }
         
-        protected virtual void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition)
+        protected virtual void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition, Health.AttackType attackType)
         {
             Flash();
-            StateMachine.ChangeState(StateMachine.HurtState);
+            
+            if (currentHealth > 0)
+            {
+                StateMachine.ChangeState(StateMachine.HurtState);
+            }
 
             if (damageSourcePosition != Vector2.zero)
             {
                 Vector2 knockbackDirection = ((Vector2)transform.position - damageSourcePosition).normalized;
                 Rb.linearVelocity = Vector2.zero; // Clear current momentum
-                Rb.AddForce(knockbackDirection * EnemyStats.KnockbackForce, ForceMode2D.Impulse);
+                
+                float knockbackForce = attackType == Health.AttackType.Heavy 
+                    ? EnemyStats.HeavyAttackKnockbackForce 
+                    : EnemyStats.LightAttackKnockbackForce;
+                    
+                Rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
             }
         }
 
