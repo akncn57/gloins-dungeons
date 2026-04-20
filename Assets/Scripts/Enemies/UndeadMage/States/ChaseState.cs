@@ -36,35 +36,22 @@ namespace Enemies.UndeadMage.States
         
         private void HandleMovement()
         {
-            var distToPlayerX = Context.transform.position.x - Context.PlayerTarget.position.x;
-            var distToPlayerY = Context.transform.position.y - Context.PlayerTarget.position.y;
-            var absDistX = Mathf.Abs(distToPlayerX);
-            
             var stats = (UndeadMageStatsSO)Context.EnemyStats;
+            Vector2 toPlayer = Context.PlayerTarget.position - Context.transform.position;
+            float distanceToPlayer = toPlayer.magnitude;
             
             Vector2 moveDirection = Vector2.zero;
+            Vector2 directionToPlayer = distanceToPlayer > 0 ? toPlayer.normalized : Vector2.left; // Default fallback
             
-            // Y ekseninde oyuncuyla aynı hizaya gelmeye çalış
-            if (Mathf.Abs(distToPlayerY) > 0.2f)
-            {
-                moveDirection.y = distToPlayerY > 0 ? -1 : 1;
-            }
-            
-            // X ekseninde retreat durumu
-            if (absDistX < stats.RetreatDistance)
+            if (distanceToPlayer < stats.RetreatDistance)
             {
                 // Hemen kaçmasın diye bi reaksiyon süresi ekledik
                 _retreatTimer += Time.fixedDeltaTime;
 
                 if (_retreatTimer >= stats.RetreatReactionDelay)
                 {
-                    // Şaşkinlık geçti, kaçmaya başla
-                    moveDirection.x = distToPlayerX > 0 ? 1 : -1;
-                }
-                else
-                {
-                    // Beklediği süre boyunca x ekseninde hareket yok, sadece durur
-                    moveDirection.x = 0; 
+                    // Oyuncudan uzağa doğru yürü
+                    moveDirection = -directionToPlayer;
                 }
             }
             else 
@@ -72,31 +59,25 @@ namespace Enemies.UndeadMage.States
                 // Menzil dışına çıkıldıysa timer'ı sıfırla ki geri yaklaşınca yine bi afallasın
                 _retreatTimer = 0f;
 
-                if (absDistX > stats.LightAttackRange)
+                if (distanceToPlayer > stats.LightAttackRange)
                 {
-                    // Uzak, oyuncuya yaklaş
-                    moveDirection.x = distToPlayerX > 0 ? -1 : 1;
+                    // Düşmana yaklaşmak için dosdoğru üzerine yürü
+                    moveDirection = directionToPlayer;
                 }
             }
-
-            moveDirection = moveDirection.normalized;
 
             var separation = CalculateSeparation();
             moveDirection = (moveDirection + separation * 1.5f).normalized;
 
-            // Hareket etme kondisyonu (Timer'a göre de ayarladık)
+            // Hareket etme kondisyonu (Menzil kontrolü)
             bool shouldMove = moveDirection.magnitude > 0.1f && 
-                              (absDistX > stats.LightAttackRange || 
-                               (absDistX < stats.RetreatDistance && _retreatTimer >= stats.RetreatReactionDelay) || 
-                               Mathf.Abs(distToPlayerY) > 0.2f);
+                              (distanceToPlayer > stats.LightAttackRange || 
+                               (distanceToPlayer < stats.RetreatDistance && _retreatTimer >= stats.RetreatReactionDelay));
 
             if (shouldMove)
             {
                 Context.Rb.linearVelocity = moveDirection * Context.EnemyStats.MoveSpeed;
-                
-                // Oyuncuya bakmasını sağla
                 FacePlayer();
-                
                 Context.Animator.SetBool(UndeadMageAnimatorHashes.IsWalking, true);
             }
             else
@@ -146,28 +127,24 @@ namespace Enemies.UndeadMage.States
         private void CheckStateTransitions()
         {
             var stats = (UndeadMageStatsSO)Context.EnemyStats;
-            var absDistX = Mathf.Abs(Context.transform.position.x - Context.PlayerTarget.position.x);
-            var absDistY = Mathf.Abs(Context.transform.position.y - Context.PlayerTarget.position.y);
+            var distToPlayer = Vector2.Distance(Context.transform.position, Context.PlayerTarget.position);
             
-            if (absDistY <= 0.5f)
-            {
-                FacePlayer();
+            FacePlayer();
 
-                if (absDistX <= stats.HeavyAttackRange)
+            if (distToPlayer <= stats.HeavyAttackRange)
+            {
+                if (Time.time >= Context.LastHeavyAttackTime + stats.HeavyAttackCooldown)
                 {
-                    if (Time.time >= Context.LastHeavyAttackTime + stats.HeavyAttackCooldown)
-                    {
-                        StateMachine.ChangeState(UndeadMageStateMachine.HeavyAttackState);
-                        return;
-                    }
+                    StateMachine.ChangeState(UndeadMageStateMachine.HeavyAttackState);
+                    return;
                 }
-                else if (absDistX <= stats.LightAttackRange && absDistX >= stats.RetreatDistance)
+            }
+            else if (distToPlayer <= stats.LightAttackRange && distToPlayer >= stats.RetreatDistance)
+            {
+                if (Time.time >= Context.LastLightAttackTime + stats.LightAttackCooldown)
                 {
-                    if (Time.time >= Context.LastLightAttackTime + stats.LightAttackCooldown)
-                    {
-                        StateMachine.ChangeState(UndeadMageStateMachine.LightAttackState);
-                        return;
-                    }
+                    StateMachine.ChangeState(UndeadMageStateMachine.LightAttackState);
+                    return;
                 }
             }
 

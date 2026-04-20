@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d34d7cb5c0041c0aab9703871169d0e, type: 3}
   m_Name: Scriptableobject_UndeadMageStats
   m_EditorClassIdentifier: Assembly-CSharp::Enemies.UndeadMage.UndeadMageStatsSO
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Undead Mage
   <MaxHealth>k__BackingField: 75
-  <KnockbackForce>k__BackingField: 5
+  <LightAttackKnockbackForce>k__BackingField: 3
+  <HeavyAttackKnockbackForce>k__BackingField: 10
   <MoveSpeed>k__BackingField: 2
   <ChaseRange>k__BackingField: 8
   <HitFlashDuration>k__BackingField: 0.5
@@ -27,6 +28,6 @@ MonoBehaviour:
   <LightAttackCooldown>k__BackingField: 3
   <HeavyAttackCooldown>k__BackingField: 2
   <ProjectilePrefab>k__BackingField: {fileID: 8205378615932170427, guid: 7fbc8ed1b727901449375ac6d6861a23, type: 3}
-  <ProjectileSpeed>k__BackingField: 10
+  <ProjectileSpeed>k__BackingField: 15
   <ProjectileDelay>k__BackingField: 0.5
   <HeavyAttackVFXPrefab>k__BackingField: {fileID: 0}

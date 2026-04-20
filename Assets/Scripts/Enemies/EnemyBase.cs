@@ -62,7 +62,11 @@ namespace Enemies
         protected virtual void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition, Health.AttackType attackType)
         {
             Flash();
-            StateMachine.ChangeState(StateMachine.HurtState);
+            
+            if (currentHealth > 0)
+            {
+                StateMachine.ChangeState(StateMachine.HurtState);
+            }
 
             if (damageSourcePosition != Vector2.zero)
             {

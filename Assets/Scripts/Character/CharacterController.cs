@@ -66,7 +66,10 @@ namespace Character
 
         private void HandleTakeDamage(int currentHealth, Vector2 damageSourcePosition, AttackType attackType)
         {
-            _characterStateMachine.OnHurt();
+            if (currentHealth > 0)
+            {
+                _characterStateMachine.OnHurt();
+            }
             
             if (damageSourcePosition != Vector2.zero)
             {
